@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- /usr/local/Cellar/pandoc/1.17.0.3/share/x86_64-osx-ghc-7.10.3/pandoc-1.17.0.3/data/templates -->
 <head$if(lang)$ lang="$lang$"$endif$$if(dir)$ dir="$dir$"$endif$>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
@@ -61,10 +62,10 @@ $else$
   }
 
   ul {
-      margin: 50px 200px;
+      margin: 10px 50px;
   }
   li > ul {
-      margin: 15px 50px;
+      margin: 10px 50px;
   }
 
   p {
