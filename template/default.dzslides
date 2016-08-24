@@ -187,6 +187,7 @@ $endif$
 $for(header-includes)$
   $header-includes$
 $endfor$
+<base target="_blank">
 </head>
 <body>
 $if(title)$
