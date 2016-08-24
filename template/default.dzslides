@@ -109,10 +109,28 @@ $else$
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 40px;
+    padding: 4px;
     text-align: right;
     background-color: #F3F4F8;
     border-top: 1px solid #CCC;
+  }
+
+  /* Custom Styles */
+    header {
+    top: 0;
+    width: 100%;
+    padding: 2px;
+    text-align: center;
+    background-color: #F3F4F8;
+    border-bottom: 1px solid #CCC;
+  }
+
+  .yel-bg {background-color: yellow;}
+  .red-bg {background-color: red}
+  .arc-bg {background-color: #dc0062}
+
+  td {
+    font-size: 50%;
   }
 
   /* Transition effect */
