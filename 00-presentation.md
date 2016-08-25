@@ -1,24 +1,33 @@
-<style type="text/css">
-table {
-	margin: 0 auto;}
-
-th, td {
-	padding: 0 10px;}
-
-table tbody tr:nth-child(n+2):nth-child(-n+11) td:nth-child(2) {
-	background-color: green;}
-
-table tbody tr:nth-child(n+15) td:nth-child(2),
-table tbody tr:nth-child(-n+6) td:nth-child(4) {
-	background-color: lightgreen;}
-</style>
-
 ---
 title: Présentation du cours
 author: <david.grunenwald@he-arc.ch>
 date: 2016
 ---
+
+<!-- Hack -->
+<style>
+  table {
+    font-size: 50%;
+    margin: 0 auto;
+  }
+
+  th, td {
+    padding: 0 10px;
+  }
+
+  table tbody tr:nth-child(n+2):nth-child(-n+11) td:nth-child(2)
+  {
+    background-color: green;
+  }
+
+  table tbody tr:nth-child(n+15) td:nth-child(2),
+  table tbody tr:nth-child(-n+6) td:nth-child(4) {
+    background-color: lightgreen;
+  }
+</style>
+
 <header>Programme</header>
+
 * Frameworks MVC : Laravel, Rails, …
 * HTML5 : vue d’ensemble
 * Javascript : AJAX, DOM, JSON, jQuery
