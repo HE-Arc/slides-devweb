@@ -1,12 +1,38 @@
-pages=00-presentation.html
+SOURCEDIR = src
+BUILDDIR = build
+TEMPLATES = templates
 
-all: $(pages)
+SOURCES=$(wildcard $(SOURCEDIR)/*.md)
+SLIDES=$(patsubst $(SOURCEDIR)/%.md,$(BUILDDIR)/%.html,$(SOURCES))
+PDFS=$(patsubst $(SOURCEDIR)/%.md,$(BUILDDIR)/%.pdf,$(SOURCES))
 
-%.html: %.md
+.PHONY: all
+all: slides pdfs
+
+.PHONY: slides
+slides: $(SLIDES)
+
+.PHONY: pdfs
+pdfs: $(PDFS)
+
+.PHONY: clean
+clean:
+	rm -rf $(BUILDDIR)
+
+$(SLIDES): $(BUILDDIR)/%.html : $(SOURCEDIR)/%.md
+	mkdir -p $(BUILDDIR)
 	pandoc -s -i \
 		-f markdown \
 		-t dzslides \
 		--self-contained \
-		-H header.html \
+		-H $(TEMPLATES)/header.html \
+		-o $@ \
+		$^
+
+$(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
+	mkdir -p $(BUILDDIR)
+	pandoc -s -i \
+		-f markdown \
+		-t latex \
 		-o $@ \
 		$^
