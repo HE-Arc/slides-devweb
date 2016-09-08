@@ -1,0 +1,20 @@
+language:
+  c
+
+cache: apt
+
+addons:
+  apt:
+    packages:
+      - make
+      - pandoc
+      - texlive
+      - fonts-inconsolata
+      - fonts-linuxlibertine
+
+env:
+  - ACTION=slides
+  - ACTION=pdfs
+
+script:
+  - make ${ACTION}
