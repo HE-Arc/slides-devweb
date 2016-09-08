@@ -1,32 +1,12 @@
----
-title: Présentation du cours
-author: <david.grunenwald@he-arc.ch>
-date: 2016
----
+% 00.Cours devweb
 
-<!-- Hack -->
-<style>
-  table {
-    font-size: 50%;
-    margin: 0 auto;
-  }
+# Développement web dlm3
 
-  th, td {
-    padding: 0 10px;
-  }
+## Présentation du cours{.title}
 
-  table tbody tr:nth-child(n+2):nth-child(-n+11) td:nth-child(2)
-  {
-    background-color: green;
-  }
+<footer>HE-Arc 2016/17 DGR et YBL</footer>
 
-  table tbody tr:nth-child(n+15) td:nth-child(2),
-  table tbody tr:nth-child(-n+6) td:nth-child(4) {
-    background-color: lightgreen;
-  }
-</style>
-
-<header>Programme</header>
+# Programme
 
 * Frameworks MVC : Laravel, Rails, …
 * HTML5 : vue d’ensemble
@@ -38,42 +18,44 @@ date: 2016
 * Sécurité : Technologies, prévention des risques courants
 * <span class="yel-bg">Vos souhaits ?</span>
 
----
-<header>Organisation</header>
+# Organisation
+
 * Cours
 * Workshops intervenants externes
-    * Automatisation du déploiement (Raphaël Emourgeon)
-    * Flask (Matthieu Amiguet)
-    * Webdesign (Manuel Schmalstieg)
+    * Automatisation du déploiement (R. Emourgeon)
+    * Flask (M. Amiguet)
+    * Webdesign (M. Schmalstieg)
+    * AngularJS (D. Jupille)
 * 2 Projets
     * 2 frameworks (Laravel, Rails)
-    * Groupes de 3, [30h de travail](https://intranet.he-arc.ch/ing/_layouts/15/WopiFrame.aspx?sourcedoc=/ing/Docs%20%20Modules%20%2020142015%20%20INF/RS430.100.15.3254%20D%C3%A9veloppement%20web%20et%20mobile.docx&action=default) par personne et par projet
+    * Groupes de 3, [30h](https://intranet.he-arc.ch/ing/_layouts/15/WopiFrame.aspx?sourcedoc=/ing/Docs%20%20Modules%20%2020142015%20%20INF/RS430.100.15.3254%20D%C3%A9veloppement%20web%20et%20mobile.docx&action=default) par personne et par projet
     * Présentation de 20min
 * Vos présentations ? <span class="yel-bg">Vos propositions ?</span>
 
-
-----
-<header>Projets</header>
+# Projets
 
 * Faire pour apprendre
 * Ne pas réinventer la roue ou tout faire soi-même
 * Les rôles dans une équipe de développement web
 * Critères d’évaluation d’un projet
 * Avant le 1er octobre :
-    * Constitution des équipes
-    * Choix du projet ([webstore](https://chrome.google.com/webstore/), [appstorm](http://web.appstorm.net/category/reviews/), [makeuseof](http://www.makeuseof.com/pages/best-websites) pour des idées)
-    * Choix forge : école ou web ([github](https://github.com/HE-Arc/), bitbucket, ...)
-    * [S’inscrire](https://docs.google.com/spreadsheet/viewform?formkey=dC1zY1J6dWo3a2tDak5ESkRyQUNqOGc6MQ)
+    * Constitution des équipes de 3 personnes
+    * Choix du projet 
+    * Forge : Créer projet sur [github.com/HE-Arc](https://github.com/HE-Arc/) 
+    * [S’inscrire](https://projets-labinfo.he-arc.ch/projects/webdev/wiki), après avoir créé un compte si besoin
 
-----
-<header>Projets des volées précédentes</header>
+# Choix des projets 
 
-* Projets de la volée [2015/16](https://projets-labinfo.he-arc.ch/projects/webdev/wiki)
-* Projets de la volée [2014/15](https://isic-lan.he-arc.ch/projects/1415-dw/wiki/Wiki)
-* Projets de la volée [2013/14](https://isic-lan.he-arc.ch/projects/1314-devweb/wiki)
+* Contrainte : appli basée sur des données 
+* Choix
+    * Besoin réel
+    * S'inspirer de l'existant :
+          * [webstore](https://chrome.google.com/webstore/), [appstorm](http://web.appstorm.net/category/reviews/), [makeuseof](http://www.makeuseof.com/pages/best-websites), ...
+          * Volées précédentes : [2015/16](https://projets-labinfo.he-arc.ch/projects/webdev/wiki), [14/15](https://isic-lan.he-arc.ch/projects/1415-dw/wiki/Wiki), [13/14](https://isic-lan.he-arc.ch/projects/1314-devweb/wiki)
+    * Données existantes (bikini, [dbpedia](http://wiki.dbpedia.org/), [opendata](https://opendata.swiss/fr/))
 
-----
-<header>Calendrier</header>
+
+# Calendrier
 
 |Semaine|Automne|Semaine|Printemps|
 |---:|---|---:|---|
@@ -96,8 +78,54 @@ date: 2016
 |5|T. Autonome|||
 |6|Examen|||
 
-----
-<header>Présentation facultative</header>
+# Jalons
+
+* Objectifs à atteindre pour le début de la semaine :
+    * 1 :
+    * 2 : Objectifs et maquettes
+    * 3 : Authentification et 1er déploiement
+    * 4 :
+    * 5 : Modèles avec relations (au moins 3)
+    * 6 :
+    * 7 : Minimal Viable Product
+    * 8 : 
+    * 9 :
+    * 10 : 
+    * 11 : Rendu projet, Présentation
+
+# Conseils
+
+* Le plus simple possible
+* Pas trop de données
+* Application crédible (vraies données, cas réaliste)
+* Projet à blanc pour la prise en main du framework
+* [Maquettes](https://brainhub.eu/blog/2016/04/20/difference-between-wireframe-mockup-prototype/) 
+* [Organisez](http://drewfradette.ca/a-simpler-successful-git-branching-model/) l'utilisation du dépôt
+* Le temps disponible à l'horaire ne suffira pas !
+* Essayez de commit avec la même identité
+* Signalez dans le commit msg si vous n'êtes pas l'auteur
+
+# Evaluation
+
+* User Experience : 50%
+    * Utilisabilité : Efficacité, efficience, satisfaction
+    * Design UI
+* Code :  30%
+    * Absence bugs, qualité code, lisibilité
+    * Respect conventions et bonnes pratiques
+    * Déploiement, configuration
+* Gestion de projet : 20%
+    * Fichiers versionnés, messages de commit
+    * Issues, planification, travail en équipe
+    * Documentation (wiki)
+    * Investissement, volume de travail
+* Bonus (ceux qui vont plus loin) : 0-20%
+    * https, 
+    * websockets ou autre API html5,
+    * webservice, ...
+* Tous les membres d'un groupe n'ont pas forcément la même note
+
+# Présentation facultative
 
 * Facultatif, ne peut qu’augmenter la moyenne
 * DOIT être annoncé au semestre d'automne
@@ -111,4 +139,34 @@ date: 2016
     * Proposer 1 à 3 thèmes
     * [Proposer](https://docs.google.com/spreadsheet/viewform?formkey=dEVJRE1WVTVPelhFcE94TGF5N1c0cGc6MQ) le(s) thème(s) de présentation et l'équipe
 
-# [Moi vs le www](https://docs.google.com/spreadsheet/viewform?formkey=dDg5Znh5akRBV1hPbC1qYlVRV3BONFE6MQ)
+# Mon expérience en développement web
+
+[Questionnaire](https://docs.google.com/spreadsheet/viewform?formkey=dDg5Znh5akRBV1hPbC1qYlVRV3BONFE6MQ)
+
+<!-- Hack -->
+<style>
+
+  table {
+    font-size: 50%;
+    margin: 0 auto;
+  }
+
+  th, td {
+    padding: 0 10px;
+  }
+
+  table tbody tr:nth-child(n+2):nth-child(-n+11) td:nth-child(2)
+  {
+    background-color: green;
+  }
+
+  table tbody tr:nth-child(n+15) td:nth-child(2),
+  table tbody tr:nth-child(-n+6) td:nth-child(4) {
+    background-color: lightgreen;
+  }
+
+  section#jalons ul li,
+  section#evaluation ul li {
+    font-size: 70%;  
+  }
+</style>

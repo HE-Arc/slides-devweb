@@ -28,9 +28,9 @@ Différences entre framework et library sur [Stack Overflow](http://stackoverflo
 * Front Controller
    * Traitement et dispatch des requêtes
    * (bootstrap, ré-écriture des URL, …)
-* [Object Relational Mapping](https://web.archive.org/web/20160316065751/http://blog.mazenod.fr/2010/01/design-pattern-mvc-zoom-sur-la-couche-modele-dal-dao-orm-crud/)
+* [Object Relational Mapping](http://blog.mazenod.fr/2010/01/design-pattern-mvc-zoom-sur-la-couche-modele-dal-dao-orm-crud/)
    * Active Record, Table Data Gateway, Data Mapper, … 
-* [UI Patterns](http://ui-patterns.com/patterns)
+* [UI Patterns](http://ui-patterns.com/)
 
 # MVC for webdev
 

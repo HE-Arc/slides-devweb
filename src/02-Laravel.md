@@ -62,7 +62,7 @@
     * [Cheat Sheet](http://cheats.jesse-obrien.ca/)
     * ([Slides Laravel 4](http://fr.slideshare.net/sgphpug/intro-to-laravel-4) Singapore PHP User Group)
 * Tutoriels
-    * [Best Momo](http://laravel.sillo.org/laravel-5/) [5.3](http://laravel.sillo.org/laravel-5-3-les-nouveautes/), [Open Classroom](https://openclassrooms.com/courses/decouvrez-le-framework-php-laravel-1)
+    * [Best Momo](http://laravel.sillo.org/laravel-5/) [5.3](http://laravel.sillo.org/laravel-5-3-les-nouveautes/), [Open Classroom](https://openclassrooms.com/courses/decouvrez-le-framework-php-laravel)
 
 #Environnement de développement
 
