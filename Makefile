@@ -1,6 +1,6 @@
 SOURCEDIR = src
-BUILDDIR = build
 TEMPLATES = templates
+BUILDDIR  = build
 
 SOURCES=$(wildcard $(SOURCEDIR)/*.md)
 SLIDES=$(patsubst $(SOURCEDIR)/%.md,$(BUILDDIR)/%.html,$(SOURCES))
@@ -21,18 +21,19 @@ clean:
 
 $(SLIDES): $(BUILDDIR)/%.html : $(SOURCEDIR)/%.md
 	mkdir -p $(BUILDDIR)
-	pandoc -s -i \
+	pandoc -s \
 		-f markdown \
 		-t dzslides \
 		--self-contained \
 		-H $(TEMPLATES)/header.html \
 		-o $@ \
-		$^
+		-V title= \
+		$^ \
 
 $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 	mkdir -p $(BUILDDIR)
-	pandoc -s -i \
+	pandoc -s \
 		-f markdown \
 		-t latex \
 		-o $@ \
-		$^
+		$^	
