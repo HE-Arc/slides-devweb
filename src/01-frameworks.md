@@ -34,7 +34,7 @@ Différences entre framework et library sur [Stack Overflow](http://stackoverflo
 
 # MVC for webdev
 
-![“MVC”](img/mvc.gif)
+![“MVC”](img/mvc.png)
 
 # Conventions
 

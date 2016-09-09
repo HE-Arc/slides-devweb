@@ -6,11 +6,15 @@ cache: apt
 addons:
   apt:
     packages:
+      - fonts-inconsolata
+      - fonts-linuxlibertine
+      - lmodern
       - make
       - pandoc
       - texlive
-      - fonts-inconsolata
-      - fonts-linuxlibertine
+      - texlive-fonts-extra
+      - texlive-fonts-recommended
+      - texlive-xetex
 
 env:
   - ACTION=slides
