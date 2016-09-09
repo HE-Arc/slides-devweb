@@ -21,19 +21,19 @@ clean:
 
 $(SLIDES): $(BUILDDIR)/%.html : $(SOURCEDIR)/%.md
 	mkdir -p $(BUILDDIR)
-	pandoc -s \
-		-f markdown \
-		-t dzslides \
-		--self-contained \
-		-H $(TEMPLATES)/header.html \
-		-o $@ \
-		-V title= \
-		$^ \
+	sed -e 's/(\(img\/\)/($(SOURCEDIR)\/\1/g' $^ | \
+		pandoc -s \
+			-f markdown \
+			-t dzslides \
+			--self-contained \
+			-V title="" \
+			-H $(TEMPLATES)/header.html \
+			-o $@
 
 $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 	mkdir -p $(BUILDDIR)
-	pandoc -s \
-		-f markdown \
-		-t latex \
-		-o $@ \
-		$^	
+	sed -e 's/(\(img\/\)/($(SOURCEDIR)\/\1/g' $^ | \
+		pandoc -s \
+			-f markdown \
+			-t latex \
+			-o $@
