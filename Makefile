@@ -36,4 +36,5 @@ $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 		pandoc -s \
 			-f markdown \
 			-t latex \
+			--latex-engine=xelatex \
 			-o $@
