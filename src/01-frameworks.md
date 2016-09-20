@@ -29,12 +29,12 @@ Différences entre framework et library sur [Stack Overflow](http://stackoverflo
    * Traitement et dispatch des requêtes
    * (bootstrap, ré-écriture des URL, …)
 * [Object Relational Mapping](http://blog.mazenod.fr/2010/01/design-pattern-mvc-zoom-sur-la-couche-modele-dal-dao-orm-crud/)
-   * Active Record, Table Data Gateway, Data Mapper, … 
+   * Active Record, Table Data Gateway, Data Mapper, …
 * [UI Patterns](http://ui-patterns.com/)
 
 # MVC for webdev
 
-![](src/img/mvc.gif "MVC")
+![“MVC”](img/mvc.png)
 
 # Conventions
 
@@ -72,7 +72,7 @@ http://app.host.tld/controller/action[/key/val]
 
 # Smart URL & SEO
 
-![](src/img/anatomy-of-a-url.jpg)
+![](img/anatomy-of-a-url.jpg)
 
 # Autres Services
 
@@ -91,7 +91,7 @@ http://app.host.tld/controller/action[/key/val]
 
 # Exemple d'architecture : Laravel
 
-![](src/img/laravel-architecture.jpg)
+![](img/laravel-architecture.jpg)
 
 # Performance
 
