@@ -17,7 +17,8 @@ pdfs: $(PDFS)
 
 .PHONY: clean
 clean:
-	rm -rf $(BUILDDIR)
+	rm -f $(SLIDES) $(PDFS)
+	rmdir --ignore-fail-on-non-empty $(BUILDDIR)
 
 $(SLIDES): $(BUILDDIR)/%.html : $(SOURCEDIR)/%.md
 	mkdir -p $(BUILDDIR)
@@ -37,4 +38,6 @@ $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 			-f markdown \
 			-t latex \
 			--latex-engine=xelatex \
+			-V papersize=a4 \
+			-V fontsize=12pt \
 			-o $@
