@@ -28,7 +28,7 @@
     * AngularJS (D. Jupille)
 * 2 Projets
     * 2 frameworks (Laravel, Rails)
-    * Groupes de 3, [30h](https://intranet.he-arc.ch/ing/_layouts/15/WopiFrame.aspx?sourcedoc=/ing/Docs%20%20Modules%20%2020142015%20%20INF/RS430.100.15.3254%20D%C3%A9veloppement%20web%20et%20mobile.docx&action=default) par personne et par projet
+    * Groupes de 3, [30h](https://intranet.he-arc.ch/ing/_layouts/15/WopiFrame.aspx?sourcedoc=/ing/Docs%20%20Modules%20%2020162017/Informatique/RS430.100.16.3254%20D%C3%A9veloppement%20web%20et%20mobile.DOCX&action=default) par personne et par projet
     * Présentation de 20min
 * Vos présentations ? <span class="yel-bg">Vos propositions ?</span>
 
@@ -50,8 +50,8 @@
 * Choix
     * Besoin réel
     * S'inspirer de l'existant :
-          * [webstore](https://chrome.google.com/webstore/), [appstorm](http://web.appstorm.net/category/reviews/), [makeuseof](http://www.makeuseof.com/pages/best-websites), ...
-          * Volées précédentes : [2015/16](https://projets-labinfo.he-arc.ch/projects/webdev/wiki), [14/15](https://isic-lan.he-arc.ch/projects/1415-dw/wiki/Wiki), [13/14](https://isic-lan.he-arc.ch/projects/1314-devweb/wiki)
+          * [webstore](https://chrome.google.com/webstore/), [appstorm](http://web.appstorm.net/category/reviews/), [makeuseof](http://www.makeuseof.com/tag/best-websites-internet/), ...
+          * Volées précédentes : [2015/16](https://projets-labinfo.he-arc.ch/projects/webdev/wiki), [14/15](https://forge.ing.he-arc.ch/projects/1415-dw/wiki), [13/14](https://forge.ing.he-arc.ch/projects/1314-devweb/wiki)
     * Données existantes (bikini, [dbpedia](http://wiki.dbpedia.org/), [opendata](https://opendata.swiss/fr/))
 
 
