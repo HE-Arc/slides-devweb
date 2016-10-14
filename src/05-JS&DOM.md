@@ -1,11 +1,11 @@
-% 05.Javascript & DOM
+% 05.JavaScript & DOM
 
-## Javascript & DOM{.title}
+## JavaScript & DOM{.title}
 
 <footer>HE-Arc (DGR) 2016</footer>
 
-# Javascript hier
-* Page web = HTML (+ CSS + Javascript)
+# JavaScript hier
+* Page web = HTML (+ CSS + JavaScript)
 * Exécuté par le browser (client)
 * Interprété, faiblement typé, OO
 * Historiquement
@@ -13,15 +13,15 @@
 	* Petites applications exécutées par le navigateur
 	* DHTML : rollovers, validation de formulaires, ... 
 
-	
-# Javascript aujourd'hui
 
-* Page web = HTML + CSS + **Javascript**
+# JavaScript aujourd'hui
+
+* Page web = HTML + CSS + **JavaScript**
 * Compilation JIT
 * HTML5, AJAX, bookmarklets
 * One Page Apps
 * Implémentations hors-browser
-	* node.js, npm, gulp
+	* Node.js, Spidermonkey, Rhino
 	* script d'app (Qt, Notepad++, ...)
 * Langage cible de compilateurs : [emscripten](https://github.com/kripken/emscripten/wiki), [asm.js](http://asmjs.org/)
 * Embarqué : [Espruino](http://www.espruino.com/)
@@ -33,14 +33,14 @@
 	* Juin 2016 : [ECMA-262 7th edition / 2016+](http://www.ecma-international.org/ecma-262/7.0/index.html) 
 	* [Support](http://kangax.github.io/compat-table/es2016plus/) des différentes implémentations
 	* Conversions avec [BabelJS](https://babeljs.io/)
-* Javascript : implémentation Firefox (réf. MDN)
+* JavaScript : implémentation Firefox (réf. MDN)
 * Variantes (à transpiler) :
 	* [Typescript](https://www.typescriptlang.org/) : variante fortement typée, avec des classes (MS)
 	* [Coffescript](http://coffeescript.org/)
 		* sucre syntaxique
 		* compilé -> js
 
-# Javascript
+# JavaScript
  
 * Différentes [implémentations](https://en.wikipedia.org/wiki/List_of_ECMAScript_engines) : navigateur, srv, apps, ...
 * Permissif : du mauvais code est peu maintenable 
@@ -85,7 +85,7 @@ parseFloat(), parseInt(), Number(), String(),
 eval(), ...
 ```
 
-# Javascript dans la page web
+# JavaScript dans la page web
 
 * Éléments `<script>` exécutés dans l’ordre de la page
 * Conseillé de les placer en [fin de page](https://developer.yahoo.com/performance/rules.html#js_bottom=)
@@ -111,18 +111,27 @@ eval(), ...
 * Conseillé d'inclure le code (attribut src)
 
 ```html
-<script language="Javascript"  type="text/javascript" src="script02.js"></script> 
+<script type="text/javascript" src="script02.js"></script> 
 ```
+
+<div class="notes">
+`language="JavaScript"` est déprécié et `type` vaut par défaut `text/javascript`.
+
+> The type attribute gives the language of the script or format of the data. [...]
+> The default, which is used if the attribute is absent, is "text/javascript".
+>
+> [HTML5: script](https://www.w3.org/TR/html5/scripting-1.html#the-script-element)
+</div>
 
 # [Unobstrusive JS](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript)
 
 * Séparation JS...
 
 ```javascript
-	window.onload = function() {
-		document.getElementById('date').onchange = validateDate;};
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('date').addEventListener("change", validateDate);
+};
 ```
-
 * ...et HTML
 
 ```html
@@ -135,7 +144,14 @@ eval(), ...
 * Utilisabilité
 	* Le script doit faire gagner du temps, pas distraire
 
-# [Node.js](https://nodejs.or)
+<div class="notes">
+> It is an incredibly popular mistake to use `load` where `DOMContentLoaded`
+> would be much more appropriate, so be cautious.
+>
+> [MDN: DOMContentLoaded](https://developer.mozilla.org/en/docs/Web/Events/DOMContentLoaded)
+</div>
+
+# [Node.js](https://nodejs.org)
 
 * Node.js : une implémentation hors navigateur
 	* environnement d'exécution + bibliothèques
@@ -161,10 +177,10 @@ eval(), ...
 * Possibilité d'accéder au contenu de la page :
 	* Lecture
 	* Modification
-	* Ajout 
-* JS peut donc modifier le contenu d'une page 
+	* Ajout
+* JS peut donc modifier le contenu d'une page
 
-# DOM
+# DOM
 
 <div style="display:inline-block;vertical-align:top;">
 
@@ -196,7 +212,7 @@ eval(), ...
 * Méthodes de `Node` (appel depuis nœud parent)
 
 ```javascript
-    insertBefore(child), appendChild(child), 
+    insertBefore(child), appendChild(child),
     removeChild(child), replaceChild(new,old)
 ```
 
@@ -212,31 +228,29 @@ function addNode() {
 
      var docBody = document.getElementsByTagName("body")[0];
      docBody.appendChild(newGraf);
-
-     return false;
 }
 ```
 
 * Création du nouveau nœud :
 	* `newText` contient le texte à ajouter
-	* `newGraf` est un élément `p`  qui contient le texte 
+	* `newGraf` est un élément `p`  qui contient le texte
 * Ajout du nœud comme une feuille de body :
 	* Sélection du parent (le premier noeud `body`)
-	* Ajout du nouveau nœud depuis son parent 
+	* Ajout du nouveau nœud depuis son parent
 
 # Supprimer un nœud
 
 ```javascript
 function delNode() {
-     var allGrafs = document.getElementsByTagName("p");
+   var allGrafs = document.getElementsByTagName("p");
 
-     if (allGrafs.length > 1) {
-        var lastGraf = allGrafs.item (allGrafs.length-1);
-        var docBody = document.getElementsByTagName("body")[0];
-        docBody.removeChild(lastGraf);
-     }
-     else { alert("Nothing to remove!"); }
-     return false;
+   if (allGrafs.length > 1) {
+      var lastGraf = allGrafs.item (allGrafs.length-1);
+      lastGraf.parentNode.removeChild(lastGraf);
+   }
+   else {
+      console.error("Nothing to remove!");
+   }
 }
 ```
 
@@ -244,8 +258,7 @@ function delNode() {
 	* `allGrafs` contient tous les éléments `p`
 	* `lastGraf` contient le denier du tableau `allGrafs`
 * Suppression :
-	* Sélection du parent (le premier `body`)
-	* Suppression du nœud sélectionné depuis son parent 
+	* Suppression du nœud sélectionné depuis son [parent](https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode)
 
 # Insérer un nœud
 
@@ -258,7 +271,7 @@ function insertNode() {
      var divMod = document.getElementsByTagName("div")[0];
      var allGrafs = divMod.getElementsByTagName("p");
      var oldGraf = allGrafs.item(0);             // position
-    
+
      divMod.insertBefore(newGraf,oldGraf);
 }
 ```
@@ -283,13 +296,13 @@ function insertNode() {
 * Sélection et Suppression :
 
 ```javascript
-    var noeud = $("p"); // select node
+    var noeud = $("p"); // select node(s)
     noeud.remove();
 ```
 
 # Références
 
-* Une [réintroduction à Javascript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Une_r%C3%A9introduction_%C3%A0_JavaScript)
+* Une [réintroduction à JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Une_r%C3%A9introduction_%C3%A0_JavaScript)
 * Référence [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference)
 * Tutoriels [w3schools](http://www.w3schools.com/js/)
 * Outils de développement Chrome et Firefox (Ctrl+Shift I)
