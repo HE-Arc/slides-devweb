@@ -17,27 +17,29 @@ pdfs: $(PDFS)
 
 .PHONY: clean
 clean:
-	rm -f $(SLIDES) $(PDFS)
+	rm -f \
+		$(foreach slide, $(SLIDES), "$(slide)") \
+		$(foreach pdf, $(PDFS), "$(pdf)")
 	rmdir --ignore-fail-on-non-empty $(BUILDDIR)
 
 $(SLIDES): $(BUILDDIR)/%.html : $(SOURCEDIR)/%.md
 	mkdir -p $(BUILDDIR)
-	sed -e 's/(\(img\/\)/($(SOURCEDIR)\/\1/g' $^ | \
+	sed -e 's/(\(img\/\)/($(SOURCEDIR)\/\1/g' "$^" | \
 		pandoc -s \
 			-f markdown \
 			-t dzslides \
 			--self-contained \
 			-V title="" \
 			-H $(TEMPLATES)/header.html \
-			-o $@
+			-o "$@"
 
 $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 	mkdir -p $(BUILDDIR)
-	sed -e 's/(\(img\/\)/($(SOURCEDIR)\/\1/g' $^ | \
+	sed -e 's/(\(img\/\)/($(SOURCEDIR)\/\1/g' "$^" | \
 		pandoc -s \
 			-f markdown \
 			-t latex \
 			--latex-engine=xelatex \
 			-V papersize=a4 \
 			-V fontsize=12pt \
-			-o $@
+			-o "$@"

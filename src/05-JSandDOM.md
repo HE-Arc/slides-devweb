@@ -181,7 +181,7 @@ eval(), ...
 ```
 
 </div>
-<div style="display:inline-block;float: right;"><img src="src/img/DOM-model.png"></div>
+<div style="display:inline-block;float: right;"><img src="img/DOM-model.png"></div>
 
 # L'objet Document
 
