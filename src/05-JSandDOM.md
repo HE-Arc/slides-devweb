@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	* gulp : make js
 	
 * [Exemples](https://docs.google.com/spreadsheets/d/1LyRwn6E8k7NM5bw2hJ7pWD7BWjgN_EskQ0ZMNphrffE) d'applications
-	* gulp, grunt, bower
+	* gulp, grunt, bower, yarn
 	* browserify
 	* serveur http
 	* express, cordova, forever, dev, pm2, karma, sails
@@ -197,7 +197,11 @@ document.addEventListener("DOMContentLoaded", function() {
 ```
 
 </div>
-<div style="display:inline-block;float: right;"><img src="img/DOM-model.png"></div>
+<div style="display: inline-block; floating: right;">
+
+![DOM tree](img/DOM-model.png)
+
+</div>
 
 # L'objet Document
 
@@ -303,6 +307,7 @@ function insertNode() {
 # Références
 
 * Une [réintroduction à JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Une_r%C3%A9introduction_%C3%A0_JavaScript)
+* [How does it feel to learn JS in 2016](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f)
 * Référence [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference)
 * Tutoriels [w3schools](http://www.w3schools.com/js/)
 * Outils de développement Chrome et Firefox (Ctrl+Shift I)
@@ -324,4 +329,9 @@ function insertNode() {
 	overflow-x: hidden; 
   }
 
+  figure img {
+	  width: auto;
+	  height: auto;
+  }
+  
 </style>
