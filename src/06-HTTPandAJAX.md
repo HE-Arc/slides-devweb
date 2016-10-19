@@ -224,11 +224,11 @@ MyXhr.setRequestHeader("Pragma", "no-cache");
 MyXhr.setRequestHeader("Expires", "Wed, 09 Aug 2000 08:21:57 GMT"); 
 ```
 
-# Préférer GET, sauf...
+# Préférer GET, sauf
 
 <div>
 
-![](img/GETvsPOST.png)
+!["GETorPOST"](img/GETvsPOST.png)
 
 </div>
 
