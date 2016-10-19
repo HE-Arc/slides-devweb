@@ -182,6 +182,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 # DOM
 
+<div style="display:inline-block;vertical-align:top;">
+
 ```html
 <html>
 <head>
@@ -189,19 +191,17 @@ document.addEventListener("DOMContentLoaded", function() {
 </head>
 <body>
 	<h1>A heading</h1>
-	<a href="#">Link text</a>
+	<a href="">Link text</a>
 </body>
 </html>
 ```
 
+</div>
+<div style="display: inline-block;">
+
 ![DOM tree](img/DOM-model.png)
 
-<!-- layout -->
-<style>
-#dom-1 .sourceCode { float:left; padding: 1em .2em }
-#dom-1 figure {width:60%;float:right; background: transparent }
-</style>
-
+</div>
 
 # L'objet Document
 
