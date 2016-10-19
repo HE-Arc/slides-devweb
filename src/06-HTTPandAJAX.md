@@ -324,7 +324,7 @@ header("Status: Message d'erreur explicite", true, 400);
 myXHR.getResponseHeader("Status");
 ```
 
-# Ne pas oublier l'utilisateur
+# Penser à l'utilisateur !
 
 * Requêtes XHR non enregistrées dans l'historique :
 	* Bouton précédent non opérationnel (sauf GET et URL uniques)
@@ -344,7 +344,7 @@ myXHR.getResponseHeader("Status");
 * Pas de surprise
 * Respect des conventions
 * Pas de distraction
-* Accessibilité (ARIA)
+* Accessibilité ([ARIA][27])
 * Ne pas switcher AJAX/non-AJAX
 * Se mettre à la place de l'utilisateur
 
@@ -375,6 +375,7 @@ myXHR.getResponseHeader("Status");
 [24]:https://www.bennadel.com/blog/1860-using-appropriate-status-codes-with-each-api-response.htm
 [25]:http://www.ajaxload.info/
 [26]:https://signalvnoise.com/archives/000558.php
+[27]:https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
 
 <!-- Hack -->
 <style>
