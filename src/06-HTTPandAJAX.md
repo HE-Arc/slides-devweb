@@ -228,7 +228,7 @@ MyXhr.setRequestHeader("Expires", "Wed, 09 Aug 2000 08:21:57 GMT");
 
 <div>
 
-![GETorPOST](img/GETvsPOST.png)
+![](img/GETvsPOST.png)
 
 </div>
 
