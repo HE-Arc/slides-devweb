@@ -54,7 +54,7 @@
 
 * Conventions de codage : Laravel respecte [PSR-2](https://laravel.com/docs/5.1/contributions#coding-style)
     * Vous aussi avec [StyleCI](https://styleci.io/)
-* Editeurs et IDE : [Nitrous.IO](https://www.nitrous.io), PhpStorm, [thimble](https://thimble.mozilla.org/fr/), brackets, Sublime Text, Atom, ...
+* Editeurs et IDE : PhpStorm, [thimble](https://thimble.mozilla.org/fr/), brackets, Sublime Text, Atom, ...
 * Tests : unitaires, Jmeter, Selenium, ...
 * Outils : devtools Chrome ou FF, [Emmet](http://emmet.io/), git
 * Doc
@@ -80,10 +80,7 @@
 
 # Environnement de développement
 
-* Nitrous
-    * Créer un compte et une box php(lamp)
-    * [Installer](https://gist.github.com/rome3ro) Laravel
-    * Ajouter de la clé publique de Nitrous à Github
+* Cloud: [Cloud9](https://community.c9.io/t/laravel-5-3-installation-on-cloud9/9038)
 
 * Local ou VM
     * Installer : serveur http, SGBD, git, php7, composer
@@ -94,14 +91,14 @@ $composer global require "laravel/installer"
 ```
 
 # Démarrer un projet
-    
+
 * Créer un nouveau projet
 
 ```bash
-$composer create-project laravel/laravel raidit
-# ou, si ~/.composer/vendor/bin est dans le PATH :
-$laravel new raidit
-$cd raidit
+$ composer create-project laravel/laravel raidit
+# ou si ~/.composer/vendor/bin est dans le PATH :
+$ laravel new raidit
+$ cd raidit
 ```
 
 * Racine du site dans ``/public`` (lien symbolique ou virtual host)
