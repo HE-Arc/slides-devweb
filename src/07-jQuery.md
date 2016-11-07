@@ -50,11 +50,35 @@ var node = $('<p>New</p>');	// un nouveau noeud
 
 * Pour être sûr que le document est chargé :
 
+<div class="onready">
+
 ```javascript
-$(document).ready(function(){				$(function() {
-	// code à éxecuter ici			ou			    console.log( "ready!" );
-});											});
+$(document).ready(function(){
+    console.log("prêt!")
+});
 ```
+
+ou
+
+```javascript
+$(function() {
+    console.log("prêt!")
+});
+```
+
+</div>
+
+<style>
+#utilisation .onready {
+    display: flex;
+    flex-direction: row;
+    flex-justify-content: center;
+    align-items: flex-start;
+}
+#utilisation .onready p {
+    margin: 0;
+}
+</style>
 
 # Sélection dans le DOM
 
