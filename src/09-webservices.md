@@ -168,6 +168,12 @@
 	* [Google][32], [Yahoo][33], [Flickr][34], [Twitter][35], [Netvibe][36], ...
 	* [APIary][37] : Aide au design d'une API REST
 
+<div class="notes">
+[GraphQL](http://graphql.org/) est destiné à devenir la prochaine évolution
+des apis REST utilisant JSON. Initié par Facebook, Github permet également
+d'en [faire usage](https://developer.github.com/early-access/graphql/).
+</div>
+
 <!-- Bibliographie -->
 [1]:https://en.wikipedia.org/wiki/Resource-oriented_architecture
 [2]:https://fr.wikipedia.org/wiki/Architecture_orient%C3%A9e_services
