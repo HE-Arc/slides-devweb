@@ -8,7 +8,6 @@
 
 # Applications distribuées
 
-* Principe de vendre un contenu à plusieurs média
 * Motivation : répartir l'exécution sur plusieurs machines
 	* Principe : Les composants/services communiquent par le réseau
 	* Problèmes : Hétérogénéité systèmes, langages, ...
