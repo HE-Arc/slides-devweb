@@ -8,10 +8,10 @@
 
 # Syndication
 
-* Principe de vendre un contenu à plusieurs média
-* Dans les journaux : dépêches, bandes dessinées, ...
+* Principe de vendre un contenu à plusieurs médias
+* Dans les journaux : dépêches, bandes dessinées, …
 * Télévision : jeux, séries
-* Web : Flux RSS
+* Web : Flux RSS / Atom
 	* 1 source de donnée, plusieurs abonnés
 	* Contenu : news, blogs, podcast, …
 	* Accès unique à plusieurs sources d'informations
@@ -27,6 +27,11 @@
 * RSS v1.0 par O'Reilly en 2000
 * RSS v2.0 par Dave Winer (Harvard) en 2002
 * Atom v1.0 en 2005 (développement communautaire)
+
+<div class="notes">
+Il y a *neuf* versions de RSS généralement incompatibles entre elles.
+Lire [The myth of RSS compatibility](https://web.archive.org/web/20110726001954/http://diveintomark.org/archives/2004/02/04/incompatible-rss)
+</div>
 
 # Applications
 
@@ -156,7 +161,7 @@
 	href="http://www.site.tld/feedfilename.xml">
 ```
 	
-* A l'utilisateur
+* À l'utilisateur
 	* Icônes correspondant au type de flux
 	* Liens vers le script générant le flux
 
@@ -211,13 +216,31 @@ length="666666" />
 
 # Pour en savoir plus...
 
-* [Etapes de création d’un flux][6]
+* [Étapes de création d’un flux][6]
 * [Spécification RSS 2.0][7]
 * [Spécification Atom 1.0][8]
 * [Comparatif RSS 2.0 / Atom 1.0][9]
 * [Stats][10] d'utilisation
 * [Is RSS dead ?][11] (03.2015)
 
+# Alternatives
+
+De multiples spécifications permettent d'enrichir le contenu d'une page afin
+de la rendre aisément « consommable » par un moteur de recherche, ou une
+plateforme sociale (e.g. Facebook, Twitter, Reddit, etc.)
+
+* [Facebook Open Graph](http://ogp.me/)
+* [Twitter Cards](https://dev.twitter.com/cards/overview)
+* [Google Schema.org](http://schema.org/)
+* [Microformats](http://microformats.org/)
+* [JSON-LD](http://json-ld.org/)
+
+<div class="notes">
+RDF/XML (utilisé par RSS 0.90, 0.91) est progressivement remplacé par les
+_microdata_ (Schema.org), RDFa ou JSON-LD.
+
+Les microformats sont notamment utilisés par LinkedIn.
+</div>
 
 <!-- Bibliographie -->
 [1]:http://blog.louisgray.com/2008/11/30-different-uses-for-rss.html
