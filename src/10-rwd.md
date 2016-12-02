@@ -101,7 +101,7 @@
 ```
 
 # Résultat = Cible / Contexte
-![Target / Context](src/img/target-context.png)
+![Target / Context](img/target-context.png)
 
 # Texte
 

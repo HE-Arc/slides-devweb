@@ -60,7 +60,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/public/exploit.txt'
 
 * Injection de code (html et script)
 * Exécution par le navigateur du client
-![from : http://www.acunetix.com/websitesecurity/xss/](src/img/xss.png)
+![from : http://www.acunetix.com/websitesecurity/xss/](img/xss.png)
 
 # Cross Site Scripting (XSS)
 
@@ -116,7 +116,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/public/exploit.txt'
 * **SOCIAL ENGINEERING !!!**
 
 # Top 500 passwords cloud
-![top 500 passwords cloud](src/img/passwordscloud.png)
+![top 500 passwords cloud](img/passwordscloud.png)
 
 # Mots de passe
 * 91% of users have a password from the top 1000 ([source][5])

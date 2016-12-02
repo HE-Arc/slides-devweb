@@ -69,7 +69,7 @@
 
 # Composants d'une [PKI][1]
 CA : Autorité de certification - VA : Autorité de validation - RA : Autorité d'enregistrement
-![PKI Structure](src/img/Public-Key-Infrastructure.png)
+![PKI Structure](img/Public-Key-Infrastructure.png)
 
 
 # Scénario simplifié de connexion HTTPS
