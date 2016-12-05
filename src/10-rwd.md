@@ -126,7 +126,7 @@ width, margin, padding, background-position, ...
 
 # Responsive Images
 
-* Nouveautés de htlm5
+* Nouveautés de html5
 	* Eléments `<picture>`, `<source>`
 	* Attributs `srcset` et `sizes`
 * [Besoins][10]
