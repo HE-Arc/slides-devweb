@@ -5,7 +5,7 @@ author: Yoan Blanc <yoan@dosimple.ch>
 
 # Ruby on Rails
 
-![](http://rubyonrails.org/images/imagine.png)
+![](img/imagine.png) <!-- source: http://rubyonrails.org/ -->
 
 # `ssh -p [PORT] [PRENOM]@srvzct-52`
 
@@ -532,7 +532,7 @@ validates_attachment_file_name :image, \
 
 # Rails vs le reste du monde
 
-![](http://rubyonrails.org/images/action-pack.png)
+![](img/action-pack.png) <!-- source: http://rubyonrails.org/everything-you-need/ -->
 
 # CSS et JavaScript
 
@@ -588,7 +588,7 @@ Voir [Form Helpers](http://guides.rubyonrails.org/form_helpers.html)
 
 --------------------------------------------------------------------------------
 
-![Fin](img/rainbow.jpg)
+![Fin](img/rainbow.jpg) <!-- http://imgarcade.com/1/riding-unicorn-rainbow/ -->
 
 <style>
 p { font-size: 100% !important; margin: 1em .2em !important; }
