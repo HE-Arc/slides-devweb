@@ -588,7 +588,7 @@ Voir [Form Helpers](http://guides.rubyonrails.org/form_helpers.html)
 
 --------------------------------------------------------------------------------
 
-![Fin](https://camo.githubusercontent.com/76215c2dffed6fe8c8414dd0c76873eaa1f05a36/687474703a2f2f32342e6d656469612e74756d626c722e636f6d2f35373238376533303063323166646461323636303363653065306237386538342f74756d626c725f6e30386d6332304136453174706f3376326f315f313238302e6a7067)
+![Fin](img/rainbow.jpg)
 
 <style>
 p { font-size: 100% !important; margin: 1em .2em !important; }
