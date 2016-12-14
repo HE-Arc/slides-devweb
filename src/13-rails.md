@@ -7,7 +7,11 @@ author: Yoan Blanc <yoan@dosimple.ch>
 
 ![](img/imagine.png) <!-- source: http://rubyonrails.org/ -->
 
-# `ssh -p [PORT] [PRENOM]@srvzct-52`
+<footer>HE-Arc (YBL) 2017</footer>
+
+--------------------------------------------------------------------------------
+
+## `ssh -p [PORT] [PRENOM]@srvzct-52`
 
 DLM-A              | Port | DLM-B           | Port
 ------------------ | ---- | --------------- | ----
@@ -27,16 +31,18 @@ Ruedin             | 2212 | Roy             | 2227
 Serex              | 2213 | Schaffo         | 2228
 Sommer             | 2214 | Vaucher         | 2229
 
-# Connexion
+--------------------------------------------------------------------------------
 
-Connexion.
+### Connexion
 
 ```sh
 $ ssh -p 20xx yoan@srvzct-52.he-arc.ch
 yoan@yoan$ more ~/README.md
 ```
 
-# Une application Ruby
+--------------------------------------------------------------------------------
+
+### Une application Ruby
 
 Comme pour Laravel, c'est une bonne pratique d'avoir un répertoire pour le contenu publiable sur Internet.
 
@@ -48,11 +54,12 @@ Gemfile
 Gemfile.lock
 public/nginx-puma.png
 
-
 $ more config.ru
 ```
 
-# Rack 101
+--------------------------------------------------------------------------------
+
+### Rack 101
 
 Une fonction qui :
 
@@ -65,7 +72,9 @@ Réponse HTTP:
 - un tableau associatif des entêtes HTTP;
 - un itérateur sur le corps du document.
 
-# `Gemfile`
+--------------------------------------------------------------------------------
+
+### `Gemfile`
 
 Un paquet Ruby se nomme une _gemme_.
 
@@ -78,9 +87,9 @@ gem "puma", "~> 3.6.2"
 gem "rack"
 ```
 
-# NGINX
+--------------------------------------------------------------------------------
 
-Le serveur HTTP qui sert les fichiers statiques (`public`) et redirige le reste vers le serveur d'application Ruby (`puma`).
+### NGINX
 
 ```nginx
 root /var/www/app/public;
@@ -94,7 +103,13 @@ location @rack {
 }
 ```
 
-# Puma
+<div class="notes">
+Le serveur HTTP qui sert les fichiers statiques (<code>public</code>) et redirige le reste vers le serveur d'application Ruby (<code>puma</code>).
+</div>
+
+--------------------------------------------------------------------------------
+
+### Puma
 
 Le serveur d'application pour Ruby. En PHP, nous utilisions PHP-FPM.
 
@@ -109,7 +124,9 @@ bind "unix:///tmp/puma.sock"
 
 Qu'utilisez-vous avec JEE?
 
-# Serveur
+--------------------------------------------------------------------------------
+
+### Serveur
 
 ```sh
 $ ls /etc/services
@@ -126,7 +143,9 @@ tini───runsvdir─┬─runsv───cron
                 └─runsv───ipython
 ```
 
-# Exercice 1
+--------------------------------------------------------------------------------
+
+## Exercice 1
 
 Modifiez l'environnement depuis puma en `development`.
 
@@ -137,7 +156,9 @@ RACK_ENV
     development
 ```
 
-# Première application
+--------------------------------------------------------------------------------
+
+## Première application
 
 Archivez `app`.
 
@@ -155,7 +176,9 @@ $ cd app
 
 Si vous changez le nom, vous devrez modifier les configurations des serveurs.
 
-# Plein de fichiers
+--------------------------------------------------------------------------------
+
+### Plein de fichiers
 
 ```
 Gemfile             # comme le composer.json
@@ -174,25 +197,36 @@ test                # tests unitaires, fonctionnels, etc.
 vendor
 ```
 
-# Exercice 2
+--------------------------------------------------------------------------------
+
+## Exercice 2
 
 Que peut-faire à l'aide de la commande `rails`?
 
 Et de la commande `bundle`?
 
-# Connexion
+--------------------------------------------------------------------------------
+
+### Connexion
 
 Utilisez pgAdmin3 pour vous connecter à votre base de données.
 
 ```sh
 $ echo $GROUPNAME $PASSWORD
-
-# ou pour les durs-à-cuire.
-
-$ psql -h $POSTGRES_HOST -U $GROUPNAME
 ```
 
-# Configuration
+Ou pour les durs-à-cuire, `psql` à la main.
+
+```sh
+$ psql -h $POSTGRES_HOST -U $GROUPNAME
+> \l
+> \dn
+> \dt
+```
+
+--------------------------------------------------------------------------------
+
+### Configuration
 
 ```yaml
 default: &default
@@ -217,7 +251,9 @@ production:
   schema_search_path: production
 ```
 
-# Application de démo
+--------------------------------------------------------------------------------
+
+## Application de démo
 
 Téléchargez l'application pré-configurée pour vous.
 
@@ -229,7 +265,9 @@ $ git clone https://github.com/HE-Arc/ruby-on-rails-introduction \
 $ cd app
 ```
 
-# Migration
+--------------------------------------------------------------------------------
+
+### Migration
 
 Installation de la base de donnée.
 
@@ -239,7 +277,9 @@ $ rails db:migrate
 
 Que s'est-il passé?
 
-# Exercice 3
+--------------------------------------------------------------------------------
+
+## Exercice 3
 
 Créez un produit possédant un titre, une description et un prix.
 
@@ -248,7 +288,9 @@ $ git reset --hard
 $ git checkout model-product
 ```
 
-# Réponse
+--------------------------------------------------------------------------------
+
+### Réponse
 
 Nous obtenons une migration, un modèle et un test unitaire.
 
@@ -262,7 +304,9 @@ $ rails generate model \
 
 RAD!
 
-# Exercice 4
+--------------------------------------------------------------------------------
+
+## Exercice 4
 
 Corrigez le test qui échoue en corrigeant les fixtures.
 
@@ -276,7 +320,9 @@ $ rails db:migrate
 $ rails test
 ```
 
-# Test unitaire
+--------------------------------------------------------------------------------
+
+### Test unitaire
 
 ```ruby
 # test/models/product_test.rb
@@ -289,7 +335,9 @@ class ProductTest < ActiveSupport::TestCase
 end
 ```
 
-# Solution
+--------------------------------------------------------------------------------
+
+### Solution
 
 ```yaml
 # test/fixtures/products.yml
@@ -300,7 +348,9 @@ tshirt:
   price: 9.99
 ```
 
-# Exercice 5
+--------------------------------------------------------------------------------
+
+### Validation
 
 Selon Ruby on Rails, la logique métier ne doit pas se trouver dans la base de données.
 
@@ -311,6 +361,10 @@ class Product < ActiveRecord::Base
 end
 ```
 
+--------------------------------------------------------------------------------
+
+## Exercice 5
+
 Testez les règles de validations ci-dessus.
 
 ```sh
@@ -319,7 +373,9 @@ $ git checkout validation
 $ rails test
 ```
 
-# Solution
+--------------------------------------------------------------------------------
+
+### Solution
 
 ```ruby
 # test/models/product_test.rb
@@ -335,7 +391,9 @@ test 'must have a price greate than zero' do
 end
 ```
 
-# Contrôleur
+--------------------------------------------------------------------------------
+
+### Contrôleur
 
 Et hop, plein de fichiers!
 
@@ -343,12 +401,14 @@ Et hop, plein de fichiers!
 $ rails g controller products
 ```
 
-# Test unitaire
+--------------------------------------------------------------------------------
+
+### Test unitaire
 
 ```ruby
 # test/controllers/products_controller_test.rb
 
-test "smoke test on index" do
+test 'smoke test on index' do
   get '/'
 
   assert_response :success
@@ -356,7 +416,9 @@ test "smoke test on index" do
 end
 ```
 
-# Exercice 6
+--------------------------------------------------------------------------------
+
+## Exercice 6
 
 Corrigez le test du contrôleur.
 
@@ -366,25 +428,26 @@ $ git checkout controller
 $ rails test
 ```
 
-# Solution
+--------------------------------------------------------------------------------
+
+### Solution
 
 ```ruby
 # config/routes.rb
-
 root 'products#index'
 
 # app/controllers/products_controller
-
 def index
   @products = Product.all
 end
 
 # app/views/products/index.html.rb
-
 🚬
 ```
 
-# Taille
+--------------------------------------------------------------------------------
+
+### Taille
 
 Création d'un modèle pour les tailles de nos t-shirts.
 
@@ -394,7 +457,9 @@ $ rails generate model size name:string
 $ rails db:migrate
 ```
 
-# Exercice 7
+--------------------------------------------------------------------------------
+
+## Exercice 7
 
 Créez un seeder pour les tailles allant de `XS` à `XXL`.
 
@@ -410,7 +475,9 @@ $ rails console
 > pp Size.all
 ```
 
-# Solution
+--------------------------------------------------------------------------------
+
+### Solution
 
 ```ruby
 # db/seeds.rb
@@ -425,15 +492,15 @@ Size.create([
 ])
 ```
 
-# Relation Produits - Tailles
+--------------------------------------------------------------------------------
+
+### Relation Produits - Tailles
 
 ```sh
 $ rails g migration associate_products_and_sizes
 ```
 
 ```ruby
-# db/migrate/..._products_and_size.rb
-
 create_table :products_sizes do |t|
   t.integer :product_id, null: false
   t.integer :size_id, null: false
@@ -446,7 +513,9 @@ add_foreign_key :products_sizes, :products
 add_foreign_key :products_sizes, :sizes
 ```
 
-# Many-to-many
+--------------------------------------------------------------------------------
+
+### Many-to-many
 
 Dans chaque modèle.
 
@@ -459,14 +528,14 @@ Tests depuis la console.
 
 ```sh
 $ rails console
-
 > xxl = Size.find_by(name: 'XXL')
-
 > xxl.products.size
 => 0
 ```
 
-# Administration
+--------------------------------------------------------------------------------
+
+### Administration
 
 ```sh
 $ more Gemfile
@@ -479,7 +548,9 @@ $ rails g rails_admin:install
 $ sudo sv restart puma
 ```
 
-# Image
+--------------------------------------------------------------------------------
+
+### Image
 
 Ajoutez une image à vos produits
 
@@ -492,7 +563,9 @@ gem 'paperclip', '~> 5.0'
 $ bundle install
 ```
 
-# Migration
+--------------------------------------------------------------------------------
+
+### Migration
 
 ```sh
 $ rails g migration add_image_to_product
@@ -506,7 +579,9 @@ def change
 end
 ```
 
-# Exercice 8
+--------------------------------------------------------------------------------
+
+## Exercice 8
 
 Faites qu'on puisse attacher une image depuis l'interface d'administration.
 
@@ -518,7 +593,9 @@ $ rails db:migrate
 
 **Indice:** lire la documentation de `paperclip`.
 
-# Solution
+--------------------------------------------------------------------------------
+
+### Solution
 
 ```ruby
 # app/models/product.rb
@@ -530,13 +607,15 @@ validates_attachment_file_name :image, \
     matches: [/png\z/, /jpe?g\z/]
 ```
 
-# Rails vs le reste du monde
+--------------------------------------------------------------------------------
+
+## Détails intéressants de Rails
 
 ![](img/action-pack.png) <!-- source: http://rubyonrails.org/everything-you-need/ -->
 
-# CSS et JavaScript
+--------------------------------------------------------------------------------
 
-Rails 5.1 proposera de gérer ces éléments-là via `webpack` ou `yarn`. D'ici là, il nous faut passer par les `gems` associées.
+### CSS et JavaScript
 
 - `foundation-rails`
 - `twitter-bootstrap-rails`
@@ -547,7 +626,13 @@ Rails 5.1 proposera de gérer ces éléments-là via `webpack` ou `yarn`. D'ici 
 
 Voir [Asset Pipeline](http://guides.rubyonrails.org/asset_pipeline.html)
 
-# ActionCable
+<div class="notes">
+Rails 5.1 proposera de gérer ces éléments-là via <code>webpack</code> ou <code>yarn</code>. D'ici là, il nous faut passer par les <code>gems</code> associées.
+</div>
+
+--------------------------------------------------------------------------------
+
+### ActionCable
 
 La nouveauté de Rails 5.0.
 
@@ -555,13 +640,17 @@ Gestion de WebSockets permettant d'incorporer des fonctionnalités «temps-réel
 
 Voir [Action Cable Overview](http://guides.rubyonrails.org/action_cable_overview.html)
 
-# ActiveJob
+--------------------------------------------------------------------------------
+
+### ActiveJob
 
 Gestion des taches de fond, comme envoyer des e-mails, redimensionner des images, ...
 
 Voir [Active Jobs Basics](http://guides.rubyonrails.org/active_job_basics.html)
 
-# ActionView
+--------------------------------------------------------------------------------
+
+### ActionView
 
 La bonne méthode pour créer des formulaires et les lier à des données.
 
@@ -574,12 +663,22 @@ La bonne méthode pour créer des formulaires et les lier à des données.
 
 Voir [Form Helpers](http://guides.rubyonrails.org/form_helpers.html)
 
-# Conclusion
+--------------------------------------------------------------------------------
+
+## Problème avec Ruby on Rails
+
+![Architecture en microservices](img/microservices-demo.png) <!-- source: https://github.com/microservices-demo/microservices-demo/blob/master/docs/internal-docs/design.md -->
+
+--------------------------------------------------------------------------------
+
+## Conclusion
 
 - Laravel tire son inspiration première de Ruby on Rails.
 - Rails est plus cohérent dans son ensemble tirant partie des fonctionnalités de Ruby.
 
-# Difficultés pour vous
+--------------------------------------------------------------------------------
+
+### Difficultés pour vous
 
 - Construisez un produit au fur et à mesure
 - Déployez souvent
@@ -591,11 +690,14 @@ Voir [Form Helpers](http://guides.rubyonrails.org/form_helpers.html)
 ![Fin](img/rainbow.jpg) <!-- http://imgarcade.com/1/riding-unicorn-rainbow/ -->
 
 <style>
-p { font-size: 100% !important; margin: 1em .2em !important; }
+h3 { margin: 50px 0 2em 1em; }
+p { font-size: 100% !important; margin: 1em .5em !important; }
+img { max-width: 800px; max-height: 550px; margin: 0 auto; }
 
-#ssh--p-port-prenomsrvzct-52 table { width: 90%; margin: 1em auto 0; font-size: 70%; border-collapse: collapse }
-#ssh--p-port-prenomsrvzct-52 table thead tr { background: #222; color: #fff }
-#ssh--p-port-prenomsrvzct-52 table tr:nth-child(even) { background: #eee; }
+#ssh--p-port-prenomsrvzct-52 + table { width: 90%; margin: 1em auto 0; font-size: 70%; border-collapse: collapse }
+#ssh--p-port-prenomsrvzct-52 + table thead tr { background: #222; color: #fff }
+#ssh--p-port-prenomsrvzct-52 + table tr:nth-child(even) { background: #eee; }
 
-#configuration pre.sourceCode { font-size: 75% }
+#configuration + .sourceCode > pre { font-size: 60% }
+#plein-de-fichiers + pre { font-size: 75% }
 </style>
