@@ -1,6 +1,6 @@
 ---
 title: Ruby on Rails
-author: Yoan Blanc <yoan@dosimple.ch>
+author: Yoan Blanc <<yoan@dosimple.ch>>
 ---
 
 # Ruby on Rails
@@ -11,38 +11,34 @@ author: Yoan Blanc <yoan@dosimple.ch>
 
 --------------------------------------------------------------------------------
 
-## `ssh -p [PORT] [PRENOM]@srvzct-52`
+## Connexion
 
-DLM-A              | Port | DLM-B           | Port
------------------- | ---- | --------------- | ----
-Bandelier          | 2200 | Baumgartner     | 2215
-Debrot             | 2201 | Burri           | 2216
-Ducommun           | 2202 | Ceschin         | 2217
-Ferreira Venancio  | 2203 | Chaperon        | 2218
-Groell             | 2204 | Da Mota Marques | 2219
-Gygi               | 2205 | Droxler         | 2220
-Jeanneret          | 2206 | Gonin           | 2221
-Magnin             | 2207 | Luy             | 2222
-Muhmenthaler       | 2208 | M'Poy           | 2223
-Nadalin            | 2209 | Perez           | 2224
-Petitpierre        | 2210 | Ramseyer        | 2225
-Rodrigues Lourenco | 2211 | Rittiner        | 2226
-Ruedin             | 2212 | Roy             | 2227
-Serex              | 2213 | Schaffo         | 2228
-Sommer             | 2214 | Vaucher         | 2229
-
---------------------------------------------------------------------------------
-
-### Connexion
+Nom de domaine et port SSH sur: <http://srvz-webapp2.he-arc.ch/>.
 
 ```sh
-$ ssh -p 20xx yoan@srvzct-52.he-arc.ch
+# Exemple
+
+$ ssh -p 2030 yoan@srvz-webapp2.he-arc.ch
 yoan@yoan$ more ~/README.md
 ```
 
 --------------------------------------------------------------------------------
 
-### Une application Ruby
+### Mise à jour de Rails
+
+```sh
+yoan@yoan$ rails -v
+Rails 5.0.0.1
+yoan@yoan$ gem update
+Updating installed gems
+...
+yoan@yoan$ rails -v
+Rails 5.0.1
+```
+
+--------------------------------------------------------------------------------
+
+## Une application Ruby
 
 Comme pour Laravel, c'est une bonne pratique d'avoir un répertoire pour le contenu publiable sur Internet.
 
@@ -59,7 +55,7 @@ $ more config.ru
 
 --------------------------------------------------------------------------------
 
-### Rack 101
+## Rack 101
 
 Une fonction qui :
 
@@ -74,7 +70,7 @@ Réponse HTTP:
 
 --------------------------------------------------------------------------------
 
-### `Gemfile`
+## `Gemfile`
 
 Un paquet Ruby se nomme une _gemme_.
 
@@ -89,7 +85,7 @@ gem "rack"
 
 --------------------------------------------------------------------------------
 
-### NGINX
+## NGINX
 
 ```nginx
 root /var/www/app/public;
@@ -109,7 +105,7 @@ Le serveur HTTP qui sert les fichiers statiques (<code>public</code>) et redirig
 
 --------------------------------------------------------------------------------
 
-### Puma
+## Puma
 
 Le serveur d'application pour Ruby. En PHP, nous utilisions PHP-FPM.
 
@@ -120,27 +116,29 @@ environment "production"
 
 directory "/var/www/app"
 bind "unix:///tmp/puma.sock"
+
+# À ajouter.
+plugin :tmp_restart
 ```
 
 Qu'utilisez-vous avec JEE?
 
 --------------------------------------------------------------------------------
 
-### Serveur
+## Serveur
 
 ```sh
 $ ls /etc/services
-cron iruby nginx puma sshd syslog
+cron nginx puma sshd syslog
 
 $ pstree
 tini───runsvdir─┬─runsv───cron
                 ├─runsv───nginx───4*[nginx]
                 ├─runsv───syslog-ng
-                ├─runsv───bundle─┬─{reactor.rb:151}
-                │                ├─{ruby-timer-thr}
-                │                ├─{server.rb:301}
-                │                └─6*[{thread_pool.rb*}]
-                └─runsv───ipython
+                └─runsv───bundle─┬─{reactor.rb:151}
+                                 ├─{ruby-timer-thr}
+                                 ├─{server.rb:301}
+                                 └─6*[{thread_pool.rb*}]
 ```
 
 --------------------------------------------------------------------------------
@@ -149,7 +147,7 @@ tini───runsvdir─┬─runsv───cron
 
 Modifiez l'environnement depuis puma en `development`.
 
-`http://PRENOM.NOM.srvzct52.he-arc.ch/` doit afficher:
+`http://[ PRENOM.NOM | GITHUB ].srvz-webapp2.he-arc.ch/` doit afficher:
 
 ```
 RACK_ENV
@@ -172,6 +170,7 @@ Créez une nouvelle application Rails.
 ```sh
 $ rails new app --database=postgresql
 $ cd app
+$ sudo sv restart puma
 ```
 
 Si vous changez le nom, vous devrez modifier les configurations des serveurs.
@@ -181,19 +180,20 @@ Si vous changez le nom, vous devrez modifier les configurations des serveurs.
 ### Plein de fichiers
 
 ```
-Gemfile             # comme le composer.json
-Gemfile.lock
-Rakefile
 app                 # votre code
 bin
 config              # fichiers de config
-config.ru           # point d'entrée, index.php
-db                  # migrations et seed
+config.ru           # point d'entrée, « index.php »
+db                  # migrations et seeds
+Gemfile             # comme le composer.json
+Gemfile.lock
 lib
 log
 public              # fichiers publics
-tmp
+Rakefile
+README.md
 test                # tests unitaires, fonctionnels, etc.
+tmp
 vendor
 ```
 
@@ -209,7 +209,7 @@ Et de la commande `bundle`?
 
 ### Connexion
 
-Utilisez pgAdmin3 pour vous connecter à votre base de données.
+Utilisez [pgAdmin3][pg3] pour vous connecter à votre base de données.
 
 ```sh
 $ echo $GROUPNAME $PASSWORD
@@ -222,6 +222,7 @@ $ psql -h $POSTGRES_HOST -U $GROUPNAME
 > \l
 > \dn
 > \dt
+> \q
 ```
 
 --------------------------------------------------------------------------------
@@ -235,8 +236,8 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: <%= ENV.fetch("POSTGRES_HOST") { "localhost" } %>
   port: <%= ENV.fetch("POSTGRES_PORT") { 5432 } %>
-  username: <%= ENV["GROUPNAME"] %>
   database: <%= ENV["GROUPNAME"] %>
+  username: <%= ENV["GROUPNAME"] %>
   password: <%= ENV["PASSWORD"] %>
 
 development:
@@ -260,8 +261,7 @@ Téléchargez l'application pré-configurée pour vous.
 ```sh
 $ cd /var/www
 $ rm -rf app
-$ git clone https://github.com/HE-Arc/ruby-on-rails-introduction \
-            app
+$ git clone https://github.com/HE-Arc/rails-intro app
 $ cd app
 ```
 
@@ -269,7 +269,7 @@ $ cd app
 
 ### Migration
 
-Installation de la base de donnée.
+Installation de la base de données.
 
 ```sh
 $ rails db:migrate
@@ -299,7 +299,7 @@ $ rails generate model \
     product \
         title:string \
         description:text \
-        price: decimal
+        price:decimal
 ```
 
 RAD!
@@ -308,7 +308,7 @@ RAD!
 
 ## Exercice 4
 
-Corrigez le test qui échoue en corrigeant les fixtures.
+Corrigez le test qui échoue en corrigeant les _fixtures_.
 
 ```sh
 $ rails db:rollback
@@ -355,6 +355,8 @@ tshirt:
 Selon Ruby on Rails, la logique métier ne doit pas se trouver dans la base de données.
 
 ```ruby
+# app/models/product.rb
+
 class Product < ActiveRecord::Base
   validates :title, presence: true
   validates :price, numericality: { greater_than: 0 }
@@ -609,6 +611,18 @@ validates_attachment_file_name :image, \
 
 --------------------------------------------------------------------------------
 
+### Ressource
+
+Il aurait été possible de créer modèle, contrôleur et routes de type REST.
+
+```
+$ rails generate resource product
+$ rails routes
+...
+```
+
+--------------------------------------------------------------------------------
+
 ## Détails intéressants de Rails
 
 ![](img/action-pack.png) <!-- source: http://rubyonrails.org/everything-you-need/ -->
@@ -636,7 +650,7 @@ Rails 5.1 proposera de gérer ces éléments-là via <code>webpack</code> ou <co
 
 La nouveauté de Rails 5.0.
 
-Gestion de WebSockets permettant d'incorporer des fonctionnalités «temps-réel».
+Gestion simplifiée des `WebSocket` permettant d'incorporer des fonctionnalités « temps-réel ».
 
 Voir [Action Cable Overview](http://guides.rubyonrails.org/action_cable_overview.html)
 
@@ -644,7 +658,7 @@ Voir [Action Cable Overview](http://guides.rubyonrails.org/action_cable_overview
 
 ### ActiveJob
 
-Gestion des taches de fond, comme envoyer des e-mails, redimensionner des images, ...
+Gestion des tâches de fond, comme envoyer des e-mails, redimensionner des images, ...
 
 Voir [Active Jobs Basics](http://guides.rubyonrails.org/active_job_basics.html)
 
@@ -701,3 +715,5 @@ img { max-width: 800px; max-height: 550px; margin: 0 auto; }
 #configuration + .sourceCode > pre { font-size: 60% }
 #plein-de-fichiers + pre { font-size: 75% }
 </style>
+
+[pg3]: https://www.pgadmin.org/
