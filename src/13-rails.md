@@ -261,7 +261,11 @@ Téléchargez l'application pré-configurée pour vous.
 ```sh
 $ cd /var/www
 $ rm -rf app
-$ git clone https://github.com/HE-Arc/rails-intro app
+
+$ git clone \
+        https://github.com/HE-Arc/rails-intro \
+        app
+
 $ cd app
 ```
 
@@ -283,10 +287,12 @@ Que s'est-il passé?
 
 Créez un produit possédant un titre, une description et un prix.
 
-```sh
-$ git reset --hard
-$ git checkout model-product
-```
+<div class="notes">
+Au besoin
+
+    $ git reset --hard
+    $ git checkout model-product
+</div>
 
 --------------------------------------------------------------------------------
 
@@ -314,6 +320,7 @@ Corrigez le test qui échoue en corrigeant les _fixtures_.
 $ rails db:rollback
 
 $ git reset --hard
+$ git clean -fd
 $ git checkout product
 $ rails db:migrate
 
@@ -328,7 +335,7 @@ $ rails test
 # test/models/product_test.rb
 
 class ProductTest < ActiveSupport::TestCase
-  test 'T-Shirt has a price' do
+  test 'T-shirt has a price' do
     product = Product.find_by(title: 'T-shirt')
     assert 0 < product.price
   end
@@ -401,7 +408,18 @@ Et hop, plein de fichiers!
 
 ```sh
 $ rails g controller products
+
+app/assets/javascripts/products.coffee
+app/assets/stylesheets/products.scss
+app/controllers/products_controller.rb
+app/helpers/products_helper.rb
+app/views/products/.keep
+test/controllers/products_controller_test.rb
 ```
+
+<div class="notes">
+Par convention, un modèle est au singulier et un contrôleur au pluriel.
+</div>
 
 --------------------------------------------------------------------------------
 
@@ -427,6 +445,7 @@ Corrigez le test du contrôleur.
 ```sh
 $ git reset --hard
 $ git checkout controller
+
 $ rails test
 ```
 
@@ -526,6 +545,15 @@ has_and_belongs_to_many :sizes
 has_and_belongs_to_many :products
 ```
 
+--------------------------------------------------------------------------------
+
+### Test
+
+```sh
+$ git reset --hard
+$ git checkout habtm
+```
+
 Tests depuis la console.
 
 ```sh
@@ -543,12 +571,20 @@ $ rails console
 $ more Gemfile
 
 # Automagic admin interface.
-gem 'rails_admin', '~> 1.0'
+gem 'rails_admin', '~> 1.1'
 
 $ bundle install
 $ rails g rails_admin:install
-$ sudo sv restart puma
+$ touch tmp/restart.txt
 ```
+
+<div class="notes">
+
+    $ git reset --hard
+    $ git checkout admin
+    $ bundle install
+
+</div>
 
 --------------------------------------------------------------------------------
 
@@ -560,7 +596,7 @@ Ajoutez une image à vos produits
 $ more Gemfile
 
 # Toughtbot's paperclip to upload files
-gem 'paperclip', '~> 5.0'
+gem 'paperclip', '~> 5.1'
 
 $ bundle install
 ```
@@ -616,7 +652,7 @@ validates_attachment_file_name :image, \
 Il aurait été possible de créer modèle, contrôleur et routes de type REST.
 
 ```
-$ rails generate resource product
+$ rails generate resource person
 $ rails routes
 ...
 ```
@@ -692,6 +728,10 @@ Voir [Form Helpers](http://guides.rubyonrails.org/form_helpers.html)
 
 --------------------------------------------------------------------------------
 
+![DHH](img/dhh.png) <!-- https://twitter.com/dhh/status/815601578329575424 -->
+
+--------------------------------------------------------------------------------
+
 ### Difficultés pour vous
 
 - Construisez un produit au fur et à mesure
@@ -706,7 +746,7 @@ Voir [Form Helpers](http://guides.rubyonrails.org/form_helpers.html)
 <style>
 h3 { margin: 50px 0 2em 1em; }
 p { font-size: 100% !important; margin: 1em .5em !important; }
-img { max-width: 800px; max-height: 550px; margin: 0 auto; }
+img { max-width: 800px; max-height: 450px; margin: 0 auto; }
 
 #ssh--p-port-prenomsrvzct-52 + table { width: 90%; margin: 1em auto 0; font-size: 70%; border-collapse: collapse }
 #ssh--p-port-prenomsrvzct-52 + table thead tr { background: #222; color: #fff }
