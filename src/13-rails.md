@@ -404,17 +404,16 @@ end
 
 ### Contrôleur
 
-Et hop, plein de fichiers!
-
 ```sh
-$ rails g controller products
+$ rails g controller products index
 
 app/assets/javascripts/products.coffee
 app/assets/stylesheets/products.scss
-app/controllers/products_controller.rb
+app/controllers/products_controller.rb       # def index; end
 app/helpers/products_helper.rb
-app/views/products/.keep
-test/controllers/products_controller_test.rb
+app/views/products/index.html.erb            # index.html.erb
+config/routes.rb                             # get 'products/index'
+test/controllers/products_controller_test.rb # should get index
 ```
 
 <div class="notes">
@@ -428,7 +427,7 @@ Par convention, un modèle est au singulier et un contrôleur au pluriel.
 ```ruby
 # test/controllers/products_controller_test.rb
 
-test 'smoke test on index' do
+test 'should get products on /' do
   get '/'
 
   assert_response :success
@@ -463,7 +462,9 @@ def index
 end
 
 # app/views/products/index.html.rb
-🚬
+<% @products.each do |product| %>
+  <h2><%= product.title %></h2>
+<% end %>
 ```
 
 --------------------------------------------------------------------------------
@@ -754,6 +755,7 @@ img { max-width: 800px; max-height: 450px; margin: 0 auto; }
 
 #configuration + .sourceCode > pre { font-size: 60% }
 #plein-de-fichiers + pre { font-size: 75% }
+#contrôleur + .sourceCode { font-size: 85% }
 </style>
 
 [pg3]: https://www.pgadmin.org/
