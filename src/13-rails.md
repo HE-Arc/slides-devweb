@@ -1,6 +1,7 @@
 ---
 title: Ruby on Rails
 author: Yoan Blanc <<yoan@dosimple.ch>>
+date: 2017 jan 11
 ---
 
 # Ruby on Rails
@@ -38,7 +39,7 @@ Rails 5.0.1
 
 --------------------------------------------------------------------------------
 
-## Une application Ruby
+### Une application Ruby
 
 Comme pour Laravel, c'est une bonne pratique d'avoir un répertoire pour le contenu publiable sur Internet.
 
@@ -70,13 +71,14 @@ Réponse HTTP:
 
 --------------------------------------------------------------------------------
 
-## `Gemfile`
+### `Gemfile`
 
 Un paquet Ruby se nomme une _gemme_.
 
 Comme le `composer.json` pour PHP.
 
-```gemfile
+```ruby
+# Gemfile
 source "https://rubygems.org"
 
 gem "puma", "~> 3.6.2"
@@ -85,7 +87,7 @@ gem "rack"
 
 --------------------------------------------------------------------------------
 
-## NGINX
+### NGINX
 
 ```nginx
 root /var/www/app/public;
@@ -96,6 +98,13 @@ location / {
 
 location @rack {
     proxy_pass http://puma;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header Host $http_host;
+    proxy_redirect off;
+}
+
+upstream puma {
+    server unix:/tmp/puma.sock fail_timeout=0;
 }
 ```
 
@@ -105,9 +114,9 @@ Le serveur HTTP qui sert les fichiers statiques (<code>public</code>) et redirig
 
 --------------------------------------------------------------------------------
 
-## Puma
+### Puma
 
-Le serveur d'application pour Ruby. En PHP, nous utilisions PHP-FPM.
+Le serveur d'application pour Ruby.
 
 ```ruby
 #!/usr/bin/env puma
@@ -121,11 +130,14 @@ bind "unix:///tmp/puma.sock"
 plugin :tmp_restart
 ```
 
+<div class="notes">
+En PHP, nous utilisions PHP-FPM.
 Qu'utilisez-vous avec JEE?
+</div>
 
 --------------------------------------------------------------------------------
 
-## Serveur
+### Serveur
 
 ```sh
 $ ls /etc/services
@@ -145,7 +157,7 @@ tini───runsvdir─┬─runsv───cron
 
 ## Exercice 1
 
-Modifiez l'environnement depuis puma en `development`.
+Modifiez l'environnement _puma_ en `development`.
 
 `http://[ PRENOM.NOM | GITHUB ].srvz-webapp2.he-arc.ch/` doit afficher:
 
@@ -173,28 +185,30 @@ $ cd app
 $ sudo sv restart puma
 ```
 
-Si vous changez le nom, vous devrez modifier les configurations des serveurs.
+<div class="notes">
+Si vous changez le nom, vous devez modifier les configurations des serveurs.
+</div>
 
 --------------------------------------------------------------------------------
 
 ### Plein de fichiers
 
 ```
-app                 # votre code
-bin
-config              # fichiers de config
+app/                # votre code
+bin/
+config/             # fichiers de config
 config.ru           # point d'entrée, « index.php »
-db                  # migrations et seeds
+db/                 # migrations et seeds
 Gemfile             # comme le composer.json
 Gemfile.lock
-lib
-log
-public              # fichiers publics
+lib/
+log/
+public/             # fichiers publics
 Rakefile
 README.md
-test                # tests unitaires, fonctionnels, etc.
-tmp
-vendor
+test/               # tests unitaires, fonctionnels, etc.
+tmp/
+vendor/
 ```
 
 --------------------------------------------------------------------------------
@@ -204,6 +218,10 @@ vendor
 Que peut-faire à l'aide de la commande `rails`?
 
 Et de la commande `bundle`?
+
+<div class="notes">
+Avant Rails 5, <code>rails</code> et <code>rake</code> avaient des rôles séparés, condensés dans <code>rails</code>.
+</div>
 
 --------------------------------------------------------------------------------
 
@@ -215,7 +233,7 @@ Utilisez [pgAdmin3][pg3] pour vous connecter à votre base de données.
 $ echo $GROUPNAME $PASSWORD
 ```
 
-Ou pour les durs-à-cuire, `psql` à la main.
+Ou pour les durs à cuire :
 
 ```sh
 $ psql -h $POSTGRES_HOST -U $GROUPNAME
@@ -658,6 +676,8 @@ $ rails routes
 ...
 ```
 
+Testez!
+
 --------------------------------------------------------------------------------
 
 ## Détails intéressants de Rails
@@ -669,7 +689,8 @@ $ rails routes
 ### CSS et JavaScript
 
 - `foundation-rails`
-- `twitter-bootstrap-rails`
+- `bootstrap-sass, ~> 3.3.7`
+- `bootstrap, ~> 4.0.0.alpha6`
 - `basscss-rails`
 - `bulma-rails`
 - `mui-sass`
@@ -756,6 +777,8 @@ img { max-width: 800px; max-height: 450px; margin: 0 auto; }
 #configuration + .sourceCode > pre { font-size: 60% }
 #plein-de-fichiers + pre { font-size: 75% }
 #contrôleur + .sourceCode { font-size: 85% }
+#serveur + .sourceCode { font-size: 90% }
+#nginx + .nginx { font-size: 75% }
 </style>
 
 [pg3]: https://www.pgadmin.org/
