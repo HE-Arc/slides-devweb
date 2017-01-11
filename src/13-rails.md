@@ -58,7 +58,24 @@ $ more config.ru
 
 ## Rack 101
 
-Une fonction qui :
+```ruby
+run ->(env) do
+  [
+    200,
+    {"Content-Type" => "text/html; charset=utf-8"},
+    [
+      "<!DOCTYPE html>",
+      "<meta charset=utf-8>",
+      "<title>Hello!</title>",
+      "<h1>Hello</h1>",
+      "<p>:-)"
+    ]
+  ]
+end
+```
+
+<div class="notes">
+Une fonction, Proc ou lambda qui :
 
 - reçoit un tableau associatif de son environement;
 - retourne un triplet de réponse HTTP.
@@ -68,14 +85,13 @@ Réponse HTTP:
 - le code HTTP;
 - un tableau associatif des entêtes HTTP;
 - un itérateur sur le corps du document.
+</div>
 
 --------------------------------------------------------------------------------
 
 ### `Gemfile`
 
 Un paquet Ruby se nomme une _gemme_.
-
-Comme le `composer.json` pour PHP.
 
 ```ruby
 # Gemfile
@@ -84,6 +100,10 @@ source "https://rubygems.org"
 gem "puma", "~> 3.6.2"
 gem "rack"
 ```
+
+<div class="notes">
+Comme le <code>composer.json</code> pour PHP.
+</div>
 
 --------------------------------------------------------------------------------
 
@@ -182,7 +202,6 @@ Créez une nouvelle application Rails.
 ```sh
 $ rails new app --database=postgresql
 $ cd app
-$ sudo sv restart puma
 ```
 
 <div class="notes">
@@ -225,9 +244,19 @@ Avant Rails 5, <code>rails</code> et <code>rake</code> avaient des rôles sépar
 
 --------------------------------------------------------------------------------
 
+### Premier démarrage
+
+```
+$ su sv restart puma
+```
+
+Kaboom!
+
+--------------------------------------------------------------------------------
+
 ### Connexion
 
-Utilisez [pgAdmin3][pg3] pour vous connecter à votre base de données.
+Utilisez [pgAdmin][pg3] pour vous connecter à votre base de données.
 
 ```sh
 $ echo $GROUPNAME $PASSWORD
@@ -285,6 +314,7 @@ $ git clone \
         app
 
 $ cd app
+$ bundle install
 ```
 
 --------------------------------------------------------------------------------
@@ -298,6 +328,8 @@ $ rails db:migrate
 ```
 
 Que s'est-il passé?
+
+(hint: `git status`)
 
 --------------------------------------------------------------------------------
 
@@ -392,7 +424,7 @@ end
 
 ## Exercice 5
 
-Testez les règles de validations ci-dessus.
+Testez les règles de validations ci-dessus en ajoutant des tests.
 
 ```sh
 $ git reset --hard
@@ -411,7 +443,7 @@ test 'must have a title' do
   assert_not Product.create(price: 10).valid?
 end
 
-test 'must have a price greate than zero' do
+test 'must have a price greater than zero' do
   assert_raise do
     Product.create!(title: 'Untitled', price: 0)
   end
@@ -426,11 +458,13 @@ end
 $ rails g controller products index
 
 app/assets/javascripts/products.coffee
-app/assets/stylesheets/products.scss
-app/controllers/products_controller.rb       # def index; end
-app/helpers/products_helper.rb
-app/views/products/index.html.erb            # index.html.erb
+          /stylesheets/products.scss
+   /controllers/products_controller.rb       # def index; end
+   /helpers/products_helper.rb
+   /views/products/index.html.erb            # index.html.erb
+
 config/routes.rb                             # get 'products/index'
+
 test/controllers/products_controller_test.rb # should get index
 ```
 
@@ -461,6 +495,7 @@ Corrigez le test du contrôleur.
 
 ```sh
 $ git reset --hard
+$ git clean -fd
 $ git checkout controller
 
 $ rails test
@@ -493,8 +528,6 @@ Création d'un modèle pour les tailles de nos t-shirts.
 
 ```
 $ rails generate model size name:string
-
-$ rails db:migrate
 ```
 
 --------------------------------------------------------------------------------
@@ -505,6 +538,7 @@ Créez un seeder pour les tailles allant de `XS` à `XXL`.
 
 ```sh
 $ git reset --hard
+$ git clean -fd
 $ git checkout sizes
 $ rails db:migrate
 
@@ -541,16 +575,12 @@ $ rails g migration associate_products_and_sizes
 ```
 
 ```ruby
-create_table :products_sizes do |t|
-  t.integer :product_id, null: false
-  t.integer :size_id, null: false
-end
+# db/migrate/..._associate_products_and_sizes.rb
 
-add_index :products_sizes, :product_id
-add_index :products_sizes, :size_id
-# ou
-add_foreign_key :products_sizes, :products
-add_foreign_key :products_sizes, :sizes
+create_table :products_sizes do |t|
+  t.references :product, :index => true
+  t.references :size, :index => true
+end
 ```
 
 --------------------------------------------------------------------------------
@@ -560,8 +590,11 @@ add_foreign_key :products_sizes, :sizes
 Dans chaque modèle.
 
 ```ruby
-has_and_belongs_to_many :sizes
-has_and_belongs_to_many :products
+# app/models/product.rb
+has_and_belongs_to_many :sizes, uniq: true
+
+# app/models/size.rb
+has_and_belongs_to_many :products, uniq: true
 ```
 
 --------------------------------------------------------------------------------
@@ -570,6 +603,7 @@ has_and_belongs_to_many :products
 
 ```sh
 $ git reset --hard
+$ git clean -fd
 $ git checkout habtm
 ```
 
@@ -581,6 +615,10 @@ $ rails console
 > xxl.products.size
 => 0
 ```
+
+<div class="notes">
+xxl.products.create(title: 'A', description: 'B', price: 10)
+</div>
 
 --------------------------------------------------------------------------------
 
@@ -644,6 +682,7 @@ Faites qu'on puisse attacher une image depuis l'interface d'administration.
 
 ```sh
 $ git reset --hard
+$ git clean -fd
 $ git checkout images
 $ rails db:migrate
 ```
