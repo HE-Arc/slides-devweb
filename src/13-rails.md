@@ -337,13 +337,6 @@ Que s'est-il passé?
 
 Créez un produit possédant un titre, une description et un prix.
 
-<div class="notes">
-Au besoin
-
-    $ git reset --hard
-    $ git checkout model-product
-</div>
-
 --------------------------------------------------------------------------------
 
 ### Réponse
