@@ -61,7 +61,7 @@ $ more config.ru
 Une fonction qui :
 
 - reçoit un tableau associatif de son environement;
-- retourne un triple de réponse HTTP.
+- retourne un triplet de réponse HTTP.
 
 Réponse HTTP:
 
@@ -215,7 +215,7 @@ vendor/
 
 ## Exercice 2
 
-Que peut-faire à l'aide de la commande `rails`?
+Que peut-on faire à l'aide de la commande `rails`?
 
 Et de la commande `bundle`?
 
