@@ -1,18 +1,16 @@
----
-title: Ruby on Rails
-author: Yoan Blanc <<yoan@dosimple.ch>>
-date: 2017 jan 11
----
+% 13.Ruby on Rails
 
-# Ruby on Rails
+# Développement web dlm3
+
+## Ruby on Rails{.title}
 
 ![](img/imagine.png) <!-- source: http://rubyonrails.org/ -->
 
-<footer>HE-Arc (YBL) 2017</footer>
+<footer>HE-Arc 2016/17 DGR et YBL</footer>
 
 --------------------------------------------------------------------------------
 
-## Connexion
+# Connexion
 
 Nom de domaine et port SSH sur: <http://srvz-webapp2.he-arc.ch/>.
 
@@ -25,7 +23,7 @@ yoan@yoan$ more ~/README.md
 
 --------------------------------------------------------------------------------
 
-### Mise à jour de Rails
+## Mise à jour de Rails
 
 ```sh
 yoan@yoan$ rails -v
@@ -39,7 +37,7 @@ Rails 5.0.1
 
 --------------------------------------------------------------------------------
 
-### Une application Ruby
+## Une application Ruby
 
 Comme pour Laravel, c'est une bonne pratique d'avoir un répertoire pour le contenu publiable sur Internet.
 
@@ -56,7 +54,7 @@ $ more config.ru
 
 --------------------------------------------------------------------------------
 
-## Rack 101
+# Rack 101
 
 ```ruby
 run ->(env) do
@@ -89,7 +87,7 @@ Réponse HTTP:
 
 --------------------------------------------------------------------------------
 
-### `Gemfile`
+## `Gemfile`
 
 Un paquet Ruby se nomme une _gemme_.
 
@@ -107,7 +105,7 @@ Comme le <code>composer.json</code> pour PHP.
 
 --------------------------------------------------------------------------------
 
-### NGINX
+## NGINX
 
 ```nginx
 root /var/www/app/public;
@@ -134,7 +132,7 @@ Le serveur HTTP qui sert les fichiers statiques (<code>public</code>) et redirig
 
 --------------------------------------------------------------------------------
 
-### Puma
+## Puma
 
 Le serveur d'application pour Ruby.
 
@@ -157,7 +155,7 @@ Qu'utilisez-vous avec JEE?
 
 --------------------------------------------------------------------------------
 
-### Serveur
+## Serveur
 
 ```sh
 $ ls /etc/services
@@ -175,7 +173,7 @@ tini───runsvdir─┬─runsv───cron
 
 --------------------------------------------------------------------------------
 
-## Exercice 1
+# Exercice 1
 
 Modifiez l'environnement _puma_ en `development`.
 
@@ -188,7 +186,7 @@ RACK_ENV
 
 --------------------------------------------------------------------------------
 
-## Première application
+# Première application
 
 Archivez `app`.
 
@@ -210,7 +208,7 @@ Si vous changez le nom, vous devez modifier les configurations des serveurs.
 
 --------------------------------------------------------------------------------
 
-### Plein de fichiers
+## Plein de fichiers
 
 ```
 app/                # votre code
@@ -232,7 +230,7 @@ vendor/
 
 --------------------------------------------------------------------------------
 
-## Exercice 2
+# Exercice 2
 
 Que peut-on faire à l'aide de la commande `rails`?
 
@@ -244,7 +242,7 @@ Avant Rails 5, <code>rails</code> et <code>rake</code> avaient des rôles sépar
 
 --------------------------------------------------------------------------------
 
-### Premier démarrage
+## Premier démarrage
 
 ```
 $ su sv restart puma
@@ -254,7 +252,7 @@ Kaboom!
 
 --------------------------------------------------------------------------------
 
-### Connexion
+## Connexion
 
 Utilisez [pgAdmin][pg3] pour vous connecter à votre base de données.
 
@@ -274,7 +272,7 @@ $ psql -h $POSTGRES_HOST -U $GROUPNAME
 
 --------------------------------------------------------------------------------
 
-### Configuration
+## Configuration
 
 ```yaml
 default: &default
@@ -301,7 +299,7 @@ production:
 
 --------------------------------------------------------------------------------
 
-## Application de démo
+# Application de démo
 
 Téléchargez l'application pré-configurée pour vous.
 
@@ -319,7 +317,7 @@ $ bundle install
 
 --------------------------------------------------------------------------------
 
-### Migration
+## Migration
 
 Installation de la base de données.
 
@@ -333,13 +331,13 @@ Que s'est-il passé?
 
 --------------------------------------------------------------------------------
 
-## Exercice 3
+# Exercice 3
 
 Créez un produit possédant un titre, une description et un prix.
 
 --------------------------------------------------------------------------------
 
-### Réponse
+## Réponse
 
 Nous obtenons une migration, un modèle et un test unitaire.
 
@@ -355,7 +353,7 @@ RAD!
 
 --------------------------------------------------------------------------------
 
-## Exercice 4
+# Exercice 4
 
 Corrigez le test qui échoue en corrigeant les _fixtures_.
 
@@ -372,7 +370,7 @@ $ rails test
 
 --------------------------------------------------------------------------------
 
-### Test unitaire
+## Test unitaire
 
 ```ruby
 # test/models/product_test.rb
@@ -387,7 +385,7 @@ end
 
 --------------------------------------------------------------------------------
 
-### Solution
+## Solution
 
 ```yaml
 # test/fixtures/products.yml
@@ -400,7 +398,7 @@ tshirt:
 
 --------------------------------------------------------------------------------
 
-### Validation
+## Validation
 
 Selon Ruby on Rails, la logique métier ne doit pas se trouver dans la base de données.
 
@@ -415,7 +413,7 @@ end
 
 --------------------------------------------------------------------------------
 
-## Exercice 5
+# Exercice 5
 
 Testez les règles de validations ci-dessus en ajoutant des tests.
 
@@ -427,7 +425,7 @@ $ rails test
 
 --------------------------------------------------------------------------------
 
-### Solution
+## Solution
 
 ```ruby
 # test/models/product_test.rb
@@ -445,7 +443,7 @@ end
 
 --------------------------------------------------------------------------------
 
-### Contrôleur
+## Contrôleur
 
 ```sh
 $ rails g controller products index
@@ -467,7 +465,7 @@ Par convention, un modèle est au singulier et un contrôleur au pluriel.
 
 --------------------------------------------------------------------------------
 
-### Test unitaire
+## Test unitaire
 
 ```ruby
 # test/controllers/products_controller_test.rb
@@ -482,7 +480,7 @@ end
 
 --------------------------------------------------------------------------------
 
-## Exercice 6
+# Exercice 6
 
 Corrigez le test du contrôleur.
 
@@ -496,7 +494,7 @@ $ rails test
 
 --------------------------------------------------------------------------------
 
-### Solution
+## Solution
 
 ```ruby
 # config/routes.rb
@@ -515,7 +513,7 @@ end
 
 --------------------------------------------------------------------------------
 
-### Taille
+## Taille
 
 Création d'un modèle pour les tailles de nos t-shirts.
 
@@ -525,7 +523,7 @@ $ rails generate model size name:string
 
 --------------------------------------------------------------------------------
 
-## Exercice 7
+# Exercice 7
 
 Créez un seeder pour les tailles allant de `XS` à `XXL`.
 
@@ -544,7 +542,7 @@ $ rails console
 
 --------------------------------------------------------------------------------
 
-### Solution
+## Solution
 
 ```ruby
 # db/seeds.rb
@@ -561,7 +559,7 @@ Size.create([
 
 --------------------------------------------------------------------------------
 
-### Relation Produits - Tailles
+## Relation Produits - Tailles
 
 ```sh
 $ rails g migration associate_products_and_sizes
@@ -578,7 +576,7 @@ end
 
 --------------------------------------------------------------------------------
 
-### Many-to-many
+## Many-to-many
 
 Dans chaque modèle.
 
@@ -592,7 +590,7 @@ has_and_belongs_to_many :products, uniq: true
 
 --------------------------------------------------------------------------------
 
-### Test
+## Test
 
 ```sh
 $ git reset --hard
@@ -615,7 +613,7 @@ xxl.products.create(title: 'A', description: 'B', price: 10)
 
 --------------------------------------------------------------------------------
 
-### Administration
+## Administration
 
 ```sh
 $ more Gemfile
@@ -638,7 +636,7 @@ $ touch tmp/restart.txt
 
 --------------------------------------------------------------------------------
 
-### Image
+## Image
 
 Ajoutez une image à vos produits
 
@@ -653,7 +651,7 @@ $ bundle install
 
 --------------------------------------------------------------------------------
 
-### Migration
+## Migration
 
 ```sh
 $ rails g migration add_image_to_product
@@ -669,7 +667,7 @@ end
 
 --------------------------------------------------------------------------------
 
-## Exercice 8
+# Exercice 8
 
 Faites qu'on puisse attacher une image depuis l'interface d'administration.
 
@@ -684,7 +682,7 @@ $ rails db:migrate
 
 --------------------------------------------------------------------------------
 
-### Solution
+## Solution
 
 ```ruby
 # app/models/product.rb
@@ -698,7 +696,7 @@ validates_attachment_file_name :image, \
 
 --------------------------------------------------------------------------------
 
-### Ressource
+## Ressource
 
 Il aurait été possible de créer modèle, contrôleur et routes de type REST.
 
@@ -712,13 +710,13 @@ Testez!
 
 --------------------------------------------------------------------------------
 
-## Détails intéressants de Rails
+# Détails intéressants de Rails
 
 ![](img/action-pack.png) <!-- source: http://rubyonrails.org/everything-you-need/ -->
 
 --------------------------------------------------------------------------------
 
-### CSS et JavaScript
+## CSS et JavaScript
 
 - `foundation-rails`
 - `bootstrap-sass, ~> 3.3.7`
@@ -736,7 +734,7 @@ Rails 5.1 proposera de gérer ces éléments-là via <code>webpack</code> ou <co
 
 --------------------------------------------------------------------------------
 
-### ActionCable
+## ActionCable
 
 La nouveauté de Rails 5.0.
 
@@ -746,7 +744,7 @@ Voir [Action Cable Overview](http://guides.rubyonrails.org/action_cable_overview
 
 --------------------------------------------------------------------------------
 
-### ActiveJob
+## ActiveJob
 
 Gestion des tâches de fond, comme envoyer des e-mails, redimensionner des images, ...
 
@@ -754,7 +752,7 @@ Voir [Active Jobs Basics](http://guides.rubyonrails.org/active_job_basics.html)
 
 --------------------------------------------------------------------------------
 
-### ActionView
+## ActionView
 
 La bonne méthode pour créer des formulaires et les lier à des données.
 
@@ -769,13 +767,13 @@ Voir [Form Helpers](http://guides.rubyonrails.org/form_helpers.html)
 
 --------------------------------------------------------------------------------
 
-## Problème avec Ruby on Rails
+# Problème avec Ruby on Rails
 
 ![Architecture en microservices](img/microservices-demo.png) <!-- source: https://github.com/microservices-demo/microservices-demo/blob/master/docs/internal-docs/design.md -->
 
 --------------------------------------------------------------------------------
 
-## Conclusion
+# Conclusion
 
 - Laravel tire son inspiration première de Ruby on Rails.
 - Rails est plus cohérent dans son ensemble tirant partie des fonctionnalités de Ruby.
@@ -786,7 +784,7 @@ Voir [Form Helpers](http://guides.rubyonrails.org/form_helpers.html)
 
 --------------------------------------------------------------------------------
 
-### Difficultés pour vous
+## Difficultés pour vous
 
 - Construisez un produit au fur et à mesure
 - Déployez souvent

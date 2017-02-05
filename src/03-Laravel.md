@@ -1,6 +1,8 @@
-% 03.Laravel
+% 03.Laravel 5
 
-# Laravel 5
+# Développement web dlm3
+
+## Laravel 5{.title}
 
 ![Logo Laravel](src/img/laravel-logo-big.png)
 
