@@ -507,7 +507,7 @@ def index
   @products = Product.all
 end
 
-# app/views/products/index.html.rb
+# app/views/products/index.html.erb
 <% @products.each do |product| %>
   <h2><%= product.title %></h2>
 <% end %>

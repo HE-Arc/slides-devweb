@@ -30,6 +30,7 @@ $(SLIDES): $(BUILDDIR)/%.html : $(SOURCEDIR)/%.md
 			-t dzslides \
 			--self-contained \
 			-V title="" \
+			-V title-prefix="HE-Arc" \
 			-H $(TEMPLATES)/header.html \
 			-o "$@"
 
