@@ -245,7 +245,7 @@ Avant Rails 5, <code>rails</code> et <code>rake</code> avaient des rôles sépar
 ## Premier démarrage
 
 ```
-$ su sv restart puma
+$ sudo sv restart puma
 ```
 
 Kaboom!
@@ -780,7 +780,7 @@ Voir [Form Helpers](http://guides.rubyonrails.org/form_helpers.html)
 
 --------------------------------------------------------------------------------
 
-![DHH](img/dhh.png) <!-- https://twitter.com/dhh/status/815601578329575424 -->
+![\@dhh](img/dhh.png)[@dhh:2017]
 
 --------------------------------------------------------------------------------
 
