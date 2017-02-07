@@ -6,7 +6,6 @@ cache: apt
 addons:
   apt:
     packages:
-      - fonts-inconsolata
       - fonts-linuxlibertine
       - lmodern
       - make
@@ -18,7 +17,7 @@ addons:
 
 env:
   - ACTION=slides
-  - ACTION=pdfs
+  - ACTION=pdfs book
 
 script:
-  - make ${ACTION}
+  - LANGUAGE= make ${ACTION}

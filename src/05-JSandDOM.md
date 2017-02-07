@@ -1,5 +1,7 @@
 % 05.JavaScript & DOM
 
+# Développement web dlm3
+
 ## JavaScript & DOM{.title}
 
 <footer>HE-Arc (DGR) 2016</footer>

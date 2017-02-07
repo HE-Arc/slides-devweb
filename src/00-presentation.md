@@ -1,4 +1,4 @@
-% 00.Cours devweb
+% 00.Présentation du cours
 
 # Développement web dlm3
 
