@@ -217,7 +217,7 @@ $(document).ready(function(){
 	* Serveur : Envoi d'[entêtes][17] interdisant le cache
 	
 ```javascript
-MyXhr.open("GET", "fichierxml", true);
+MyXhr.open("GET", "fichier.xml", true);
 MyXhr.setRequestHeader("Cache-Control", "no-store, no-cache, must-revalidate, 
 			post-check=0, pre-check=0");
 MyXhr.setRequestHeader("Pragma", "no-cache");
@@ -246,6 +246,25 @@ MyXhr.setRequestHeader("Expires", "Wed, 09 Aug 2000 08:21:57 GMT");
 * La réponse est dans l'attribut `responseText
 * ou dans `responseXML`
 	* Utilisation du DOM (`getElementsByTagName(), ...`)
+
+# Fetch API
+
+Le successeur d'XHR est [fetch][whatwg:fetch] qui possède un _polyfill_ pour
+les navigateurs ne le supportant pas. L'API, proche de celle offerte par jQuery,
+est plus simple d'utilisation.
+
+```javascript
+fetch("fichier.json")
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(json) {
+        console.log(json);
+    })
+    .catch(function(error) {
+        console.error("erreur", error)
+    })
+```
 
 # Réponse en XML
 
@@ -329,6 +348,7 @@ myXHR.getResponseHeader("Status");
 * Requêtes XHR non enregistrées dans l'historique :
 	* Bouton précédent non opérationnel (sauf GET et URL uniques)
 	* Pas de bookmark
+    * solution via [History API][w3c:history]
 * Utilisabilité : signaler à l'utilisateur ce qui est en cours :
 	* GIF [AJAX loading][25]
 	* Rectangle Loading en haut à droite (Google)
@@ -376,6 +396,9 @@ myXHR.getResponseHeader("Status");
 [25]:http://www.ajaxload.info/
 [26]:https://signalvnoise.com/archives/000558.php
 [27]:https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
+
+[w3c:history]: http://w3c.github.io/html/browsers.html#session-history-and-navigation
+[whatwg:fetch]: https://fetch.spec.whatwg.org/
 
 <!-- Hack -->
 <style>
