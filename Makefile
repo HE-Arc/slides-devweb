@@ -10,7 +10,7 @@ BOOKS=$(patsubst $(SOURCEDIR)/%.md,$(BUILDDIR)/%.tmp,$(SOURCES))
 LANGUAGE ?= fr
 
 .PHONY: all
-all: slides pdfs # book
+all: slides pdfs book
 
 .PHONY: slides
 slides: $(SLIDES)
@@ -51,7 +51,6 @@ $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 			--latex-engine=xelatex \
 			-V lang=$(LANGUAGE) \
 			-V documentclass="scrartcl" \
-			-V classoption="twoside" \
 			-V papersize=a4 \
 			-V fontsize=12pt \
 			-o "$@"
@@ -84,7 +83,6 @@ build/book.pdf: build/book.md
 		-V date="$(shell date +"%d %B %Y")" \
 		-V papersize=a4 \
 		-V documentclass="scrreprt" \
-		-V classoption="twoside" \
 		-V mainfont="Linux Libertine O" \
 		-V sansfont="Linux Biolinum O" \
 		-V monofontoptions=="Scale=0.9" \
