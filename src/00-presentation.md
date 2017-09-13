@@ -1,20 +1,20 @@
-% 00.Présentation du cours
+% 00.Cours devweb
 
 # Développement web dlm3
 
 ## Présentation du cours{.title}
 
-<footer>HE-Arc 2016/17 DGR et YBL</footer>
+<footer>HE-Arc 2017/18 DGR</footer>
 
 # Programme
 
-* Frameworks MVC : Laravel, Rails, …
+* Frameworks MVC : Laravel, Rails, Django, …
 * HTML5 : vue d’ensemble
 * Javascript : AJAX, DOM, JSON, jQuery
 * Syndication : RSS, Atom
 * Déploiement et configuration Serveur
 * (Responsive) Web Design
-* Webservices : SOAP vs REST
+* Webservices : REST vs SOAP
 * Sécurité : Technologies, prévention des risques courants
 * <span class="yel-bg">Vos souhaits ?</span>
 
@@ -27,7 +27,7 @@
     * Webdesign (M. Schmalstieg)
     * AngularJS (D. Jupille)
 * 2 Projets
-    * 2 frameworks (Laravel, Rails)
+    * 2 frameworks (Laravel, Rails ou Django)
     * Groupes de 3, [30h][docx] par personne et par projet
     * Présentation de 20min
 * Vos présentations ? <span class="yel-bg">Vos propositions ?</span>
@@ -56,7 +56,7 @@
         - [webstore](https://chrome.google.com/webstore/),
           [appstorm](http://web.appstorm.net/category/reviews/),
           [makeuseof](http://www.makeuseof.com/pages/best-websites), …
-        - Volées précédentes : [2015/16][wiki],
+        - Volées précédentes : [2016/17][wiki], [2015/16][wiki],
           [14/15](https://isic-lan.he-arc.ch/projects/1415-dw/wiki/Wiki),
           [13/14](https://isic-lan.he-arc.ch/projects/1314-devweb/wiki)
 
@@ -110,6 +110,7 @@
 * Le temps disponible à l'horaire ne suffira pas !
 * Essayez de commit avec la même identité
 * Signalez dans le commit msg si vous n'êtes pas l'auteur
+* Le déploiement est long : comencez tôt !
 
 # Évaluation
 
