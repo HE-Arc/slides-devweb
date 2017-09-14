@@ -4,7 +4,7 @@
 
 ## Présentation du cours{.title}
 
-<footer>HE-Arc 2017/18 DGR</footer>
+<footer>HE-Arc 2017/18 DGR et YBL</footer>
 
 # Programme
 
@@ -35,8 +35,8 @@
 # Projets
 
 * Faire pour apprendre
-* Ne pas réinventer la roue ou tout faire soi-même
 * Les rôles dans une équipe de développement web
+* Ne pas réinventer la roue ou tout faire soi-même
 * Critères d’évaluation d’un projet
 * Avant le 1er octobre :
     * Constitution des équipes de 3 personnes
@@ -49,17 +49,16 @@
 * Contrainte : appli basée sur des données
 * Choix
     * Besoin réel
-    * Données existantes : Bikini,
+    * Données existantes : [Inventaire](https://inventory.ing.he-arc.ch/),
       [dbpedia](http://wiki.dbpedia.org/),
-      [opendata](https://opendata.swiss/fr/)
+      [opendata](https://opendata.swiss/fr/),
+	  DB Bikini Test à dispo
     * S'inspirer de l'existant :
-        - [webstore](https://chrome.google.com/webstore/),
-          [appstorm](http://web.appstorm.net/category/reviews/),
-          [makeuseof](http://www.makeuseof.com/pages/best-websites), …
-        - Volées précédentes : [2016/17][wiki], [2015/16][wiki],
-          [14/15](https://isic-lan.he-arc.ch/projects/1415-dw/wiki/Wiki),
-          [13/14](https://isic-lan.he-arc.ch/projects/1314-devweb/wiki)
-
+        - [Product Hunt](https://www.producthunt.com/topics/web-app),
+          [blinklist](http://blinklist.com/reviews),
+          [makeuseof](http://www.makeuseof.com/tag/best-websites-internet/), …
+        - Volées précédentes : [2016/17](https://github.com/orgs/HE-Arc/teams/webapp-1617/repositories), [2015/16](https://projets-labinfo.he-arc.ch/projects/webdev/wiki/Wiki#Projets-2015-2016),
+          [14/15](https://forge.ing.he-arc.ch/projects/1415-dw/wiki/Wiki)
 
 # Calendrier
 
@@ -67,14 +66,14 @@
 |---:|---|---:|---|
 |38||8||
 |39|Projet Laravel|9||
-|40||10||
+|40||10|Forum SO|
 |42||11||
 |43||12||
 |44||13||
-|45||14||
+|45||15||
 |46||16|Présentations|
-|47|T. Autonome|17|Présentations|
-|48||18||
+|47||17|Présentations|
+|48|T. Autonome|18||
 |49||19|T. Autonome|
 |50|Présentations|20|Examens|
 |51|Présentations|21|Début TB|
@@ -105,12 +104,12 @@
 * Pas trop de données
 * Application crédible (vraies données, cas réaliste)
 * Projet à blanc pour la prise en main du framework
-* [Maquettes](https://brainhub.eu/blog/2016/04/20/difference-between-wireframe-mockup-prototype/)
+* [Maquettes](https://brainhub.eu/blog/difference-between-wireframe-mockup-prototype/)
 * [Organisez](http://drewfradette.ca/a-simpler-successful-git-branching-model/) l'utilisation du dépôt
 * Le temps disponible à l'horaire ne suffira pas !
 * Essayez de commit avec la même identité
 * Signalez dans le commit msg si vous n'êtes pas l'auteur
-* Le déploiement est long : comencez tôt !
+* Le déploiement est long : commencez tôt !
 
 # Évaluation
 
@@ -147,13 +146,14 @@
 
 # Mon expérience en développement web
 
-[Questionnaire][form-survey]
+[Questionnaire][form-survey] obligatoire : Merci d'avance !
 
 <!-- Bibliographie -->
 [docx]: https://intranet.he-arc.ch/ing/\_layouts/15/WopiFrame.aspx?sourcedoc=/ing/Docs%20%20Modules%20%2020142015%20%20INF/RS430.100.15.3254%20D%C3%A9veloppement%20web%20et%20mobile.docx&action=default
 [form-pres]: https://docs.google.com/spreadsheet/viewform?formkey=dEVJRE1WVTVPelhFcE94TGF5N1c0cGc6MQ
 [form-survey]: https://docs.google.com/spreadsheet/viewform?formkey=dDg5Znh5akRBV1hPbC1qYlVRV3BONFE6MQ
 [wiki]: https://projets-labinfo.he-arc.ch/projects/webdev/wiki
+[github]: https://github.com/orgs/HE-Arc
 
 <!-- Hack -->
 <style>
