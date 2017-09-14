@@ -8,6 +8,8 @@ PDFS=$(patsubst $(SOURCEDIR)/%.md,$(BUILDDIR)/%.pdf,$(SOURCES))
 BOOKS=$(patsubst $(SOURCEDIR)/%.md,$(BUILDDIR)/%.tmp,$(SOURCES))
 
 LANGUAGE ?= fr
+BIB = $(SOURCEDIR)/bibliographie.yaml
+CSL = ens-de-lyon-centre-d-ingenierie-documentaire.csl
 
 .PHONY: all
 all: slides pdfs book
@@ -32,11 +34,16 @@ clean:
 
 $(SLIDES): $(BUILDDIR)/%.html : $(SOURCEDIR)/%.md
 	mkdir -p $(BUILDDIR)
-	sed -e 's/(\(img\/\)/($(SOURCEDIR)\/\1/g' "$^" | \
-		pandoc -s \
+	sed -e 's/(\(img\/\)/($(SOURCEDIR)\/\1/g' "$^" \
+		| sed -e "\$$a# Bibliographie" \
+		| pandoc -s \
 			-f markdown \
 			-t dzslides \
 			--self-contained \
+			--filter=pandoc-citeproc \
+			--biblio=$(BIB) \
+			--csl=$(CSL) \
+			-V show-notes=true \
 			-V title="" \
 			-V title-prefix="HE-Arc" \
 			-H $(TEMPLATES)/header.html \
@@ -45,14 +52,23 @@ $(SLIDES): $(BUILDDIR)/%.html : $(SOURCEDIR)/%.md
 $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 	mkdir -p $(BUILDDIR)
 	sed -e 's/(\(img\/\)/($(SOURCEDIR)\/\1/g' "$^" \
+		| sed -e "\$$a# Bibliographie" \
 		| pandoc -s \
 			-f markdown \
 			-t latex \
+			--filter=pandoc-citeproc \
+			--biblio=$(BIB) \
+			--csl=$(CSL) \
 			--latex-engine=xelatex \
+			-H $(TEMPLATES)/header.tex \
 			-V lang=$(LANGUAGE) \
 			-V documentclass="scrartcl" \
 			-V papersize=a4 \
-			-V fontsize=12pt \
+			-V mainfont="Linux Libertine O" \
+			-V sansfont="Linux Biolinum O" \
+			-V monofontoptions=="Scale=0.9" \
+			-V linkcolor="blue" \
+			-V urlcolor="blue" \
 			-o "$@"
 
 $(BOOKS): $(BUILDDIR)/%.tmp: $(SOURCEDIR)/%.md
@@ -60,7 +76,6 @@ $(BOOKS): $(BUILDDIR)/%.tmp: $(SOURCEDIR)/%.md
 	$(eval ref := $(shell echo $< | sed -e 's~[\/\-\.]~~g'))
 	sed -e 's/(\(img\/\)/($(SOURCEDIR)\/\1/g' "$^" \
 		| sed -e "s~\[\([a-zA-Z0-f_\-\.]*\)\]\([^\[(]\)~[$(ref)-\1]\2~g" \
-		| sed -e 's/^----*//g' \
 		| sed -e '0,/<footer>/ s/^#.*$$//g' \
 		| sed -e 's/<footer>.*<\/footer>//g' \
 		| sed -e 's/^#/##/g' \
@@ -70,13 +85,18 @@ $(BOOKS): $(BUILDDIR)/%.tmp: $(SOURCEDIR)/%.md
 build/book.md: $(BOOKS)
 	cat $(foreach source, $(sort $(BOOKS)), "$(source)") \
 		> $@
+	echo "# Bibliographie" >> $@
 
 build/book.pdf: build/book.md
 	pandoc -s \
 		-f markdown \
 		-t latex \
 		--latex-engine=xelatex \
+		--filter=pandoc-citeproc \
+		--biblio=$(BIB) \
+		--csl=$(CSL) \
 		--toc \
+		-H $(TEMPLATES)/header.tex \
 		-V lang=$(LANGUAGE) \
 		-V title="Application Web II" \
 		-V subtitle="HE-Arc Ingénierie" \

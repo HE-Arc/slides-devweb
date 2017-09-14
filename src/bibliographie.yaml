@@ -1,0 +1,97 @@
+---
+# https://github.com/citation-style-language/schema/blob/master/csl-data.json
+
+references:
+
+# PHP intro framework
+
+- id: wiki:polp
+  type: webpage
+  author:
+    - literal: Wikipedia
+  title: Principle of least privilege
+  URL: https://en.wikipedia.org/wiki/Principle_of_least_privilege
+  language: en-US
+  accessed:
+    year: 2017
+    month: 2
+    day: 7
+
+- id: wiki:mvc
+  type: webpage
+  author:
+    - literal: Wikipedia
+  title: Modèle-Vue-Contrôleur
+  URL: https://fr.wikipedia.org/wiki/Modèle-vue-contrôleur
+  language: fr-FR
+  accessed:
+    year: 2017
+    month: 2
+    day: 7
+
+- id: wiki:orm
+  author:
+    - literal: Wikipedia
+  title: Mapping objet-relationnel
+  URL: https://fr.wikipedia.org/wiki/Mapping_objet-relationnel
+  language: fr-FR
+  accessed:
+    year: 2017
+    month: 2
+    day: 7
+
+- id: django:mtv
+  type: webpage
+  author:
+    - literal: Django Project
+  container-title: "FAQ: General"
+  title: Django appears to be a MVC framework, but you call the Controller the “view”, and the View the “template”. How come you don’t use the standard names?
+  URL: https://docs.djangoproject.com/en/1.11/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names
+  accessed:
+    year: 2017
+    month: 2
+    day: 7
+
+- id: w3c:20
+  type: webpage
+  author:
+    - literal: W3C
+  title: W3C 20 Anniversary Symposium
+  URL: https://www.w3.org/20/Overview.html
+  issued: 2014
+  accessed:
+    year: 2017
+    month: 2
+    day: 7
+
+- id: xkcd:327
+  author:
+    - family: Munroe
+      given: Randall
+  title: Exploits of a mom
+  journal: xkcd.com
+  URL: https://xkcd.com/327/
+  type: webpage
+  issued:
+    year: 2007
+  accessed:
+    year: 2017
+    month: 2
+    day: 7
+
+# Rails
+
+- id: dhh:2017
+  type: webpage
+  author:
+    - family: Heinemeier Hansson
+      given: David
+  title: "2017: Start fewer things, but finish them."
+  URL: https://twitter.com/dhh/status/815601578329575424
+  issued:
+    year: 2017
+  accessed:
+    year: 2017
+    month: 2
+    day: 7
+...

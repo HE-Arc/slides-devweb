@@ -82,24 +82,21 @@ Qui est qui?
 
 ---
 
-![](img/GandalfStaff5.jpg)
+![[source](http://hero.wikia.com/wiki/Gandalf)](img/GandalfStaff5.jpg)
 
 
 <div class="notes">
 oOops, ceci n'a rien à voir avec le cours.
-
-([Source de la figure][1])
 </div>
 
 ---
 
-![](img/0O4A8746-large.jpg)
+![W3C © 2014](img/0O4A8746-large.jpg)[@w3c:20]
 
 <div class="notes">
 Donc, ce ne sont pas Gandalf (sans sa barbe) et Saruman mais bien Sir Tim
-Berners-Lee et Vinton Cerf, résponsables du (World Wide) Web et de l'Internet.
-
-([Source de la figure][2])
+Berners-Lee et Vinton Cerf, responsables du (World Wide) Web et de
+l'Internet.
 </div>
 
 ---
@@ -278,7 +275,7 @@ Quel est le problème avec cette solution?
 
 # Sécurité des templates
 
-* _Principle of Least Privilege_ ([POLA][7])
+* _Principle of Least Privilege_[@wiki:polp]
 * Intégration faite par un graphiste, société externe
 
 <div class="notes">
@@ -349,7 +346,7 @@ if ("equipe" === $page) {
 
 ---
 
-![](img/exploits_of_a_mom.png)
+![2007 © Randall Munroe[@xkcd:327]](img/exploits_of_a_mom.png)
 Problème d'injection SQL.
 
 <div class="notes">
@@ -359,10 +356,8 @@ beaucoup de redondance et de failles de sécurité potentielles.
 
 Une solution est d'ajouter une couche d'abstraction qui va cacher la structure
 réelle de notre base de données et offrir une interface orientée objet. Un
-[_Object-Relational Mapping_ ou
-ORM](https://fr.wikipedia.org/wiki/Mapping_objet-relationnel) dans le jargon.
-
-(Source [XKCD][xkcd327])
+_Object-Relational Mapping_ ou
+ORM[wiki:orm] dans le jargon.
 </div>
 
 ---
@@ -527,9 +522,9 @@ tel que `global`.
 
 <div class="notes">
 
-[MVC][5] vient des applications bureau et ne représente pas
+_MVC_[@wiki:mvc] vient des applications bureau et ne représente pas
 toujours le fonctionnement dans le monde du web. Par exemple, Django, un
-framework Python, se décrit comme étant [Modèle - Template - Vue][6].
+framework Python, se décrit comme étant _Modèle - Template - Vue_[@django:mtv].
 
 Les frameworks web en PHP (ou d'autres langages) reposent majoritairement sur
 ce paradigme-là.
@@ -732,15 +727,9 @@ retrouver ces éléments-là. Symfony, CakePHP, etc. auront les mêmes idées.
 Questions?
 
 <!-- Bibliographie -->
-[1]: http://hero.wikia.com/wiki/Gandalf
-[2]: https://www.w3.org/20/Overview.html
 [3]: http://www.redbeanphp.com/
 [4]: http://getcomposer.org/
-[5]: https://fr.wikipedia.org/wiki/https://en.wikipedia.org/wiki/Principle_of_least_privilegeMod%C3%A8le-vue-contr%C3%B4leur
-[6]: https://docs.djangoproject.com/en/1.8/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names)
-[7]: https://en.wikipedia.org/wiki/Principle_of_least_privilege
 [8]: https://github.com/HE-Arc/php-intro-framework
-[xkcd327]: https://xkcd.com/327/
 
 <!-- CSS -->
 <style>

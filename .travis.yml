@@ -1,5 +1,7 @@
-language:
-  c
+dist: trusty
+sudo: false
+
+language: generic
 
 cache: apt
 
@@ -7,9 +9,11 @@ addons:
   apt:
     packages:
       - fonts-linuxlibertine
+      - librsvg2-bin
       - lmodern
       - make
       - pandoc
+      - pandoc-citeproc
       - texlive
       - texlive-fonts-extra
       - texlive-fonts-recommended
@@ -17,9 +21,18 @@ addons:
       - texlive-latex-extra
       - texlive-xetex
 
+before_install:
+  - wget https://github.com/Ranks/emojione/archive/v2.2.7.tar.gz
+  - tar xzf v2.2.7.tar.gz
+  - wget https://raw.githubusercontent.com/mreq/xelatex-emoji/master/xelatexemoji.sty
+  - wget https://raw.githubusercontent.com/mreq/xelatex-emoji/master/xelatexemoji-flags.sty
+  - sed -i 's/^\(\\usepackage{amsmath}\)/%\1/' xelatexemoji.sty
+  - sed -i 's/^\(\\providecommand{\\xelatexemojipath}\)/%\1/' xelatexemoji.sty
+
 env:
   - ACTION=slides
-  - ACTION=pdfs book
+  - ACTION=pdfs
+  - ACTION=book
 
 script:
   - LANGUAGE= make ${ACTION}
