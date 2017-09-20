@@ -17,6 +17,7 @@
 * Webservices : REST vs SOAP
 * Sécurité : Technologies, prévention des risques courants
 * <span class="yel-bg">Vos souhaits ?</span>
+* Slides cours : [github/HE-Arc](https://github.com/HE-Arc/slides-devweb/tree/master/src)
 
 # Organisation
 
@@ -146,10 +147,10 @@
 
 # Mon expérience en développement web
 
-[Questionnaire][form-survey] obligatoire : Merci d'avance !
+* [Questionnaire][form-survey] obligatoire : Merci d'avance !
 
 <!-- Bibliographie -->
-[docx]: https://intranet.he-arc.ch/ing/\_layouts/15/WopiFrame.aspx?sourcedoc=/ing/Docs%20%20Modules%20%2020142015%20%20INF/RS430.100.15.3254%20D%C3%A9veloppement%20web%20et%20mobile.docx&action=default
+[docx]: https://www.he-arc.ch/sites/www.he-arc.ch/files/Reglements/04%20Formation%20de%20base/43%20Ing%C3%A9nierie/430.100%20Descriptifs%20de%20modules%20Informatique/RS430.100.17.3255%20Technologies%20d'interaction.pdf
 [form-pres]: https://docs.google.com/spreadsheet/viewform?formkey=dEVJRE1WVTVPelhFcE94TGF5N1c0cGc6MQ
 [form-survey]: https://docs.google.com/spreadsheet/viewform?formkey=dDg5Znh5akRBV1hPbC1qYlVRV3BONFE6MQ
 [wiki]: https://projets-labinfo.he-arc.ch/projects/webdev/wiki

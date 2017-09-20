@@ -24,9 +24,8 @@ Dans les faits, cela montre également une maturité de la plateforme.
 
 ---
 
-> _There are people who actually like programming. <br>
+> _There are people who actually like programming.
 > I don't understand why they like programming._
->
 > Rasmus Lerdorf [💬](https://en.wikiquote.org/wiki/Rasmus_Lerdorf)
 
 ---
@@ -173,8 +172,8 @@ autrement, ici c'est dit dans l'entête `Content-Type: text/html; charset=utf-8`
 </div>
 
 ---
-
 ## Fait #1
+
 
 PHP parle HTTP.
 
@@ -601,7 +600,7 @@ les définitions de Twig sont présentes et il nous suffit d'obtenir la classe
 # _Front-Controller_
 
 Utilisation de [FastRoute](https://github.com/nikic/FastRoute)<br>
-(voir [07-fastroute/index.php](07-fastroute/index.php)).
+(voir [06-fastroute/index.php](https://github.com/HE-Arc/php-intro-framework/blob/master/06-fastroute/index.php)).
 
 <div class="notes">
 ```console
@@ -765,24 +764,15 @@ p {
     margin: 1em;
 }
 
-figure {
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-}
-
-figure > img {
-    width: auto;
-    height: 100%;
-}
 
 blockquote > p {
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+	font-size: 0.8em;
 }
 
 #progress-bar {
-    height: 10px;
+    height: 5px;
     border-top-right-radius: 10px;
     background: rgba(239, 0, 98, 0.5);
 }

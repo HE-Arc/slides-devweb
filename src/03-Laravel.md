@@ -23,7 +23,8 @@
 * Mai 2013 : version 4, utilise [composer](https://getcomposer.org/)
 * Août 2014 : projet PHP le plus [populaire](https://github.com/search?l=PHP&q=stars%3A%3E0&ref=searchresults&type=Repositories) sur github
 * [Qui](http://builtwithlaravel.com/) utilise Laravel ?
-* version 5.3 sortie en juin 2016
+* version 5.5 sortie en août 2017
+
 
 #Principales fonctionnalités
 
@@ -64,7 +65,7 @@
     * [Cheat Sheet](http://cheats.jesse-obrien.ca/)
     * ([Slides Laravel 4](http://fr.slideshare.net/sgphpug/intro-to-laravel-4) Singapore PHP User Group)
 * Tutoriels
-    * [Best Momo](http://laravel.sillo.org/laravel-5/) [5.3](http://laravel.sillo.org/laravel-5-3-les-nouveautes/), [Open Classroom](https://openclassrooms.com/courses/decouvrez-le-framework-php-laravel)
+    * [Best Momo](http://laravel.sillo.org/laravel-5/), [Open Classroom](https://openclassrooms.com/courses/decouvrez-le-framework-php-laravel)
 
 #Environnement de développement
 
@@ -75,7 +76,7 @@
 * VM (Vagrant - Homestead) ou conteneur
     * Mise en route plus rapide : pré-configuré
     * Environnement dédié au dev
-* Cloud (nitrous, cloud9, ...)
+* Cloud (-nitrous-, cloud9, ...)
     * Mise en route plus rapide : pré-configuré
     * Indépendant du poste de travail (navigateur)
     * Outils de synchro disponibles
@@ -120,7 +121,7 @@ $git push --set-upstream origin master
 
 * Penser à ajouter sa clé publique (ou celle de nitrous) à Github
 
-#[Apache](https://help.ubuntu.com/lts/serverguide/httpd.html) (inutile avec Nitrous)
+#[Apache](https://help.ubuntu.com/lts/serverguide/httpd.html)
 
 * Virtual hosts
     * `http-vhosts.conf` (activer dans `httpd.conf`)
@@ -144,11 +145,11 @@ $php artisan make:controller
 $php artisan list
 ```
 
-* [Extensible](https://laravel.com/docs/5.3/artisan)
+* [Extensible](https://laravel.com/docs/master/artisan)
 
 # Premiers pas
 
-* [Routes](https://laravel.com/docs/5.3/routing)
+* [Routes](https://laravel.com/docs/master/routing)
     * Ajouter une route `/test`
     * Ajouter un paramètre qui sera affiché : `/test/param`
     * Utiliser une vue pour cette route
@@ -156,14 +157,14 @@ $php artisan list
 
 . . .
 
-* [Contrôleurs](https://laravel.com/docs/5.3/controllers)
+* [Contrôleurs](https://laravel.com/docs/master/controllers)
     * Ajouter un contrôleur : `Test`
     * Lui ajouter une action : `index`
     * Ajouter la route correspondante : `/test/index`
 
 . . .
 
-* [Vues](https://laravel.com/docs/5.3/views)
+* [Vues](https://laravel.com/docs/master/views)
     * Ajouter une vue Blade (`.blade.php`)
     * Afficher cette vue dans l'action `index`
 
