@@ -59,6 +59,12 @@ données, du XML, etc.
 Et plus encore sur la page [History of
 PHP](http://php.net/manual/en/history.php.php) et [Wikipedia:
 PHP](https://en.wikipedia.org/wiki/PHP).
+
+Les différentes moutures de PHP 7 offrent ceci, entre autres.
+
+* PHP 7, performances
+* PHP 7.1, `void`
+* PHP 7.2, sodium
 </div>
 
 ---
@@ -169,6 +175,7 @@ autrement, ici c'est dit dans l'entête `Content-Type: text/html; charset=utf-8`
 </div>
 
 ---
+
 ## Fait #1
 
 
@@ -757,7 +764,7 @@ p {
 blockquote > p {
     margin-top: 0;
     margin-bottom: 20px;
-	font-size: 0.8em;
+    font-size: 0.8em;
 }
 
 #progress-bar {
