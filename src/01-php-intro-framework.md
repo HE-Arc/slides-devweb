@@ -286,7 +286,7 @@ Quel est le problème avec cette solution?
 
 <div class="notes">
 Dans ce le cas présent rien ne nous empêche de mettre de la logique métier dans
-nos fichiers de template, car ils sont faits de PHP eux aussi.
+nos fichiers de *template*, car ils sont faits de PHP eux aussi.
 </div>
 
 ---
@@ -310,9 +310,11 @@ nos fichiers de template, car ils sont faits de PHP eux aussi.
 ```
 
 <div class="notes">
-La page est réalisée avec [Twig](http://twig.sensiolabs.org/).
+La page est réalisée avec [Twig](http://twig.sensiolabs.org/) <2.0. À partir de
+la version 2.0, il faut utiliser un _autoloader_ externe, comme celui de composer
+(voir ci-dessous).
 
-Le code est un poil plus propre du côté de nos templates qui ne peuvent plus
+Le code est un poil plus propre du côté de nos *templates* qui ne peuvent plus
 exécuter de PHP sauf ce qu'on leur autorise, ici `md5` et `strtolower`. Voir
 [`02-twig/index.php`](02-twig/index.php).
 
@@ -358,7 +360,6 @@ Problème d'injection SQL.
 <div class="notes">
 Effectuer des requêtes MySQL à la main ou devoir connaitre tous les champs crée
 beaucoup de redondance et de failles de sécurité potentielles.
-
 
 Une solution est d'ajouter une couche d'abstraction qui va cacher la structure
 réelle de notre base de données et offrir une interface orientée objet. Un
@@ -430,7 +431,7 @@ if ("equipe" === $page) {
 Pensez à Wikipedia.
 
 <div class="notes">
-Les addresses des pages font partie de l'expérience utilisateur. Un utilisateur
+Les adresses des pages font partie de l'expérience utilisateur. Un utilisateur
 doit être capable d'imaginer le contenu de la page en lisant l'URI.
 Certainement, ce que vous faites avant de cliquer sur un lien.
 </div>
@@ -533,7 +534,7 @@ toujours le fonctionnement dans le monde du web. Par exemple, Django, un
 framework Python, se décrit comme étant _Modèle - Template - Vue_[@django:mtv].
 
 Les frameworks web en PHP (ou d'autres langages) reposent majoritairement sur
-ce paradigme-là.
+ce paradigme.
 </div>
 
 ---
@@ -557,8 +558,8 @@ paquets public et utilisé par défaut.
 ```json
 {
     "require": {
-        "twig/twig": "1.24.*",
-        "gabordemooij/redbean": "4.3.*",
+        "twig/twig": "^2.0",
+        "gabordemooij/redbean": "^4.3",
     }
 }
 ```
@@ -610,7 +611,7 @@ $ composer require nikic/fast-route
 ```
 
 `FastRoute` repose sur un système proche de celui que nous avons utilisé
-jusqu'ici. D'autres sytèmes, tels que `Aura.Router` pour ne citer que lui,
+jusqu'ici. D'autres systèmes, tels que `Aura.Router` pour ne citer que lui,
 reposent sur la spécification [PSR-7](http://www.php-fig.org/psr/psr-7/). Cette
 dernière décrit l'interface objet d'un message HTTP, tant au niveau de la
 requête que de la réponse.
@@ -695,7 +696,7 @@ Une collection de bibliothèques avec un peu de glue.
 <div class="notes">
 Un framework web vous propose une structure de base pour construire selon une
 méthode jugée bonne par ses concepteurs. Il est possible de remplacer un
-composant par un autre, par le sien. Et même de créer sa glue ou même ses
+composant par un autre, par le sien. Et même de créer sa *glue* ou même ses
 outils propres.
 </div>
 
@@ -713,7 +714,7 @@ outils propres.
 
 <div class="notes">
 Je vous invite à aller lire le code généré pour vous par Laravel. Vous allez
-retrouver ces éléments-là. Symfony, CakePHP, etc. auront les mêmes idées.
+retrouver ces éléments. Symfony, CakePHP, etc. auront les mêmes idées.
 </div>
 
 ---
