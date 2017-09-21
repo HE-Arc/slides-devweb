@@ -569,7 +569,9 @@ Nos dépendances sont ainsi matérialisées dans le projet et peuvent être
 installée, ou mises à jour simplement.
 
 En principe les numéros de version respectent le
-[SemVer](http://semver.org/lang/fr/) (_Semantic Versioning_).
+[SemVer](http://semver.org/lang/fr/) (_Semantic Versioning_) et les différents
+signes permettent de sélection une ou plusieurs versions (voir
+[Version and constraints][https://getcomposer.org/doc/articles/versions.md]).
 </div>
 
 ---
