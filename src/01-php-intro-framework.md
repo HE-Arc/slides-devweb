@@ -363,7 +363,7 @@ beaucoup de redondance et de failles de sécurité potentielles.
 Une solution est d'ajouter une couche d'abstraction qui va cacher la structure
 réelle de notre base de données et offrir une interface orientée objet. Un
 _Object-Relational Mapping_ ou
-ORM[wiki:orm] dans le jargon.
+ORM[@wiki:orm] dans le jargon.
 </div>
 
 ---
