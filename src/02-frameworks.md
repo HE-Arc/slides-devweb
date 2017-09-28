@@ -55,6 +55,7 @@ Différences entre framework et library sur [Stack Overflow](http://stackoverflo
 * You Ain’t Gonna Need It
 * Convention Over Configuration
 * Keep It Simple and Stupid
+* [12 factor app](https://12factor.net/) - [fr](https://12factor.net/fr/)
 
 # Pretty ( | smart | clean | formatted) URL
 

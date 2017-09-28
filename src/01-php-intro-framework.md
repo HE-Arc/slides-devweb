@@ -169,8 +169,8 @@ autrement, ici c'est dit dans l'entête `Content-Type: text/html; charset=utf-8`
 </div>
 
 ---
-## Fait #1
 
+## Fait #1
 
 PHP parle HTTP.
 
@@ -274,7 +274,7 @@ Quel est le problème avec cette solution?
 
 # Sécurité des templates
 
-* _Principle of Least Privilege_[@wiki:polp]
+* _Principle of Least Privilege_ ( [polp](https://en.wikipedia.org/wiki/Principle_of_least_privilege) )
 * Intégration faite par un graphiste, société externe
 
 <div class="notes">

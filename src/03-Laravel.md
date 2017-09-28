@@ -63,9 +63,8 @@
 * Doc
     * [Documentation officielle](https://laravel.com/docs/master) de Laravel
     * [Cheat Sheet](http://cheats.jesse-obrien.ca/)
-    * ([Slides Laravel 4](http://fr.slideshare.net/sgphpug/intro-to-laravel-4) Singapore PHP User Group)
 * Tutoriels
-    * [Best Momo](http://laravel.sillo.org/laravel-5/), [Open Classroom](https://openclassrooms.com/courses/decouvrez-le-framework-php-laravel)
+    * [Best Momo](http://laravel.sillo.org/laravel-5/), [Open Classroom](https://openclassrooms.com/courses/decouvrez-le-framework-php-laravel-1), [CodeSchool](https://www.codeschool.com/courses/try-laravel)
 
 #Environnement de développement
 
@@ -76,7 +75,7 @@
 * VM (Vagrant - Homestead) ou conteneur
     * Mise en route plus rapide : pré-configuré
     * Environnement dédié au dev
-* Cloud (-nitrous-, cloud9, ...)
+* Cloud (cloud9, ...)
     * Mise en route plus rapide : pré-configuré
     * Indépendant du poste de travail (navigateur)
     * Outils de synchro disponibles
@@ -84,7 +83,6 @@
 # Environnement de développement
 
 * Cloud: [Cloud9](https://community.c9.io/t/laravel-5-3-installation-on-cloud9/9038)
-
 * Local ou VM
     * Installer : serveur http, SGBD, git, php7, composer
     * Installer Laravel :
@@ -119,7 +117,7 @@ $git remote add origin git@github.com:bastian/raidit.git
 $git push --set-upstream origin master
 ```
 
-* Penser à ajouter sa clé publique (ou celle de nitrous) à Github
+* Penser à ajouter sa clé publique à Github
 
 #[Apache](https://help.ubuntu.com/lts/serverguide/httpd.html)
 
