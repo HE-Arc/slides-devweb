@@ -155,7 +155,7 @@ $ curl -v "http://he-arc.ch/?id=25"
 
 ```html
 <!DOCTYPE html>
-<title>He-Arc</title>
+<title>HE-Arc</title>
 <p>Hello
 ```
 
@@ -191,14 +191,14 @@ du niveau de compréhension de PHP et d'une forme de complexité.
 $page = isset($_GET["page"]) ? $_GET["page"] : null;
 $id = isset($_GET["id"]) ? (int) $_GET["id"] : 0;
 
-// Connexion à la page de donnée.
+// Connexion à la base de données.
 $db = new PDO("sqlite:../users.db");
 
 // Page HTML
 ?>
 <!DOCTYPE html>
 <meta charset=utf-8>
-<title>He-Arc</title>
+<title>HE-Arc</title>
 <?php
 // Contenu
 if ("equipe" === $page):
@@ -334,7 +334,7 @@ $twig->addFilter(new Twig_SimpleFilter('strtolower', 'strtolower'));
 $twig->addFilter(new Twig_SimpleFilter('md5', 'md5'));
 
 // variable globale
-$titre = "He-Arc";
+$titre = "HE-Arc";
 
 // Contenu
 if ("equipe" === $page) {
