@@ -111,3 +111,12 @@ build/book.pdf: build/book.md
 		-V urlcolor="blue" \
 		-o $@ \
 		$^
+
+$(BUILDDIR)/index.html: $(SLIDES)
+	echo "<!DOCTYPE html><meta charset=utf-8><title>Slides</title>" > $@
+	echo "<h1>Slides (<a href="book.pdf">pdf</a>)</h1><ol>" >> $@
+	echo $(foreach source, $(sort $^), "<li><a href='$(source)'>$(patsubst %.html,%,$(source))</a> (<a href='$(patsubst %.html,%.pdf,$(source))'>pdf</a>)") \
+		| sed -e "s/$(BUILDDIR)\///g" \
+		| sed -e "s/>..-/>/g" \
+		>> $@
+	echo "</ol>" >> $@
