@@ -6,7 +6,6 @@ make build/index.html
 
 (
     cd build
-    rm -f *.tmp *.md
     git init
     git config user.name "TravisCI"
     git config user.email "travis@he-arc.test"

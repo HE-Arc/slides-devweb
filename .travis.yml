@@ -35,10 +35,12 @@ install:
   - export PATH=$HOME/.cabal/bin:$PATH
 
 script:
-  - LANGUAGE= make all
+  - LANGUAGE= make ${ACTION}
 
 after_success:
   - >
-    test "${TRAVIS_PULL_REQUEST}" = "false" && test "${TRAVIS_BRANCH}" = "master" \
+    test "${ACTION}" = "slides" \
+      && test "${TRAVIS_PULL_REQUEST}" = "false" \
+      && test "${TRAVIS_BRANCH}" = "master" \
       && bash deploy.sh \
       || echo ":-)"
