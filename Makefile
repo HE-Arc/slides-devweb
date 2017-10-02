@@ -11,6 +11,9 @@ LANGUAGE ?= fr
 BIB = $(SOURCEDIR)/bibliographie.yaml
 CSL = ens-de-lyon-centre-d-ingenierie-documentaire.csl
 
+#Bootstrap css
+CDN = '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">'
+
 .PHONY: all
 all: slides pdfs book
 
@@ -113,8 +116,9 @@ build/book.pdf: build/book.md
 
 $(BUILDDIR)/index.html: $(SLIDES)
 	echo "<!DOCTYPE html><meta charset=utf-8><title>Slides</title>" > $@
-	echo "<h1>Slides</h1><ul>" >> $@
-	echo $(foreach source, $(sort $^), "<li><a href='$(source)'>$(source)</a>") \
+	echo $(CDN) > $@
+	echo "<h1 class="display-3">Slides</h1><ul>" >> $@
+	echo $(foreach source, $(sort $^), "<li><a class="btn btn-outline-primary" href='$(subst '\d+[-]', '', source)'>$(source)</a>") \
 		| sed -e "s/$(BUILDDIR)\///g" \
 		>> $@
 	echo "</ul>" >> $@
