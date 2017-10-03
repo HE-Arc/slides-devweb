@@ -7,7 +7,7 @@ SLIDES=$(patsubst $(SOURCEDIR)/%.md,$(BUILDDIR)/%.html,$(SOURCES))
 PDFS=$(patsubst $(SOURCEDIR)/%.md,$(BUILDDIR)/%.pdf,$(SOURCES))
 BOOKS=$(patsubst $(SOURCEDIR)/%.md,$(BUILDDIR)/%.tmp,$(SOURCES))
 
-LANGUAGE ?= fr
+LANGUAGE = fr
 BIB = $(SOURCEDIR)/bibliographie.yaml
 CSL = ens-de-lyon-centre-d-ingenierie-documentaire.csl
 
@@ -62,6 +62,7 @@ $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 			--latex-engine=xelatex \
 			-H $(TEMPLATES)/header.tex \
 			-V lang=$(LANGUAGE) \
+			-V date="\\today" \
 			-V documentclass="scrartcl" \
 			-V papersize=a4 \
 			-V mainfont="Linux Libertine O" \
@@ -100,7 +101,7 @@ build/book.pdf: build/book.md
 		-V lang=$(LANGUAGE) \
 		-V title="Application Web II" \
 		-V subtitle="HE-Arc Ingénierie" \
-		-V date="$(shell date +"%d %B %Y")" \
+		-V date="\\today" \
 		-V papersize=a4 \
 		-V documentclass="scrreprt" \
 		-V mainfont="Linux Libertine O" \
