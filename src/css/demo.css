@@ -51,6 +51,8 @@
 }
 
 footer{
+	margin-top: 15vh;
+	clear: both;
     height: 25vh;
     font-size: 0.5em;
 }
@@ -104,8 +106,8 @@ footer a:hover {
 
 .container > section {
 	margin: 0 auto;
-	padding: 10em 3em;
-	text-align: center;
+	padding: 3em 10em 3em 0em;
+	height: auto;
 }
 
 .color-1 {

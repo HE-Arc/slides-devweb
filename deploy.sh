@@ -2,14 +2,15 @@
 
 set -xe
 
-make build/index.html
-
+if [ "${ACTION}" = "slides" ]
+then
+    make $1/index.html
+fi
 (
-    cd build
-    git init
-    git config user.name "TravisCI"
-    git config user.email "travis@he-arc.test"
+    cd $1
+    git pull
+    rm -f *.tmp *.md
     git add .
-    git commit -m "Deployed to github pages"
-    git push -f -q "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}" master:gh-pages
+    git commit -m "Deployed ${ACTION} to github pages" || echo "oups..."
+    git push || echo "oups..."
 )

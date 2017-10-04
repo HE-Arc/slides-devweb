@@ -11,38 +11,10 @@ body {
 }
 
 nav{
-    max-width: 62vw;
-    margin-left: 17vw;
-}
-
-@media screen and (max-width: 100em) {
-    nav{
-        margin-left: 16vw;
-    }
-}
-
-@media screen and (max-width: 90em) {
-    nav{
-        margin-left: 15vw;
-    }
-}
-
-@media screen and (max-width: 80em) {
-    nav{
-        margin-left: 13vw;
-    }
-}
-
-@media screen and (max-width: 60em) {
-    nav{
-        margin-left: 12vw;
-    }
-}
-
-@media screen and (max-width: 50em){
-    nav{
-        margin-left: 10vw;
-    }
+    width: 40vw;
+    margin-left: 30vw;
+    height: auto;
+    padding-bottom: 3em;
 }
 
 nav a {
@@ -62,6 +34,100 @@ nav a {
 nav a:hover,
 nav a:focus {
     outline: none;
+}
+
+nav a.right:hover ~ hr{
+    width: 10vw;
+    margin-right: 11.5vw;
+}
+
+hr{
+    border: 1px solid #ceccc6;
+    clear: both;
+    width: 20vw;
+    margin-right: 1.5vw;
+    transition: all 0.5s ease;
+}
+
+@media screen and (min-width: 91em) {
+    nav{
+        margin-left: 30vw;
+    }
+}
+
+@media screen and (max-width: 90em) {
+    nav{
+        width: 50vw;
+        margin-left: 25vw;
+    }
+}
+
+@media screen and (max-width: 70em) {
+    nav{
+        width: 60vw;
+        margin-left: 20vw;
+    }
+}
+
+@media screen and (max-width: 60em) {
+    nav{
+        width: 70vw;
+        margin-left: 15vw;
+    }
+}
+
+@media screen and (max-width: 50em) {
+    nav{
+        width: 70vw;
+        margin-left: 14vw;
+    }
+
+    hr{
+        width: 20vw;
+        margin-right: 5vw;
+        transition: all 0.5s ease;
+    }
+
+    nav a.right:hover ~ hr{
+        width: 10vw;
+        margin-right: 15vw;
+    }
+}
+
+@media screen and (max-width: 30em) {
+    nav{
+        width: 90vw;
+        margin-left: 0;
+    }
+
+    hr{
+        width: 20vw;
+        margin-right: 5vw;
+        transition: all 0.5s ease;
+    }
+
+    nav a.right:hover ~ hr{
+        width: 5vw;
+        margin-right: 20vw;
+    }
+}
+
+a.left{
+    float:left;
+    clear:left;
+}
+a.right{
+    float:right;
+    clear:right;
+}
+
+a.book{
+    float:right;
+    clear:both;
+}
+
+.clear{
+    clear:both;
 }
 
 /* Effect 1: Brackets */

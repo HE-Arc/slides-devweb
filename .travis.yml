@@ -29,18 +29,34 @@ before_install:
   - wget https://raw.githubusercontent.com/mreq/xelatex-emoji/master/xelatexemoji-flags.sty
   - sed -i 's/^\(\\usepackage{amsmath}\)/%\1/' xelatexemoji.sty
   - sed -i 's/^\(\\providecommand{\\xelatexemojipath}\)/%\1/' xelatexemoji.sty
+  - >
+    test "${TRAVIS_PULL_REQUEST}" = "${ON_PR}" \
+      && test "${TRAVIS_BRANCH}" = "${BUILD_BRANCH}" \
+      && chmod a+x gitInit.sh \
+      && ./gitInit.sh "${BUILD_FOLDER}" gh-pages \
+      || echo ":-)"
 
 install:
   - cabal install pandoc pandoc-citeproc
   - export PATH=$HOME/.cabal/bin:$PATH
+
+
+env:
+  global:
+    - BUILD_FOLDER=build
+    - BUILD_BRANCH=master
+    - ON_PR=false
+  matrix:
+    - ACTION=slides
+    - ACTION=pdfs
+    - ACTION=book
 
 script:
   - LANGUAGE= make ${ACTION}
 
 after_success:
   - >
-    test "${ACTION}" = "slides" \
-      && test "${TRAVIS_PULL_REQUEST}" = "false" \
-      && test "${TRAVIS_BRANCH}" = "style" \
-      && bash deploy.sh \
+    test "${TRAVIS_PULL_REQUEST}" = "${ON_PR}" \
+      && test "${TRAVIS_BRANCH}" = "${BUILD_BRANCH}" \
+      && bash deploy.sh "${BUILD_FOLDER}" \
       || echo ":-)"

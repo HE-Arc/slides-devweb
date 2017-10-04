@@ -113,10 +113,13 @@ build/book.pdf: build/book.md
 
 $(BUILDDIR)/index.html: $(SLIDES)
 	cat $(TEMPLATES)/indexTop.html > $@
-	# | sed -e 's/\([0-9][0-9]\-\)//p' -e "s/\b\(.\)/\u\1/g"
-	$(foreach source,$(sort $^),echo "<a href='$(source)'>" | sed -e "s/$(BUILDDIR)\///g" >> $@; \
-		echo $(basename $(source)) | sed -e "s/$(BUILDDIR)\///g" -e "s/[[:digit:]]\+-//g" -e "s/-/ /g" -e "s/\b\(.\)/\u\1/g" >> $@; \
-		echo "</a>" >> $@;)
+	$(foreach source,$(sort $^),echo "<div><a href='$(source)' class='left'>" | sed -e "s/$(BUILDDIR)\///g" >> $@; \
+		echo $(basename $(source)) | sed -e "s/$(BUILDDIR)\///g" \
+			-e "s/[[:digit:]]\+-//g" \
+			-e "s/-/ /g" \
+			-e "s/\b\(.\)/\u\1/g" >> $@; \
+		echo "</a><a href='$(patsubst %.html,%.pdf,$(source))' class='right'>PDF</a><br /><hr></div>" | sed -e "s/$(BUILDDIR)\///g" >> $@;)
+	echo "<a href='book.pdf' class='book'>Livre complet</a>" >> $@
 	cat $(TEMPLATES)/indexBottom.html >> $@
 	cp -r $(SOURCEDIR)/js $(BUILDDIR)
 	cp -r $(SOURCEDIR)/css $(BUILDDIR)
