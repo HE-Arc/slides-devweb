@@ -11,9 +11,6 @@ LANGUAGE ?= fr
 BIB = $(SOURCEDIR)/bibliographie.yaml
 CSL = ens-de-lyon-centre-d-ingenierie-documentaire.csl
 
-#Bootstrap css
-CDN = '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">'
-
 .PHONY: all
 all: slides pdfs book
 
@@ -115,10 +112,12 @@ build/book.pdf: build/book.md
 		$^
 
 $(BUILDDIR)/index.html: $(SLIDES)
-	echo "<!DOCTYPE html><meta charset=utf-8><title>Slides</title>" > $@
-	echo $(CDN) > $@
-	echo "<h1 class="display-3">Slides</h1><ul>" >> $@
-	echo $(foreach source, $(sort $^), "<li><a class="btn btn-outline-primary" href='$(subst '\d+[-]', '', source)'>$(source)</a>") \
-		| sed -e "s/$(BUILDDIR)\///g" \
-		>> $@
-	echo "</ul>" >> $@
+	cat $(TEMPLATES)/indexTop.html > $@
+	# | sed -e 's/\([0-9][0-9]\-\)//p' -e "s/\b\(.\)/\u\1/g"
+	$(foreach source,$(sort $^),echo "<a href='$(source)'>" | sed -e "s/$(BUILDDIR)\///g" >> $@; \
+		echo $(basename $(source)) | sed -e "s/$(BUILDDIR)\///g" -e "s/[[:digit:]]\+-//g" -e "s/-/ /g" -e "s/\b\(.\)/\u\1/g" >> $@; \
+		echo "</a>" >> $@;)
+	cat $(TEMPLATES)/indexBottom.html >> $@
+	cp -r $(SOURCEDIR)/js $(BUILDDIR)
+	cp -r $(SOURCEDIR)/css $(BUILDDIR)
+	cp -r $(SOURCEDIR)/fonts $(BUILDDIR)

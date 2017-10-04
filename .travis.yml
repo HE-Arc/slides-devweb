@@ -41,6 +41,6 @@ after_success:
   - >
     test "${ACTION}" = "slides" \
       && test "${TRAVIS_PULL_REQUEST}" = "false" \
-      && test "${TRAVIS_BRANCH}" = "master" \
+      && test "${TRAVIS_BRANCH}" = "style" \
       && bash deploy.sh \
       || echo ":-)"
