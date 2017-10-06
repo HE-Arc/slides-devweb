@@ -113,10 +113,15 @@ build/book.pdf: build/book.md
 		$^
 
 $(BUILDDIR)/index.html: $(SLIDES)
-	echo "<!DOCTYPE html><meta charset=utf-8><title>Slides</title>" > $@
-	echo "<h1>Slides (<a href="book.pdf">pdf</a>)</h1><ol>" >> $@
-	echo $(foreach source, $(sort $^), "<li><a href='$(source)'>$(patsubst %.html,%,$(source))</a> (<a href='$(patsubst %.html,%.pdf,$(source))'>pdf</a>)") \
-		| sed -e "s/$(BUILDDIR)\///g" \
-		| sed -e "s/>..-/>/g" \
-		>> $@
-	echo "</ol>" >> $@
+	cat $(TEMPLATES)/indexTop.html > $@
+	$(foreach source,$(sort $^),echo "<div class="chapter"><a href='$(source)' class='left'>" | sed -e "s/$(BUILDDIR)\///g" >> $@; \
+		echo $(basename $(source)) | sed -e "s/$(BUILDDIR)\///g" \
+			-e "s/[[:digit:]]\+-//g" \
+			-e "s/-/ /g" \
+			-e "s/\b\(.\)/\u\1/g" >> $@; \
+		echo "</a><a href='$(patsubst %.html,%.pdf,$(source))' class='right'>PDF</a></div>" | sed -e "s/$(BUILDDIR)\///g" >> $@;)
+	echo "<a href='book.pdf' class='book'>Livre complet</a>" >> $@
+	cat $(TEMPLATES)/indexBottom.html >> $@
+	cat $(SOURCEDIR)/css/normalize.css > $(BUILDDIR)/style.css
+	cat $(SOURCEDIR)/css/component.css >> $(BUILDDIR)/style.css
+	cat $(SOURCEDIR)/css/demo.css >> $(BUILDDIR)/style.css

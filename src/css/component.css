@@ -1,0 +1,160 @@
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+nav{
+    width: 40vw;
+    margin-left: 30vw;
+    height: auto;
+    padding-bottom: 3em;
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    margin: 15px 25px;
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-shadow: 0 0 1px rgba(255,255,255,0.3);
+    font-size: 1.35em;
+}
+
+nav a:hover,
+nav a:focus {
+    outline: none;
+}
+
+.chapter{
+    width: 100%;
+    position: relative;
+    padding-bottom:3px;
+    display: inline-block;
+    overflow-y: hidden;
+}
+
+.chapter:after{
+    content: "";
+    display:block;
+    width:50%;
+    height:2px;
+    padding:0;margin:0;
+    background-color:white;
+    position: absolute;
+    right:25%;
+    bottom:-1px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 91em) {
+    nav{
+        margin-left: 30vw;
+    }
+}
+
+@media screen and (max-width: 90em) {
+    nav{
+        width: 50vw;
+        margin-left: 25vw;
+    }
+}
+
+@media screen and (max-width: 70em) {
+    nav{
+        width: 60vw;
+        margin-left: 20vw;
+    }
+}
+
+@media screen and (max-width: 60em) {
+    nav{
+        width: 70vw;
+        margin-left: 15vw;
+    }
+}
+
+@media screen and (max-width: 50em) {
+    nav{
+        width: 70vw;
+        margin-left: 14vw;
+    }
+
+    nav a.right:hover ~ hr{
+        width: 10vw;
+        margin-right: 15vw;
+    }
+}
+
+@media screen and (max-width: 30em) {
+    nav{
+        width: 90vw;
+        margin-left: 0;
+    }
+
+    nav a.right:hover ~ hr{
+        width: 5vw;
+        margin-right: 20vw;
+    }
+}
+
+a.left{
+    float:left;
+    clear:left;
+}
+a.right{
+    float:right;
+    clear:right;
+}
+
+a.book{
+    float:right;
+    clear:both;
+}
+
+/* Effect 13: three circles */
+.cl-effect-13 a {
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.cl-effect-13 a::before {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    color: transparent;
+    content: '•';
+    text-shadow: 0 0 transparent;
+    font-size: 1.2em;
+    -webkit-transition: text-shadow 0.3s, color 0.3s;
+    -moz-transition: text-shadow 0.3s, color 0.3s;
+    transition: text-shadow 0.3s, color 0.3s;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.cl-effect-13 a:hover::before,
+.cl-effect-13 a:focus::before {
+    color: #fff;
+    text-shadow: 10px 0 #fff, -10px 0 #fff;
+}
+
+.cl-effect-13 a:hover,
+.cl-effect-13 a:focus {
+    color: #89867e;
+}
