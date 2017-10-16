@@ -4,7 +4,7 @@
 
 ## JavaScript & DOM{.title}
 
-<footer>HE-Arc (DGR) 2016</footer>
+<footer>HE-Arc (DGR) 2017</footer>
 
 # JavaScript hier
 * Page web = HTML (+ CSS + JavaScript)
@@ -32,7 +32,7 @@
 # *Script
 
 * ECMAScript : Norme depuis 1997 
-	* Juin 2016 : [ECMA-262 7th edition / 2016+](http://www.ecma-international.org/ecma-262/7.0/index.html) 
+	* Juin 2017 : [ECMA-262 8th edition / 2017](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
 	* [Support](http://kangax.github.io/compat-table/es2016plus/) des différentes implémentations
 	* Conversions avec [BabelJS](https://babeljs.io/)
 * JavaScript : implémentation Firefox (réf. MDN)
