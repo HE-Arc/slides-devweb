@@ -1,10 +1,7 @@
 dist: trusty
-sudo: false
+sudo: required
 
-language: haskell
-
-env:
-  - GHCVER=7.8
+language: generic
 
 cache: apt
 
@@ -24,6 +21,10 @@ addons:
       - texlive-lang-french
 
 before_install:
+  - wget https://github.com/jgm/pandoc/releases/download/1.19.2.1/pandoc-1.19.2.1-1-amd64.deb -O pandoc.deb
+  - sudo dpkg -i pandoc.deb
+
+install:
   - wget https://github.com/Ranks/emojione-assets/archive/3.1.2.tar.gz -O emojione-assets.tgz
   - tar xzf emojione-assets.tgz
   - mv emojione-assets-3.1.2 emojione-assets
@@ -31,10 +32,6 @@ before_install:
   - wget https://raw.githubusercontent.com/mreq/xelatex-emoji/master/xelatexemoji-flags.sty
   - sed -i 's/^\(\\usepackage{amsmath}\)/%\1/' xelatexemoji.sty
   - sed -i 's/^\(\\providecommand{\\xelatexemojipath}\)/%\1/' xelatexemoji.sty
-
-install:
-  - cabal install pandoc pandoc-citeproc
-  - export PATH=$HOME/.cabal/bin:$PATH
 
 script:
   - make all
