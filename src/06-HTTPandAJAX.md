@@ -80,7 +80,7 @@ Content-Type:		text/html; charset=iso-8859-1
 
 # HTTP
 
-* Requête POST : paramètre dans le corps
+* Requête POST : paramètres dans le corps
 
 ```html 
 POST /login.jsp HTTP/1.1
@@ -100,7 +100,7 @@ userid=joe&password=guessme
 
 # AJAX : Historique
 
-* Asynchronous JavaScript And Xml
+* Asynchronous Javascript And Xml
 * Buzzword, [Jesse James Garret][7], 2005
 * Mise à jour sans rechargement intégral
 * Utilisation de [Remote Scripting][8] et de DOM
@@ -110,6 +110,7 @@ userid=joe&password=guessme
 	* Utilisation des images/cookies (ex: [GIF][11])
 	* Applets, Flash, ActiveX, ...
 	* <span class="red">XHR : XML HTTP Request</span> (IE5, 1999 pour OWA)
+	* Fetch API
 	
 * Pas obligatoire d'avoir du JS, XML ni d'être asynchrone !
 
@@ -123,7 +124,7 @@ userid=joe&password=guessme
 	2. La réponse provoque l'éxecution de la fonction de rappel
 	3. Le DOM de la page est mis à jour
 * Applications
-	* GUI ressemblanr à des app natives
+	* GUI ressemblant à des app natives
 	* MAJ dynamiques de formulaires, autocompletion
 	* Validation avec interrogation du serveur
 	* ...
@@ -158,7 +159,7 @@ function createXMLHttpRequest()
 }
 ```
 
-Dans son [contexte][13]
+* Dans son [contexte][13]
 
 # XHR en jQuery avec `load()`
 
@@ -243,30 +244,9 @@ MyXhr.setRequestHeader("Expires", "Wed, 09 Aug 2000 08:21:57 GMT");
 * Si la requête aboutit :
 	* `readystate == 4`
 	* `status == 200`
-* La réponse est dans l'attribut `responseText
+* La réponse est dans l'attribut `responseText`
 * ou dans `responseXML`
 	* Utilisation du DOM (`getElementsByTagName(), ...`)
-
-# Fetch API
-
-* Le successeur d'XHR est [fetch][whatwg:fetch] 
-* Fetch a un _polyfill_ pour les navigateurs ne le supportant pas
-* L'API Fetch est native et plus simple d'utilisation que jQuery
-
-```javascript
-fetch("fichier.json")
-    .then(function(response) {
-        return response.json()
-    })
-    .then(function(json) {
-        console.log(json);
-    })
-    .catch(function(error) {
-        console.error("erreur", error)
-    })
-```
-
-* L'API fecth est native et utilise les [promesses][28] plutôt que les callbacks
 
 # Réponse en XML
 
@@ -313,7 +293,7 @@ pour créer le tableau d'objets correspondant
 
 # [« eval is Evil »][22]
 
-* `eval()` : évalue et exécute la chaine en paramètre
+* `eval()` : évalue et exécute la chaîne en paramètre
 * Risque : instructions au lieu d'un tableau d’objets
 * Solution : le [parser][23] JSON 
 
@@ -327,6 +307,27 @@ var myString = JSON.stringify(users);
 var obj = jQuery.parseJSON('{"nom":"Berger"}');
 alert(obj.nom);
 ```
+
+# Fetch API
+
+* Le successeur d'XHR est [fetch][whatwg:fetch] : [Exemple][28]
+* Fetch a un _polyfill_ pour les navigateurs ne le supportant pas
+* L'API Fetch est native et plus simple d'utilisation que jQuery
+
+```javascript
+fetch("fichier.json")
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(json) {
+        console.log(json);
+    })
+    .catch(function(error) {
+        console.error("erreur", error)
+    })
+```
+
+* L'API fecth est native et utilise les [promesses][29] plutôt que les callbacks
 
 # Traitement d'erreurs
 
@@ -401,7 +402,8 @@ myXHR.getResponseHeader("Status");
 
 [w3c:history]: http://w3c.github.io/html/browsers.html#session-history-and-navigation
 [whatwg:fetch]: https://fetch.spec.whatwg.org/
-[28]:https://www.promisejs.org/
+[28]:https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
+[29]:https://www.promisejs.org/
 
 <!-- Hack -->
 <style>

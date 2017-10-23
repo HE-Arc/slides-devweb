@@ -25,7 +25,7 @@
 * Implémentations hors-browser
 	* Node.js, Spidermonkey, Rhino
 	* script d'app (Qt, Notepad++, ...)
-* Langage cible de compilateurs : [emscripten](https://github.com/kripken/emscripten/wiki), [asm.js](http://asmjs.org/)
+* Langage cible de compilateurs : [emscripten](https://github.com/kripken/emscripten/wiki), [WebAssembly](http://webassembly.org/)
 * Embarqué : [Espruino](http://www.espruino.com/)
 
 	
