@@ -4,7 +4,7 @@
 
 ## HTTP & AJAX{.title}
 
-<footer>HE-Arc (DGR) 2016</footer>
+<footer>HE-Arc (DGR) 2017</footer>
 
 # HyperText Transfer Protocol
 
@@ -18,7 +18,7 @@
 	* Plus d’entêtes, Host obligatoire
 * [HTTP 2.0][1] (2015)
 	* Binaire, multiplexage connexions, compresions entêtes, push, ...
-	* Supporté par [certains navigateurs][2], une majorité de serveurs
+	* Supporté par [presque tous][2] les navigateurs, une majorité de serveurs
 
 # Codes de réponse
 
@@ -95,7 +95,7 @@ userid=joe&password=guessme
 * Outils HTTP
 	* CLI : curl
 	* Browser dev tools
-	* WebApps : [HURL][3], [web-sniffer][4]
+	* WebApp : [HURL][3]
 * Exemples PATCH : [mnot][5] , [SOA bits][6]
 
 # AJAX : Historique
@@ -139,7 +139,7 @@ userid=joe&password=guessme
 * Asynchrone : Non bloquant
 * Non standard => différentes implémentations
 * Supporté par Chrome, FF, Safari, IE, Konqueror, ...
-* Alternative souhaitable pour les autres navigateurs et versions obsolètes
+* Alternative souhaitable si JS désactivé
 
 # XHR en JS
 
@@ -249,9 +249,9 @@ MyXhr.setRequestHeader("Expires", "Wed, 09 Aug 2000 08:21:57 GMT");
 
 # Fetch API
 
-Le successeur d'XHR est [fetch][whatwg:fetch] qui possède un _polyfill_ pour
-les navigateurs ne le supportant pas. L'API, proche de celle offerte par jQuery,
-est plus simple d'utilisation.
+* Le successeur d'XHR est [fetch][whatwg:fetch] 
+* Fetch a un _polyfill_ pour les navigateurs ne le supportant pas
+* L'API Fetch est native et plus simple d'utilisation que jQuery
 
 ```javascript
 fetch("fichier.json")
@@ -265,6 +265,8 @@ fetch("fichier.json")
         console.error("erreur", error)
     })
 ```
+
+* L'API fecth est native et utilise les [promesses][28] plutôt que les callbacks
 
 # Réponse en XML
 
@@ -372,7 +374,7 @@ myXHR.getResponseHeader("Status");
 [1]:https://docs.google.com/presentation/d/1eqae3OBCxwWswOsaWMAWRpqnmrVVrAfPQclfSqPkXrA/present#slide=id.p19
 [2]:http://caniuse.com/#feat=http2
 [3]:http://hurl.it/
-[4]:http://web-sniffer.net/
+
 [5]:http://www.mnot.net/blog/2012/09/05/patch
 [6]:http://soabits.blogspot.ch/2013/01/http-put-patch-or-post-partial-updates.html
 [7]:http://web.archive.org/web/20110102130434/http://www.adaptivepath.com/ideas/essays/archives/000385.php
@@ -391,7 +393,7 @@ myXHR.getResponseHeader("Status");
 [20]:http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf
 [21]:http://www.crockford.com/
 [22]:https://javascriptweblog.wordpress.com/2010/04/19/how-evil-is-eval/
-[23]:http://www.json.org/js.html
+[23]:https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/JSON/parse
 [24]:https://www.bennadel.com/blog/1860-using-appropriate-status-codes-with-each-api-response.htm
 [25]:http://www.ajaxload.info/
 [26]:https://signalvnoise.com/archives/000558.php
@@ -399,6 +401,7 @@ myXHR.getResponseHeader("Status");
 
 [w3c:history]: http://w3c.github.io/html/browsers.html#session-history-and-navigation
 [whatwg:fetch]: https://fetch.spec.whatwg.org/
+[28]:https://www.promisejs.org/
 
 <!-- Hack -->
 <style>
