@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700|Raleway:400,300,700);
+
+.container > header,
+.container > footer,
+.codrops-top {
+	font-family: 'Lato', Arial, sans-serif;
+}
+
+.container > header,
+.container > footer {
+	margin: 0 auto;
+	padding: 2em;
+	text-align: center;
+	color: #89867e;
+}
+
+.container > header h1,
+.container > footer h2 {
+	font-size: 2.625em;
+	line-height: 1.3;
+	margin: 0;
+	font-weight: 300;
+}
+
+.container > header span,
+.container > footer span {
+	display: block;
+	font-size: 60%;
+	color: #ceccc6;
+	padding: 0 0 0.6em 0.1em;
+}
+
+footer{
+	margin-top: 15vh;
+	clear: both;
+    height: 25vh;
+    font-size: 0.5em;
+}
+
+footer p{
+    font-size: 2.5em;
+    margin-bottom: 3em;
+}
+
+footer a {
+	text-decoration: none;
+	padding: 0 0;
+	letter-spacing: 0.1em;
+	color: #888;
+	display: inline-block;
+}
+
+footer a:hover {
+	background: rgba(255,255,255,0.95);
+	color: #E60062;
+}
+
+.container > section {
+	margin: 0 auto;
+	padding: 3em 10em 3em 0em;
+	height: auto;
+}
+
+.color-HE-Arc {
+    background: #E60062;
+}
