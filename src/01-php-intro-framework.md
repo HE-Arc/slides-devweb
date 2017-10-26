@@ -214,7 +214,7 @@ if ("equipe" === $page):
         <?php echo $personne->nom ?>
     </h2>
     <p>
-        <img src="http://www.gravatar.com/avatar/<?php
+        <img src="//www.gravatar.com/avatar/<?php
             echo md5(strtolower($personne->email));
         ?>" alt="avatar">
 <?php
@@ -302,7 +302,7 @@ nos fichiers de *template*, car ils sont faits de PHP eux aussi.
   {{ personne.nom -}}
 </h2>
 <p><img
-  src="http://www.gravatar.com/avatar/
+  src="//www.gravatar.com/avatar/
   {{- personne.email | strtolower | md5 }}"
   alt="avatar">
 {% endblock -%}
