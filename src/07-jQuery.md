@@ -193,9 +193,9 @@ $("p").click(function(){
 
 # Alternatives
 
-* "jQuery aussi, ça fait vieux", YBL 17.10.29
-* (bling.js)[https://gist.github.com/paulirish/12fb951a8b893a454b32]
-*  API (queryselectorall)[https://www.w3schools.com/jsref/met_document_queryselectorall.asp] au lieu des getElementsBy...
+* *jQuery aussi, ça fait vieux*, YBL 17.10.29
+* [bling.js][12]
+*  API [queryselectorall()][13] au lieu des getElementsBy...
 
 
 # Références
@@ -218,6 +218,10 @@ $("p").click(function(){
 [9]:http://www.javascriptoo.com/sizzle
 [10]:http://vanilla-js.com/
 [11]:http://www.w3schools.com/jquery/jquery_ajax_load.asp
+[12]:https://gist.github.com/paulirish/12fb951a8b893a454b32
+[13]:https://www.w3schools.com/jsref/met_document_queryselectorall.asp
+
+
 <!-- Hack -->
 <style>
 
