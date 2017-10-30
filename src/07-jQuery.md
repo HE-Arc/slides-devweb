@@ -191,6 +191,13 @@ $("p").click(function(){
 * `slideDown(), slideUp(), slideToggle()`
 * [`animate()`][5]
 
+# Alternatives
+
+* "jQuery aussi, ça fait vieux", YBL 17.10.29
+* (bling.js)[https://gist.github.com/paulirish/12fb951a8b893a454b32]
+*  API (queryselectorall)[https://www.w3schools.com/jsref/met_document_queryselectorall.asp] au lieu des getElementsBy...
+
+
 # Références
 
 * Site officiel de [jQuery][6]

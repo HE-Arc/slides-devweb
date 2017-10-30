@@ -4,9 +4,9 @@
 
 ## Responsive Web Design{.title}
 
-### "Conception de sites web adaptatifs"
+### *Conception de sites web adaptatifs*
 
-<footer>HE-Arc (DGR) 2016</footer>
+<footer>HE-Arc (DGR) 2017</footer>
 
 # Site adaptatif ?
 
@@ -155,7 +155,7 @@ img, embed, object, video{ max-width: 100%; }
 # Outils
 
 * Tester
-	* [redimensionner][15] son browser
+	* Simuateur mobile des devtools, largeur browser
 	* [bookmarklet][16] pour afficher les media queries
 	* mais surtout tester sur mobile
 * Et Après ? [MOBILE FIRST][17], [OFFLINE FIRST][18]
@@ -196,7 +196,7 @@ img, embed, object, video{ max-width: 100%; }
 [12]:https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/
 [13]:http://www.hteumeuleu.fr/attribut-srcset-images-responsive/
 [14]:https://www.smashingmagazine.com/2011/07/responsive-web-design-techniques-tools-and-design-strategies/
-[15]:http://chrispederick.com/work/web-developer/
+[15]:
 [16]:https://seesparkbox.com/foundry/media_query_bookmarklet
 [17]:http://www.lukew.com/resources/mobile_first.asp
 [18]:http://offlinefirst.org/
