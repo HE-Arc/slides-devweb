@@ -155,7 +155,7 @@ img, embed, object, video{ max-width: 100%; }
 # Outils
 
 * Tester
-	* Simuateur mobile des devtools, largeur browser
+	* Simulateur mobile des devtools, largeur browser
 	* [bookmarklet][16] pour afficher les media queries
 	* mais surtout tester sur mobile
 * Et Après ? [MOBILE FIRST][17], [OFFLINE FIRST][18]
