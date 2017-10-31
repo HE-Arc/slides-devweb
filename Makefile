@@ -11,6 +11,8 @@ LANGUAGE = fr
 BIB = $(SOURCEDIR)/bibliographie.yaml
 CSL = iso690-numeric-fr.csl
 
+LATEX_ENGINE=$(shell pandoc -v | grep -o 'pandoc 2' >/dev/null && echo "pdf" || echo "latex")
+
 .PHONY: all
 all: slides pdfs book
 
@@ -59,7 +61,7 @@ $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 			--filter=pandoc-citeproc \
 			--biblio=$(BIB) \
 			--csl=$(CSL) \
-			--latex-engine=xelatex \
+			--$(LATEX_ENGINE)-engine=xelatex \
 			-H $(TEMPLATES)/header.tex \
 			-V lang=$(LANGUAGE) \
 			-V date="\\today" \
@@ -92,7 +94,7 @@ build/book.pdf: build/book.md
 	pandoc -s \
 		-f markdown \
 		-t latex \
-		--latex-engine=xelatex \
+		--$(LATEX_ENGINE)-engine=xelatex \
 		--filter=pandoc-citeproc \
 		--biblio=$(BIB) \
 		--csl=$(CSL) \
