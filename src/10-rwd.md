@@ -158,7 +158,7 @@ img, embed, object, video{ max-width: 100%; }
 	* Simulateur mobile des devtools, largeur browser
 	* [bookmarklet][16] pour afficher les media queries
 	* mais surtout tester sur mobile
-* Et Après ? [MOBILE FIRST][17], [OFFLINE FIRST][18]
+* Et Après ? [MOBILE FIRST][17], [OFFLINE FIRST][18], [PWA][30]
 * framework ou from scratch ?
 
 # Références
@@ -196,7 +196,7 @@ img, embed, object, video{ max-width: 100%; }
 [12]:https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/
 [13]:http://www.hteumeuleu.fr/attribut-srcset-images-responsive/
 [14]:https://www.smashingmagazine.com/2011/07/responsive-web-design-techniques-tools-and-design-strategies/
-[15]:
+
 [16]:https://seesparkbox.com/foundry/media_query_bookmarklet
 [17]:http://www.lukew.com/resources/mobile_first.asp
 [18]:http://offlinefirst.org/
@@ -211,7 +211,7 @@ img, embed, object, video{ max-width: 100%; }
 [27]:https://24ways.org/2014/making-sites-more-responsive-responsibly/
 [28]:http://nelm.io/pierre
 [29]:http://goo.gl/gj8bke
-
+[30]:https://developers.google.com/web/progressive-web-apps/
 <!-- Hack -->
 <style>
 
