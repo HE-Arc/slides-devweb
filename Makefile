@@ -9,7 +9,7 @@ BOOKS=$(patsubst $(SOURCEDIR)/%.md,$(BUILDDIR)/%.tmp,$(SOURCES))
 
 LANGUAGE = fr
 BIB = $(SOURCEDIR)/bibliographie.yaml
-CSL = ens-de-lyon-centre-d-ingenierie-documentaire.csl
+CSL = iso690-numeric-fr.csl
 
 .PHONY: all
 all: slides pdfs book
