@@ -79,6 +79,38 @@ references:
     month: 2
     day: 7
 
+# RWD
+- id: alistapart:rwd
+  author:
+    - family: Marcotte
+      given: Ethan
+  title: Responsive Web Design
+  URL: https://alistapart.com/article/responsive-web-design
+  type: webpage
+  issued:
+    year: 2010
+    month: 5
+    day: 25
+  accessed:
+    year: 2017
+    month: 11
+    day: 6
+
+- id: smashing:rwd
+  author:
+    - literal: The Smashing Editorial
+  title: Responsive Web Design Techniques, Tools and Design Strategies
+  URL: https://www.smashingmagazine.com/2011/07/responsive-web-design-techniques-tools-and-design-strategies/
+  type: webpage
+  issued:
+    year: 2011
+    month: 7
+    day: 22
+  accessed:
+    year: 2017
+    month: 11
+    day: 6
+
 # Rails
 
 - id: dhh:2017
