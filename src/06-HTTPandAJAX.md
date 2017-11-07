@@ -129,7 +129,7 @@ userid=joe&password=guessme
 	* Validation avec interrogation du serveur
 	* ...
 
-# L'objet `XmlHttpRequest`
+# L'objet _XMLHttpRequest_
 
 * Initiative de Microsoft
 	* Composant ActiveX de IE5
@@ -161,7 +161,7 @@ function createXMLHttpRequest()
 
 * Dans son [contexte][13]
 
-# XHR en jQuery avec `load()`
+# XHR en jQuery avec _load()_
 
 ```html
 <!DOCTYPE html>
@@ -288,7 +288,7 @@ MyXhr.setRequestHeader("Expires", "Wed, 09 Aug 2000 08:21:57 GMT");
 ```
 
 * Utilisation de :
-~~`var users = eval('(' + myXHR.responseText + ')'); `~~ 
+`~~var users = eval('(' + myXHR.responseText + ')'); ~~` 
 pour créer le tableau d'objets correspondant
 
 # [« eval is Evil »][22]

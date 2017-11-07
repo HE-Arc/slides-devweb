@@ -87,7 +87,7 @@ Réponse HTTP:
 
 --------------------------------------------------------------------------------
 
-## `Gemfile`
+## _Gemfile_
 
 Un paquet Ruby se nomme une _gemme_.
 

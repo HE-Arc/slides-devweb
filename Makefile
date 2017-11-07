@@ -7,16 +7,6 @@ SLIDES=$(patsubst $(SOURCEDIR)/%.md,$(BUILDDIR)/%.html,$(SOURCES))
 PDFS=$(patsubst $(SOURCEDIR)/%.md,$(BUILDDIR)/%.pdf,$(SOURCES))
 BOOKS=$(patsubst $(SOURCEDIR)/%.md,$(BUILDDIR)/%.tmp,$(SOURCES))
 
-LANGUAGE = fr
-BIB = $(SOURCEDIR)/bibliographie.yaml
-CSL = iso690-numeric-fr.csl
-
-TITLE_FONT = Linux Biolinum O
-MAIN_FONT = Linux Libertine O
-MONO_FONT = Inconsolata
-
-LATEX_ENGINE=$(shell pandoc -v | grep -o 'pandoc 2' >/dev/null && echo "pdf" || echo "latex")
-
 .PHONY: all
 all: slides pdfs book
 
@@ -46,9 +36,8 @@ $(SLIDES): $(BUILDDIR)/%.html : $(SOURCEDIR)/%.md
 			-f markdown \
 			-t dzslides \
 			--self-contained \
+			--lua-filter=meta.lua \
 			--filter=pandoc-citeproc \
-			--biblio=$(BIB) \
-			--csl=$(CSL) \
 			-V show-notes=true \
 			-V title="" \
 			-V title-prefix="HE-Arc" \
@@ -62,21 +51,12 @@ $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 		| pandoc -s \
 			-f markdown \
 			-t latex \
+			--pdf-engine=xelatex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
 			--filter=pandoc-citeproc \
-			--biblio=$(BIB) \
-			--csl=$(CSL) \
-			--$(LATEX_ENGINE)-engine=xelatex \
 			-H $(TEMPLATES)/header.tex \
-			-V lang=$(LANGUAGE) \
-			-V date="\\today" \
 			-V documentclass="scrartcl" \
-			-V papersize=a4 \
-			-V mainfont="$(MAIN_FONT)" \
-			-V sansfont="$(TITLE_FONT)" \
-			-V monofont="$(MONO_FONT)" \
-			-V monofontoptions="Scale=0.9" \
-			-V linkcolor="blue" \
-			-V urlcolor="blue" \
 			-o "$@"
 
 $(BOOKS): $(BUILDDIR)/%.tmp: $(SOURCEDIR)/%.md
@@ -99,24 +79,15 @@ build/book.pdf: build/book.md
 	pandoc -s \
 		-f markdown \
 		-t latex \
-		--$(LATEX_ENGINE)-engine=xelatex \
+		--pdf-engine=xelatex \
+		--lua-filter=meta.lua \
+		--lua-filter=english.lua \
 		--filter=pandoc-citeproc \
-		--biblio=$(BIB) \
-		--csl=$(CSL) \
 		--toc \
 		-H $(TEMPLATES)/header.tex \
-		-V lang=$(LANGUAGE) \
 		-V title="Application Web II" \
 		-V subtitle="HE-Arc Ingénierie" \
-		-V date="\\today" \
-		-V papersize=a4 \
 		-V documentclass="scrreprt" \
-		-V mainfont="$(MAIN_FONT)" \
-		-V sansfont="$(TITLE_FONT)" \
-		-V monofont="$(MONO_FONT)" \
-		-V monofontoptions="Scale=0.9" \
-		-V linkcolor="blue" \
-		-V urlcolor="blue" \
 		-o $@ \
 		$^
 
