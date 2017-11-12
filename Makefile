@@ -62,10 +62,10 @@ $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 		| pandoc -s \
 			-f markdown \
 			-t latex \
+			--$(LATEX_ENGINE)-engine=xelatex \
 			--filter=pandoc-citeproc \
 			--biblio=$(BIB) \
 			--csl=$(CSL) \
-			--$(LATEX_ENGINE)-engine=xelatex \
 			-H $(TEMPLATES)/header.tex \
 			-V lang=$(LANGUAGE) \
 			-V date="\\today" \
@@ -77,6 +77,7 @@ $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 			-V monofontoptions="Scale=0.9" \
 			-V linkcolor="blue" \
 			-V urlcolor="blue" \
+			-V links-as-notes="true" \
 			-o "$@"
 
 $(BOOKS): $(BUILDDIR)/%.tmp: $(SOURCEDIR)/%.md
@@ -117,6 +118,7 @@ build/book.pdf: build/book.md
 		-V monofontoptions="Scale=0.9" \
 		-V linkcolor="blue" \
 		-V urlcolor="blue" \
+		-V links-as-notes="true" \
 		-o $@ \
 		$^
 
