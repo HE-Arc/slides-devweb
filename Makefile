@@ -11,6 +11,10 @@ LANGUAGE = fr
 BIB = $(SOURCEDIR)/bibliographie.yaml
 CSL = iso690-numeric-fr.csl
 
+TITLE_FONT = Linux Biolinum O
+MAIN_FONT = Linux Libertine O
+MONO_FONT = Inconsolata
+
 LATEX_ENGINE=$(shell pandoc -v | grep -o 'pandoc 2' >/dev/null && echo "pdf" || echo "latex")
 
 .PHONY: all
@@ -67,9 +71,10 @@ $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 			-V date="\\today" \
 			-V documentclass="scrartcl" \
 			-V papersize=a4 \
-			-V mainfont="Linux Libertine O" \
-			-V sansfont="Linux Biolinum O" \
-			-V monofontoptions=="Scale=0.9" \
+			-V mainfont="$(MAIN_FONT)" \
+			-V sansfont="$(TITLE_FONT)" \
+			-V monofont="$(MONO_FONT)" \
+			-V monofontoptions="Scale=0.9" \
 			-V linkcolor="blue" \
 			-V urlcolor="blue" \
 			-o "$@"
@@ -106,9 +111,10 @@ build/book.pdf: build/book.md
 		-V date="\\today" \
 		-V papersize=a4 \
 		-V documentclass="scrreprt" \
-		-V mainfont="Linux Libertine O" \
-		-V sansfont="Linux Biolinum O" \
-		-V monofontoptions=="Scale=0.9" \
+		-V mainfont="$(MAIN_FONT)" \
+		-V sansfont="$(TITLE_FONT)" \
+		-V monofont="$(MONO_FONT)" \
+		-V monofontoptions="Scale=0.9" \
 		-V linkcolor="blue" \
 		-V urlcolor="blue" \
 		-o $@ \
