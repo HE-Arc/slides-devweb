@@ -21,7 +21,7 @@
 * Le même contenu pour tous
 * Souvent basé sur la largeur de l'écran
 * CSS3
-* ["RWD"][1], Ethan Marcotte, 2010 (A List Apart) : [Exemple][2]
+* _Responsive Web Design_ [@alistapart:rwd], [Exemple][2]
 
 # Techniques
 
@@ -32,9 +32,9 @@
 * Flexible images (and media) : Taille des médias en %
 * Autres considérations
 	* Adaptatif avec [grilles fixes][3]
-	* [Performance][4] : tps chargement, requêtes inutiles, ...
+	* [Performances][4] : tps chargement, requêtes inutiles, ...
 	* Transitions CSS
-	* [...][5]
+	* ...
 * [Exemple][6]
 
 # [Media Queries][7]
@@ -126,11 +126,11 @@ width, margin, padding, background-position, ...
 
 # Responsive Images
 
-* Nouveautés de html5
+* Nouveautés de HTML 5
 	* Eléments `<picture>`, `<source>`
 	* Attributs `srcset` et `sizes`
 * [Besoins][10]
-	* Ecrans haute densité : `srcset`
+	* Écrans haute densité : `srcset`
 	* Taille variable : `srcset` et `sizes`
 	* [Substitution][11] et modification layout : `<picture>, <source>`
 	* Choix formats de fichiers `<picture>`
@@ -150,7 +150,7 @@ img, embed, object, video{ max-width: 100%; }
 	.feature img { display: block; max-width: auto; }
 ```
 * Pas de standard pour servir différentes tailles de fichier
-* Quelques idées recensées par [Smashing][14]
+* Quelques idées recensées par _Smashing Magazine_ [@smashing:rwd]
 
 # Outils
 
@@ -171,7 +171,7 @@ img, embed, object, video{ max-width: 100%; }
 * Plus loin...
 	* [Généralités][24]
 	* [viewport et media queries][25]
-	* D'autres techniques, liste de [Smashing][5] magazine
+	* D'autres techniques, liste de Smashing magazine [@smashing:rwd]
 	* Améliorer la [performance][26]
 	* [Making sites more responsive, responsibly][27]
 
@@ -182,11 +182,10 @@ img, embed, object, video{ max-width: 100%; }
 * Comprendre les sources
 * Présentation adaptative de votre équipe de projet
 
-[1]:http://alistapart.com/article/responsive-web-design
 [2]:http://alistapart.com/d/responsive-web-design/ex/ex-site-FINAL.html
 [3]:http://www.jonikorpi.com/frameless/
 [4]:https://browserdiet.com/
-[5]:https://www.smashingmagazine.com/2011/07/responsive-web-design-techniques-tools-and-design-strategies/
+
 [6]:http://webdesignerwall.com/tutorials/responsive-design-in-3-steps
 [7]:https://developer.mozilla.org/fr/docs/CSS/Media_queries
 [8]:http://blog.javierusobiaga.com/stop-using-the-viewport-tag-until-you-know-ho
@@ -195,7 +194,6 @@ img, embed, object, video{ max-width: 100%; }
 [11]:http://ericportis.com/etc/smashing-mag-picture-examples/art-direction.html
 [12]:https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/
 [13]:http://www.hteumeuleu.fr/attribut-srcset-images-responsive/
-[14]:https://www.smashingmagazine.com/2011/07/responsive-web-design-techniques-tools-and-design-strategies/
 
 [16]:https://seesparkbox.com/foundry/media_query_bookmarklet
 [17]:http://www.lukew.com/resources/mobile_first.asp
@@ -212,6 +210,7 @@ img, embed, object, video{ max-width: 100%; }
 [28]:http://nelm.io/pierre
 [29]:http://goo.gl/gj8bke
 [30]:https://developers.google.com/web/progressive-web-apps/
+
 <!-- Hack -->
 <style>
 
