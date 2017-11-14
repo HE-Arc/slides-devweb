@@ -2,7 +2,7 @@
 
 # Développement web dlm3
 
-## Risques applicatifs des app web{.title}
+## Risques applicatifs des app web{.title}
 
 <footer>HE-Arc (DGR) 2016</footer>
 

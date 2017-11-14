@@ -1,8 +1,8 @@
 % 07.jQuery
 
-# Développement web
+# Développement web
 
-## jQuery{.title}
+## jQuery{.title}
 
 <footer>HE-Arc (DGR) 2016</footer>
 

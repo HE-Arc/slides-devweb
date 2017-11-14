@@ -2,11 +2,11 @@
 
 # Développement web dlm3
 
-## Really Simple Syndication{.title}
+## Really Simple Syndication{.title}
 
 <footer>HE-Arc (DGR) 2016</footer>
 
-# Syndication
+# Syndication
 
 * Principe de vendre un contenu à plusieurs médias
 * Dans les journaux : dépêches, bandes dessinées, …

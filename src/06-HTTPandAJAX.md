@@ -2,7 +2,7 @@
 
 # Développement web dlm3
 
-## HTTP & AJAX{.title}
+## HTTP & AJAX{.title}
 
 <footer>HE-Arc (DGR) 2017</footer>
 

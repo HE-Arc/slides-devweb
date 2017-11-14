@@ -2,9 +2,9 @@
 
 # Développement web dlm3
 
-## Responsive Web Design{.title}
+## Responsive Web Design{.title}
 
-### *Conception de sites web adaptatifs*
+### *Conception de sites web adaptatifs*
 
 <footer>HE-Arc (DGR) 2017</footer>
 

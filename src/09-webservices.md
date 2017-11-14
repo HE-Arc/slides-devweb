@@ -2,11 +2,11 @@
 
 # Développement web dlm3
 
-## Services web{.title}
+## Services web{.title}
 
 <footer>HE-Arc (DGR) 2016</footer>
 
-# Applications distribuées
+# Applications distribuées
 
 * Motivation : répartir l'exécution sur plusieurs machines
 	* Principe : Les composants/services communiquent par le réseau

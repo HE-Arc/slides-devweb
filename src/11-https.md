@@ -2,11 +2,11 @@
 
 # Développement web dlm3
 
-## HTTPS{.title}
+## HTTPS{.title}
 
 <footer>HE-Arc (DGR) 2016</footer>
 
-# Sécuriser un site web
+# Sécuriser un site web
 
 * Authentification du serveur
 	* Assurer que le serveur est celui qu’il prétend être
