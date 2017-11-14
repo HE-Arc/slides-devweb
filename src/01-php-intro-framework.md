@@ -453,11 +453,12 @@ URL pour nous.
 
 ---
 
-## Réécriture d'URL (`mod_rewrite`)
+## Réécriture d'URL
 
 ```apache
 # 04-routes/.htaccess
 
+# mod_rewrite
 RewriteEngine on
 RewriteBase /php-intro-framework/04-routes/
 
@@ -551,7 +552,7 @@ paquets public et utilisé par défaut.
 
 ---
 
-## `composer.json`
+## composer.json
 
 
 ```json
