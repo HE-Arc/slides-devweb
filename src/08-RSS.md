@@ -17,7 +17,7 @@
 	* Accès unique à plusieurs sources d'informations
 	* Mises à jour fréquentes
 
-# Historique
+# Historique
 
 * Feed (fil ou flux) RSS
 * Format d'échange de données en XML
@@ -33,7 +33,7 @@ Il y a *neuf* versions de RSS généralement incompatibles entre elles.
 Lire [The myth of RSS compatibility](https://web.archive.org/web/20110726001954/http://diveintomark.org/archives/2004/02/04/incompatible-rss)
 </div>
 
-# Applications
+# Applications
 
 * Récupérer l'info pour :
 	* la lire
@@ -46,7 +46,7 @@ Lire [The myth of RSS compatibility](https://web.archive.org/web/20110726001954/
 * Augmenter le trafic d'un site
 * [Exemples][1] et [Passerelles][2]
 
-# Agrégateurs
+# Agrégateurs
 
 * Natifs
 	* Navigateurs (IE, FF, ...)
@@ -58,7 +58,7 @@ Lire [The myth of RSS compatibility](https://web.archive.org/web/20110726001954/
 	* Sage
 * [Liste][3]
 
-# Générer un flux RSS
+# Générer un flux RSS
 
 * Fichier XML :
 	* Canal / Items (RSS)
@@ -67,7 +67,7 @@ Lire [The myth of RSS compatibility](https://web.archive.org/web/20110726001954/
 * Permettre l'abonnement : logo visible dans la page
 * Génération dynamique du fichier XML
 
-# Formats
+# Formats
 
 * RSS 2.0 (Really Simple Syndication)
 	* Simple, le plus répandu
@@ -81,7 +81,7 @@ Lire [The myth of RSS compatibility](https://web.archive.org/web/20110726001954/
 * Antérieurs : RSS 0.91, 0.92 (Rich Site Summary) : obsolètes
 	* Migration facile vers RSS 2.0
 
-# RSS 2.0
+# RSS 2.0
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -113,7 +113,7 @@ Lire [The myth of RSS compatibility](https://web.archive.org/web/20110726001954/
 </rss>
 ```
 
-# Atom 1.0
+# Atom 1.0
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -144,7 +144,7 @@ Lire [The myth of RSS compatibility](https://web.archive.org/web/20110726001954/
 </feed>
 ```
 
-# Générer le flux
+# Générer le flux
 
 * Données dynamiques
 * Source de données identique à celle de l’application
@@ -178,7 +178,7 @@ Lire [The myth of RSS compatibility](https://web.archive.org/web/20110726001954/
 	* application/atom+xml
 	* application/rss+xml
 
-# Podcasts
+# Podcasts
 
 * Elément <enclosure/> en RSS 2.0 :
 
@@ -214,7 +214,7 @@ length="666666" />
 </entry>
 ```
 
-# Pour en savoir plus...
+# Pour en savoir plus...
 
 * [Étapes de création d’un flux][6]
 * [Spécification RSS 2.0][7]

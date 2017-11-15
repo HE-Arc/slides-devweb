@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
 > [MDN: DOMContentLoaded](https://developer.mozilla.org/en/docs/Web/Events/DOMContentLoaded)
 </div>
 
-# [Node.js](https://nodejs.org)
+# [Node.js](https://nodejs.org)
 
 * Node.js : une implémentation hors navigateur
 	* environnement d'exécution + bibliothèques
@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function() {
     removeChild(child), replaceChild(new,old)
 ```
 
-# Ajouter un noeud
+# Ajouter un noeud
 
 ```javascript
 function addNode() {
@@ -244,7 +244,7 @@ function addNode() {
 	* Sélection du parent (le premier noeud `body`)
 	* Ajout du nouveau nœud depuis son parent
 
-# Supprimer un nœud
+# Supprimer un nœud
 
 ```javascript
 function delNode() {
@@ -266,7 +266,7 @@ function delNode() {
 * Suppression :
 	* Suppression du nœud sélectionné depuis son [parent](https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode)
 
-# Insérer un nœud
+# Insérer un nœud
 
 ```javascript
 function insertNode() {
@@ -290,7 +290,7 @@ function insertNode() {
 	* Recherche du frère gauche
 	* Insertion depuis le parent 
 
-# Avec jQuery
+# Avec jQuery
 
 * Création et ajout :
 
@@ -306,7 +306,7 @@ function insertNode() {
     noeud.remove();
 ```
 
-# Références
+# Références
 
 * Une [réintroduction à JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Une_r%C3%A9introduction_%C3%A0_JavaScript)
 * [How does it feel to learn JS in 2016](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f)

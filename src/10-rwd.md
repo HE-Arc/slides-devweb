@@ -23,7 +23,7 @@
 * CSS3
 * _Responsive Web Design_ [@alistapart:rwd], [Exemple][2]
 
-# Techniques
+# Techniques
 
 * Media queries : Taille de l'écran (ou sortie)
 * UNITES RELATIVES
@@ -100,7 +100,7 @@
 <meta name="viewport" content="width=device-width; initial-scale=1.0">
 ```
 
-# Résultat = Cible / Contexte
+# Résultat = Cible / Contexte
 ![Target / Context](img/target-context.png)
 
 # Texte
@@ -112,7 +112,7 @@
 	* ne pas arrondir
 	* laisser le rapport en commentaire
 
-# Fluid Grids
+# Fluid Grids
 
 * Layout basé sur une grille en pixel
 * Conversion px -> % : **result = target/context**
@@ -124,7 +124,7 @@
 width, margin, padding, background-position, ...
 ```
 
-# Responsive Images
+# Responsive Images
 
 * Nouveautés de HTML 5
 	* Eléments `<picture>`, `<source>`
@@ -161,7 +161,7 @@ img, embed, object, video{ max-width: 100%; }
 * Et Après ? [MOBILE FIRST][17], [OFFLINE FIRST][18], [PWA][30]
 * framework ou from scratch ?
 
-# Références
+# Références
 
 * Exemples
 	* [Site][19] support du [livre][20] d'Ethan Marcotte

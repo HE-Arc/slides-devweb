@@ -19,7 +19,7 @@
 * Pour un site web, ces services sont fournis par https
 	* HTTPS : HTTP sécurisé par SSL/TLS, par défaut sur le port 443
 
-# Secure Socket Layer --> Transport Layer Security
+# Secure Socket Layer --> Transport Layer Security
 
 * Conçu par Netscape (v2.0 en 1994, v3.0 en 1996)
 * Brevet racheté par l'IETF : TLS v1.0 en 1999 (SSL 3.1)
@@ -34,7 +34,7 @@
 	* Authentification optionnelle du client
 * Certificats (clé publique associée au certificat)
 
-# Rôle d'un certificat
+# Rôle d'un certificat
 * Garantir le lien entre une entité physique et une entité numérique :
 	* Intégrité des données
 	* Authentification
@@ -44,7 +44,7 @@
 * Délivré par une autorité de certification
 * Certificats clients
 
-# Autorité de Certification
+# Autorité de Certification
 * Tiers de confiance
 	* enregistrée et certifiée par des autorités publiques ou de gouvernance de l'Internet
 * Rôle :
@@ -56,7 +56,7 @@
 	* usage interne
 	* pas de tiers de confiance
 
-# Contenu d'un certificat X509
+# Contenu d'un certificat X509
 * version de X.509 (v3, depuis 1996)
 * numéro de série du certificat
 * algorithme de chiffrement utilisé pour signer le certificat
@@ -67,7 +67,7 @@
 * signature de l'émetteur du certificat (thumbprint)
 * ...
 
-# Composants d'une [PKI][1]
+# Composants d'une [PKI][1]
 CA : Autorité de certification - VA : Autorité de validation - RA : Autorité d'enregistrement
 ![PKI Structure](img/Public-Key-Infrastructure.png)
 
@@ -97,7 +97,7 @@ CA : Autorité de certification - VA : Autorité de validation - RA : Autorité 
 * [How to][4]
 * OU utiliser un serveur pré-configuré comme [Caddy][16]
 
-# Ressources
+# Ressources
 
 * [Security Party 23.10.2009][5]
 * [SebSauvage][6]

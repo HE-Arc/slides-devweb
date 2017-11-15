@@ -19,7 +19,7 @@
 * Facile à apprendre
 * Utilisation du chaînage des méthodes et des callbacks 
 
-# Utilisation
+# Utilisation
 
 * Inclusion [CDN][1]
 
@@ -80,7 +80,7 @@ $(function() {
 }
 </style>
 
-# Sélection dans le DOM
+# Sélection dans le DOM
 
 * Sélection
 
@@ -115,7 +115,7 @@ $(".post, #main ");
 
 * D'autres [exemples][2] de sélecteurs
 
-# Parcours ([traversing][3])
+# Parcours ([traversing][3])
 
 * Parcours du DOM dans les trois directions :
 	* Depuis le noeud courant (sélectionné)
@@ -127,7 +127,7 @@ $(".post, #main ");
 	* `filter(), not()`
 	* [Référence][4]
 
-# Modifications de contenu
+# Modifications de contenu
 
 * Accès au contenu :
 	* `text()` : get/set le texte entre les balises
@@ -141,7 +141,7 @@ $(".post, #main ");
 	* `empty()` : suppression des enfants
 	* `remove()` : supression de la sélection (possibilité de filtrer)
 
-# Accès aux CSS
+# Accès aux CSS
 
 * Accès aux classes
 	* `addClass()` : ajout de classe(s) à l'élément sélectionné
@@ -154,7 +154,7 @@ $("p").css("background-color"); 				// get
 $("p").css({"background-color":"yellow","font-size":"200%"}); 	// set
 ```
 
-# Evénements
+# Evénements
 
 * Souris
 	* `click, dblclick, mouseenter, mouseleave`
@@ -184,21 +184,21 @@ $("p").click(function(){
 * `$.get(URL, callback)`
 * `$.post(URL, data, callback)`
 
-# Effets et animations
+# Effets et animations
 
 * `hide(), show(), toggle()`
 * `fadeIn(), fadeOut(), fadeToggle()`
 * `slideDown(), slideUp(), slideToggle()`
 * [`animate()`][5]
 
-# Alternatives
+# Alternatives
 
 * *jQuery aussi, ça fait vieux*, YBL 17.10.29
 * [bling.js][12]
 *  API [queryselectorall()][13] au lieu des getElementsBy...
 
 
-# Références
+# Références
 
 * Site officiel de [jQuery][6]
 * Tutos [w3schools][7]

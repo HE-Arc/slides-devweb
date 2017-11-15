@@ -57,7 +57,7 @@ Différences entre framework et library sur [Stack Overflow](http://stackoverflo
 * Keep It Simple and Stupid
 * [12 factor app](https://12factor.net/) - [fr](https://12factor.net/fr/)
 
-# Pretty ( | smart | clean | formatted) URL
+# Pretty ( | smart | clean | formatted) URL
 
 * Les URL doivent être explicites :
     * Manipulées par l’utilisateur
@@ -90,7 +90,7 @@ http://app.host.tld/controller/action[/key/val]
 * Loggers
 * ... 
 
-# Exemple d'architecture : Laravel
+# Exemple d'architecture : Laravel
 
 ![](img/laravel-architecture.jpg)
 

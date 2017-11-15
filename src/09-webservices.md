@@ -19,7 +19,7 @@
     * [orientée ressource][1] : atome : ressource (donnée) : REST
     * [orientée service][2] : atome : service (traitement) : RPC (SOAP)
 
-# Service web
+# Service web
 
 * 2 visions :
 	* Utiliser les technos web pour développer des applis distribuées
@@ -34,7 +34,7 @@
 	* [IFTTT][7], [potions Netvibes][8]
 * Consommer un service web ≠ Créer un service web
 
-# SOAP
+# SOAP
 
 * AVANT : Simple Object Access Protocol (obsolète)
 * Evolution de XML-RPC, format XML d'envoi de messages
@@ -46,7 +46,7 @@
 	* spécifications liées aux différents aspects des services web
 	* pour déployer un WS : au minimum SOAP + WSDL + UDDI
 
-# SOAP
+# SOAP
 
 * Structure d'un message SOAP
 	* Enveloppe, Entête, Corps, Erreurs
@@ -64,7 +64,7 @@
 </soap:Envelope>
 ```
 
-# SOAP
+# SOAP
 
 * [Exemple][10] requête/réponse
 * [Introduction à SOAP][11] (fr)
@@ -78,7 +78,7 @@
 	* annuaire d'interfaces de services web décrites en WSDL
 * [Tutorial WSDL/UDDI w3schools][12]
 
-# REST : REpresentational State Transfer
+# REST : REpresentational State Transfer
 
 * Style d'architecture sur lequel a été bâti le web
 * Architecture Orientée Ressource (ROA)
@@ -93,7 +93,7 @@
 * Représentation : forme donnée à la ressource
 	* ex. : page html, fichier PDF, image, flux RSS, fichier sonore, ...
 
-# REST
+# REST
 
 * Principes
 	* Identifier les ressources avec des URI (noms)
@@ -108,7 +108,7 @@
 	* Sûreté : Etat de la ressource (contenu) inchangé
 	* Idempotence : plusieurs appels donnent le même résultat
 
-# REST
+# REST
 
 * URI logique plutôt qu'URL physique
 * L'appel d'une ressource avec des méthodes différentes produira un résultat différent :
@@ -125,7 +125,7 @@
 	`index, show, store/create, update, destroy`
 * Laravel et Rails sont RESTful !
 
-# Niveaux de maturité de [Richardson][18]
+# Niveaux de maturité de [Richardson][18]
 
 * Plain Old Xml (POX)
 	* Utilisation de HTTP pour faire du RPC
@@ -136,7 +136,7 @@
 * Hypertext As The Engine Of Application State (HATEOAS)
 	* Les états suivants sont documentés dans la réponse (`<link>`)
 
-# SOAP vs REST
+# SOAP vs REST
 
 * webservice : exposer son API en REST ou SOAP ?
 * SOAP (WS-*)
@@ -152,7 +152,7 @@
 	* maintenance plus facile
 	* meilleure tolérance aux pannes
 
-# Pour aller plus loin...
+# Pour aller plus loin...
 
 * Références
 	* [SOAP][19], [WSDL][20], [UDDI][21], [XML-RPC][22], [REST][24]

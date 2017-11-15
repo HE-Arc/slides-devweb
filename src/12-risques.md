@@ -115,7 +115,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/public/exploit.txt'
 * Usurpation de mots de passe : dictionnaire, force brute
 * **SOCIAL ENGINEERING !!!**
 
-# Top 500 passwords cloud
+# Top 500 passwords cloud
 ![top 500 passwords cloud](img/passwordscloud.png)
 
 # Mots de passe
@@ -124,7 +124,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/public/exploit.txt'
 * xkcd's [password strength][6]
 * [passwordless][7] authentication
 
-# Collecte d'information
+# Collecte d'information
 * Toute information est bonne pour l'attaquant
 	* Messages d'erreur
 	* Configuration OS serveur

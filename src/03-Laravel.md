@@ -104,7 +104,7 @@ $ cd raidit
 
 * Racine du site dans ``/public`` (lien symbolique ou virtual host)
 
-# Le dépôt
+# Le dépôt
 
 * Initialiser le dépôt
 

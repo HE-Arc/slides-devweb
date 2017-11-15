@@ -117,7 +117,7 @@
 * User Experience : 50%
     * Utilisabilité : Efficacité, efficience, satisfaction
     * Design UI
-* Code :  30%
+* Code :  30%
     * Absence bugs, qualité code, lisibilité
     * Respect conventions et bonnes pratiques
     * Déploiement, configuration

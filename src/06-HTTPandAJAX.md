@@ -28,7 +28,7 @@
 * 4xx : Erreur Client
 * 5xx : Erreur Serveur
 
-# Méthodes HTTP (verbes)
+# Méthodes HTTP (verbes)
 
 * <span class="green">GET</span> : Demander une ressource
 * POST : Création d’une ressource
@@ -42,7 +42,7 @@
 <span class="green">sûres</span>
 
 
-# Echanges HTTP
+# Echanges HTTP
 
 * Requête
 
@@ -161,7 +161,7 @@ function createXMLHttpRequest()
 
 * Dans son [contexte][13]
 
-# XHR en jQuery avec _load()_
+# XHR en jQuery avec _load()_
 
 ```html
 <!DOCTYPE html>
@@ -187,7 +187,7 @@ $(document).ready(function(){
 * [Tester][14]
 * D'[autres][15] façons de faire
 
-# XHR : propriétés et méthodes
+# XHR : propriétés et méthodes
 
 * `readyState, status, onreadystatechange`
 * `responseText, responseXML`
@@ -225,7 +225,7 @@ MyXhr.setRequestHeader("Pragma", "no-cache");
 MyXhr.setRequestHeader("Expires", "Wed, 09 Aug 2000 08:21:57 GMT"); 
 ```
 
-# Préférer GET, sauf
+# Préférer GET, sauf
 
 <div>
 
@@ -239,7 +239,7 @@ MyXhr.setRequestHeader("Expires", "Wed, 09 Aug 2000 08:21:57 GMT");
 
 </div>
 
-# Réponse en texte
+# Réponse en texte
 
 * Si la requête aboutit :
 	* `readystate == 4`
@@ -248,7 +248,7 @@ MyXhr.setRequestHeader("Expires", "Wed, 09 Aug 2000 08:21:57 GMT");
 * ou dans `responseXML`
 	* Utilisation du DOM (`getElementsByTagName(), ...`)
 
-# Réponse en XML
+# Réponse en XML
 
 ```xml
 <?xml version="1.0" ?>
@@ -269,7 +269,7 @@ MyXhr.setRequestHeader("Expires", "Wed, 09 Aug 2000 08:21:57 GMT");
 ```
    * Dans `responseXML`
 
-# Réponse en [JSON][19]
+# Réponse en [JSON][19]
 
 * [Standard][20] depuis octobre 2013 ([Douglas Crockford][21])
 * Tableau d'objets js :
@@ -288,10 +288,10 @@ MyXhr.setRequestHeader("Expires", "Wed, 09 Aug 2000 08:21:57 GMT");
 ```
 
 * Utilisation de :
-`~~var users = eval('(' + myXHR.responseText + ')'); ~~` 
+`~~var users = eval('(' + myXHR.responseText + ')'); ~~` 
 pour créer le tableau d'objets correspondant
 
-# [« eval is Evil »][22]
+# [« eval is Evil »][22]
 
 * `eval()` : évalue et exécute la chaîne en paramètre
 * Risque : instructions au lieu d'un tableau d’objets
@@ -329,7 +329,7 @@ fetch("fichier.json")
 
 * L'API fecth est native et utilise les [promesses][29] plutôt que les callbacks
 
-# Traitement d'erreurs
+# Traitement d'erreurs
 
 * Utiliser les [entêtes HTTP][24]
 	* Champ Status
@@ -346,7 +346,7 @@ header("Status: Message d'erreur explicite", true, 400);
 myXHR.getResponseHeader("Status");
 ```
 
-# Penser à l'utilisateur !
+# Penser à l'utilisateur !
 
 * Requêtes XHR non enregistrées dans l'historique :
 	* Bouton précédent non opérationnel (sauf GET et URL uniques)
@@ -361,7 +361,7 @@ myXHR.getResponseHeader("Status");
 	* Mauvais code == Appli lente
 * En cas de doute, faire tester des utilisateurs
 
-# Bonnes pratiques d'utilisabilité
+# Bonnes pratiques d'utilisabilité
 
 * Trafic minimal
 * Pas de surprise
