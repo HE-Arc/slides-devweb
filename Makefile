@@ -5,7 +5,7 @@ BUILDDIR  = build
 SOURCES=$(wildcard $(SOURCEDIR)/*.md)
 SLIDES=$(patsubst $(SOURCEDIR)/%.md,$(BUILDDIR)/%.html,$(SOURCES))
 PDFS=$(patsubst $(SOURCEDIR)/%.md,$(BUILDDIR)/%.pdf,$(SOURCES))
-BOOKS=$(patsubst $(SOURCEDIR)/%.md,$(BUILDDIR)/%.tmp,$(SOURCES))
+BOOKS=$(patsubst $(SOURCEDIR)/%.md,$(BUILDDIR)/%.tex,$(SOURCES))
 
 .PHONY: all
 all: slides pdfs book
@@ -21,6 +21,7 @@ book: build/book.pdf
 
 .PHONY: clean
 clean:
+	latexmk -C $(TEMPLATES)/book.tex
 	rm -f \
 		$(foreach slide, $(SLIDES), "$(slide)") \
 		$(foreach pdf, $(PDFS), "$(pdf)") \
@@ -31,7 +32,7 @@ clean:
 $(SLIDES): $(BUILDDIR)/%.html : $(SOURCEDIR)/%.md
 	mkdir -p $(BUILDDIR)
 	sed -e 's/(\(img\/\)/($(SOURCEDIR)\/\1/g' "$^" \
-		| sed -e "\$$a# Bibliographie" \
+		| sed -e "\$$a# Sources" \
 		| pandoc -s \
 			-f markdown \
 			-t dzslides \
@@ -47,7 +48,7 @@ $(SLIDES): $(BUILDDIR)/%.html : $(SOURCEDIR)/%.md
 $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 	mkdir -p $(BUILDDIR)
 	sed -e 's/(\(img\/\)/($(SOURCEDIR)\/\1/g' "$^" \
-		| sed -e "\$$a# Bibliographie" \
+		| sed -e "\$$a# Sources" \
 		| pandoc -s \
 			-f markdown \
 			-t latex \
@@ -60,37 +61,24 @@ $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 			-V links-as-notes=true \
 			-o "$@"
 
-$(BOOKS): $(BUILDDIR)/%.tmp: $(SOURCEDIR)/%.md
+$(BOOKS): $(BUILDDIR)/%.tex: $(SOURCEDIR)/%.md
 	mkdir -p $(BUILDDIR)
-	$(eval ref := $(shell echo $< | sed -e 's~[\/\-\.]~~g'))
 	sed -e 's/(\(img\/\)/($(SOURCEDIR)\/\1/g' "$^" \
-		| sed -e "s~\[\([a-zA-Z0-f_\-\.]*\)\]\([^\[(]\)~[$(ref)-\1]\2~g" \
 		| sed -e '0,/<footer>/ s/^#.*$$//g' \
 		| sed -e 's/<footer>.*<\/footer>//g' \
-		| sed -e 's/^#/##/g' \
-		| sed -e 's/^% [0-9]* *\.\(.*\)$$/\n\n# \1/g' \
+		| sed -e 's/^----*//g' \
+		| sed -e "\$$a# Sources" \
+		| pandoc -f markdown \
+			-t latex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
 		> $@
 
-build/book.md: $(BOOKS)
-	cat $(foreach source, $(sort $(BOOKS)), "$(source)") \
-		> $@
-	echo "# Bibliographie" >> $@
-
-build/book.pdf: build/book.md
-	pandoc -s \
-		-f markdown \
-		-t latex \
-		--pdf-engine=xelatex \
-		--lua-filter=meta.lua \
-		--lua-filter=english.lua \
-		--filter=pandoc-citeproc \
-		--toc \
-		-H $(TEMPLATES)/header.tex \
-		-V title="Application Web II" \
-		-V subtitle="HE-Arc Ingénierie" \
-		-V documentclass="scrreprt" \
-		-o $@ \
-		$^
+$(BUILDDIR)/book.pdf: $(TEMPLATES)/book.tex $(BOOKS)
+	latexmk -pdf $<
+	latexmk -c $<
+	mv book.pdf build/
 
 $(BUILDDIR)/index.html: $(SLIDES)
 	cat $(TEMPLATES)/indexTop.html > $@
