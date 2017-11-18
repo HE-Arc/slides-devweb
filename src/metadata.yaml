@@ -4,8 +4,8 @@ lang: fr
 bibliography: src/bibliographie.yaml
 csl: iso690-numeric-fr.csl
 
-mainfont: Linux Biolinum O
-sansfont: Linux Libertine O
+mainfont: Linux Libertine O
+sansfont: Linux Biolinum O
 monofont: Inconsolata
 monofontoptions: Scale=0.9
 ---
