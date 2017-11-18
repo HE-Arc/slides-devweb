@@ -57,6 +57,7 @@ $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 			--filter=pandoc-citeproc \
 			-H $(TEMPLATES)/header.tex \
 			-V documentclass="scrartcl" \
+			-V links-as-notes=true \
 			-o "$@"
 
 $(BOOKS): $(BUILDDIR)/%.tmp: $(SOURCEDIR)/%.md

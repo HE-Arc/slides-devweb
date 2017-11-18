@@ -8,4 +8,5 @@ mainfont: Linux Libertine O
 sansfont: Linux Biolinum O
 monofont: Inconsolata
 monofontoptions: Scale=0.9
+linkcolor: blue
 ---
