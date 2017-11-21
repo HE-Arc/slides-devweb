@@ -38,6 +38,7 @@ nav a:focus {
 
 .chapter{
     width: 100%;
+    min-height: 4.5rem;
     position: relative;
     padding-bottom:3px;
     display: inline-block;
