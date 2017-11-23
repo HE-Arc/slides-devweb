@@ -7,7 +7,7 @@ cache: apt
 
 env:
   global:
-    - PANDOC_VERSION=2.0.2
+    - PANDOC_VERSION=2.0.3
     - EMOJIONE_VERSION=3.1.2
 
 addons:
@@ -48,5 +48,15 @@ after_success:
   - >
     test "${TRAVIS_PULL_REQUEST}" = "false" \
       && test "${TRAVIS_BRANCH}" = "master" \
-      && bash deploy.sh \
-      || echo ":-)"
+      && ( \
+        make build/index.html
+        cd build
+        rm -f *.tmp *.md
+        git init
+        git config user.name "TravisCI"
+        git config user.email "travis@he-arc.test"
+        git add .
+        git commit -m "Deployed to github pages"
+        git push -f -q "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}" master:gh-pages
+      ) \
+      || echo "Nothing to do outside the master branch."
