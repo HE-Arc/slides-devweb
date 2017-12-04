@@ -147,17 +147,19 @@ SELECT login, password FROM user INTO DUMPFILE 'www/public/exploit.txt'
 	* ces bonnes pratiques sont déjà implémentées
 * Suites et logiciels de test
 
-# [Top 10][9] OWASP 2013
+# [Top 10][9] OWASP 2017
+
 1. Injection
-2. Violation de gestion d'authentification ou de session
-3. Cross Site Scripting (XSS)
-4. Références directes non sécurisées à une ressource
-5. Mauvaise configuration de sécurité
-6. Exposition de données sensibles
-7. Contrôle d'accès lacunaire au niveau fonctionnel
-8. Falsification de requêtes intersites (CSRF)
-9. Composants obsolètes (vulnérabilités connues)
-10. Redirection et renvois non validés
+2. Broken Authentication
+3. Sensitive Data Exposure
+4. XML External Entities (XXE) 
+5. Broken Access Control
+6. Security Misconfiguration
+7. Cross Site Scripting (XSS) 
+8. Insecure Deserialization
+9. Using Components with Known Vulnerabilities
+10. Insufficient Logging & Monitoring
+
 * Top 10 [mobile][17]
 
 # Références

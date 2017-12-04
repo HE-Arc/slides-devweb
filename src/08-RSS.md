@@ -4,7 +4,7 @@
 
 ## Really Simple Syndication{.title}
 
-<footer>HE-Arc (DGR) 2016</footer>
+<footer>HE-Arc (DGR) 2017</footer>
 
 # Syndication
 
@@ -155,16 +155,13 @@ Lire [The myth of RSS compatibility](https://web.archive.org/web/20110726001954/
 # Signaler la présence d'un fil RSS
 
 * Au navigateur
-
 ```html
 <link rel="alternate" type="application/rss+xml" title="RSS" 
 	href="http://www.site.tld/feedfilename.xml">
 ```
 	
 * À l'utilisateur
-	* Icônes correspondant au type de flux
-	* Liens vers le script générant le flux
-
+	* Icône + lien vers le script générant le flux
 ```html
 <a href="http://www.site.tld/feed">
 <img src="rss-icon.png" alt="M'abonner" /></a> 
@@ -188,9 +185,7 @@ Lire [The myth of RSS compatibility](https://web.archive.org/web/20110726001954/
 <link>http://www.website_url.com</link>
 <description>Podcast : audio.mp3</description>
 
-<enclosure
-url="http://www.site.tld/sounds/audio.mp3"
-length="666666" type="audio/mpeg"/>
+<enclosure url="http://www.site.tld/sounds/audio.mp3" length="666666" type="audio/mpeg"/>
 
 <guid isPermaLink="false">2004-11-30-02</guid>
 </item>
@@ -206,13 +201,27 @@ length="666666" type="audio/mpeg"/>
 <summary>An overview of Atom 1.0</summary> 
 
 <link rel="enclosure" 
-type="audio/mpeg" 
-title="MP3" 
+type="audio/mpeg" title="Sttellla - ça va comme un lundi" 
 href=" http://www.site.tld/sounds/audio.mp3 "
 length="666666" />
 
 </entry>
 ```
+
+# Alternatives
+
+* [Facebook Open Graph](http://ogp.me/)
+* [Twitter Cards](https://dev.twitter.com/cards/overview)
+* [Google Schema.org](http://schema.org/)
+* [Microformats](http://microformats.org/)
+* [JSON-LD](http://json-ld.org/)
+
+De multiples spécifications permettent d'enrichir le contenu d'une page afin
+de la rendre aisément « consommable » par un moteur de recherche, ou une
+plateforme sociale (e.g. Facebook, Twitter, Reddit, etc.) 
+
+RDF/XML (utilisé par RSS 0.90, 0.91) est progressivement remplacé par les
+_microdata_ (Schema.org), RDFa ou JSON-LD. Les microformats sont notamment utilisés par LinkedIn.
 
 # Pour en savoir plus...
 
@@ -222,25 +231,6 @@ length="666666" />
 * [Comparatif RSS 2.0 / Atom 1.0][9]
 * [Stats][10] d'utilisation
 * [Is RSS dead ?][11] (03.2015)
-
-# Alternatives
-
-De multiples spécifications permettent d'enrichir le contenu d'une page afin
-de la rendre aisément « consommable » par un moteur de recherche, ou une
-plateforme sociale (e.g. Facebook, Twitter, Reddit, etc.)
-
-* [Facebook Open Graph](http://ogp.me/)
-* [Twitter Cards](https://dev.twitter.com/cards/overview)
-* [Google Schema.org](http://schema.org/)
-* [Microformats](http://microformats.org/)
-* [JSON-LD](http://json-ld.org/)
-
-<div class="notes">
-RDF/XML (utilisé par RSS 0.90, 0.91) est progressivement remplacé par les
-_microdata_ (Schema.org), RDFa ou JSON-LD.
-
-Les microformats sont notamment utilisés par LinkedIn.
-</div>
 
 <!-- Bibliographie -->
 [1]:http://blog.louisgray.com/2008/11/30-different-uses-for-rss.html
@@ -259,10 +249,12 @@ Les microformats sont notamment utilisés par LinkedIn.
 <!-- Hack -->
 <style>
 	.sourceCode {
-    font-size: 80%;
+    font-size: 64%;
 	line-height: 80%;
     margin: 0 auto;
 	overflow: hidden; 
   }
+  
+  #sources {display:none}  
 </style>
  

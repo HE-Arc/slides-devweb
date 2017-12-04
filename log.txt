@@ -1,0 +1,1815 @@
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/00-presentation.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t dzslides \
+			--self-contained \
+			--lua-filter=meta.lua \
+			--filter=pandoc-citeproc \
+			-V show-notes=true \
+			-V title="" \
+			-V title-prefix="HE-Arc" \
+			-H templates/header.html \
+			-o "build/00-presentation.html"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/01-php-intro-framework.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t dzslides \
+			--self-contained \
+			--lua-filter=meta.lua \
+			--filter=pandoc-citeproc \
+			-V show-notes=true \
+			-V title="" \
+			-V title-prefix="HE-Arc" \
+			-H templates/header.html \
+			-o "build/01-php-intro-framework.html"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/02-frameworks.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t dzslides \
+			--self-contained \
+			--lua-filter=meta.lua \
+			--filter=pandoc-citeproc \
+			-V show-notes=true \
+			-V title="" \
+			-V title-prefix="HE-Arc" \
+			-H templates/header.html \
+			-o "build/02-frameworks.html"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/03-Laravel.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t dzslides \
+			--self-contained \
+			--lua-filter=meta.lua \
+			--filter=pandoc-citeproc \
+			-V show-notes=true \
+			-V title="" \
+			-V title-prefix="HE-Arc" \
+			-H templates/header.html \
+			-o "build/03-Laravel.html"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/04-html5.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t dzslides \
+			--self-contained \
+			--lua-filter=meta.lua \
+			--filter=pandoc-citeproc \
+			-V show-notes=true \
+			-V title="" \
+			-V title-prefix="HE-Arc" \
+			-H templates/header.html \
+			-o "build/04-html5.html"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/05-JSandDOM.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t dzslides \
+			--self-contained \
+			--lua-filter=meta.lua \
+			--filter=pandoc-citeproc \
+			-V show-notes=true \
+			-V title="" \
+			-V title-prefix="HE-Arc" \
+			-H templates/header.html \
+			-o "build/05-JSandDOM.html"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/06-HTTPandAJAX.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t dzslides \
+			--self-contained \
+			--lua-filter=meta.lua \
+			--filter=pandoc-citeproc \
+			-V show-notes=true \
+			-V title="" \
+			-V title-prefix="HE-Arc" \
+			-H templates/header.html \
+			-o "build/06-HTTPandAJAX.html"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/07-jQuery.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t dzslides \
+			--self-contained \
+			--lua-filter=meta.lua \
+			--filter=pandoc-citeproc \
+			-V show-notes=true \
+			-V title="" \
+			-V title-prefix="HE-Arc" \
+			-H templates/header.html \
+			-o "build/07-jQuery.html"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/08-RSS.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t dzslides \
+			--self-contained \
+			--lua-filter=meta.lua \
+			--filter=pandoc-citeproc \
+			-V show-notes=true \
+			-V title="" \
+			-V title-prefix="HE-Arc" \
+			-H templates/header.html \
+			-o "build/08-RSS.html"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/09-webservices.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t dzslides \
+			--self-contained \
+			--lua-filter=meta.lua \
+			--filter=pandoc-citeproc \
+			-V show-notes=true \
+			-V title="" \
+			-V title-prefix="HE-Arc" \
+			-H templates/header.html \
+			-o "build/09-webservices.html"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/10-rwd.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t dzslides \
+			--self-contained \
+			--lua-filter=meta.lua \
+			--filter=pandoc-citeproc \
+			-V show-notes=true \
+			-V title="" \
+			-V title-prefix="HE-Arc" \
+			-H templates/header.html \
+			-o "build/10-rwd.html"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/11-https.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t dzslides \
+			--self-contained \
+			--lua-filter=meta.lua \
+			--filter=pandoc-citeproc \
+			-V show-notes=true \
+			-V title="" \
+			-V title-prefix="HE-Arc" \
+			-H templates/header.html \
+			-o "build/11-https.html"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/12-risques.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t dzslides \
+			--self-contained \
+			--lua-filter=meta.lua \
+			--filter=pandoc-citeproc \
+			-V show-notes=true \
+			-V title="" \
+			-V title-prefix="HE-Arc" \
+			-H templates/header.html \
+			-o "build/12-risques.html"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/13-rails.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t dzslides \
+			--self-contained \
+			--lua-filter=meta.lua \
+			--filter=pandoc-citeproc \
+			-V show-notes=true \
+			-V title="" \
+			-V title-prefix="HE-Arc" \
+			-H templates/header.html \
+			-o "build/13-rails.html"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/00-presentation.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t latex \
+			--pdf-engine=xelatex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+			-H templates/header.tex \
+			-V documentclass="scrartcl" \
+			-V links-as-notes=true \
+			-o "build/00-presentation.pdf"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/01-php-intro-framework.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t latex \
+			--pdf-engine=xelatex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+			-H templates/header.tex \
+			-V documentclass="scrartcl" \
+			-V links-as-notes=true \
+			-o "build/01-php-intro-framework.pdf"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/02-frameworks.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t latex \
+			--pdf-engine=xelatex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+			-H templates/header.tex \
+			-V documentclass="scrartcl" \
+			-V links-as-notes=true \
+			-o "build/02-frameworks.pdf"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/03-Laravel.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t latex \
+			--pdf-engine=xelatex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+			-H templates/header.tex \
+			-V documentclass="scrartcl" \
+			-V links-as-notes=true \
+			-o "build/03-Laravel.pdf"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/04-html5.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t latex \
+			--pdf-engine=xelatex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+			-H templates/header.tex \
+			-V documentclass="scrartcl" \
+			-V links-as-notes=true \
+			-o "build/04-html5.pdf"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/05-JSandDOM.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t latex \
+			--pdf-engine=xelatex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+			-H templates/header.tex \
+			-V documentclass="scrartcl" \
+			-V links-as-notes=true \
+			-o "build/05-JSandDOM.pdf"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/06-HTTPandAJAX.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t latex \
+			--pdf-engine=xelatex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+			-H templates/header.tex \
+			-V documentclass="scrartcl" \
+			-V links-as-notes=true \
+			-o "build/06-HTTPandAJAX.pdf"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/07-jQuery.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t latex \
+			--pdf-engine=xelatex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+			-H templates/header.tex \
+			-V documentclass="scrartcl" \
+			-V links-as-notes=true \
+			-o "build/07-jQuery.pdf"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/08-RSS.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t latex \
+			--pdf-engine=xelatex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+			-H templates/header.tex \
+			-V documentclass="scrartcl" \
+			-V links-as-notes=true \
+			-o "build/08-RSS.pdf"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/09-webservices.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t latex \
+			--pdf-engine=xelatex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+			-H templates/header.tex \
+			-V documentclass="scrartcl" \
+			-V links-as-notes=true \
+			-o "build/09-webservices.pdf"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/10-rwd.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t latex \
+			--pdf-engine=xelatex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+			-H templates/header.tex \
+			-V documentclass="scrartcl" \
+			-V links-as-notes=true \
+			-o "build/10-rwd.pdf"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/11-https.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t latex \
+			--pdf-engine=xelatex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+			-H templates/header.tex \
+			-V documentclass="scrartcl" \
+			-V links-as-notes=true \
+			-o "build/11-https.pdf"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/12-risques.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t latex \
+			--pdf-engine=xelatex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+			-H templates/header.tex \
+			-V documentclass="scrartcl" \
+			-V links-as-notes=true \
+			-o "build/12-risques.pdf"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/13-rails.md" \
+		| sed -e "\$a# Sources" \
+		| pandoc -s \
+			-f markdown \
+			-t latex \
+			--pdf-engine=xelatex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+			-H templates/header.tex \
+			-V documentclass="scrartcl" \
+			-V links-as-notes=true \
+			-o "build/13-rails.pdf"
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/00-presentation.md" \
+		| sed -e '0,/<footer>/ s/^#.*$//g' \
+		| sed -e 's/<footer>.*<\/footer>//g' \
+		| sed -e 's/^----*//g' \
+		| sed -e "\$a# Sources" \
+		| pandoc -f markdown \
+			-t latex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+		> build/00-presentation.tex
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/01-php-intro-framework.md" \
+		| sed -e '0,/<footer>/ s/^#.*$//g' \
+		| sed -e 's/<footer>.*<\/footer>//g' \
+		| sed -e 's/^----*//g' \
+		| sed -e "\$a# Sources" \
+		| pandoc -f markdown \
+			-t latex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+		> build/01-php-intro-framework.tex
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/02-frameworks.md" \
+		| sed -e '0,/<footer>/ s/^#.*$//g' \
+		| sed -e 's/<footer>.*<\/footer>//g' \
+		| sed -e 's/^----*//g' \
+		| sed -e "\$a# Sources" \
+		| pandoc -f markdown \
+			-t latex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+		> build/02-frameworks.tex
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/03-Laravel.md" \
+		| sed -e '0,/<footer>/ s/^#.*$//g' \
+		| sed -e 's/<footer>.*<\/footer>//g' \
+		| sed -e 's/^----*//g' \
+		| sed -e "\$a# Sources" \
+		| pandoc -f markdown \
+			-t latex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+		> build/03-Laravel.tex
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/04-html5.md" \
+		| sed -e '0,/<footer>/ s/^#.*$//g' \
+		| sed -e 's/<footer>.*<\/footer>//g' \
+		| sed -e 's/^----*//g' \
+		| sed -e "\$a# Sources" \
+		| pandoc -f markdown \
+			-t latex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+		> build/04-html5.tex
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/05-JSandDOM.md" \
+		| sed -e '0,/<footer>/ s/^#.*$//g' \
+		| sed -e 's/<footer>.*<\/footer>//g' \
+		| sed -e 's/^----*//g' \
+		| sed -e "\$a# Sources" \
+		| pandoc -f markdown \
+			-t latex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+		> build/05-JSandDOM.tex
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/06-HTTPandAJAX.md" \
+		| sed -e '0,/<footer>/ s/^#.*$//g' \
+		| sed -e 's/<footer>.*<\/footer>//g' \
+		| sed -e 's/^----*//g' \
+		| sed -e "\$a# Sources" \
+		| pandoc -f markdown \
+			-t latex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+		> build/06-HTTPandAJAX.tex
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/07-jQuery.md" \
+		| sed -e '0,/<footer>/ s/^#.*$//g' \
+		| sed -e 's/<footer>.*<\/footer>//g' \
+		| sed -e 's/^----*//g' \
+		| sed -e "\$a# Sources" \
+		| pandoc -f markdown \
+			-t latex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+		> build/07-jQuery.tex
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/08-RSS.md" \
+		| sed -e '0,/<footer>/ s/^#.*$//g' \
+		| sed -e 's/<footer>.*<\/footer>//g' \
+		| sed -e 's/^----*//g' \
+		| sed -e "\$a# Sources" \
+		| pandoc -f markdown \
+			-t latex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+		> build/08-RSS.tex
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/09-webservices.md" \
+		| sed -e '0,/<footer>/ s/^#.*$//g' \
+		| sed -e 's/<footer>.*<\/footer>//g' \
+		| sed -e 's/^----*//g' \
+		| sed -e "\$a# Sources" \
+		| pandoc -f markdown \
+			-t latex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+		> build/09-webservices.tex
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/10-rwd.md" \
+		| sed -e '0,/<footer>/ s/^#.*$//g' \
+		| sed -e 's/<footer>.*<\/footer>//g' \
+		| sed -e 's/^----*//g' \
+		| sed -e "\$a# Sources" \
+		| pandoc -f markdown \
+			-t latex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+		> build/10-rwd.tex
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/11-https.md" \
+		| sed -e '0,/<footer>/ s/^#.*$//g' \
+		| sed -e 's/<footer>.*<\/footer>//g' \
+		| sed -e 's/^----*//g' \
+		| sed -e "\$a# Sources" \
+		| pandoc -f markdown \
+			-t latex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+		> build/11-https.tex
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/12-risques.md" \
+		| sed -e '0,/<footer>/ s/^#.*$//g' \
+		| sed -e 's/<footer>.*<\/footer>//g' \
+		| sed -e 's/^----*//g' \
+		| sed -e "\$a# Sources" \
+		| pandoc -f markdown \
+			-t latex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+		> build/12-risques.tex
+mkdir -p build
+sed -e 's/(\(img\/\)/(src\/\1/g' "src/13-rails.md" \
+		| sed -e '0,/<footer>/ s/^#.*$//g' \
+		| sed -e 's/<footer>.*<\/footer>//g' \
+		| sed -e 's/^----*//g' \
+		| sed -e "\$a# Sources" \
+		| pandoc -f markdown \
+			-t latex \
+			--lua-filter=meta.lua \
+			--lua-filter=english.lua \
+			--filter=pandoc-citeproc \
+		> build/13-rails.tex
+latexmk -pdf templates/book.tex
+Latexmk: applying rule 'pdflatex'...
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex)
+ \write18 enabled.
+entering extended mode
+(./templates/book.tex
+LaTeX2e <2017-04-15>
+Babel <3.13> and hyphenation patterns for 22 language(s) loaded.
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/scrbook.cls
+Document Class: scrbook 2017/09/07 v3.24 KOMA-Script document class (book)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/scrkbase.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/scrbase.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/scrlfile.sty)))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/tocbasic.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/scrsize12pt.clo)
+ (/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/typearea.sty))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/lm/lmodern.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/base/t1enc.def)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/lm/t1lmr.fd))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/l3kernel/expl3-code.tex)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/base/tuenc.def))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/polyglossia/polyglossia.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/makecmds/makecmds.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/ifluatex.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/ifxetex/ifxetex.sty))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/polyglossia/gloss-french.ldf
+)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/polyglossia/gloss-english.ld
+f) (/usr/local/texlive/2016basic/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/microtype/microtype-xetex.de
+f) (/usr/local/texlive/2016basic/texmf-dist/tex/latex/microtype/microtype.cfg))
+ (/usr/local/texlive/2016basic/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/ulem/ulem.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.s
+ty
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/hobsub-generic.st
+y)) (/usr/local/texlive/2016basic/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/latexconfig/hyperref.cfg))
+
+Package hyperref Message: Driver (autodetected): hxetex.
+
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/stringenc.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty)
+) (/usr/local/texlive/2016basic/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/adjustbox/adjcalc.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/adjustbox/trimclip.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics-def/xetex.def)))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/collectbox/collectbox.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/adjustbox/tc-xetex.def)))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics-cfg/color.cfg))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)) (./templates/header.tex
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/xltxtra/xltxtra.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/realscripts/realscripts.sty)
+ (/usr/local/texlive/2016basic/texmf-dist/tex/latex/metalogo/metalogo.sty))
+(/Users/dgr/Library/texmf/tex/xelatexemoji.sty
+(/Users/dgr/Library/texmf/tex/newunicodechar/newunicodechar.sty))
+(/Users/dgr/Library/texmf/tex/xelatexemoji-flags.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/sectsty/sectsty.sty))
+(./book.aux)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/gettitlestring.st
+y))
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/microtype/mt-LatinModernRoma
+n.cfg) (/usr/local/texlive/2016basic/texmf-dist/tex/latex/lm/omllmm.fd)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/lm/omslmsy.fd)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/lm/omxlmex.fd)
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/se-ascii-print.de
+f) [1] [2]
+chapter 1.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 114.
+
+(./build/00-presentation.tex [3]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table \relax 1.1 on input line 164.
+
+[4] [5]) [6]
+chapter 2.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 117.
+
+(./build/01-php-intro-framework.tex [7]
+Overfull \hbox (24.02211pt too wide) in paragraph at lines 112--113
+[][]\TU/LinuxLibertineO(0)/m/n/12 (1) 
+[8] [9] [10]
+
+LaTeX Font Warning: Font shape `TU/Inconsolata(0)/m/it' undefined
+(Font)              using `TU/Inconsolata(0)/m/n' instead on input line 226.
+
+[11] [12] [13]
+Overfull \hbox (11.99983pt too wide) in paragraph at lines 410--412
+[][]
+[14] [15] [16] [17] [18] [19]
+
+Class scrbook Warning: incompatible usage of \@ssect detected.
+(scrbook)              You've used the KOMA-Script implementation of \@ssect
+(scrbook)              from within a non compatible caller, that does not
+(scrbook)              \scr@s@ct@@nn@m@ locally.
+(scrbook)              This could result in several error messages on input lin
+e 865.
+
+[20])
+Overfull \hbox (510.93307pt too wide) in paragraph at lines 889--119
+[][][][][][][][][][][][][] [] [][][] [] [][] [] [] [] [][] [] [][][] [] [][][][
+][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][]$[][]
+
+Underfull \hbox (badness 10000) in paragraph at lines 889--119
+
+[21]
+chapter 3.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 120.
+
+(./build/02-frameworks.tex [22] [23]
+Overfull \hbox (11.99109pt too wide) in paragraph at lines 182--183
+[][] 
+[24]
+Overfull \hbox (11.98878pt too wide) in paragraph at lines 219--220
+[][] 
+[25]) [26]
+chapter 4.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 123.
+
+(./build/03-Laravel.tex [27] [28] [29] [30] [31]) [32] [33]
+chapter 5.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 126.
+
+(./build/04-html5.tex [34]) [35]
+chapter 6.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 129.
+
+(./build/05-JSandDOM.tex [36] [37] [38] [39] [40] [41] [42] [43]) [44]
+chapter 7.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 132.
+
+(./build/06-HTTPandAJAX.tex [45] [46] [47] [48] [49] [50] [51] [52] [53])
+[54]
+chapter 8.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 135.
+
+(./build/07-jQuery.tex [55] [56] [57] [58]) [59]
+chapter 9.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 138.
+
+(./build/08-RSS.tex [60] [61] [62] [63] [64]) [65]
+chapter 10.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 141.
+
+(./build/09-webservices.tex [66] [67]
+Underfull \hbox (badness 1540) in paragraph at lines 320--325
+[]\TU/LinuxLibertineO(0)/m/n/12 Avec [][]Laravel[][] ou Rails, ces actions sont
+ nommées : [][][][][]\TU/Inconsolata(0)/m/it/12 index, show, store/create,
+[68] [69]) [70]
+chapter 11.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 144.
+
+(./build/10-rwd.tex [71] [72] [73] [74] [75]
+
+Class scrbook Warning: incompatible usage of \@ssect detected.
+(scrbook)              You've used the KOMA-Script implementation of \@ssect
+(scrbook)              from within a non compatible caller, that does not
+(scrbook)              \scr@s@ct@@nn@m@ locally.
+(scrbook)              This could result in several error messages on input lin
+e 502.
+
+)
+Overfull \hbox (92.46501pt too wide) in paragraph at lines 511--146
+[][]$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][][][][] [] [][][] [
+] [][][][] [] [][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+$[][]
+
+Underfull \hbox (badness 10000) in paragraph at lines 511--146
+
+[76]
+chapter 12.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 147.
+
+(./build/11-https.tex [77] [78] [79]) [80]
+chapter 13.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 150.
+
+(./build/12-risques.tex [81]
+Overfull \hbox (208.16206pt too wide) in paragraph at lines 132--134
+[]\TU/LinuxLibertineO(0)/m/n/12 Exécution par le navigateur du client [] 
+[82] [83] [84] [85]) [86]
+chapter 14.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 153.
+
+(./build/13-rails.tex
+Overfull \hbox (8.72528pt too wide) in paragraph at lines 1--2
+[][] 
+[87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98]
+Overfull \hbox (8.72528pt too wide) in paragraph at lines 929--930
+[][] 
+[99] [100] [101]
+Overfull \hbox (24.0179pt too wide) in paragraph at lines 1017--1018
+[][]\TU/LinuxLibertineO(0)/m/n/12 (1) 
+[102]
+Overfull \hbox (11.98746pt too wide) in paragraph at lines 1034--1035
+[][] 
+
+Class scrbook Warning: incompatible usage of \@ssect detected.
+(scrbook)              You've used the KOMA-Script implementation of \@ssect
+(scrbook)              from within a non compatible caller, that does not
+(scrbook)              \scr@s@ct@@nn@m@ locally.
+(scrbook)              This could result in several error messages on input lin
+e 1041.
+
+)
+
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
+
+[103] [104] (./book.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)
+Output written on book.pdf (104 pages).
+Transcript written on book.log.
+=== TeX engine is 'XeTeX'
+Latexmk: applying rule 'pdflatex'...
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex)
+ \write18 enabled.
+entering extended mode
+(./templates/book.tex
+LaTeX2e <2017-04-15>
+Babel <3.13> and hyphenation patterns for 22 language(s) loaded.
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/scrbook.cls
+Document Class: scrbook 2017/09/07 v3.24 KOMA-Script document class (book)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/scrkbase.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/scrbase.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/scrlfile.sty)))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/tocbasic.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/scrsize12pt.clo)
+ (/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/typearea.sty))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/lm/lmodern.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/base/t1enc.def)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/lm/t1lmr.fd))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/l3kernel/expl3-code.tex)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/base/tuenc.def))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/polyglossia/polyglossia.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/makecmds/makecmds.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/ifluatex.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/ifxetex/ifxetex.sty))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/polyglossia/gloss-french.ldf
+)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/polyglossia/gloss-english.ld
+f) (/usr/local/texlive/2016basic/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/microtype/microtype-xetex.de
+f) (/usr/local/texlive/2016basic/texmf-dist/tex/latex/microtype/microtype.cfg))
+ (/usr/local/texlive/2016basic/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/ulem/ulem.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.s
+ty
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/hobsub-generic.st
+y)) (/usr/local/texlive/2016basic/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/latexconfig/hyperref.cfg))
+
+Package hyperref Message: Driver (autodetected): hxetex.
+
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/stringenc.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty)
+) (/usr/local/texlive/2016basic/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/adjustbox/adjcalc.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/adjustbox/trimclip.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics-def/xetex.def)))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/collectbox/collectbox.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/adjustbox/tc-xetex.def)))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics-cfg/color.cfg))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)) (./templates/header.tex
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/xltxtra/xltxtra.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/realscripts/realscripts.sty)
+ (/usr/local/texlive/2016basic/texmf-dist/tex/latex/metalogo/metalogo.sty))
+(/Users/dgr/Library/texmf/tex/xelatexemoji.sty
+(/Users/dgr/Library/texmf/tex/newunicodechar/newunicodechar.sty))
+(/Users/dgr/Library/texmf/tex/xelatexemoji-flags.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/sectsty/sectsty.sty))
+(./book.aux
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `ruxe9fuxe9rences' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `alternatives' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `ruxe9fuxe9rences' multiply defined.
+
+
+LaTeX Warning: Label `pratique' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `ressources' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `bonnes-pratiques' multiply defined.
+
+
+LaTeX Warning: Label `ruxe9fuxe9rences' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+) (/usr/local/texlive/2016basic/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/gettitlestring.st
+y)) (./book.out) (./book.out)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/microtype/mt-LatinModernRoma
+n.cfg) (/usr/local/texlive/2016basic/texmf-dist/tex/latex/lm/omllmm.fd)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/lm/omslmsy.fd)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/lm/omxlmex.fd)
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/se-ascii-print.de
+f) [1] (./book.toc) [2]
+chapter 1.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 114.
+
+(./build/00-presentation.tex [3] [4] [5]) [6]
+chapter 2.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 117.
+
+(./build/01-php-intro-framework.tex [7]
+Overfull \hbox (24.02211pt too wide) in paragraph at lines 112--113
+[][]\TU/LinuxLibertineO(0)/m/n/12 (1) 
+[8] [9] [10]
+
+LaTeX Font Warning: Font shape `TU/Inconsolata(0)/m/it' undefined
+(Font)              using `TU/Inconsolata(0)/m/n' instead on input line 226.
+
+[11] [12] [13]
+Overfull \hbox (11.99983pt too wide) in paragraph at lines 410--412
+[][]
+[14] [15] [16] [17] [18] [19]
+
+Class scrbook Warning: incompatible usage of \@ssect detected.
+(scrbook)              You've used the KOMA-Script implementation of \@ssect
+(scrbook)              from within a non compatible caller, that does not
+(scrbook)              \scr@s@ct@@nn@m@ locally.
+(scrbook)              This could result in several error messages on input lin
+e 865.
+
+[20])
+Overfull \hbox (510.93307pt too wide) in paragraph at lines 889--119
+[][][][][][][][][][][][][] [] [][][] [] [][] [] [] [] [][] [] [][][] [] [][][][
+][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][]$[][]
+
+Underfull \hbox (badness 10000) in paragraph at lines 889--119
+
+[21]
+chapter 3.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 120.
+
+(./build/02-frameworks.tex [22] [23]
+Overfull \hbox (11.99109pt too wide) in paragraph at lines 182--183
+[][] 
+[24]
+Overfull \hbox (11.98878pt too wide) in paragraph at lines 219--220
+[][] 
+[25]) [26]
+chapter 4.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 123.
+
+(./build/03-Laravel.tex [27] [28] [29] [30] [31]) [32] [33]
+chapter 5.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 126.
+
+(./build/04-html5.tex [34]) [35]
+chapter 6.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 129.
+
+(./build/05-JSandDOM.tex [36] [37] [38] [39] [40] [41] [42] [43]) [44]
+chapter 7.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 132.
+
+(./build/06-HTTPandAJAX.tex [45] [46] [47] [48] [49] [50] [51] [52] [53])
+[54]
+chapter 8.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 135.
+
+(./build/07-jQuery.tex [55] [56] [57] [58]) [59]
+chapter 9.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 138.
+
+(./build/08-RSS.tex [60] [61] [62] [63] [64]) [65]
+chapter 10.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 141.
+
+(./build/09-webservices.tex [66] [67]
+Underfull \hbox (badness 1540) in paragraph at lines 320--325
+[]\TU/LinuxLibertineO(0)/m/n/12 Avec [][]Laravel[][] ou Rails, ces actions sont
+ nommées : [][][][][]\TU/Inconsolata(0)/m/it/12 index, show, store/create,
+[68] [69]) [70]
+chapter 11.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 144.
+
+(./build/10-rwd.tex [71] [72] [73] [74] [75]
+
+Class scrbook Warning: incompatible usage of \@ssect detected.
+(scrbook)              You've used the KOMA-Script implementation of \@ssect
+(scrbook)              from within a non compatible caller, that does not
+(scrbook)              \scr@s@ct@@nn@m@ locally.
+(scrbook)              This could result in several error messages on input lin
+e 502.
+
+)
+Overfull \hbox (92.46501pt too wide) in paragraph at lines 511--146
+[][]$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][][][][] [] [][][] [
+] [][][][] [] [][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+$[][]
+
+Underfull \hbox (badness 10000) in paragraph at lines 511--146
+
+[76]
+chapter 12.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 147.
+
+(./build/11-https.tex [77] [78] [79]) [80]
+chapter 13.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 150.
+
+(./build/12-risques.tex [81]
+Overfull \hbox (208.16206pt too wide) in paragraph at lines 132--134
+[]\TU/LinuxLibertineO(0)/m/n/12 Exécution par le navigateur du client [] 
+[82] [83] [84] [85]) [86]
+chapter 14.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 153.
+
+(./build/13-rails.tex
+Overfull \hbox (8.72528pt too wide) in paragraph at lines 1--2
+[][] 
+[87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98]
+Overfull \hbox (8.72528pt too wide) in paragraph at lines 929--930
+[][] 
+[99] [100] [101]
+Overfull \hbox (24.0179pt too wide) in paragraph at lines 1017--1018
+[][]\TU/LinuxLibertineO(0)/m/n/12 (1) 
+[102]
+Overfull \hbox (11.98746pt too wide) in paragraph at lines 1034--1035
+[][] 
+
+Class scrbook Warning: incompatible usage of \@ssect detected.
+(scrbook)              You've used the KOMA-Script implementation of \@ssect
+(scrbook)              from within a non compatible caller, that does not
+(scrbook)              \scr@s@ct@@nn@m@ locally.
+(scrbook)              This could result in several error messages on input lin
+e 1041.
+
+) [103] [104] (./book.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(see the transcript file for additional information)
+Output written on book.pdf (104 pages).
+Transcript written on book.log.
+=== TeX engine is 'XeTeX'
+Latexmk: applying rule 'pdflatex'...
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex)
+ \write18 enabled.
+entering extended mode
+(./templates/book.tex
+LaTeX2e <2017-04-15>
+Babel <3.13> and hyphenation patterns for 22 language(s) loaded.
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/scrbook.cls
+Document Class: scrbook 2017/09/07 v3.24 KOMA-Script document class (book)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/scrkbase.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/scrbase.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/scrlfile.sty)))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/tocbasic.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/scrsize12pt.clo)
+ (/usr/local/texlive/2016basic/texmf-dist/tex/latex/koma-script/typearea.sty))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/lm/lmodern.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/base/t1enc.def)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/lm/t1lmr.fd))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/l3kernel/expl3-code.tex)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/base/tuenc.def))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/polyglossia/polyglossia.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/makecmds/makecmds.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/ifluatex.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/ifxetex/ifxetex.sty))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/polyglossia/gloss-french.ldf
+)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/polyglossia/gloss-english.ld
+f) (/usr/local/texlive/2016basic/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/microtype/microtype-xetex.de
+f) (/usr/local/texlive/2016basic/texmf-dist/tex/latex/microtype/microtype.cfg))
+ (/usr/local/texlive/2016basic/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/ulem/ulem.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.s
+ty
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/hobsub-generic.st
+y)) (/usr/local/texlive/2016basic/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/latexconfig/hyperref.cfg))
+
+Package hyperref Message: Driver (autodetected): hxetex.
+
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/stringenc.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty)
+) (/usr/local/texlive/2016basic/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/adjustbox/adjcalc.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/adjustbox/trimclip.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics-def/xetex.def)))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/collectbox/collectbox.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/adjustbox/tc-xetex.def)))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics-cfg/color.cfg))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)) (./templates/header.tex
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/xltxtra/xltxtra.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/realscripts/realscripts.sty)
+ (/usr/local/texlive/2016basic/texmf-dist/tex/latex/metalogo/metalogo.sty))
+(/Users/dgr/Library/texmf/tex/xelatexemoji.sty
+(/Users/dgr/Library/texmf/tex/newunicodechar/newunicodechar.sty))
+(/Users/dgr/Library/texmf/tex/xelatexemoji-flags.sty)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/sectsty/sectsty.sty))
+(./book.aux
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `ruxe9fuxe9rences' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `alternatives' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `ruxe9fuxe9rences' multiply defined.
+
+
+LaTeX Warning: Label `pratique' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `ressources' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `bonnes-pratiques' multiply defined.
+
+
+LaTeX Warning: Label `ruxe9fuxe9rences' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+
+LaTeX Warning: Label `sources' multiply defined.
+
+) (/usr/local/texlive/2016basic/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/gettitlestring.st
+y)) (./book.out) (./book.out)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/microtype/mt-LatinModernRoma
+n.cfg) (/usr/local/texlive/2016basic/texmf-dist/tex/latex/lm/omllmm.fd)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/lm/omslmsy.fd)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/lm/omxlmex.fd)
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/se-ascii-print.de
+f) [1] (./book.toc) [2]
+chapter 1.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 114.
+
+(./build/00-presentation.tex [3] [4] [5]) [6]
+chapter 2.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 117.
+
+(./build/01-php-intro-framework.tex [7]
+Overfull \hbox (24.02211pt too wide) in paragraph at lines 112--113
+[][]\TU/LinuxLibertineO(0)/m/n/12 (1) 
+[8] [9] [10]
+
+LaTeX Font Warning: Font shape `TU/Inconsolata(0)/m/it' undefined
+(Font)              using `TU/Inconsolata(0)/m/n' instead on input line 226.
+
+[11] [12] [13]
+Overfull \hbox (11.99983pt too wide) in paragraph at lines 410--412
+[][]
+[14] [15] [16] [17] [18] [19]
+
+Class scrbook Warning: incompatible usage of \@ssect detected.
+(scrbook)              You've used the KOMA-Script implementation of \@ssect
+(scrbook)              from within a non compatible caller, that does not
+(scrbook)              \scr@s@ct@@nn@m@ locally.
+(scrbook)              This could result in several error messages on input lin
+e 865.
+
+[20])
+Overfull \hbox (510.93307pt too wide) in paragraph at lines 889--119
+[][][][][][][][][][][][][] [] [][][] [] [][] [] [] [] [][] [] [][][] [] [][][][
+][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][]$[][]
+
+Underfull \hbox (badness 10000) in paragraph at lines 889--119
+
+[21]
+chapter 3.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 120.
+
+(./build/02-frameworks.tex [22] [23]
+Overfull \hbox (11.99109pt too wide) in paragraph at lines 182--183
+[][] 
+[24]
+Overfull \hbox (11.98878pt too wide) in paragraph at lines 219--220
+[][] 
+[25]) [26]
+chapter 4.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 123.
+
+(./build/03-Laravel.tex [27] [28] [29] [30] [31]) [32] [33]
+chapter 5.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 126.
+
+(./build/04-html5.tex [34]) [35]
+chapter 6.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 129.
+
+(./build/05-JSandDOM.tex [36] [37] [38] [39] [40] [41] [42] [43]) [44]
+chapter 7.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 132.
+
+(./build/06-HTTPandAJAX.tex [45] [46] [47] [48] [49] [50] [51] [52] [53])
+[54]
+chapter 8.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 135.
+
+(./build/07-jQuery.tex [55] [56] [57] [58]) [59]
+chapter 9.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 138.
+
+(./build/08-RSS.tex [60] [61] [62] [63] [64]) [65]
+chapter 10.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 141.
+
+(./build/09-webservices.tex [66] [67]
+Underfull \hbox (badness 1540) in paragraph at lines 320--325
+[]\TU/LinuxLibertineO(0)/m/n/12 Avec [][]Laravel[][] ou Rails, ces actions sont
+ nommées : [][][][][]\TU/Inconsolata(0)/m/it/12 index, show, store/create,
+[68] [69]) [70]
+chapter 11.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 144.
+
+(./build/10-rwd.tex [71] [72] [73] [74] [75]
+
+Class scrbook Warning: incompatible usage of \@ssect detected.
+(scrbook)              You've used the KOMA-Script implementation of \@ssect
+(scrbook)              from within a non compatible caller, that does not
+(scrbook)              \scr@s@ct@@nn@m@ locally.
+(scrbook)              This could result in several error messages on input lin
+e 502.
+
+)
+Overfull \hbox (92.46501pt too wide) in paragraph at lines 511--146
+[][]$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][][][][] [] [][][] [
+] [][][][] [] [][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+$[][]
+
+Underfull \hbox (badness 10000) in paragraph at lines 511--146
+
+[76]
+chapter 12.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 147.
+
+(./build/11-https.tex [77] [78] [79]) [80]
+chapter 13.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 150.
+
+(./build/12-risques.tex [81]
+Overfull \hbox (208.16206pt too wide) in paragraph at lines 132--134
+[]\TU/LinuxLibertineO(0)/m/n/12 Exécution par le navigateur du client [] 
+[82] [83] [84] [85]) [86]
+chapter 14.
+
+Class scrbook Warning: usage of \IfUsePrefixLine outside section command
+(scrbook)              style makes no sense, because the behaviour not only
+(scrbook)              depends on class options but also on the run-time
+(scrbook)              section command style.
+(scrbook)              Neither the then-code nor the else-code will be
+(scrbook)              executed.
+(scrbook)              You may change this and avoid the warning by LOCALLY
+(scrbook)              setting \IfUsePrefixLine to either \@firstoftwo or
+(scrbook)              \@secondoftwo before using it on input line 153.
+
+(./build/13-rails.tex
+Overfull \hbox (8.72528pt too wide) in paragraph at lines 1--2
+[][] 
+[87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98]
+Overfull \hbox (8.72528pt too wide) in paragraph at lines 929--930
+[][] 
+[99] [100] [101]
+Overfull \hbox (24.0179pt too wide) in paragraph at lines 1017--1018
+[][]\TU/LinuxLibertineO(0)/m/n/12 (1) 
+[102]
+Overfull \hbox (11.98746pt too wide) in paragraph at lines 1034--1035
+[][] 
+
+Class scrbook Warning: incompatible usage of \@ssect detected.
+(scrbook)              You've used the KOMA-Script implementation of \@ssect
+(scrbook)              from within a non compatible caller, that does not
+(scrbook)              \scr@s@ct@@nn@m@ locally.
+(scrbook)              This could result in several error messages on input lin
+e 1041.
+
+) [103] [104] (./book.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(see the transcript file for additional information)
+Output written on book.pdf (104 pages).
+Transcript written on book.log.
+=== TeX engine is 'XeTeX'
+Latexmk: All targets (book.pdf) are up-to-date
+latexmk -c templates/book.tex
+mv book.pdf build/

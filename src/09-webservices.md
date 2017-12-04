@@ -4,7 +4,7 @@
 
 ## Services web{.title}
 
-<footer>HE-Arc (DGR) 2016</footer>
+<footer>HE-Arc (DGR) 2017</footer>
 
 # Applications distribuées
 
@@ -114,11 +114,11 @@
 * L'appel d'une ressource avec des méthodes différentes produira un résultat différent :
 
 ```html 
-	* GET		http://www.monblog.com/posts            // Liste des billets
-	* GET		http://www.monblog.com/posts/1          // Billet 1
-	* POST		http://www.monblog.com/posts            // Création d'un billet
-	* PUT/PATCH	http://www.monblog.com/posts/1          // Mise à jour billet 1
-	* DELETE	http://www.monblog.com/posts/1          // Suppr billet 1
+ * GET       http://www.monblog.com/posts     // Liste des billets
+ * GET       http://www.monblog.com/posts/1   // Billet 1
+ * POST      http://www.monblog.com/posts     // Création d'un billet
+ * PUT/PATCH http://www.monblog.com/posts/1   // Mise à jour billet 1
+ * DELETE    http://www.monblog.com/posts/1   // Suppr billet 1
 ```
 
 * Avec [Laravel][17] ou Rails, ces actions sont nommées :
@@ -127,13 +127,13 @@
 
 # Niveaux de maturité de [Richardson][18]
 
-* Plain Old Xml (POX)
+* 0: Plain Old Xml (POX)
 	* Utilisation de HTTP pour faire du RPC
-* Ressources
+* 1: Ressources
 	* Ressources identifiées par URI
-* Verbes HTTP
+* 2: Verbes HTTP
 	* Respect des propriétés des verbes HTTP
-* Hypertext As The Engine Of Application State (HATEOAS)
+* 3: Hypertext As The Engine Of Application State (HATEOAS)
 	* Les états suivants sont documentés dans la réponse (`<link>`)
 
 # SOAP vs REST
@@ -155,23 +155,17 @@
 # Pour aller plus loin...
 
 * Références
-	* [SOAP][19], [WSDL][20], [UDDI][21], [XML-RPC][22], [REST][24]
-	* [The Web Service Interoperability Organization][23]
-* Plus accessibles
+	* [SOAP][19], [WSDL][20], [UDDI][21], [XML-RPC][22], [REST][24], [The WSIO][23]
 	* [Des services web RESTful][25], [Une apologie de REST][26] (recommandés)
-	* [REST et architectures orientées service][27]
-	* [Présentation ROA][28], comparaison SOAP vs REST
+	* [REST et architectures orientées service][27], [Présentation ROA][28]
 	* [The RESTful cookbook][29], [Implementing REST][30]
 	* How important is [HATEOAS][31] (stack overflow)
 * Exemples de services web :
 	* [Google][32], [Yahoo][33], [Flickr][34], [Twitter][35], [Netvibe][36], ...
 	* [APIary][37] : Aide au design d'une API REST
 
-<div class="notes">
-[GraphQL](http://graphql.org/) est destiné à devenir la prochaine évolution
-des apis REST utilisant JSON. Initié par Facebook, Github permet également
-d'en [faire usage](https://developer.github.com/early-access/graphql/).
-</div>
+* [GraphQL](http://graphql.org/) 
+	* est destiné à devenir la prochaine évolution des apis REST utilisant JSON. Initié par Facebook, Github permet également d'en [faire usage](https://developer.github.com/early-access/graphql/).
 
 <!-- Bibliographie -->
 [1]:https://en.wikipedia.org/wiki/Resource-oriented_architecture
@@ -217,10 +211,12 @@ d'en [faire usage](https://developer.github.com/early-access/graphql/).
 <style>
 
 	.sourceCode {
-    font-size: 80%;
+    font-size: 70%;
 	line-height: 80%;
     margin: 0 auto;
 	overflow: hidden; 
   }
+  
+  #sources {display:none}
   
 </style>

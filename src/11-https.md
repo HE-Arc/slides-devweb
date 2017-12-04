@@ -88,14 +88,14 @@ CA : Autorité de certification - VA : Autorité de validation - RA : Autorité 
 # Déploiement
 
 * Installer OpenSSL
-* (Créer son autorité de certification) si autosigné
+* (Créer son autorité de certification si autosigné)
 * Obtenir le certificat et la clé privée du serveur
 * Configurer httpd. Pour Apache :
 	* virtual host (port 443), ssl.conf, (ports.conf)
 * Création de l'arborescence sécurisée
 * Démarrage serveur
-* [How to][4]
-* OU utiliser un serveur pré-configuré comme [Caddy][16]
+* OU BIEN utiliser [Let's encrypt][15]
+* OU BIEN utiliser un serveur pré-configuré comme [Caddy][16]
 
 # Ressources
 
@@ -145,5 +145,6 @@ ol > li {
 	margin: 10px 30px;
 	font-size: 60%;
 }
+  #sources {display:none}
 </style>
 	
