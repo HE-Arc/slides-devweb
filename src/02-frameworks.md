@@ -105,3 +105,12 @@ http://app.host.tld/controller/action[/key/val]
     * Cache de pages, d’opcode
     * Jointures ORM, vues, procédures stockées
     * Outils d’optimisation : YSlow, page speed, mytop
+
+<!-- Hack -->
+<style>
+section#sources {display:none;}
+img {
+    width: 100%;
+    height: 100%;
+}
+</style>

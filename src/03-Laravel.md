@@ -8,7 +8,7 @@
 
 <footer>HE-Arc (DGR & R. Emourgeon) 2016</footer>
 
-#Pourquoi [Laravel](https://laravel.com/) ?
+# Pourquoi [Laravel](https://laravel.com/) ?
 
 * Framework full stack / glue
 * Prise en main rapide
@@ -16,7 +16,7 @@
 * Incite au respect des principes [S.O.L.I.D](http://fr.wikipedia.org/wiki/SOLID_(informatique))
 * Gratuit et opensource (Licence MIT)
 
-#Historique
+# Historique
 
 * Projet initié en 2011 par [Taylor Otwell](http://taylorotwell.com/)
 * Basé sur des composants d'autres frameworks
@@ -25,8 +25,7 @@
 * [Qui](http://builtwithlaravel.com/) utilise Laravel ?
 * version 5.5 sortie en août 2017
 
-
-#Principales fonctionnalités
+# Principales fonctionnalités
 
 * Routes RESTful
 * ORM (Eloquent, implémentation du pattern Active Record)
@@ -38,15 +37,15 @@
 * Tests unitaires
 * Extensible par [packages](http://packalyst.com/) (bundles) via composer
 
-#Le Front Controller
+# Le Front Controller
 
 ![Rôle du front controller](src/img/front-ctrl.jpg "deux")
 
-#Architecture
+# Architecture
 
 ![Architecture de Laravel](src/img/laravel-architecture.jpg "trois")
 
-#MVC
+# MVC
 
 * Structure d'une appli web = [cycle Requête/Reponse](https://laravel.com/docs/master/lifecycle)
 * Modèle : Eloquent ORM
@@ -66,7 +65,7 @@
 * Tutoriels
     * [Best Momo](http://laravel.sillo.org/laravel-5/), [Open Classroom](https://openclassrooms.com/courses/decouvrez-le-framework-php-laravel-1), [CodeSchool](https://www.codeschool.com/courses/try-laravel)
 
-#Environnement de développement
+# Environnement de développement
 
 * Local
     * Installation AMP, git + configuration : Long
@@ -119,7 +118,7 @@ $git push --set-upstream origin master
 
 * Penser à ajouter sa clé publique à Github
 
-#[Apache](https://help.ubuntu.com/lts/serverguide/httpd.html)
+# [Apache](https://help.ubuntu.com/lts/serverguide/httpd.html)
 
 * Virtual hosts
     * `http-vhosts.conf` (activer dans `httpd.conf`)
@@ -177,8 +176,7 @@ $php artisan list
 
 
 <style type="text/css">
-    section.title,
-    h1.title {diplay:none;}
+    section.title, section#sources, h1.title {display:none;}
     section#premiers-pas ul li ul li,
     section#pratique ul li  ul li{
     font-size: 70%;  

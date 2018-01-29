@@ -742,6 +742,7 @@ Questions?
 
 <!-- CSS -->
 <style>
+section#sources {display:none;}
 html, .view body {
     background-color: #CC0050;
 }

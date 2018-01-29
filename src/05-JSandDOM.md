@@ -322,7 +322,7 @@ function insertNode() {
 
 <!-- Hack -->
 <style>
-
+section#sources {display:none;}
   .sourceCode {
     font-size: 80%;
 	line-height: 0.9;
