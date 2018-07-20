@@ -7,7 +7,7 @@ cache: apt
 
 env:
   global:
-    - PANDOC_VERSION=2.0.3
+    - PANDOC_VERSION=2.2.2.1
     - EMOJIONE_VERSION=3.1.2
 
 addons:
