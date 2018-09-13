@@ -1,123 +1,111 @@
 % 00.Cours devweb
 
 # Développement web dlm3
-
 ## Présentation du cours{.title}
-
-<footer>HE-Arc 2017/18 DGR et YBL</footer>
+<footer>HE-Arc 2018/19 DGR et YBL</footer>
 
 # Programme
-
-* Frameworks MVC : Laravel, Rails, Django, …
+* Frameworks MVC : Laravel, (Rails), Django, …
 * HTML5 : vue d’ensemble
-* Javascript : AJAX, DOM, JSON, jQuery
-* Syndication : RSS, Atom
+* Javascript : AJAX, DOM, JSON, Node.js, jQuery
+* (Syndication : RSS, Atom)
 * Déploiement et configuration Serveur
 * (Responsive) Web Design
 * Webservices : REST vs SOAP
 * Sécurité : Technologies, prévention des risques courants
 * <span class="yel-bg">Vos souhaits ?</span>
-* Slides cours : [github/HE-Arc](https://github.com/HE-Arc/slides-devweb/tree/master/src)
+* Slides cours : [ghpages][slidesghp], [Source : github/HE-Arc][slides]
 
 # Organisation
-
 * Cours
 * Workshops intervenants externes
-    * Automatisation du déploiement (R. Emourgeon)
-    * Flask (M. Amiguet)
-    * Webdesign (M. Schmalstieg)
-    * AngularJS (D. Jupille)
+    * Automatisation du déploiement (R. Emourgeon) ?
+    * Flask (M. Amiguet) en janvier 2019
+    * Webdesign (M. Schmalstieg) ?
+    * Vue.js ? React ? AngularJS ?
 * 2 Projets
-    * 2 frameworks (Laravel, Rails ou Django)
-    * Groupes de 3, [30h][docx] par personne et par projet
+    * 2 frameworks : Laravel & Django (ouvert à d'autres propositions)
+    * Groupes de 3, [30h][module] par personne et par projet
     * Présentation de 20min
 * Vos présentations ? <span class="yel-bg">Vos propositions ?</span>
 
 # Projets
-
 * Faire pour apprendre
 * Les rôles dans une équipe de développement web
 * Ne pas réinventer la roue ou tout faire soi-même
 * Critères d’évaluation d’un projet
+* En profiter pour apprendre des choses qui vous intéressent
 * Avant le 1er octobre :
+    * Avoir un compte github avec une [clé SSH][sshkey] (indispensable au déploiement)
     * Constitution des équipes de 3 personnes
     * Choix du projet
-    * Forge : Créer projet sur [github.com/HE-Arc](https://github.com/HE-Arc/)
-    * [S’inscrire][wiki], après avoir créé un compte si besoin
+    * Forge : Créer projet sur github dans l'entité [HE-Arc][gharc]
+    * [S’inscrire][wiki]
+* Offre d'essai Pluralsight 90 jours sur [MS Imagine][msi]
 
 # Choix des projets
-
 * Contrainte : appli basée sur des données
 * Choix
-    * Besoin réel
-    * Données existantes : [Inventaire](https://inventory.ing.he-arc.ch/),
-      [dbpedia](http://wiki.dbpedia.org/),
-      [opendata](https://opendata.swiss/fr/),
-	  DB Bikini Test à dispo
+    * Besoin réel (ex: Concours robots P1 TIN)
+    * Données existantes : [Inventaire][inv], [dbpedia][dbp], [opendata][odata], DB Bikini Test à dispo
     * S'inspirer de l'existant :
-        - [Product Hunt](https://www.producthunt.com/topics/web-app),
-          [blinklist](http://blinklist.com/reviews),
-          [makeuseof](http://www.makeuseof.com/tag/best-websites-internet/), …
-        - Volées précédentes : [2016/17](https://github.com/orgs/HE-Arc/teams/webapp-1617/repositories), [2015/16](https://projets-labinfo.he-arc.ch/projects/webdev/wiki/Wiki#Projets-2015-2016),
-          [14/15](https://forge.ing.he-arc.ch/projects/1415-dw/wiki/Wiki)
+        - [Product Hunt][prodhunt], [blinklist][blinklist], [makeuseof][makeuseof], …
+        - Volées précédentes : [2016-18][arcghp], [2015/16][wd15], [2014/15][wd14]
 
 # Calendrier
-
 |Semaine|Automne|Semaine|Printemps|
 |---:|---|---:|---|
 |38||8||
 |39|Projet Laravel|9||
-|40||10|Forum SO|
-|42||11||
+|40||10||
+|41||11||
 |43||12||
 |44||13||
-|45||15||
-|46||16|Présentations|
-|47||17|Présentations|
-|48|T. Autonome|18||
+|45||14||
+|46||15|Présentations|
+|47|T. Autonome|17|Présentations|
+|48||18||
 |49||19|T. Autonome|
 |50|Présentations|20|Examens|
 |51|Présentations|21|Début TB|
 |2||||
-|3|Projet Rails|||
+|3|Projet Python|||
 |4||||
 |5|T. Autonome|||
 |6|Examen|||
 
-# Jalons
+# Jalons (Objectifs à atteindre pour le début de la semaine)
 
-* Objectifs à atteindre pour le début de la semaine :
-    * 1 :
-    * 2 : Objectifs et maquettes
-    * 3 : Authentification et 1er déploiement
-    * 4 :
-    * 5 : Modèles avec relations (au moins 3)
-    * 6 :
-    * 7 : Minimal Viable Product
-    * 8 :
-    * 9 :
-    * 10 :
-    * 11 : Rendu projet, Présentation
+* 1 
+* 2 Objectifs et maquettes
+* 3 Authentification et 1er déploiement
+* 4
+* 5 Modèles avec relations (au moins 3)
+* 6
+* 7 Minimal Viable Product
+* 8
+* 9
+* 10
+* 11 Rendu projet, Présentation
 
 # Conseils
-
 * Le plus simple possible
 * Pas trop de données
-* Application crédible (vraies données, cas réaliste)
+* Application crédible (vraies données, cas réalistes)
 * Projet à blanc pour la prise en main du framework
-* [Maquettes](https://brainhub.eu/blog/difference-between-wireframe-mockup-prototype/)
-* [Organisez](http://drewfradette.ca/a-simpler-successful-git-branching-model/) l'utilisation du dépôt
+* [Maquettes][mockups]
+* [Organisez][branching] l'utilisation du dépôt
 * Le temps disponible à l'horaire ne suffira pas !
 * Essayez de commit avec la même identité
 * Signalez dans le commit msg si vous n'êtes pas l'auteur
 * Le déploiement est long : commencez tôt !
+* Il est moins risqué travailler plus au début du projet qu'à la fin !
 
 # Évaluation
-
 * User Experience : 50%
     * Utilisabilité : Efficacité, efficience, satisfaction
     * Design UI
-* Code :  30%
+* Code : 30%
     * Absence bugs, qualité code, lisibilité
     * Respect conventions et bonnes pratiques
     * Déploiement, configuration
@@ -132,7 +120,6 @@
 * Tous les membres d'un groupe n'ont pas forcément la même note
 
 # Présentation facultative
-
 * Facultatif, ne peut qu’augmenter la moyenne
 * DOIT être annoncé au semestre d'automne
 * Un thème absent du cours
@@ -146,15 +133,32 @@
     * [Proposer][form-pres] le(s) thème(s) de présentation et l'équipe
 
 # Mon expérience en développement web
+* [Questionnaire][form-survey] obligatoire (votre username github vous y sera demandé)
 
-* [Questionnaire][form-survey] obligatoire : Merci d'avance !
+### M E R C I !
 
 <!-- Bibliographie -->
-[docx]: https://www.he-arc.ch/sites/www.he-arc.ch/files/Reglements/04%20Formation%20de%20base/43%20Ing%C3%A9nierie/430.100%20Descriptifs%20de%20modules%20Informatique/RS430.100.17.3255%20Technologies%20d'interaction.pdf
+[slidesghp]: https://he-arc.github.io/slides-devweb/
+[slides]: https://github.com/HE-Arc/slides-devweb/tree/master/src
+[module]: https://www.he-arc.ch/sites/www.he-arc.ch/files/Reglements/04%20Formation%20de%20base/43%20Ing%C3%A9nierie/430.100%20Descriptifs%20de%20modules%20Informatique/RS430.100.18.3255%20Technologies%20d'interaction.pdf
+[sshkey]: https://github.com/settings/keys
+[gharc]: https://github.com/HE-Arc/
+[msi]: https://imagine.microsoft.com/fr-fr/Catalog/Product/21
+[inv]: https://inventory.ing.he-arc.ch/
+[dbp]: http://wiki.dbpedia.org/
+[odata]: https://opendata.swiss/fr/
+[prodhunt]: https://www.producthunt.com/topics/web-app
+[blinklist]: http://blinklist.com/reviews
+[makeuseof]: http://www.makeuseof.com/tag/best-websites-internet/
+[wiki]: https://github.com/HE-Arc/slides-devweb/wiki/Projets-2018-2019
+[github]: https://github.com/orgs/HE-Arc
+[arcghp]: https://he-arc.github.io/
+[wd15]: https://projets-labinfo.he-arc.ch/projects/webdev/wiki/Wiki#Projets-2015-2016
+[wd14]: https://forge.ing.he-arc.ch/projects/1415-dw/wiki/Wiki
+[mockups]: https://brainhub.eu/blog/difference-between-wireframe-mockup-prototype/
+[branching]: http://drewfradette.ca/a-simpler-successful-git-branching-model/
 [form-pres]: https://docs.google.com/spreadsheet/viewform?formkey=dEVJRE1WVTVPelhFcE94TGF5N1c0cGc6MQ
 [form-survey]: https://docs.google.com/spreadsheet/viewform?formkey=dDg5Znh5akRBV1hPbC1qYlVRV3BONFE6MQ
-[wiki]: https://projets-labinfo.he-arc.ch/projects/webdev/wiki
-[github]: https://github.com/orgs/HE-Arc
 
 <!-- Hack -->
 <style>
@@ -168,18 +172,22 @@
     padding: 0 10px;
   }
 
+  /* Projets automne */
   table tbody tr:nth-child(n+2):nth-child(-n+11) td:nth-child(2)
   {
     background-color: green;
   }
 
+  /* Projets printemps */
   table tbody tr:nth-child(n+15) td:nth-child(2),
-  table tbody tr:nth-child(-n+6) td:nth-child(4) {
+  table tbody tr:nth-child(-n+7) td:nth-child(4) {
     background-color: lightgreen;
   }
 
   section#jalons ul li,
   section#évaluation ul li {
-    font-size: 70%;
+    font-size: 75%;
   }
+
+  section#sources {display: none;}
 </style>
