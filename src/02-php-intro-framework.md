@@ -4,9 +4,109 @@
 
 ## Introduction aux frameworks PHP{.title}
 
-<footer>HE-Arc 2016/17 DGR et YBL</footer>
+<footer>HE-Arc 2016-18 DGR et YBL</footer>
 
 ---
+
+# [Framework](http://en.wikipedia.org/wiki/Software_framework)
+* Fonctionnalités similaires pour de nombreuses applis
+* Composants de haut-niveau réutilisables (faible couplage)
+* Règles de codage et d’architecture
+* Code sûr et efficace
+* Facilite les tests et la gestion de projets complexes
+* Utilisation de Design Patterns dès que possible
+* Comportement par défaut
+* Extensible
+* Principe d’inversion de contrôle
+
+Différences entre framework et library sur [Stack Overflow][lib-fw1] ou [artima developper][lib-fw2].
+
+# Design Patterns et webdev
+* Inversion de contrôle ([IoC][IoC])
+* Model View Controller
+    * M : Accès aux données, logique métier
+    * V : Templates des pages à générer
+    * C : Orchestration, transfert des infos
+* Front Controller
+   * Traitement et dispatch des requêtes
+   * (bootstrap, ré-écriture des URL, …)
+* [Object Relational Mapping][DAL]
+   * Active Record, Table Data Gateway, Data Mapper, …
+* [UI Patterns][UIpat]
+
+# MVC for webdev
+
+![“MVC”](img/mvc.png)
+
+# Conventions
+
+* Nommage
+    * Classes
+    * Base de données
+    * Fichiers et dossiers
+* ROUTES : ```http://app.host.tld/controller/action[/key/val]```
+* Arborescence :
+    * Imposée ou libre selon frameworks
+    * Pas de code (minimum) sous la racine web 
+* Conventions obligatoires ou non, mais RECOMMANDEES dans tous les cas
+
+# Bonnes pratiques
+
+* Heavy Model, Light Controller
+* Don’t Repeat Yourself
+* You Ain’t Gonna Need It
+* Convention Over Configuration
+* Keep It Simple and Stupid
+* [12 factor app][12f] - [fr][12ff]
+
+# Pretty ( | smart | clean | formatted) URL
+
+* Les URL doivent être explicites :
+    * Manipulées par l’utilisateur
+    * Utilisées pour le référencement 
+* Cohérence avec l’implémentation MVC :
+
+```
+http://app.host.tld/controller/action[/key/val]
+```
+* Le routage (routing)
+    * Le Front Controller recoit toutes les requêtes (URL rewriting)
+    * Il les dispatche vers les contrôleurs 
+
+# Smart URL & SEO
+
+![](img/anatomy-of-a-url.jpg)
+
+# Autres Services
+
+* Migrations : Evolutions de la strucutre de la BDD
+* Tests
+* Génération, validation et traitement de formulaires
+* Authenfication, Sessions, Permissions, Roles, ACL
+* Pagination
+* I18n
+* Génération de code
+* Mail
+* Connecteurs aux webservices
+* Captchas
+* Loggers
+* ... 
+
+# Exemple d'architecture : Laravel
+
+![](img/laravel-architecture.jpg)
+
+# Performance
+
+* Un framework web est lent :
+    * Rendu d’une page nécéssite de traverser tout le code
+    * Pour chaque requête toute l’appli est chargée
+    * Plus de code qu’une appli standalone
+    * Plus de requêtes
+* Solutions
+    * Cache de pages, d’opcode
+    * Jointures ORM, vues, procédures stockées
+    * Outils d’optimisation : YSlow, page speed, mytop
 
 # Frameworks PHP
 
@@ -16,7 +116,7 @@
 
 <div class=notes>
 L'explication donnée par Joe Gregorio pour [le langage
-Python](http://bitworking.org/news/Why_so_many_Python_web_frameworks) est : «
+Python][pyFW] est : «
 parce que c'est facile. »
 
 Dans les faits, cela montre également une maturité de la plateforme.
@@ -26,7 +126,7 @@ Dans les faits, cela montre également une maturité de la plateforme.
 
 > _There are people who actually like programming.
 > I don't understand why they like programming._
-> Rasmus Lerdorf [💬](https://en.wikiquote.org/wiki/Rasmus_Lerdorf)
+> Rasmus Lerdorf [💬][Lerdorf]
 
 ---
 
@@ -56,9 +156,7 @@ liée au fait qu'il est simple à mettre en œuvre, gratuit **et** libre. Tout
 un tas de modules est fourni avec pour faire de l'imagerie, des bases de
 données, du XML, etc.
 
-Et plus encore sur la page [History of
-PHP](http://php.net/manual/en/history.php.php) et [Wikipedia:
-PHP](https://en.wikipedia.org/wiki/PHP).
+Et plus encore sur la page [History of PHP][PHP-Hist] et [Wikipedia: PHP][PHP-wiki].
 
 Les différentes moutures de PHP 7 offrent ceci, entre autres.
 
@@ -106,13 +204,13 @@ l'Internet.
 
 ---
 
-## Qu'est-ce qu'[Internet](https://www.youtube.com/watch?v=iDbyYGrswtg)?
+## Qu'est-ce qu'[Internet][ITcrowd] ?
 
 * un réseau IP
 
 ---
 
-## Qu'est-ce que le [World Wide Web](http://line-mode.cern.ch/www/hypertext/WWW/TheProject.html)?
+## Qu'est-ce que le [World Wide Web][CERN] ?
 
 * **URI/URL**, des identifiants uniques
 * **HTML**, un langage de publication
@@ -241,8 +339,8 @@ PHP **est** un langage de template.
 <div class="notes">
 Pour preuve, il faut ouvrir une balise `<?php` pour commencer la partie code.
 
-Avec la pratique, on a réalisé que de mélanger la logique métier et celle
-d'affichage n'était pas optimale car difficile à lire et maintenir.
+Avec la pratique, on a réalisé que mélanger la logique métier et celle
+d'affichage n'est pas optimal car difficile à lire et maintenir.
 </div>
 
 ---
@@ -726,7 +824,7 @@ retrouver ces éléments. Symfony, CakePHP, etc. auront les mêmes idées.
 * Refaites les différentes étapes à partir de `00-base`.
 * Tel quel ou en utilisant d'autres bibliothèques :
 [Smarty](https://github.com/smarty-php/smarty),
-[Doctrine](http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html),
+[Doctrine](https://www.doctrine-project.org/projects/doctrine-orm/en/current/tutorials/getting-started.html),
 [Aura.Router](https://github.com/auraphp/Aura.Router)
 
 ---
@@ -739,6 +837,19 @@ Questions?
 [3]: http://www.redbeanphp.com/
 [4]: http://getcomposer.org/
 [8]: https://github.com/HE-Arc/php-intro-framework
+[DAL]: https://web.archive.org/web/20160316065751/http://blog.mazenod.fr/2010/01/design-pattern-mvc-zoom-sur-la-couche-modele-dal-dao-orm-crud/ 
+[lib-fw1]: http://stackoverflow.com/questions/148747/what-is-the-difference-between-a-framework-and-a-library
+[lib-fw2]: http://www.artima.com/forums/flat.jsp?forum=106&thread=152104
+[IoC]: http://martinfowler.com/bliki/InversionOfControl.html
+[UIpat]: http://ui-patterns.com/
+[12f]: https://12factor.net/
+[12ff]: https://12factor.net/fr/
+[pyFW]: http://bitworking.org/news/Why_so_many_Python_web_frameworks
+[Lerdorf]: https://en.wikiquote.org/wiki/Rasmus_Lerdorf
+[PHP-Hist]: http://php.net/manual/en/history.php.php
+[PHP-wiki]: https://en.wikipedia.org/wiki/PHP
+[ITcrowd]: https://www.youtube.com/watch?v=iDbyYGrswtg
+[CERN]: http://line-mode.cern.ch/www/hypertext/WWW/TheProject.html^
 
 <!-- CSS -->
 <style>
@@ -764,16 +875,17 @@ p {
     margin: 1em;
 }
 
-
 blockquote > p {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 0.8em;
 }
 
-#progress-bar {
-    height: 5px;
-    border-top-right-radius: 10px;
-    background: rgba(239, 0, 98, 0.5);
+/*
+img {
+    width: 100%;
+    height: 100%;
 }
+*/
+
 </style>
