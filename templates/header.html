@@ -4,21 +4,16 @@
     width: 1066px;
     margin-left: -533px;
   }
-  /* ING bg color */
-  /*
-  html, .view body {
-    background-color: #E60062;
-  }
-  */
+
   section > pre, section > .sourceCode {
     margin: 0 .5em;
   }
 
   ul {
-      margin: 10px 50px;
+    margin: 10px 50px;
   }
   li > ul {
-      margin: 10px 50px;
+    margin: 10px 50px;
   }
 
   footer {
@@ -32,19 +27,23 @@
     font-size: 80px;
     padding-top: 100px;
 
-   border-bottom: 0px solid #FFF;
-   background-color: #FFF;
-   }
+    border-bottom: 0px solid #FFF;
+    background-color: #FFF;
+  }
 
-  h1, h2, header {
+ h1, h2, header {
     top: 0;
     width: 100%;
     padding: 2px;
     text-align: center;
-    background-color: red;
-    border-bottom: 1px solid #b00;
+    background-color: #efefef;
+    border-top: 10px solid red;
     margin:0;
     font-size: 30px;
+  }
+
+  h1 + h2 {
+    border-top: 0px none;
   }
 
   code {font-size:75%;}
@@ -61,14 +60,12 @@
 
   .yel-bg {background-color: yellow;}
   .red-bg {background-color: red}
-/*  .arc-bg {background-color: #E60062} */
 
-#progress-bar {
+  #progress-bar {
     height: 5px;
     border-top-right-radius: 10px;
-    background: rgba(230, 0, 98, 0.5);
-}
-
+    background: rgba(255, 0, 0, 0.5);
+  }
 
   /* waiting for a better solution */
   .footnoteRef, .footnotes { display: none }
