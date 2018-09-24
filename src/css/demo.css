@@ -62,5 +62,9 @@ footer a:hover {
 }
 
 .color-HE-Arc {
-    background: #E60062;
+    background: #3E3E3E;
+}
+
+.color-HE-Arc a:hover {
+	color: #E60062;
 }
