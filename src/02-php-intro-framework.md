@@ -855,7 +855,7 @@ Questions?
 <style>
 section#sources {display:none;}
 html, .view body {
-    background-color: #CC0050;
+    background-color: black;
 }
 
 body {
