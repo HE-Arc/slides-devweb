@@ -7,7 +7,6 @@
 <footer>HE-Arc (DGR) 2017</footer>
 
 # HyperText Transfer Protocol
-
 * Protocole application : invention www en 1990 (v0.9)
 	* Connexion, GET, réponse, fermeture
 * HTTP 1.0 (1996)
@@ -21,7 +20,6 @@
 	* Supporté par [presque tous][2] les navigateurs, une majorité de serveurs
 
 # Codes de réponse
-
 * 1xx : Information
 * 2xx : Succès
 * 3xx : Redirection
@@ -29,7 +27,6 @@
 * 5xx : Erreur Serveur
 
 # Méthodes HTTP (verbes)
-
 * <span class="green">GET</span> : Demander une ressource
 * POST : Création d’une ressource
 * <span class="blue">PUT</span> : Remplacement total d’une ressource
@@ -43,7 +40,6 @@
 
 
 # Echanges HTTP
-
 * Requête
 
 ```html
@@ -79,7 +75,6 @@ Content-Type:		text/html; charset=iso-8859-1
 ```
 
 # HTTP
-
 * Requête POST : paramètres dans le corps
 
 ```html 
@@ -99,13 +94,12 @@ userid=joe&password=guessme
 * Exemples PATCH : [mnot][5] , [SOA bits][6]
 
 # AJAX : Historique
-
 * Asynchronous Javascript And Xml
 * Buzzword, [Jesse James Garret][7], 2005
 * Mise à jour sans rechargement intégral
 * Utilisation de [Remote Scripting][8] et de DOM
 * Historique de techniques de remote scripting
-	* [(i)frames][9]
+	* (i)frames
 	* Bibliothèques JS (ex: [JSRS][10])
 	* Utilisation des images/cookies (ex: [GIF][11])
 	* Applets, Flash, ActiveX, ...
@@ -115,7 +109,6 @@ userid=joe&password=guessme
 * Pas obligatoire d'avoir du JS, XML ni d'être asynchrone !
 
 # AJAX
-
 * XHR est devenue la méthode standard
 	* Popularisée par Google (GMaps, GMail, ...)
 	* Le w3c fait évoluer un [draft][12] depuis 2006
@@ -188,7 +181,6 @@ $(document).ready(function(){
 * D'[autres][15] façons de faire
 
 # XHR : propriétés et méthodes
-
 * `readyState, status, onreadystatechange`
 * `responseText, responseXML`
 * `open (Verbe, URI, async) :`
@@ -201,7 +193,6 @@ $(document).ready(function(){
 * `abort()`
 
 # Envoi de données
-
 * GET
 	* <span class="red">Obtenir des données</span>
 	* Longueur URL limitée par le navigateur (2'048 pour IE)
@@ -213,6 +204,8 @@ $(document).ready(function(){
 	* Longueur limitée par le serveur (assez large)
 	* Utilisation de la méthode send() de XHR
 	* Requête Ajax en 2 temps (entête, puis données)
+
+# Envoi de données
 * Cache
 	* Client : Construire des [URL uniques][16]
 	* Serveur : Envoi d'[entêtes][17] interdisant le cache
@@ -226,7 +219,6 @@ MyXhr.setRequestHeader("Expires", "Wed, 09 Aug 2000 08:21:57 GMT");
 ```
 
 # Préférer GET, sauf
-
 <div>
 
 !["GETorPOST"](img/GETvsPOST.png)
@@ -240,7 +232,6 @@ MyXhr.setRequestHeader("Expires", "Wed, 09 Aug 2000 08:21:57 GMT");
 </div>
 
 # Réponse en texte
-
 * Si la requête aboutit :
 	* `readystate == 4`
 	* `status == 200`
@@ -249,7 +240,6 @@ MyXhr.setRequestHeader("Expires", "Wed, 09 Aug 2000 08:21:57 GMT");
 	* Utilisation du DOM (`getElementsByTagName(), ...`)
 
 # Réponse en XML
-
 ```xml
 <?xml version="1.0" ?>
 <liste>
@@ -288,11 +278,10 @@ MyXhr.setRequestHeader("Expires", "Wed, 09 Aug 2000 08:21:57 GMT");
 ```
 
 * Utilisation de :
-`~~var users = eval('(' + myXHR.responseText + ')'); ~~` 
+~~ `var users = eval('(' + myXHR.responseText + ')');` ~~ 
 pour créer le tableau d'objets correspondant
 
 # [« eval is Evil »][22]
-
 * `eval()` : évalue et exécute la chaîne en paramètre
 * Risque : instructions au lieu d'un tableau d’objets
 * Solution : le [parser][23] JSON 
@@ -330,7 +319,6 @@ fetch("fichier.json")
 * L'API fecth est native et utilise les [promesses][29] plutôt que les callbacks
 
 # Traitement d'erreurs
-
 * Utiliser les [entêtes HTTP][24]
 	* Champ Status
 	* Code d'erreur
@@ -347,7 +335,6 @@ myXHR.getResponseHeader("Status");
 ```
 
 # Penser à l'utilisateur !
-
 * Requêtes XHR non enregistrées dans l'historique :
 	* Bouton précédent non opérationnel (sauf GET et URL uniques)
 	* Pas de bookmark
@@ -362,7 +349,6 @@ myXHR.getResponseHeader("Status");
 * En cas de doute, faire tester des utilisateurs
 
 # Bonnes pratiques d'utilisabilité
-
 * Trafic minimal
 * Pas de surprise
 * Respect des conventions
@@ -417,8 +403,6 @@ myXHR.getResponseHeader("Status");
     margin: 0 auto;
 	overflow: hidden; 
   }
-  
-	#envoi-de-données li {font-size:75%} 
 	
 	figure img{
 	  width: auto;
