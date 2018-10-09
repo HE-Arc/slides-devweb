@@ -9,8 +9,7 @@
 # Exemples
 
 * Vue d'ensemble : [slides](http://web.archive.org/web/20150525080904/http://slides.html5rocks.com/#landing-slide) Google 2011 ( [sources](https://github.com/html5rocks/slides.html5rocks.com) )
-* API d'accès à la [caméra](http://www.soundstep.com/blog/experiments/jsdetection/)
-    * ... saupoudré de [webGL](http://auduno.github.io/clmtrackr/examples/facesubstitution.html)...
+* API d'accès à la [caméra](http://www.soundstep.com/blog/experiments/jsdetection/), avec du [webGL](http://auduno.github.io/clmtrackr/examples/facesubstitution.html)...
 * Bachelor NIFFF 2014 : une webapp mobile pour LACIS
 * Plein d'exemples
     * [html5 rocks!](http://www.html5rocks.com/) => [Web Fundamentals](https://developers.google.com/web/)
@@ -19,6 +18,7 @@
     * [html5 demos](http://html5demos.com/)
     * [plus de demos ?](http://bit.ly/VJaqjb)
 * Veille : [Frontend Focus](http://html5weekly.com/) (newsletter)
+* Disponibilité dans les navigateurs [CanIUse.com](https://caniuse.com/)
 
 # Progressive Web Apps
 

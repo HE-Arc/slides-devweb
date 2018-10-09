@@ -32,7 +32,7 @@
 # *Script
 
 * ECMAScript : Norme depuis 1997 
-	* Juin 2017 : [ECMA-262 8th edition / 2017](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
+	* Juin 2018 : [ECMA-262 9th edition / 2017](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
 	* [Support](http://kangax.github.io/compat-table/es2016plus/) des différentes implémentations
 	* Conversions avec [BabelJS](https://babeljs.io/)
 * JavaScript : implémentation Firefox (réf. MDN)
@@ -52,7 +52,7 @@
 * Interface pour scripter le navigateur
 	* Accès et modification du contenu via DOM
 	* [Bookmarklets](http://www.howtogeek.com/125846/the-most-useful-bookmarklets-to-enhance-your-browsing-experience/), [exemples](http://www.hongkiat.com/blog/100-useful-bookmarklets-for-better-productivity-ultimate-list/)
-	* Requêtes HTTP (Xml Http Request)
+	* Requêtes HTTP (Fetch API, Xml Http Request)
 * Développement d'applications complètes, parfois offline 
 * Langage de script généraliste (paquets npm)
 
@@ -311,7 +311,7 @@ function insertNode() {
 * Une [réintroduction à JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Une_r%C3%A9introduction_%C3%A0_JavaScript)
 * [How does it feel to learn JS in 2016](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f)
 * Référence [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference)
-* Tutoriels [w3schools](http://www.w3schools.com/js/)
+* Tutoriels [The Modern JS Tuto](https://javascript.info/) [w3schools](http://www.w3schools.com/js/)
 * Outils de développement Chrome et Firefox (Ctrl+Shift I)
 * Firefox :
 	* [Tilt3D](https://addons.mozilla.org/fr/firefox/addon/tilt/) (Ctrl+Shift+L)
