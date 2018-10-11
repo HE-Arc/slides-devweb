@@ -3,6 +3,8 @@
   html body {
     width: 1066px;
     margin-left: -533px;
+    background: linear-gradient(to bottom, rgb(255, 47, 65), rgb(255, 230, 230) 15%);
+    color: rgb(36, 0, 0);
   }
 
   section > pre, section > .sourceCode {
@@ -19,7 +21,7 @@
   footer {
     padding: 4px;
     font-size: 30px;
-    background-color: red;
+    background-color: rgba(255, 47, 64, 0.788);
   }
 
  .title {
@@ -27,8 +29,8 @@
     font-size: 80px;
     padding-top: 100px;
 
-    border-bottom: 0px solid #FFF;
-    background-color: #FFF;
+    border-bottom: 0px solid rgb(255, 230, 230);
+    /*background-color: rgb(255, 213, 213);*/
   }
 
  h1, h2, header {
@@ -36,8 +38,8 @@
     width: 100%;
     padding: 2px;
     text-align: center;
-    background-color: #efefef;
-    border-top: 10px solid red;
+    /*background-color: rgb(231, 90, 102);*/
+    border-top: 10px solid rgb(255, 47, 65);
     margin:0;
     font-size: 30px;
   }
@@ -46,9 +48,11 @@
     border-top: 0px none;
   }
 
+  h1 {margin-bottom: 5%}
+
   code {font-size:75%;}
-  p {font-size: 60%}
-  ul li ul li {font-size: 80%}
+  p {font-size: 60%;}
+  ul li ul li {font-size: 80%;}
   figcaption {display: none}
 
   figure, figure img {
@@ -58,13 +62,25 @@
     height: 90%;
   }
 
-  .yel-bg {background-color: yellow;}
-  .red-bg {background-color: red}
+  .yel-bg {background-color: rgb(255, 47, 65);}
+  .red-bg {background-color: rgb(231, 90, 102)}
 
   #progress-bar {
     height: 10px;
     border-top-right-radius: 10px;
-    background: rgba(255, 0, 0, 0.8);
+    background: rgb(255, 47, 65);
+  }
+
+  a {color: rgb(255, 47, 65)}
+  a:visited {color: #920000/*#a50031*/}
+
+  ul {
+    list-style: none;
+    margin-left: 0%;
+  }
+  li:before {
+    content: "\203A";
+    margin: 0 1em;
   }
 
   /* waiting for a better solution */
