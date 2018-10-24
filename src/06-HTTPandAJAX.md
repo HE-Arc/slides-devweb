@@ -266,7 +266,7 @@ MyXhr.setRequestHeader("Expires", "Wed, 09 Aug 2000 08:21:57 GMT");
 	* pour chacun, ses attributs sont des paires clé:valeur
 
 ```json
-{objet1 : nom : 'Berger', prenom: 'Laurent'}
+{nom : 'Berger', prenom: 'Laurent'}
 
 [objet1, objet2, objet3]
 
@@ -278,7 +278,7 @@ MyXhr.setRequestHeader("Expires", "Wed, 09 Aug 2000 08:21:57 GMT");
 ```
 
 * Utilisation de :
-~~ `var users = eval('(' + myXHR.responseText + ')');` ~~ 
+~~`var users = eval('(' + myXHR.responseText + ')');`~~ 
 pour créer le tableau d'objets correspondant
 
 # [« eval is Evil »][22]
