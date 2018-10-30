@@ -202,7 +202,6 @@ $("p").click(function(){
 
 * Site officiel de [jQuery][6]
 * Tutos [w3schools][7]
-* Tutos [codeschools][8]
 * [SizzleJS][9] : uniquement les sélecteurs
 * Comparaison avec [Vanilla JS][10]
 
@@ -214,7 +213,6 @@ $("p").click(function(){
 [5]:http://www.w3schools.com/jquery/jquery_animate.asp
 [6]:http://jquery.com/
 [7]:http://www.w3schools.com/jquery/
-[8]:http://try.jquery.com/
 [9]:http://www.javascriptoo.com/sizzle
 [10]:http://vanilla-js.com/
 [11]:http://www.w3schools.com/jquery/jquery_ajax_load.asp
