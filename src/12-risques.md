@@ -4,7 +4,7 @@
 
 ## Risques applicatifs des app web{.title}
 
-<footer>HE-Arc (DGR) 2017</footer>
+<footer>HE-Arc (DGR) 2018</footer>
 
 # Risque
 
@@ -104,7 +104,8 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 	3. ... et les utilise sur le site officiel
 * Difficile à contrer pour le développeur
 * L'utilisateur doit être prudent
-* Bien lire les URLS et le GUI du navigateur ([Exemples][4])
+* Bien lire les URLS et le GUI du navigateur pas toujours suffisant
+* Ne pas utiliser de lien dont on n'est pas sur de la source ([Exemple][4])
 
 # Risques non liés à l'application
 
@@ -185,7 +186,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [1]:https://fr.wikipedia.org/wiki/Injection_SQL
 [2]:https://www.owasp.org/index.php/DOM_Based_XSS
 [3]:https://www.owasp.org/index.php/CSRF
-[4]:http://kb.cadzow.com.au:15384/cadzow/details.aspx?ID=1422
+[4]:https://www.xudongz.com/blog/2017/idn-phishing/
 [5]:https://xato.net/10-000-top-passwords-6d6380716fe0#.q5gcg2vme
 [6]:http://xkcd.com/936/
 [7]:https://hacks.mozilla.org/2014/10/passwordless-authentication-secure-simple-and-fast-to-deploy/

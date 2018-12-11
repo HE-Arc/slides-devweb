@@ -101,15 +101,16 @@ CA : Autorité de certification - VA : Autorité de validation - RA : Autorité 
 
 * [Security Party 23.10.2009][5]
 * [SebSauvage][6]
-* Diagramme de séquence [EventHelix][7]
-* [HowTo certificats SSL][8]
+* HTTPS en détails :
+    * Diagramme de séquence [HTTPS][7]
+	* Diagramme de séquence [SPDY][17]
+	* [SSL][18] en détails
+* Durée de vie de la [Clé Symétrique][19]
 * [Faux Certificat][8]
 * Autorités de certification :
 	* [Let's Encrypt][15]
 	* [CA Cert][9]
 	* [Startcom][10]
-	* [Verisign][11] (Symantec)
-	* [Thawte][12]
 * Différences TLS / SSH : [Snailbook][13], [StackExchange][14]
 
 
@@ -130,7 +131,9 @@ CA : Autorité de certification - VA : Autorité de validation - RA : Autorité 
 [14]:http://security.stackexchange.com/questions/1599/what-is-the-difference-between-ssl-vs-ssh-which-is-more-secure
 [15]:https://letsencrypt.org/
 [16]:https://caddyserver.com/
-
+[17]:http://www.eventhelix.com/RealtimeMantra/Networking/ssl-tls/https-ssl-tls-session-for-spdy.pdf
+[18]:https://security.stackexchange.com/questions/20803/how-does-ssl-tls-work/20847#20847
+[19]:https://security.stackexchange.com/questions/55454/how-long-does-an-https-symmetric-key-last
 <!-- Hack -->
 <style>
 
