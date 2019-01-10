@@ -121,7 +121,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 ![top 500 passwords cloud](img/passwordscloud.png)
 
 # Mots de passe
-* 91% of users have a password from the top 1000 ([source][5])
+* 30% of users have a password from the top 10'000 ([source][5])
 * Our passwords habits [revealed][19]
 * xkcd's [password strength][6]
 * [passwordless][7] authentication
