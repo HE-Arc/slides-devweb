@@ -316,7 +316,7 @@ fetch("fichier.json")
     })
 ```
 
-* L'API fecth est native et utilise les [promesses][29] plutôt que les callbacks
+* L'API fetch est native et utilise les [promesses][29] plutôt que les callbacks
 
 # Traitement d'erreurs
 * Utiliser les [entêtes HTTP][24]
