@@ -16,7 +16,7 @@
 	* Keep-alive, pipelining, cache, ...
 	* Plus d’entêtes, Host obligatoire
 * [HTTP 2.0][1] (2015)
-	* Binaire, multiplexage connexions, compresions entêtes, push, ...
+	* Binaire, multiplexage connexions, compression entêtes, push, …
 	* Supporté par [presque tous][2] les navigateurs, une majorité de serveurs
 
 # Codes de réponse
@@ -316,7 +316,7 @@ fetch("fichier.json")
     })
 ```
 
-* L'API fecth est native et utilise les [promesses][29] plutôt que les callbacks
+* L'API fetch est native et utilise les [promesses][29] plutôt que les callbacks
 
 # Traitement d'erreurs
 * Utiliser les [entêtes HTTP][24]
