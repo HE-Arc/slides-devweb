@@ -132,6 +132,25 @@
     * Proposer 1 à 3 thèmes
     * [Proposer][form-pres] le(s) thème(s) de présentation et l'équipe
 
+# Examen
+* Généralités pour la partie dev web de l'examen :
+    * Vous n'avez droit à rien : on vous mettra à disposition 1 crayon et du papier pour préparer votre présentation,
+    * L'examen porte sur toute la matière vue au en cours (yc workshops),
+    * Les questions sont générales, il s'agit de présenter des concepts vus en cours (souvent 1 chapitre), et expliquer certains mécanismes sous-jacents,
+    * Il n'agit pas de réciter le contenu des slides par coeur, mais de les présenter avec vos propres mots (compréhension), et vos propres exemples.
+
+* Généralités pour la partie dev mobile de l'examen :
+    * Vous pourriez avoir un résumé personnel manuscrit, d’une feuille A4 recto-verso,
+    * L’examen porte sur toute la matière vue en cours et ce que vous avez fait dans votre projet Android,
+    * Les questions peuvent être théoriques ou/et  pratiques.
+
+# Examen 
+* Déroulement : 
+    * Vous tirez un n° de question au hasard pour chaque cours 
+    * Vous disposez de 15 min pour préparer une présentation de 10 min pour chacun des 2 cours (pendant la présentation de l'étudiant précédent) 
+    * Idéalement vous faites une présentation d'environ 10 min et les 5 min restantes sont dédiées aux questions (pour chacun des cours)
+
+
 # Mon expérience en développement web
 * [Questionnaire][form-survey] obligatoire (votre username github vous y sera demandé)
 
@@ -184,6 +203,7 @@
     background-color: lightgreen;
   }
 
+  section#examen ul li,
   section#jalons ul li,
   section#évaluation ul li {
     font-size: 75%;

@@ -125,6 +125,8 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 * Our passwords habits [revealed][19]
 * xkcd's [password strength][6]
 * [passwordless][7] authentication
+	* [WebAuthN][24]
+	* [U2F][25]
 * 2017 : [NIST 800-63-3][21] suivi par la [NCSC][22]
 	* Mots de passe longs plutôt qu’avec des caractères spéciaux
 	* Ne forcer le changement qu’en cas de nécessité
@@ -207,6 +209,8 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [22]:https://www.ncsc.gov.uk/guidance/password-guidance-simplifying-your-approach
 [23]:https://www.acunetix.com/blog/articles/xml-external-entity-xxe-vulnerabilities/
 
+[24]:https://en.wikipedia.org/wiki/WebAuthn
+[25]:https://u2f-key.tech/fr/
 <!-- Hack -->
 <style>
 
