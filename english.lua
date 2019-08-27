@@ -1,38 +1,13 @@
-local lang = 'english'
-
-local before = pandoc.RawInline('tex', '\\begin{otherlanguage}{' .. lang .. '}')
-local after = pandoc.RawInline('tex', '\\end{otherlanguage}')
-
-local meta = {}
+local lang = 'en'
 
 return {
-  -- remove the metadata
   {
-    Meta = function (el)
-      meta = el
-      return {}
-    end
-  },
-  -- modify any code element
-  {
-    Code = function (code)
-      return {before, code, after}
+    Code = function(el)
+      return pandoc.Span(el, pandoc.Attr("", {}, {lang = lang}))
     end,
 
-    CodeBlock = function (code_block)
-      return {pandoc.Para({before}), code_block, pandoc.Para({after})}
+    CodeBlock = function(el)
+      return pandoc.Div(el, pandoc.Attr("", {}, {lang = lang}))
     end,
-
-    RawBlock = function (raw_block)
-      return {pandoc.Para({before}), raw_block, pandoc.Para({after})}
-    end,
-  },
-  -- restore the metadata
-  {
-    Meta = function(_)
-      meta['babel-otherlangs'] = lang
-      meta['polyglossia-otherlangs'] = {name = lang}
-      return meta
-    end
   }
 }

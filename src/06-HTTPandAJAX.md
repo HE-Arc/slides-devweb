@@ -266,14 +266,18 @@ MyXhr.setRequestHeader("Expires", "Wed, 09 Aug 2000 08:21:57 GMT");
 	* pour chacun, ses attributs sont des paires clé:valeur
 
 ```json
-{nom : 'Berger', prenom: 'Laurent'}
+{"nom": "Berger", "prénom": "Laurent"}
+```
 
-[objet1, objet2, objet3]
+```json
+["zéro", 1, 2, 3]
+```
 
+```json
 [
-	{nom:"Berger", 	prenom:"Laurent"},
-	{nom:"Borgo", 	prenom:"Sébastien"},
-	{nom:"Bux", 	prenom:"Rémy"}
+  {"nom": "Berger", "prénom": "Laurent"},
+  {"nom": "Borgo",  "prénom": "Sébastien"},
+  {"nom": "Bux",    "prénom": "Rémy"}
 ]
 ```
 
