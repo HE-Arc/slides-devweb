@@ -83,7 +83,7 @@
 * Steve Visinand vous présentera Laravel
 * Les 2 groupes viennent à Neuchâtel la matinée du mardi 24.09 en salle 314
 * Les dlm3a rattrappent leur P3 le jeudi 26.09 à 12h30 en 316
-* Le temps de présence suplémentaire est pris en compte
+* Le temps de présence supplémentaire est pris en compte
 
 # Jalons pour chacun des 2 projets
 * Echéances
