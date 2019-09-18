@@ -1,12 +1,12 @@
-% 03.Laravel 5
+% 03.Laravel 6
 
 # Développement web dlm3
 
-## Laravel 5{.title}
+## Laravel 6{.title}
 
 ![Logo Laravel](src/img/laravel-logo-big.png)
 
-<footer>HE-Arc (DGR & R. Emourgeon) 2018</footer>
+<footer>HE-Arc (DGR & R. Emourgeon) 2018-20</footer>
 
 # Pourquoi [Laravel](https://laravel.com/) ?
 
@@ -23,7 +23,7 @@
 * Mai 2013 : version 4, utilise [composer][Composer]
 * Août 2014 : projet PHP le plus [populaire][LaraStats] sur github
 * [Qui][builtwith] utilise Laravel ?
-* version 5.7 sortie en août 2018
+* [version 6][laravel6] sortie le 3 sept. 2019
 
 # Principales fonctionnalités
 
@@ -56,14 +56,15 @@
 
 * Conventions de codage : Laravel respecte [PSR-2][PSR2]
     * Vous aussi avec [StyleCI][styleci]
-* Editeurs et IDE : PhpStorm, [thimble][thimble], brackets, Sublime Text, Atom, VS Code...
+* Editeurs et IDE : PhpStorm, [glitch][glitch], brackets, Sublime Text, Atom, VS Code, [repl.it][replit]...
 * Tests : unitaires, Jmeter, Selenium, ...
 * Outils : devtools Chrome ou FF, [Emmet][emmet], git
 * Doc
     * [Documentation officielle][LaraDoc] de Laravel
-    * [Cheat Sheet][LaraCheat]
+    * [Cheat Sheet][LaraCheat] (Laravel 5)
 * Tutoriels
-    * [Best Momo][tutoBMomo], [Open Classroom][tutoOCR], [CodeSchool -> Pluralsight][tutoCS]
+    * Laravel 6 : [Tuts Make][tutsmake], [Best Momo][tutoBMomo]
+    * Laravel 5 : [Open Classroom][tutoOCR], [CodeSchool -> Pluralsight][tutoCS]
 
 # Environnement de développement
 
@@ -75,15 +76,15 @@
 * VM (Vagrant - [Homestead][homestead]) ou conteneur
     * Mise en route plus rapide : pré-configuré
     * Environnement dédié au dev, identique pour chaque développeur
-* Cloud (Cloud9, ...)
+* Cloud (Cloud9, Koding, coder.com, repl.it ...)
     * Mise en route plus rapide : pré-configuré
     * Indépendant du poste de travail (navigateur)
     * Outils de synchro disponibles
 
 # Environnement de développement
 
-* Cloud: [Cloud9][c9]
-* Local ou VM
+* Cloud: [AWS Cloud9][c9], 
+* Local ou VM (plus simple sous linux ou [WSL][wsl] !)
     * Installer : serveur http, SGBD, git, php7, composer
     * Installer Laravel :
 
@@ -168,15 +169,16 @@ $php artisan list
 
 # Ressources
 
-* [Laracast](https://laracasts.com/series/laravel-5-fundamentals)
+* [Laracast](https://laracasts.com/series/laravel-6-from-scratch)
 * [Laravel Tips](https://laraveltips.wordpress.com/)
 * [Learning Laravel](http://learninglaravel.net/tags/tutorials)
-* [RESTful API with Laravel 5](http://www.tutorials.kode-blog.com/laravel-5-rest-api)
+* [Laravel 6 REST API CRUD tuto](https://www.techiediaries.com/laravel-tutorial-rest-crud-api-models-relationships/)
 * [Les vôtres](https://github.com/HE-Arc/slides-devweb/wiki/Ressources)
 
 [LaraForum]: http://laravel.io/forum
 [SOLID]: http://fr.wikipedia.org/wiki/SOLID_(informatique)
 [TO]: http://taylorotwell.com/
+[laravel6]: https://itanea.fr/apprendre-le-developpement-web/laravel-6-0-qu-est-ce-que-propose-cette-nouvelle-version-lts-majeure/
 [Composer]: https://getcomposer.org/
 [LaraStats]: https://github.com/search?l=PHP&q=stars%3A%3E0&ref=searchresults&type=Repositories
 [builtwith]: https://madewithlaravel.com/
@@ -184,11 +186,13 @@ $php artisan list
 [lifeCycle]: https://laravel.com/docs/master/lifecycle
 [PSR2]: https://laravel.com/docs/5.1/contributions#coding-style
 [styleci]: https://styleci.io/
-[thimble]: https://thimble.mozilla.org/fr/
+[glitch]: https://glitch.com/
+[replit]: https://repl.it/
 [emmet]: http://emmet.io/
 [LaraDoc]: https://laravel.com/docs/master
 [LaraCheat]: https://summerblue.github.io/laravel5-cheatsheet/#
-[tutoBMomo]: http://laravel.sillo.org/laravel-5/
+[tutsmake]: https://www.tutsmake.com/laravel-6-tutorial-from-scratch-laravel-step-by-step/
+[tutoBMomo]: https://laravel.sillo.org/laravel-6-2/
 [tutoOCR]: https://openclassrooms.com/courses/decouvrez-le-framework-php-laravel-1
 [tutoCS]: https://www.codeschool.com/courses/try-laravel
 [wsl]: https://docs.microsoft.com/en-us/windows/wsl/install-win10

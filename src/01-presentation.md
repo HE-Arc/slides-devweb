@@ -1,37 +1,36 @@
-% 00.Cours devweb
+% 01.Cours devweb
 
 # Développement web dlm3
 ## Présentation du cours{.title}
-<footer>HE-Arc 2018/19 DGR et YBL</footer>
+<footer>HE-Arc 2019/20 DGR et YBL</footer>
 
 # Programme
-* Frameworks MVC : Laravel, (Rails), Django, …
+* Frameworks MVC : Laravel, Django, …
 * HTML5 : vue d’ensemble
 * Javascript : AJAX, DOM, JSON, Node.js, jQuery
-* (Syndication : RSS, Atom)
 * Déploiement et configuration Serveur
-* (Responsive) Web Design
 * Webservices : REST vs SOAP
 * Sécurité : Technologies, prévention des risques courants
+* (Responsive) Web Design
+* (Syndication : RSS, Atom)
 * <span class="yel-bg">Vos souhaits ?</span>
-* Slides cours : [ghpages][slidesghp], [Source : github/HE-Arc][slides]
 
-# Organisation
-* Cours
-* Workshops intervenants externes
-    * Automatisation du déploiement (R. Emourgeon) ?
-    * Flask (M. Amiguet) en janvier 2019
-    * Webdesign (M. Schmalstieg) ?
-    * Vue.js ? React ? AngularJS ?
+# Contenu, activités
+* Cours théorique
 * 2 Projets
     * 2 frameworks : Laravel & Django (ouvert à d'autres propositions)
     * Groupes de 3, [30h][module] par personne et par projet
     * Présentation de 20min
-* Vos présentations ? <span class="yel-bg">Vos propositions ?</span>
+* Workshops intervenants externes
+    * Webdesign ([A. Keller][AK]) ?
+    * Flask ([M. Amiguet][MA]) ?
+	* Automatisation du déploiement ([R. Emourgeon][RE]) ?
+    * <span class="yel-bg">Vos présentations (Vue.js) ? Vos propositions ?</span>
+* Support : [ghpages][slidesghp] ([source][slides]), ...ProfsAEtudiants\\3255_Technologies_Interaction\\dw
 
 # Projets
 * Faire pour apprendre
-* Les rôles dans une équipe de développement web
+* Les rôles dans une équipe de développement web, workflow
 * Ne pas réinventer la roue ou tout faire soi-même
 * Critères d’évaluation d’un projet
 * En profiter pour apprendre des choses qui vous intéressent
@@ -41,31 +40,33 @@
     * Choix du projet
     * Forge : Créer projet sur github dans l'entité [HE-Arc][gharc]
     * [S’inscrire][wiki]
-* Offre d'essai Pluralsight 90 jours sur [MS Imagine][msi]
+* Offre d'essai Pluralsight 1-6 mois sur [MS Imagine][msvsde], [infos][masb]
 
 # Choix des projets
 * Contrainte : appli basée sur des données
 * Choix
-    * Besoin réel (ex: Concours robots P1 TIN)
+    * Besoin réel
     * Données existantes : [Inventaire][inv], [dbpedia][dbp], [opendata][odata], DB Bikini Test à dispo
     * S'inspirer de l'existant :
         - [Product Hunt][prodhunt], [blinklist][blinklist], [makeuseof][makeuseof], …
-        - Volées précédentes : [2016-18][arcghp], [2015/16][wd15], [2014/15][wd14]
+        - [Volées précédentes][arcghp]
+* Commencer tôt pour se libérer les dernières semaines de l'année		
+
 
 # Calendrier
 |Semaine|Automne|Semaine|Printemps|
 |---:|---|---:|---|
 |38||8||
-|39|Projet Laravel|9||
+|39|Projet PHP|9||
 |40||10||
 |41||11||
 |43||12||
 |44||13||
 |45||14||
 |46||15|Présentations|
-|47|T. Autonome|17|Présentations|
+|47|S. thématique|17|Présentations|
 |48||18||
-|49||19|T. Autonome|
+|49||19||
 |50|Présentations|20|Examens|
 |51|Présentations|21|Début TB|
 |2||||
@@ -74,19 +75,31 @@
 |5|T. Autonome|||
 |6|Examen|||
 
-# Jalons (Objectifs à atteindre pour le début de la semaine)
+# Suivi du calendrier (à jour sur le réseau interne)
 
-* 1 
-* 2 Objectifs et maquettes
-* 3 Authentification et 1er déploiement
-* 4
-* 5 Modèles avec relations (au moins 3)
-* 6
-* 7 Minimal Viable Product
-* 8
-* 9
-* 10
-* 11 Rendu projet, Présentation
+![Suivi calendrier](img/DW1920.png)
+
+# Semaine prochaine
+* Steve Visinand vous présentera Laravel
+* Les 2 groupes viennent à Neuchâtel la matinée du mardi 24.09 en salle 314
+* Les dlm3a rattrappent leur P3 le jeudi 26.09 à 12h30 en 316
+* Le temps de présence suplémentaire est pris en compte
+
+# Jalons pour chacun des 2 projets
+* Echéances
+  * en début de semaine :
+    1. Formation équipe et choix thème
+    2. Objectifs et maquettes
+    3. Authentification et 1er déploiement
+    4. 
+    5. Modèles avec relations (au moins 3, dont 1 n-n)
+    6. 
+    7. Minimal Viable Product
+    8. 
+    9. 
+    10. 
+    11. Rendu projet, Présentation
+* Il n'est pas interdit d'en ajouter
 
 # Conseils
 * Le plus simple possible
@@ -101,28 +114,30 @@
 * Le déploiement est long : commencez tôt !
 * Il est moins risqué travailler plus au début du projet qu'à la fin !
 
-# Évaluation
-* User Experience : 50%
-    * Utilisabilité : Efficacité, efficience, satisfaction
-    * Design UI
-* Code : 30%
-    * Absence bugs, qualité code, lisibilité
-    * Respect conventions et bonnes pratiques
-    * Déploiement, configuration
-* Gestion de projet : 20%
-    * Fichiers versionnés, messages de commit
-    * Issues, planification, travail en équipe
-    * Documentation (wiki)
-    * Investissement, volume de travail
-* Bonus (ceux qui vont plus loin) : 0-20%
-    * WebSockets ou autre API HTML5,
-    * WebService, …
-* Tous les membres d'un groupe n'ont pas forcément la même note
+# Évaluation des projets
+* Note finale d'un projet :
+    * User Experience : 50%
+        * Design UI, Utilisabilité (Efficacité, efficience, satisfaction)
+    * Code : 30%
+        * Absence bugs, qualité code, lisibilité, respect conventions et bonnes pratiques
+        * Déploiement, configuration
+    * Gestion de projet : 20%
+        * Fichiers versionnés, messages de commit, Issues, planification, travail en équipe
+        * Documentation (wiki), Investissement, volume de travail
+    * Bonus (ceux qui vont plus loin) : 0-20%
+        * WebSockets ou autre API HTML5, webservices, …
+        * Contribution, présentation, documentation, …
+* <span class="yel-bg">Tous les membres d'un groupe n'ont pas forcément la même note</span>
+
+# Participation
+* Aux projets des autres : Issues, PR
+* Participez à la [Hacktoberfest][hacktober]
+* Pariticipez au cours : contenu, présentation, pages (index, wiki, ...)
 
 # Présentation facultative
 * Facultatif, ne peut qu’augmenter la moyenne
 * DOIT être annoncé au semestre d'automne
-* Un thème absent du cours
+* Un thème absent du cours (Vue.js ? ;)
 * 2 à 4 personnes
 * Une présentation claire avec démo (printemps)
 * Un exercice d’application
@@ -157,23 +172,26 @@
 ### M E R C I !
 
 <!-- Bibliographie -->
+[AK]: https://www.alinekeller.ch
+[MA]: http://www.matthieuamiguet.ch/
+[RE]: https://www.linkedin.com/in/raphaelemourgeon/
 [slidesghp]: https://he-arc.github.io/slides-devweb/
 [slides]: https://github.com/HE-Arc/slides-devweb/tree/master/src
-[module]: https://www.he-arc.ch/sites/www.he-arc.ch/files/Reglements/04%20Formation%20de%20base/43%20Ing%C3%A9nierie/430.100%20Descriptifs%20de%20modules%20Informatique/RS430.100.18.3255%20Technologies%20d'interaction.pdf
+[module]:https://www.he-arc.ch/reglementation
 [sshkey]: https://github.com/settings/keys
 [gharc]: https://github.com/HE-Arc/
-[msi]: https://imagine.microsoft.com/fr-fr/Catalog/Product/21
+[msvsde]: https://my.visualstudio.com/Benefits
 [inv]: https://inventory.ing.he-arc.ch/
 [dbp]: http://wiki.dbpedia.org/
 [odata]: https://opendata.swiss/fr/
 [prodhunt]: https://www.producthunt.com/topics/web-app
 [blinklist]: http://blinklist.com/reviews
 [makeuseof]: http://www.makeuseof.com/tag/best-websites-internet/
-[wiki]: https://github.com/HE-Arc/slides-devweb/wiki/Projets-2018-2019
+[wiki]: https://github.com/HE-Arc/slides-devweb/wiki/Projets-2019-2020
+[masb]:https://docs.microsoft.com/fr-fr/visualstudio/subscriptions/vs-pluralsight
 [github]: https://github.com/orgs/HE-Arc
-[arcghp]: https://he-arc.github.io/
-[wd15]: https://projets-labinfo.he-arc.ch/projects/webdev/wiki/Wiki#Projets-2015-2016
-[wd14]: https://forge.ing.he-arc.ch/projects/1415-dw/wiki/Wiki
+[arcghp]: https://he-arc.github.io/#développement-web-1
+[hacktober]:https://hacktoberfest.digitalocean.com/
 [mockups]: https://brainhub.eu/blog/difference-between-wireframe-mockup-prototype/
 [branching]: http://drewfradette.ca/a-simpler-successful-git-branching-model/
 [form-pres]: https://docs.google.com/spreadsheet/viewform?formkey=dEVJRE1WVTVPelhFcE94TGF5N1c0cGc6MQ

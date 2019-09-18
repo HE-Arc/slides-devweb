@@ -1,10 +1,10 @@
-% 01.Introduction aux frameworks PHP
+% 02.Introduction aux frameworks PHP
 
 # Développement web dlm3
 
 ## Introduction aux frameworks PHP{.title}
 
-<footer>HE-Arc 2016-18 DGR et YBL</footer>
+<footer>HE-Arc 2016-20 DGR et YBL</footer>
 
 ---
 
@@ -28,7 +28,7 @@ Différences entre framework et library sur [Stack Overflow][lib-fw1] ou [artima
     * V : Templates des pages à générer
     * C : Orchestration, transfert des infos
 * Front Controller
-   * Traitement et dispatch des requêtes
+   * Traitement et dispatch des requêtes grâce aux **routes**
    * (bootstrap, ré-écriture des URL, …)
 * [Object Relational Mapping][DAL]
    * Active Record, Table Data Gateway, Data Mapper, …
@@ -36,10 +36,9 @@ Différences entre framework et library sur [Stack Overflow][lib-fw1] ou [artima
 
 # MVC for webdev
 
-![“MVC”](img/mvc.png)
+![MVC](img/mvc.png)
 
 # Conventions
-
 * Nommage
     * Classes
     * Base de données
@@ -75,7 +74,7 @@ http://app.host.tld/controller/action[/key/val]
 
 # Smart URL & SEO
 
-![](img/anatomy-of-a-url.jpg)
+![SEO](img/anatomy-of-a-url.jpg)
 
 # Autres Services
 
@@ -94,7 +93,11 @@ http://app.host.tld/controller/action[/key/val]
 
 # Exemple d'architecture : Laravel
 
-![](img/laravel-architecture.jpg)
+![Archi](img/laravel-architecture.jpg)
+
+<div class="notes">
+Ce schéma est clair mais pas tout à fait juste : dans Laravel, le contrôleur récupère la page générée à partir de la vue, et c'est lui qui renvoie le HTML (objet Response) au client.
+</div>
 
 # Performance
 
@@ -854,6 +857,7 @@ Questions?
 <!-- CSS -->
 <style>
 section#sources {display:none;}
+
 html, .view body {
     background-color: black;
 }
@@ -881,11 +885,38 @@ blockquote > p {
     font-size: 0.8em;
 }
 
-/*
-img {
-    width: 100%;
-    height: 100%;
+section {
+  width: 100%; /* just set a width you like*/
 }
-*/
+
+
+figure { 
+ padding-top: 30%; /* the % of padding will calculate by width */
+ position:relative; /* as it childern's(img here) position's anchor */ 
+ background-color: white;
+}
+
+img {
+  /* make the image inside the padding space */
+  position:absolute;
+  top:0;
+  bottom:0; 
+  left:0; 
+  right:0;
+  height:auto;
+  width:auto;
+  /* make sure the image will not over the division */
+  max-height:90%;
+  max-width:90%;
+  /* center the image */
+  display:block; 
+  margin: auto;
+}
+
+
+figure > img {
+width:unset;
+heigth:unset;
+}
 
 </style>
