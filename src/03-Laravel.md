@@ -67,33 +67,42 @@
     * Laravel 5 : [Open Classroom][tutoOCR], [CodeSchool -> Pluralsight][tutoCS]
 
 # Environnement de développement
-
-* Local
-    * Installation AMP, git + configuration : Long
-    * Dépendant du poste de travail
-    * Travail offline
-	* Windows : [WSL][wsl] est votre ami !!!
-* VM (Vagrant - [Homestead][homestead]) ou conteneur
-    * Mise en route plus rapide : pré-configuré
-    * Environnement dédié au dev, identique pour chaque développeur
-* Cloud (Cloud9, Koding, coder.com, repl.it ...)
-    * Mise en route plus rapide : pré-configuré
-    * Indépendant du poste de travail (navigateur)
-    * Outils de synchro disponibles
-
-# Environnement de développement
-
-* Cloud: [AWS Cloud9][c9], 
-* Local ou VM (plus simple sous linux ou [WSL][wsl] !)
-    * Installer : serveur http, SGBD, git, php7, composer
-    * Installer Laravel :
+* De quoi ai-je besoin pour développer ?
+	* (L)AMP : Serveur HTTP, SGBD, PHP
+	* Git
+	* [Composer][composer] : gestionnaire de dépendances PHP
+	* Associer nom de domaine au dossier projet
+* Installer Laravel (créer un nouveau projet)
 
 ```bash
 $composer global require "laravel/installer"
 ```
 
-# Démarrer un projet
+* Le déploiement est simplifié si l'env de **dev** ressemble à celui de **production**
 
+# Environnement de développement
+* Local
+    * Installation AMP, git + configuration : Long
+    * Dépendant du poste de travail
+    * Travail offline
+* VM (Vagrant - [Homestead][homestead]) ou conteneur
+    * Mise en route plus rapide : pré-configuré
+    * Environnement dédié au dev, identique pour chaque développeur
+* Cloud ([Cloud9][c9], Koding, coder.com, repl.it ...)
+    * Mise en route plus rapide : pré-configuré
+    * Indépendant du poste de travail (navigateur)
+    * Outils de synchro disponibles
+
+# Aide à la mise en place du dev env
+* Paquets AMP (WAMP, EasyPHP, ...)
+* Pour aller plus vite :
+	* Windows : [Laragon][laragon]
+	* Laravel Valet pour [Mac][valetOSX], [Ubuntu][valetLinux], et [WSL][valetWSL]
+* Windows avec WSL
+    * [Tuto 1][wsl1]
+    * [Tuto 2][wsl2]
+
+# Démarrer un projet
 * Créer un nouveau projet
 
 ```bash
@@ -202,6 +211,12 @@ $php artisan list
 [routing]: https://laravel.com/docs/master/routing
 [controllers]: https://laravel.com/docs/master/controllers
 [views]: https://laravel.com/docs/master/views
+[wsl1]: https://jackwhiting.co.uk/posts/setting-up-a-windows-10-development-environment-with-wsl-php-laravel/
+[wsl2]: https://dev-squared.com/2018/05/15/getting-started-with-laravel-development-on-windows-subsystem-for-linux-with-vs-code-a-complete-guide/
+[laragon]: https://laragon.org/
+[valetOSX]: https://laravel.com/docs/master/valet
+[valetLinux]: https://cpriego.github.io/valet-linux/#installation
+[valetWSL]: https://github.com/valeryan/valet-wsl
 
 <style type="text/css">
     section.title, section#sources, h1.title {display:none;}
