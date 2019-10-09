@@ -41,8 +41,7 @@ install:
   - sed -i 's/^\(\\usepackage{amsmath}\)/%\1/' xelatexemoji.sty
   - sed -i 's/^\(\\providecommand{\\xelatexemojipath}\)/%\1/' xelatexemoji.sty
 
-script:
-  - make all
+
 
 after_success:
   - >
