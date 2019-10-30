@@ -4,7 +4,7 @@
 
 ## JavaScript & DOM{.title}
 
-<footer>HE-Arc (DGR) 2017</footer>
+<footer>HE-Arc (DGR) 2019</footer>
 
 # JavaScript hier
 * Page web = HTML (+ CSS + JavaScript)
@@ -26,13 +26,13 @@
 	* Node.js, Spidermonkey, Rhino
 	* script d'app (Qt, Notepad++, ...)
 * Langage cible de compilateurs : [emscripten](https://github.com/kripken/emscripten/wiki), [WebAssembly](http://webassembly.org/)
-* Embarqué : [Espruino](http://www.espruino.com/)
+* Embarqué : [Espruino](http://www.espruino.com/), robotique : [Node Bots](https://nodebots.io/), [CylonJS](https://cylonjs.com/)
+* Applications Desktop : [Electron](https://electronjs.org/)
 
-	
 # *Script
 
 * ECMAScript : Norme depuis 1997 
-	* Juin 2018 : [ECMA-262 9th edition / 2017](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
+	* Juin 2019 : [ECMA-262 10th edition / 2019](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
 	* [Support](http://kangax.github.io/compat-table/es2016plus/) des différentes implémentations
 	* Conversions avec [BabelJS](https://babeljs.io/)
 * JavaScript : implémentation Firefox (réf. MDN)
@@ -62,7 +62,7 @@
 * Syntaxe proche de C, Java
 * Faiblement typé :
 	* Pas de déclaration, type déterminé par la dernière affectation
-	* Risque : typo => nouvelle variable. Utiliser `var`
+	* Risque : typo => nouvelle variable. Utiliser `var` et `let` 
 * Types :
 	* Primitifs : `Boolean Null Undefined Number String Symbol`
 	* Objets : `Object Function`
@@ -77,7 +77,7 @@
 * Possibilité de retourner ou non une valeur
 * Sans retour, valeur spéciale : undefined
 * Pas de surcharge (la dernière définie prime)
-* function est un type
+* `function` est un type
 * Fonctions imbriquées, anonymes
 * Fonctions globales :
 
@@ -163,11 +163,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	* [npm](https://www.npmjs.com) : gestionnaire de paquets
 	* gulp : make js
 	
-* [Exemples](https://docs.google.com/spreadsheets/d/1LyRwn6E8k7NM5bw2hJ7pWD7BWjgN_EskQ0ZMNphrffE) d'applications
+* [Exemples](https://colorlib.com/wp/npm-packages-node-js/) d'applications
 	* gulp, grunt, bower, yarn
 	* browserify
 	* serveur http
-	* express, cordova, forever, dev, pm2, karma, sails
+	* express, cordova, forever, dev, pm2, karma, sails, phantomjs
 	
 * [Tuto](https://www.tutorialspoint.com/nodejs/index.htm), [Playground](https://runkit.com)
 
@@ -312,10 +312,7 @@ function insertNode() {
 * [How does it feel to learn JS in 2016](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f)
 * Référence [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference)
 * Tutoriels [The Modern JS Tuto](https://javascript.info/) [w3schools](http://www.w3schools.com/js/)
-* Outils de développement Chrome et Firefox (Ctrl+Shift I)
-* Firefox :
-	* [Tilt3D](https://addons.mozilla.org/fr/firefox/addon/tilt/) (Ctrl+Shift+L)
-	* Barre développement (Shift+F2) 
+* Outils de développement Chrome et Firefox (F12, Ctrl+Shift I)
 * Outils web
 	* [JSFiddle](https://jsfiddle.net/)
 	* [JSLint](http://www.jslint.com/)
