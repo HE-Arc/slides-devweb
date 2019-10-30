@@ -313,6 +313,7 @@ function insertNode() {
 * Référence [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference)
 * Tutoriels [The Modern JS Tuto](https://javascript.info/) [w3schools](http://www.w3schools.com/js/)
 * Outils de développement Chrome et Firefox (F12, Ctrl+Shift I)
+* Visualisation du [DOM](http://bioub.github.io/dom-visualizer/), du [shadow DOM](https://html5-demos.appspot.com/static/shadowdom-visualizer/index.html)
 * Outils web
 	* [JSFiddle](https://jsfiddle.net/)
 	* [JSLint](http://www.jslint.com/)
