@@ -35,7 +35,7 @@ before_install:
 install:
   - wget https://github.com/joypixels/emoji-assets/archive/v${EMOJIONE_VERSION}.tar.gz -O emojione-assets.tgz
   - tar xf emojione-assets.tgz
-  - mv emojione-assets-${EMOJIONE_VERSION} emojione-assets
+  - mv emoji-assets-${EMOJIONE_VERSION} emojione-assets
   - wget https://raw.githubusercontent.com/mreq/xelatex-emoji/master/xelatexemoji.sty
   - wget https://raw.githubusercontent.com/mreq/xelatex-emoji/master/xelatexemoji-flags.sty
   - sed -i 's/^\(\\usepackage{amsmath}\)/%\1/' xelatexemoji.sty
