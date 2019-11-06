@@ -4,20 +4,20 @@
 
 ## HTTP & AJAX{.title}
 
-<footer>HE-Arc (DGR) 2017</footer>
+<footer>HE-Arc (DGR) 2019</footer>
 
 # HyperText Transfer Protocol
 * Protocole application : invention www en 1990 (v0.9)
 	* Connexion, GET, réponse, fermeture
 * HTTP 1.0 (1996)
-	* Entêtes de requête (Host, Referer, User-Agent, …)
-	* Entêtes de réponse (Content-Type, Set-Cookie, Location, …)
+	* Entêtes de requête (Host, Referer, User-Agent, …) et réponse (Content-Type, Set-Cookie, Location, …)
 * HTTP 1.1 (1997)
-	* Keep-alive, pipelining, cache, ...
-	* Plus d’entêtes, Host obligatoire
+	* Nouveaux entêtes (Keep-alive, pipelining, cache, ...), Host obligatoire
 * [HTTP 2.0][1] (2015)
 	* Binaire, multiplexage connexions, compression entêtes, push, …
 	* Supporté par [presque tous][2] les navigateurs, une majorité de serveurs
+* [HTTP 3.0][3] (2019)
+	* UDP, correction erreur, contrôle congestion, multiplexage (0 RTT)
 
 # Codes de réponse
 * 1xx : Information
@@ -90,7 +90,6 @@ userid=joe&password=guessme
 * Outils HTTP
 	* CLI : curl
 	* Browser dev tools
-	* WebApp : [HURL][3]
 * Exemples PATCH : [mnot][5] , [SOA bits][6]
 
 # AJAX : Historique
@@ -109,7 +108,7 @@ userid=joe&password=guessme
 * Pas obligatoire d'avoir du JS, XML ni d'être asynchrone !
 
 # AJAX
-* XHR est devenue la méthode standard
+* XHR est devenue la méthode standard jusqu'à 2018
 	* Popularisée par Google (GMaps, GMail, ...)
 	* Le w3c fait évoluer un [draft][12] depuis 2006
 * Principe
@@ -123,7 +122,6 @@ userid=joe&password=guessme
 	* ...
 
 # L'objet _XMLHttpRequest_
-
 * Initiative de Microsoft
 	* Composant ActiveX de IE5
 	* Adopté par Mozilla 1.0 et Safari 1.2
@@ -364,7 +362,7 @@ myXHR.getResponseHeader("Status");
 <!-- Bibliographie -->
 [1]:https://docs.google.com/presentation/d/1eqae3OBCxwWswOsaWMAWRpqnmrVVrAfPQclfSqPkXrA/present#slide=id.p19
 [2]:http://caniuse.com/#feat=http2
-[3]:http://hurl.it/
+[3]:https://http3-explained.haxx.se/fr/
 
 [5]:http://www.mnot.net/blog/2012/09/05/patch
 [6]:http://soabits.blogspot.ch/2013/01/http-put-patch-or-post-partial-updates.html
