@@ -38,10 +38,8 @@
 <span class="blue">idempotentes</span><br/>
 <span class="green">sûres</span>
 
-
 # Echanges HTTP
 * Requête
-
 ```html
 GET / HTTP/1.1[CRLF]
 Host: www.cff.ch[CRLF]
@@ -56,7 +54,6 @@ Referer: http://web-sniffer.net/[CRLF]
 ```
 
 * Réponse
-
 ```html
 HTTP Status Code: 	HTTP/1.1 302 Found
 Date:			Mon, 16 Nov 2009 08:01:35 GMT	
@@ -130,11 +127,10 @@ userid=joe&password=guessme
 * Fonction de rappel (callback)
 * Asynchrone : Non bloquant
 * Non standard => différentes implémentations
-* Supporté par Chrome, FF, Safari, IE, Konqueror, ...
+* Supporté par la majorité des navigateurs
 * Alternative souhaitable si JS désactivé
 
 # XHR en JS
-
 ```javascript
 var xhr;
 function createXMLHttpRequest() 
