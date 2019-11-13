@@ -4,7 +4,7 @@
 
 ## jQuery{.title}
 
-<footer>HE-Arc (DGR) 2016</footer>
+<footer>HE-Arc (DGR) 2019</footer>
 
 # jQuery
 * John Resig, 2006
@@ -206,16 +206,16 @@ $("p").click(function(){
 * Comparaison avec [Vanilla JS][10]
 
 <!-- Bibliographie -->
-[1]:http://jquery.com/download/#other-cdns
-[2]:http://www.w3schools.com/jquery/jquery_selectors.asp
-[3]:http://www.w3schools.com/jquery/jquery_traversing.asp
-[4]:http://www.w3schools.com/jquery/jquery_ref_traversing.asp
-[5]:http://www.w3schools.com/jquery/jquery_animate.asp
-[6]:http://jquery.com/
-[7]:http://www.w3schools.com/jquery/
-[9]:http://www.javascriptoo.com/sizzle
-[10]:http://vanilla-js.com/
-[11]:http://www.w3schools.com/jquery/jquery_ajax_load.asp
+[1]:https://jquery.com/download/#other-cdns
+[2]:https://www.w3schools.com/jquery/jquery_selectors.asp
+[3]:https://www.w3schools.com/jquery/jquery_traversing.asp
+[4]:https://www.w3schools.com/jquery/jquery_ref_traversing.asp
+[5]:https://www.w3schools.com/jquery/jquery_animate.asp
+[6]:https://jquery.com/
+[7]:https://www.w3schools.com/jquery/
+[9]:https://github.com/jquery/sizzle/wiki
+[10]:https://vanilla-js.com/
+[11]:https://www.w3schools.com/jquery/jquery_ajax_load.asp
 [12]:https://gist.github.com/paulirish/12fb951a8b893a454b32
 [13]:https://www.w3schools.com/jsref/met_document_queryselectorall.asp
 
