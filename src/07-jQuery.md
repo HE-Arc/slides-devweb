@@ -214,7 +214,7 @@ $("p").click(function(){
 [6]:https://jquery.com/
 [7]:https://www.w3schools.com/jquery/
 [9]:https://github.com/jquery/sizzle/wiki
-[10]:https://vanilla-js.com/
+[10]:http://vanilla-js.com/
 [11]:https://www.w3schools.com/jquery/jquery_ajax_load.asp
 [12]:https://gist.github.com/paulirish/12fb951a8b893a454b32
 [13]:https://www.w3schools.com/jsref/met_document_queryselectorall.asp
