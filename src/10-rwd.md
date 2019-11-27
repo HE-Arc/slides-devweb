@@ -162,7 +162,6 @@ img, embed, object, video{ max-width: 100%; }
 * framework ou from scratch ?
 
 # Références
-
 * Exemples
 	* [Site][19] support du [livre][20] d'Ethan Marcotte
 	* [mediaqueri.es][21]
@@ -174,19 +173,17 @@ img, embed, object, video{ max-width: 100%; }
 	* D'autres techniques, liste de Smashing magazine [@smashing:rwd]
 	* Améliorer la [performance][26]
 	* [Making sites more responsive, responsibly][27]
-
+        * Workshop [Pierre Spring][28] 26.02.13
+	
 # Pratique
-
-* Workshop [Pierre Spring][28] 26.02.13, [sources][29]
 * Tester les exemples sur un mobile
 * Comprendre les sources
 * Présentation adaptative de votre équipe de projet
 
-[2]:http://alistapart.com/d/responsive-web-design/ex/ex-site-FINAL.html
-[3]:http://www.jonikorpi.com/frameless/
+[2]:https://alistapart.github.io/code-samples/responsive-web-design/ex/ex-site-FINAL.html
+[3]:https://blog.atolcd.com/adaptive-design-versus-responsive-design/
 [4]:https://browserdiet.com/
-
-[6]:http://webdesignerwall.com/tutorials/responsive-design-in-3-steps
+[6]:https://webdesignerwall.com/tutorials/responsive-design-in-3-steps
 [7]:https://developer.mozilla.org/fr/docs/CSS/Media_queries
 [8]:http://blog.javierusobiaga.com/stop-using-the-viewport-tag-until-you-know-ho
 [9]:https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html
@@ -194,7 +191,6 @@ img, embed, object, video{ max-width: 100%; }
 [11]:http://ericportis.com/etc/smashing-mag-picture-examples/art-direction.html
 [12]:https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/
 [13]:http://www.hteumeuleu.fr/attribut-srcset-images-responsive/
-
 [16]:https://seesparkbox.com/foundry/media_query_bookmarklet
 [17]:http://www.lukew.com/resources/mobile_first.asp
 [18]:http://offlinefirst.org/
@@ -207,8 +203,7 @@ img, embed, object, video{ max-width: 100%; }
 [25]:http://www.quirksmode.org/blog/archives/2010/09/combining_meta.html
 [26]:http://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/
 [27]:https://24ways.org/2014/making-sites-more-responsive-responsibly/
-[28]:http://nelm.io/pierre
-[29]:http://goo.gl/gj8bke
+[28]:https://www.slideshare.net/caillou/2013-03-webtuesday-responsive
 [30]:https://developers.google.com/web/progressive-web-apps/
 
 <!-- Hack -->
