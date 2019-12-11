@@ -165,17 +165,17 @@
 	* [APIary][37] : Aide au design d'une API REST
 
 * [GraphQL](http://graphql.org/) 
-	* est destiné à devenir la prochaine évolution des apis REST utilisant JSON. Initié par Facebook, Github permet également d'en [faire usage](https://developer.github.com/early-access/graphql/).
+	* est destiné à devenir la prochaine évolution des apis REST utilisant JSON. Initié par Facebook, Github permet également d'en [faire usage](https://developer.github.com/v4/).
 
 <!-- Bibliographie -->
 [1]:https://en.wikipedia.org/wiki/Resource-oriented_architecture
 [2]:https://fr.wikipedia.org/wiki/Architecture_orient%C3%A9e_services
 [3]:https://upload.wikimedia.org/wikipedia/commons/3/3f/Concept_WS.jpg
 [4]:https://fr.wikipedia.org/wiki/Application_composite
-[5]:http://www.programmableweb.com/category/all/mashups
+[5]:https://www.programmableweb.com/category/mashups
 [6]:https://developers.google.com/apis-explorer/
 [7]:https://ifttt.com/
-[8]:http://www.netvibes.com/fr/dashboardofthings
+[8]:https://www.netvibes.com/fr/explorer/dashboard-of-things
 [9]:https://en.wikipedia.org/wiki/List_of_web_service_specifications
 [10]:http://www.w3schools.com/xml/xml_soap.asp
 [11]:http://www.soapuser.com/fr/basics1.html
