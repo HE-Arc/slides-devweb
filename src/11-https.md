@@ -4,7 +4,7 @@
 
 ## HTTPS{.title}
 
-<footer>HE-Arc (DGR) 2016</footer>
+<footer>HE-Arc (DGR) 2019</footer>
 
 # Sécuriser un site web
 
@@ -22,7 +22,7 @@
 # Secure Socket Layer --> Transport Layer Security
 
 * Conçu par Netscape (v2.0 en 1994, v3.0 en 1996)
-* Brevet racheté par l'IETF : TLS v1.0 en 1999 (SSL 3.1)
+* Brevet racheté par l'IETF : TLS v1.0 en 1999 (SSL 3.1), v1.3 en 2018
 * Couche Application :
 	* Entre les couches transport et application
 	* Pas besoin de modifier la pile TCP/IP
@@ -97,6 +97,14 @@ CA : Autorité de certification - VA : Autorité de validation - RA : Autorité 
 * OU BIEN utiliser [Let's encrypt][15]
 * OU BIEN utiliser un serveur pré-configuré comme [Caddy][16]
 
+# HTTPS Aujourd'hui
+
+* Il n'y a plus de bonne raison d'utiliser HTTP
+* TLS toujours utilisé avec HTTP2 et HTTP3
+* HTTP2 et 3 minimisent et accélèrent les échanges
+* Certificats gratuits
+* Mise en place simplifiée
+
 # Ressources
 
 * [Security Party 23.10.2009][5]
@@ -110,7 +118,7 @@ CA : Autorité de certification - VA : Autorité de validation - RA : Autorité 
 * Autorités de certification :
 	* [Let's Encrypt][15]
 	* [CA Cert][9]
-	* [Startcom][10]
+	* [SSLforFree][10]
 * Différences TLS / SSH : [Snailbook][13], [StackExchange][14]
 
 
@@ -124,7 +132,7 @@ CA : Autorité de certification - VA : Autorité de validation - RA : Autorité 
 [7]:http://www.eventhelix.com/realtimemantra/networking/SSL.pdf
 [8]:http://www.win.tue.nl/hashclash/rogue-ca/
 [9]:http://www.cacert.org/
-[10]:http://www.startcom.org/
+[10]:https://www.sslforfree.com/
 [11]:https://www.verisign.com/?dmn=www.verisign.ch
 [12]:https://www.thawte.com/
 [13]:http://www.snailbook.com/faq/ssl.auto.html
