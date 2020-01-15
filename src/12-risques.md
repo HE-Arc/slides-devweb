@@ -174,7 +174,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 # Références
 
 * Référence
-	* [OWASP][10]
+	* [OWASP][10], [webinar fr][28], [webinar fr 2016][29]
 * Exemples, explications
 	* [Présentation XSS et CSRF][11] en français
 	* [Protection CSRF][12] en français
@@ -212,6 +212,8 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [25]:https://u2f-key.tech/fr/
 [26]:https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf
 [27]:https://github.com/OWASP/Top10/tree/master/2017/fr
+[28]:https://www.youtube.com/watch?v=uJwoctrxyNs
+[29]:https://www.youtube.com/watch?v=pHI2zitLph8
 
 <!-- Hack -->
 <style>
