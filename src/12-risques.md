@@ -4,7 +4,7 @@
 
 ## Risques applicatifs des app web{.title}
 
-<footer>HE-Arc (DGR) 2018</footer>
+<footer>HE-Arc (DGR) 2020</footer>
 
 # Risque
 
@@ -141,7 +141,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 	* Identifiants et commentaires dans sources -au cas où-
 	* SOCIAL ENGINEERING !
 * Le développeur doit laisser filter un minimum d'info !
-* Utilisée aussi par les "white hats" (etical hackers) : [Honeynet Project][8]
+* Utilisée aussi par les "white hats" (etical hackers) : [Honeypots][8]
 
 # Bonnes pratiques
 * Configuration stricte du serveur
@@ -156,7 +156,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 	* ces bonnes pratiques sont déjà implémentées
 * Suites et logiciels de test
 
-# [Top 10][9] OWASP 2017
+# [Top 10][9] OWASP 2017 ([pdf][26], [fr][27])
 
 1. Injection
 2. Broken Authentication
@@ -192,7 +192,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [5]:https://xato.net/10-000-top-passwords-6d6380716fe0#.q5gcg2vme
 [6]:http://xkcd.com/936/
 [7]:https://hacks.mozilla.org/2014/10/passwordless-authentication-secure-simple-and-fast-to-deploy/
-[8]:https://www.honeynet.org/node/960
+[8]:https://hackertarget.com/cowrie-honeypot-analysis-24hrs/
 [9]:https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project
 [10]:https://www.owasp.org/index.php/Main_Page
 [11]:http://www.journaldunet.com/developpeur/tutoriel/php/031030php_nexen-xss1.shtml
@@ -208,9 +208,11 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [21]:https://nakedsecurity.sophos.com/2016/08/18/nists-new-password-rules-what-you-need-to-know/
 [22]:https://www.ncsc.gov.uk/guidance/password-guidance-simplifying-your-approach
 [23]:https://www.acunetix.com/blog/articles/xml-external-entity-xxe-vulnerabilities/
-
 [24]:https://en.wikipedia.org/wiki/WebAuthn
 [25]:https://u2f-key.tech/fr/
+[26]:https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf
+[27]:https://github.com/OWASP/Top10/tree/master/2017/fr
+
 <!-- Hack -->
 <style>
 
