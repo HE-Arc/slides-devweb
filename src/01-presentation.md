@@ -156,8 +156,8 @@
 
 * Généralités pour la partie dev mobile de l'examen :
     * Vous pourriez avoir un résumé personnel manuscrit, d’une feuille A4 recto-verso,
-    * L’examen porte sur toute la matière vue en cours et ce que vous avez fait dans votre projet Android,
-    * Les questions peuvent être théoriques ou/et  pratiques.
+    * L’examen porte sur toute la matière vue en cours,
+    * Les questions peuvent être théoriques ou/et pratiques.
 
 # Examen 
 * Déroulement : 
