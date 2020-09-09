@@ -2,12 +2,12 @@
 
 # Développement web dlm3
 ## Présentation du cours{.title}
-<footer>HE-Arc 2019/20 DGR et YBL</footer>
+<footer>HE-Arc 2020/21 DGR et YBL</footer>
 
 # Programme
 * Frameworks MVC : Laravel, Django, …
 * HTML5 : vue d’ensemble
-* Javascript : AJAX, DOM, JSON, Node.js, jQuery
+* Javascript : VueJS, Node.js, jQuery, AJAX, JSON, ...
 * Déploiement et configuration Serveur
 * Webservices : REST vs SOAP
 * Sécurité : Technologies, prévention des risques courants
@@ -50,7 +50,7 @@
     * S'inspirer de l'existant :
         - [Product Hunt][prodhunt], [blinklist][blinklist], [makeuseof][makeuseof], …
         - [Volées précédentes][arcghp]
-* Commencer tôt pour se libérer les dernières semaines de l'année		
+* Commencer tôt pour se libérer les dernières semaines de l'année
 
 
 # Calendrier
