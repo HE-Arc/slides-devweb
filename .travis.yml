@@ -1,10 +1,13 @@
+dist: trusty
+sudo: required
+
 language: generic
 
 cache: apt
 
 env:
   global:
-    - PANDOC_VERSION=2.10.1
+    - PANDOC_VERSION=2.7.3
     - EMOJIONE_VERSION=5.0.3
 
 addons:
