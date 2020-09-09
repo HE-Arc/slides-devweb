@@ -7,12 +7,13 @@ cache: apt
 
 env:
   global:
-    - PANDOC_VERSION=2.7.3
+    - PANDOC_VERSION=2.10.1
     - EMOJIONE_VERSION=5.0.3
 
 addons:
   apt:
     packages:
+      - fonts-inconsolata
       - fonts-linuxlibertine
       - latex-xcolor
       - latexmk
