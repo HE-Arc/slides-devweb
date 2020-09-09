@@ -2,9 +2,9 @@
 
 # Développement web dlm3
 ## Présentation du cours{.title}
-<footer>HE-Arc 2020-21 DGR et YBL</footer>
+<footer>HE-Arc 2020/21 DGR et YBL</footer>
 
-# Programme
+# Programmes
 * Frameworks MVC : Laravel, Django, …
 * HTML5 : vue d’ensemble
 * Javascript : VueJS, Node.js, jQuery, AJAX, JSON, ...
