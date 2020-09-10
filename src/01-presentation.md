@@ -25,7 +25,7 @@
     * Webdesign ([A. Keller][AK]) ?
     * Flask ([M. Amiguet][MA]) ?
 	* Automatisation du déploiement ([R. Emourgeon][RE]) ?
-    * <span class="yel-bg">Vos présentations (Vue.js) ? Vos propositions ?</span>
+    * <span class="yel-bg">Vos présentations ? Vos propositions ?</span>
 * Support : [ghpages][slidesghp] ([source][slides]), ...ProfsAEtudiants\\3255_Technologies_Interaction\\dw
 
 # Projets
@@ -46,12 +46,11 @@
 * Contrainte : appli basée sur des données
 * Choix
     * Besoin réel
-    * Données existantes : [Inventaire][inv], [dbpedia][dbp], [opendata][odata], DB Bikini Test à dispo
+    * Données existantes :  [dbpedia][dbp], [opendata][odata], …
     * S'inspirer de l'existant :
-        - [Product Hunt][prodhunt], [blinklist][blinklist], [makeuseof][makeuseof], …
+        - [Product Hunt][prodhunt], [makeuseof][makeuseof], …
         - [Volées précédentes][arcghp]
 * Commencer tôt pour se libérer les dernières semaines de l'année
-
 
 # Calendrier
 |Semaine|Automne|Semaine|Printemps|
@@ -76,11 +75,11 @@
 |6|Examen|||
 
 # Suivi du calendrier (à jour sur le réseau interne)
-
 ![Suivi calendrier](img/DW2021.png)
 
 # Jalons pour chacun des 2 projets
-* Echéances (début de semaine) :
+* Echéances
+  * En début de semaine, pour chacun des projets :
     1. Formation équipe et choix thème
     2. Objectifs et maquettes
     3. Authentification et 1er déploiement
@@ -130,7 +129,7 @@
 # Présentation facultative
 * Facultatif, ne peut qu’augmenter la moyenne
 * DOIT être annoncé au semestre d'automne
-* Un thème absent du cours (Vue.js ? ;)
+* Un thème absent du cours
 * 2 à 4 personnes
 * Une présentation claire avec démo (printemps)
 * Un exercice d’application
@@ -140,7 +139,7 @@
     * Proposer 1 à 3 thèmes
     * [Proposer][form-pres] le(s) thème(s) de présentation et l'équipe
 
-# Examen
+# Examen oral SA
 * Généralités pour la partie dev web de l'examen :
     * Vous n'avez droit à rien : on vous mettra à disposition 1 crayon et du papier pour préparer votre présentation,
     * L'examen porte sur toute la matière vue au en cours (yc workshops),
@@ -152,12 +151,22 @@
     * L’examen porte sur toute la matière vue en cours,
     * Les questions peuvent être théoriques ou/et pratiques.
 
-# Examen 
+# Examen oral SA
 * Déroulement : 
     * Vous tirez un n° de question au hasard pour chaque cours 
     * Vous disposez de 15 min pour préparer une présentation de 10 min pour chacun des 2 cours (pendant la présentation de l'étudiant précédent) 
     * Idéalement vous faites une présentation d'environ 10 min et les 5 min restantes sont dédiées aux questions (pour chacun des cours)
 
+# Mesures sanitaires COVID-19
+* Rentrée : 100% présentiel
+* Etudiants portent le masque
+* Enseignants portent le masque à moins d'1.50m
+* Désinfection des mains avant d'entrer en salle
+* Quarantaine :
+  * courte en cas de suspicion : le temps d'avoir le résultat des tests (2-5j)
+    * considérée comme une absence, nécessité d'un certificat, faire le nécessaire pour rattrapper
+  * longue (14 jours) si test positif
+  * quarantaine courte ou des enseignants : le cours sera donné via Teams si possible
 
 # Mon expérience en développement web
 * [Questionnaire][form-survey] obligatoire (votre username github vous y sera demandé)
@@ -174,16 +183,14 @@
 [sshkey]: https://github.com/settings/keys
 [gharc]: https://github.com/HE-Arc/
 [msvsde]: https://my.visualstudio.com/Benefits
-[inv]: https://inventory.ing.he-arc.ch/
 [dbp]: http://wiki.dbpedia.org/
 [odata]: https://opendata.swiss/fr/
 [prodhunt]: https://www.producthunt.com/topics/web-app
-[blinklist]: http://blinklist.com/reviews
 [makeuseof]: http://www.makeuseof.com/tag/best-websites-internet/
-[wiki]: https://github.com/HE-Arc/slides-devweb/wiki/Projets-2019-2020
+[wiki]: https://github.com/HE-Arc/slides-devweb/wiki/Projets-2020-2021
 [masb]:https://docs.microsoft.com/fr-fr/visualstudio/subscriptions/vs-pluralsight
 [github]: https://github.com/orgs/HE-Arc
-[arcghp]: https://he-arc.github.io/#développement-web-1
+[arcghp]: https://he-arc.github.io
 [hacktober]:https://hacktoberfest.digitalocean.com/
 [mockups]: https://brainhub.eu/blog/difference-between-wireframe-mockup-prototype/
 [branching]: http://drewfradette.ca/a-simpler-successful-git-branching-model/
