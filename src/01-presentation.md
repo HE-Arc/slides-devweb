@@ -4,7 +4,7 @@
 ## Présentation du cours{.title}
 <footer>HE-Arc 2020/21 DGR et YBL</footer>
 
-# Programmes
+# Programme
 * Frameworks MVC : Laravel, Django, …
 * HTML5 : vue d’ensemble
 * Javascript : VueJS, Node.js, jQuery, AJAX, JSON, ...
@@ -62,32 +62,25 @@
 |41||11||
 |43||12||
 |44||13||
-|45||14||
-|46||15|Présentations|
+|45||15||
+|46||16|Présentations|
 |47|S. thématique|17|Présentations|
-|48||18||
+|48||18|Présentations|
 |49||19||
-|50|Présentations|20|Examens|
+|50||20|Examens|
 |51|Présentations|21|Début TB|
-|2||||
-|3|Projet Python|||
+|2|Projet Python|||
+|3||||
 |4||||
 |5|T. Autonome|||
 |6|Examen|||
 
 # Suivi du calendrier (à jour sur le réseau interne)
 
-![Suivi calendrier](img/DW1920.png)
-
-# Semaine prochaine
-* Steve Visinand vous présentera Laravel
-* Les 2 groupes viennent à Neuchâtel la matinée du mardi 24.09 en salle 314
-* Les dlm3a rattrappent leur P3 le jeudi 26.09 à 12h30 en 316
-* Le temps de présence supplémentaire est pris en compte
+![Suivi calendrier](img/DW2021.png)
 
 # Jalons pour chacun des 2 projets
-* Echéances
-  * en début de semaine :
+* Echéances (début de semaine) :
     1. Formation équipe et choix thème
     2. Objectifs et maquettes
     3. Authentification et 1er déploiement
@@ -210,15 +203,15 @@
   }
 
   /* Projets automne */
-  table tbody tr:nth-child(n+2):nth-child(-n+11) td:nth-child(2)
+  table tbody tr:nth-child(n+2):nth-child(-n+12) td:nth-child(2)
   {
     background-color: green;
   }
 
   /* Projets printemps */
-  table tbody tr:nth-child(n+15) td:nth-child(2),
-  table tbody tr:nth-child(-n+7) td:nth-child(4) {
-    background-color: lightgreen;
+  table tbody tr:nth-child(n+14) td:nth-child(2),
+  table tbody tr:nth-child(-n+6) td:nth-child(4) {
+    background-color: green;
   }
 
   section#examen ul li,
