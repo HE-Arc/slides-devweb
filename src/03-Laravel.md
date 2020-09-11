@@ -1,10 +1,8 @@
-% 03.Laravel 6
+% 03.Laravel
 
 # Développement web dlm3
 
-## Laravel 6{.title}
-
-![Logo Laravel](src/img/laravel-logo-big.png)
+## Laravel{.title}
 
 <footer>HE-Arc (DGR & R. Emourgeon) 2018-20</footer>
 
@@ -23,7 +21,7 @@
 * Mai 2013 : version 4, utilise [composer][Composer]
 * Août 2014 : projet PHP le plus [populaire][LaraStats] sur github
 * [Qui][builtwith] utilise Laravel ?
-* [version 6][laravel6] sortie le 3 sept. 2019
+* version 8 sortie le 9 sept. 2020
 
 # Principales fonctionnalités
 
@@ -39,11 +37,11 @@
 
 # Le Front Controller
 
-![Rôle du front controller](src/img/front-ctrl.jpg "deux")
+![Rôle du front controller](img/front-ctrl.jpg "deux")
 
 # Architecture
 
-![Architecture de Laravel](src/img/laravel-architecture.jpg "trois")
+![Architecture de Laravel](img/laravel-architecture.jpg "trois")
 
 # MVC
 
@@ -56,15 +54,15 @@
 
 * Conventions de codage : Laravel respecte [PSR-2][PSR2]
     * Vous aussi avec [StyleCI][styleci]
-* Editeurs et IDE : PhpStorm, [glitch][glitch], brackets, Sublime Text, Atom, VS Code, [repl.it][replit]...
+* Editeurs et IDE : PhpStorm, [glitch][glitch], brackets, VS Code, [repl.it][replit]...
 * Tests : unitaires, Jmeter, Selenium, ...
 * Outils : devtools Chrome ou FF, [Emmet][emmet], git
 * Doc
     * [Documentation officielle][LaraDoc] de Laravel
     * [Cheat Sheet][LaraCheat] (Laravel 5)
 * Tutoriels
-    * Laravel 6 : [Tuts Make][tutsmake], [Best Momo][tutoBMomo]
-    * Laravel 5 : [Open Classroom][tutoOCR], [CodeSchool -> Pluralsight][tutoCS]
+    * Pour un tuto à jour : bien préciser la version (8) dans votre recherche
+    * Laravel 7 : [Best Momo][tutoBMomo], [Tuts Make][tutsmake]
 
 # Environnement de développement
 * De quoi ai-je besoin pour développer ?
@@ -88,7 +86,7 @@ $composer global require "laravel/installer"
 * VM (Vagrant - [Homestead][homestead]) ou conteneur
     * Mise en route plus rapide : pré-configuré
     * Environnement dédié au dev, identique pour chaque développeur
-* Cloud ([Cloud9][c9], Koding, coder.com, repl.it ...)
+* Cloud (koding.com, coder.com, repl.it ...)
     * Mise en route plus rapide : pré-configuré
     * Indépendant du poste de travail (navigateur)
     * Outils de synchro disponibles
@@ -129,7 +127,7 @@ $git push --set-upstream origin master
 
 * Penser à ajouter sa clé publique à Github
 
-# [Apache](https://help.ubuntu.com/lts/serverguide/httpd.html)
+# Apache
 
 * Virtual hosts
     * `http-vhosts.conf` (activer dans `httpd.conf`)
@@ -179,7 +177,6 @@ $php artisan list
 # Ressources
 
 * [Laracast](https://laracasts.com/series/laravel-6-from-scratch)
-* [Laravel Tips](https://laraveltips.wordpress.com/)
 * [Learning Laravel](http://learninglaravel.net/tags/tutorials)
 * [Laravel 6 REST API CRUD tuto](https://www.techiediaries.com/laravel-tutorial-rest-crud-api-models-relationships/)
 * [Les vôtres](https://github.com/HE-Arc/slides-devweb/wiki/Ressources)
@@ -187,7 +184,6 @@ $php artisan list
 [LaraForum]: http://laravel.io/forum
 [SOLID]: http://fr.wikipedia.org/wiki/SOLID_(informatique)
 [TO]: http://taylorotwell.com/
-[laravel6]: https://itanea.fr/apprendre-le-developpement-web/laravel-6-0-qu-est-ce-que-propose-cette-nouvelle-version-lts-majeure/
 [Composer]: https://getcomposer.org/
 [LaraStats]: https://github.com/search?l=PHP&q=stars%3A%3E0&ref=searchresults&type=Repositories
 [builtwith]: https://madewithlaravel.com/
@@ -201,7 +197,7 @@ $php artisan list
 [LaraDoc]: https://laravel.com/docs/master
 [LaraCheat]: https://summerblue.github.io/laravel5-cheatsheet/#
 [tutsmake]: https://www.tutsmake.com/laravel-6-tutorial-from-scratch-laravel-step-by-step/
-[tutoBMomo]: https://laravel.sillo.org/laravel-6-2/
+[tutoBMomo]: https://laravel.sillo.org/laravel-7/
 [tutoOCR]: https://openclassrooms.com/courses/decouvrez-le-framework-php-laravel-1
 [tutoCS]: https://www.codeschool.com/courses/try-laravel
 [wsl]: https://docs.microsoft.com/en-us/windows/wsl/install-win10

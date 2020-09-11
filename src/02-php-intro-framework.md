@@ -410,6 +410,7 @@ nos fichiers de *template*, car ils sont faits de PHP eux aussi.
 ```
 
 <div class="notes">
+
 La page est réalisée avec [Twig](http://twig.sensiolabs.org/) <2.0. À partir de
 la version 2.0, il faut utiliser un _autoloader_ externe, comme celui de composer
 (voir ci-dessous).
