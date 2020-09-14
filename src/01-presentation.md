@@ -105,6 +105,7 @@
 * Signalez dans le commit msg si vous n'êtes pas l'auteur
 * Le déploiement est long : commencez tôt !
 * Il est moins risqué travailler plus au début du projet qu'à la fin !
+* Discutez ! Echangez ! par exemple avec les vieux sur [gitter](https://gitter.im/HE-Arc)
 
 # Évaluation des projets
 * Note finale d'un projet :
