@@ -27,7 +27,7 @@
 * Avantages des 2 mondes (natif et web)
 * [Article](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) d'Alex Russel 15.06.15
 * Vue d'ensemble par [Wikipedia](https://en.wikipedia.org/wiki/Progressive_web_app)
-* Partiellement supporté par [iOS](https://stackoverflow.com/questions/41185471/what-is-progressive-web-app-solution-for-ios) (support SW en dev)
+* Partiellement supporté par [iOS](https://love2dev.com/pwa/ios/) (pas de notif, cache limité)
 
 # PWA : howto
 
@@ -40,7 +40,7 @@
 # Exemples et tutos
 
 * Exemples 
-	* [PWA rocks](https://pwa.rocks/)
+	* [Appscope](https://appsco.pe/)
 	* [HN PWA](https://hnpwa.com/)
 	* [Gokulakrishnan Kalaikovan](https://github.com/gokulkrishh)
 * Tutos
