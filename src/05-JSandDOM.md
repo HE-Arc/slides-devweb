@@ -27,12 +27,12 @@
 	* script d'app (Qt, Notepad++, ...)
 * Langage cible de compilateurs : [emscripten](https://github.com/kripken/emscripten/wiki), [WebAssembly](http://webassembly.org/)
 * Embarqué : [Espruino](http://www.espruino.com/), robotique : [Node Bots](https://nodebots.io/), [CylonJS](https://cylonjs.com/)
-* Applications Desktop : [Electron](https://electronjs.org/)
+* Applications Desktop : [Electron](https://electronjs.org/), [<sciter>](https://sciter.com/)
 
 # *Script
 
 * ECMAScript : Norme depuis 1997 
-	* Juin 2019 : [ECMA-262 10th edition / 2019](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
+	* Juin 2020 : [ECMA-262 11th edition / 2019](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
 	* [Support](http://kangax.github.io/compat-table/es2016plus/) des différentes implémentations
 	* Conversions avec [BabelJS](https://babeljs.io/)
 * JavaScript : implémentation Firefox (réf. MDN)
@@ -313,7 +313,7 @@ function insertNode() {
 * Référence [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference)
 * Tutoriels [The Modern JS Tuto](https://javascript.info/) [w3schools](http://www.w3schools.com/js/)
 * Outils de développement Chrome et Firefox (F12, Ctrl+Shift I)
-* Visualisation du [DOM](http://bioub.github.io/dom-visualizer/), du [shadow DOM](https://html5-demos.appspot.com/static/shadowdom-visualizer/index.html)
+* Visualisation du [DOM](http://bioub.github.io/dom-visualizer/)
 * Outils web
 	* [JSFiddle](https://jsfiddle.net/)
 	* [JSLint](http://www.jslint.com/)
