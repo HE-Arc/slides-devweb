@@ -113,17 +113,17 @@
 * URI logique plutôt qu'URL physique
 * L'appel d'une ressource avec des méthodes différentes produira un résultat différent :
 
-```html 
- * GET       http://www.monblog.com/posts     // Liste des billets
- * GET       http://www.monblog.com/posts/1   // Billet 1
- * POST      http://www.monblog.com/posts     // Création d'un billet
- * PUT/PATCH http://www.monblog.com/posts/1   // Mise à jour billet 1
- * DELETE    http://www.monblog.com/posts/1   // Suppr billet 1
-```
+| Effet | Route   | Verbe  |URL (ressource) | Description                      |
+|-------|---------|--------|----------------|----------------------------------|
+|       | Index   | GET    | /blogs         | Affiche la liste                 |
+|       | New     | GET    | /blog/new      | Affiche formulaire création      |
+| C     | Create  | POST   | /blogs         | Création en DB, puis redirection |
+| R     | Show    | GET    | /blogs/42      | Affiche le blog 42               |
+|       | Edit    | GET    | /blogs/42/edit | Formulaire édition blog 42       |
+| U     | Update  | PUT    | /blogs/42      | MAJ en DB blog 42                |
+| D     | Destroy | DELETE | /blogs/42      | Suppression ne DB blog 42        |
 
-* Avec [Laravel][17] ou Rails, ces actions sont nommées :
-	`index, show, store/create, update, destroy`
-* Laravel et Rails sont RESTful !
+* Laravel, Django, Rails, ... sont RESTful !
 
 # Niveaux de maturité de [Richardson][18]
 
