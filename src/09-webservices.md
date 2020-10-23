@@ -109,11 +109,9 @@
 	* Idempotence : plusieurs appels donnent le même résultat
 
 # REST
+* L'appel d'une ressource avec des verbes différents produira un résultat différent :
 
-* URI logique plutôt qu'URL physique
-* L'appel d'une ressource avec des méthodes différentes produira un résultat différent :
-
-| Effet | Route   | Verbe  |URL (ressource) | Description                      |
+| Effet | Route   | Verbe  |URI (ressource) | Description                      |
 |-------|---------|--------|----------------|----------------------------------|
 |       | Index   | GET    | /blogs         | Affiche la liste                 |
 |       | New     | GET    | /blog/new      | Affiche formulaire création      |
