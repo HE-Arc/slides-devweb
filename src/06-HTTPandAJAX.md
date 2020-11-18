@@ -351,7 +351,7 @@ myXHR.getResponseHeader("Status");
 * Pas de surprise
 * Respect des conventions
 * Pas de distraction
-* A11y ([Contrast Checker][30], [ARIA][27], [Resources][31])
+* A11y ([Contrast Checker][30], [Checklist][32], [ARIA][27], [Resources][31])
 * Ne pas switcher AJAX/non-AJAX
 * Se mettre à la place de l'utilisateur
 
@@ -390,6 +390,7 @@ myXHR.getResponseHeader("Status");
 [29]:https://www.promisejs.org/
 [30]:https://color.a11y.com/
 [31]:https://www.a11yproject.com/resources/
+[32]:https://www.a11yproject.com/checklist/
 
 <!-- Hack -->
 <style>
