@@ -351,7 +351,7 @@ myXHR.getResponseHeader("Status");
 * Pas de surprise
 * Respect des conventions
 * Pas de distraction
-* Accessibilité ([ARIA][27])
+* A11y ([Contrast Checker][30], [ARIA][27], [Resources][31])
 * Ne pas switcher AJAX/non-AJAX
 * Se mettre à la place de l'utilisateur
 
@@ -388,6 +388,8 @@ myXHR.getResponseHeader("Status");
 [whatwg:fetch]: https://fetch.spec.whatwg.org/
 [28]:https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
 [29]:https://www.promisejs.org/
+[30]:https://color.a11y.com/
+[31]:https://www.a11yproject.com/resources/
 
 <!-- Hack -->
 <style>
