@@ -4,7 +4,7 @@
 
 ## HTTP & AJAX{.title}
 
-<footer>HE-Arc (DGR) 2019</footer>
+<footer>HE-Arc (DGR) 2020</footer>
 
 # HyperText Transfer Protocol
 * Protocole application : invention www en 1990 (v0.9)
