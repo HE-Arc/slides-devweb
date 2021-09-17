@@ -1,7 +1,6 @@
 # Web Dev Slides
 
-[![Build Status](https://travis-ci.com/HE-Arc/slides-devweb.svg?branch=master)](https://travis-ci.com/HE-Arc/slides-devweb)
-
+[![Build Status](https://app.travis-ci.com/HE-Arc/slides-devweb.svg?branch=master)](https://app.travis-ci.com/HE-Arc/slides-devweb)
 Slides for web development course at HE-Arc.ch (3rd year bachelor).
 
 ## Emoji's
