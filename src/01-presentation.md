@@ -2,7 +2,7 @@
 
 # Développement web dlm3
 ## Présentation du cours{.title}
-<footer>HE-Arc 2020/21 DGR et YBL</footer>
+<footer>HE-Arc 2021/22 DGR et YBL</footer>
 
 # Programme
 * Frameworks MVC : Laravel, Django, …
@@ -75,7 +75,7 @@
 |6|Examen|||
 
 # Suivi du calendrier (à jour sur le réseau interne)
-![Suivi calendrier](img/DW2021.png)
+![Suivi calendrier](img/DW2122.png)
 
 # Jalons pour chacun des 2 projets
 * Echéances
