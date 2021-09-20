@@ -94,8 +94,7 @@
 * Il n'est pas interdit d'en ajouter
 
 # Conseils
-* Le plus simple possible
-* Pas trop de données
+* Le plus simple possible, pas trop de données
 * Application crédible (vraies données, cas réalistes)
 * Projet à blanc pour la prise en main du framework
 * [Maquettes][mockups]
@@ -126,6 +125,7 @@
 * Aux projets des autres : Issues, PR
 * Participez à la [Hacktoberfest][hacktober]
 * Pariticipez au cours : contenu, présentation, pages ([index][ghpindex], [wiki][wikicours], ...)
+* Echangez avec [caravel](https://caravel.ing.he-arc.ch/) (groupes : dlm3 a21-22, dlm3 b21-22) et [gitter](https://gitter.im/HE-Arc)
 
 # Présentation facultative
 * Facultatif, ne peut qu’augmenter la moyenne
