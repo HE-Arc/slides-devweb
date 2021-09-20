@@ -213,14 +213,14 @@
   }
 
   /* Projets automne */
-  table tbody tr:nth-child(n+2):nth-child(-n+12) td:nth-child(2)
+  table tbody tr:nth-child(n+1):nth-child(-n+12) td:nth-child(2)
   {
     background-color: green;
   }
 
   /* Projets printemps */
   table tbody tr:nth-child(n+14) td:nth-child(2),
-  table tbody tr:nth-child(-n+6) td:nth-child(4) {
+  table tbody tr:nth-child(-n+7) td:nth-child(4) {
     background-color: green;
   }
 
