@@ -49,21 +49,21 @@
     * Données existantes :  [dbpedia][dbp], [opendata][odata], …
     * S'inspirer de l'existant :
         - [Product Hunt][prodhunt], [makeuseof][makeuseof], …
-        - [Volées précédentes][arcghp]
+        - [Volées précédentes][gharc]
 * Commencer tôt pour se libérer les dernières semaines de l'année
 
 # Calendrier
 |Semaine|Automne|Semaine|Printemps|
 |---:|---|---:|---|
-|38||8||
-|39|Projet PHP|9||
+|38|Projet PHP|8||
+|39||9||
 |40||10||
-|41||11||
+|42||11||
 |43||12||
 |44||13||
-|45||15||
-|46||16|Présentations|
-|47|S. thématique|17|Présentations|
+|45|S. thématique|14||
+|46||15|Présentations|
+|47||17|Présentations|
 |48||18|Présentations|
 |49||19||
 |50||20|Examens|
@@ -125,7 +125,7 @@
 # Participation
 * Aux projets des autres : Issues, PR
 * Participez à la [Hacktoberfest][hacktober]
-* Pariticipez au cours : contenu, présentation, pages (index, wiki, ...)
+* Pariticipez au cours : contenu, présentation, pages ([index][ghpindex], [wiki][wikicours], ...)
 
 # Présentation facultative
 * Facultatif, ne peut qu’augmenter la moyenne
@@ -188,7 +188,7 @@
 [odata]: https://opendata.swiss/fr/
 [prodhunt]: https://www.producthunt.com/topics/web-app
 [makeuseof]: http://www.makeuseof.com/tag/best-websites-internet/
-[wiki]: https://github.com/HE-Arc/slides-devweb/wiki/Projets-2020-2021
+[wiki]: https://github.com/HE-Arc/slides-devweb/wiki/Projets-2021-22
 [masb]:https://docs.microsoft.com/fr-fr/visualstudio/subscriptions/vs-pluralsight
 [github]: https://github.com/orgs/HE-Arc
 [arcghp]: https://he-arc.github.io
@@ -197,6 +197,8 @@
 [branching]: http://drewfradette.ca/a-simpler-successful-git-branching-model/
 [form-pres]: https://docs.google.com/spreadsheet/viewform?formkey=dEVJRE1WVTVPelhFcE94TGF5N1c0cGc6MQ
 [form-survey]: https://docs.google.com/spreadsheet/viewform?formkey=dDg5Znh5akRBV1hPbC1qYlVRV3BONFE6MQ
+[ghpindex]: https://he-arc.github.io/
+[wikicours]: https://github.com/HE-Arc/slides-devweb/wiki
 
 <!-- Hack -->
 <style>

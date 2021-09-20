@@ -4,7 +4,7 @@
 
 ## Introduction aux frameworks PHP{.title}
 
-<footer>HE-Arc 2016-20 DGR et YBL</footer>
+<footer>HE-Arc 2016-21 DGR et YBL</footer>
 
 ---
 
@@ -144,6 +144,7 @@ Dans les faits, cela montre également une maturité de la plateforme.
  * PHP 5.5, `yield`
  * ~~PHP 6, Unicode~~ 💩, 🎃, 🐧
  * PHP 7, que du rêve!
+ * PHP 8, JIT compilation, [...][PHP8]
 
 <div class="notes">
 
@@ -854,6 +855,7 @@ Questions?
 [PHP-wiki]: https://en.wikipedia.org/wiki/PHP
 [ITcrowd]: https://www.youtube.com/watch?v=iDbyYGrswtg
 [CERN]: http://line-mode.cern.ch/www/hypertext/WWW/TheProject.html^
+[PHP8]: https://kinsta.com/fr/blog/php-8/
 
 <!-- CSS -->
 <style>
