@@ -62,7 +62,7 @@
     * [Cheat Sheet][LaraCheat]
 * Tutoriels
     * Pour un tuto à jour : bien préciser la version (8) dans votre recherche
-    * Laravel 7 : [Best Momo][tutoBMomo], [Tuts Make][tutsmake]
+    * Laravel 8 : [Best Momo][tutoBMomo], [Tuts Make][tutsmake]
 
 # Environnement de développement
 * De quoi ai-je besoin pour développer ?
