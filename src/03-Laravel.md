@@ -4,7 +4,7 @@
 
 ## Laravel{.title}
 
-<footer>HE-Arc (DGR & R. Emourgeon) 2018-20</footer>
+<footer>HE-Arc (DGR & R. Emourgeon) 2018-21</footer>
 
 # Pourquoi [Laravel](https://laravel.com/) ?
 
@@ -54,12 +54,12 @@
 
 * Conventions de codage : Laravel respecte [PSR-2][PSR2]
     * Vous aussi avec [StyleCI][styleci]
-* Editeurs et IDE : PhpStorm, [glitch][glitch], brackets, VS Code, [repl.it][replit]...
+* Editeurs et IDE : PhpStorm, [glitch][glitch], brackets, VS Code, [repl.it][replit], [Gitpod][gitpod]...
 * Tests : unitaires, Jmeter, Selenium, ...
 * Outils : devtools Chrome ou FF, [Emmet][emmet], git
 * Doc
     * [Documentation officielle][LaraDoc] de Laravel
-    * [Cheat Sheet][LaraCheat] (Laravel 5)
+    * [Cheat Sheet][LaraCheat]
 * Tutoriels
     * Pour un tuto à jour : bien préciser la version (8) dans votre recherche
     * Laravel 7 : [Best Momo][tutoBMomo], [Tuts Make][tutsmake]
@@ -86,7 +86,7 @@ $composer global require "laravel/installer"
 * VM (Vagrant - [Homestead][homestead]) ou conteneur
     * Mise en route plus rapide : pré-configuré
     * Environnement dédié au dev, identique pour chaque développeur
-* Cloud (koding.com, coder.com, repl.it ...)
+* Cloud (koding.com, coder.com, repl.it, gitpod ...)
     * Mise en route plus rapide : pré-configuré
     * Indépendant du poste de travail (navigateur)
     * Outils de synchro disponibles
@@ -176,9 +176,10 @@ $php artisan list
 
 # Ressources
 
-* [Laracast](https://laracasts.com/series/laravel-6-from-scratch)
+* [Laracast](https://laracasts.com/series/laravel-8-from-scratch)
 * [Learning Laravel](http://learninglaravel.net/tags/tutorials)
-* [Laravel 6 REST API CRUD tuto](https://www.techiediaries.com/laravel-tutorial-rest-crud-api-models-relationships/)
+* [Laravel REST API CRUD tuto](https://www.tutsmake.com/laravel-8-rest-api-crud-with-passport-auth-tutorial/)
+* [Tips](https://github.com/LaravelDaily/laravel-tips)
 * [Les vôtres](https://github.com/HE-Arc/slides-devweb/wiki/Ressources)
 
 [LaraForum]: http://laravel.io/forum
@@ -193,15 +194,16 @@ $php artisan list
 [styleci]: https://styleci.io/
 [glitch]: https://glitch.com/
 [replit]: https://repl.it/
+[gitpod]: https://www.gitpod.io/
 [emmet]: http://emmet.io/
 [LaraDoc]: https://laravel.com/docs/master
-[LaraCheat]: https://summerblue.github.io/laravel5-cheatsheet/#
-[tutsmake]: https://www.tutsmake.com/laravel-6-tutorial-from-scratch-laravel-step-by-step/
-[tutoBMomo]: https://laravel.sillo.org/laravel-7/
+[LaraCheat]: https://learninglaravel.net/cheatsheet/
+[tutsmake]: https://www.tutsmake.com/page/1/?s=tutorial+laravel+8
+[tutoBMomo]: https://laravel.sillo.org/laravel-8/
 [tutoOCR]: https://openclassrooms.com/courses/decouvrez-le-framework-php-laravel-1
 [tutoCS]: https://www.codeschool.com/courses/try-laravel
 [wsl]: https://docs.microsoft.com/en-us/windows/wsl/install-win10
-[homestead]: https://laravel.com/docs/5.7/homestead
+[homestead]: https://laravel.com/docs/master/homestead
 [c9]: https://github.com/dev-nowornet/Laravel-5.6-Complete-Install-Cloud9-C9
 [artisan]: https://laravel.com/docs/master/artisan
 [routing]: https://laravel.com/docs/master/routing
@@ -213,6 +215,7 @@ $php artisan list
 [valetOSX]: https://laravel.com/docs/master/valet
 [valetLinux]: https://cpriego.github.io/valet-linux/#installation
 [valetWSL]: https://github.com/valeryan/valet-wsl
+
 
 <style type="text/css">
     section.title, section#sources, h1.title {display:none;}

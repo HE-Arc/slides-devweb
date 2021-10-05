@@ -854,7 +854,7 @@ Questions?
 [PHP-Hist]: http://php.net/manual/en/history.php.php
 [PHP-wiki]: https://en.wikipedia.org/wiki/PHP
 [ITcrowd]: https://www.youtube.com/watch?v=iDbyYGrswtg
-[CERN]: http://line-mode.cern.ch/www/hypertext/WWW/TheProject.html^
+[CERN]: http://line-mode.cern.ch/www/hypertext/WWW/TheProject.html
 [PHP8]: https://kinsta.com/fr/blog/php-8/
 
 <!-- CSS -->
