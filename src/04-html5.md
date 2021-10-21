@@ -9,6 +9,7 @@
 # Exemples
 
 * Vue d'ensemble : [slides](http://web.archive.org/web/20150525080904/http://slides.html5rocks.com/#landing-slide) Google 2011 ( [sources](https://github.com/html5rocks/slides.html5rocks.com) )
+    * Obslolète : ~~web sql~~, ~~quota~~, ~~microdata~~, ~~application cache~~ : Service Workers
 * API d'accès à la [caméra](http://www.soundstep.com/blog/experiments/jsdetection/), avec du [webGL](http://auduno.github.io/clmtrackr/examples/facesubstitution.html)...
 * Bachelor NIFFF 2014 : une webapp mobile pour LACIS
 * Plein d'exemples
