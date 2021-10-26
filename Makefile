@@ -38,7 +38,7 @@ $(SLIDES): $(BUILDDIR)/%.html : $(SOURCEDIR)/%.md
 			-t dzslides \
 			--self-contained \
 			--lua-filter=meta.lua \
-			--filter=pandoc-citeproc \
+			--citeproc \
 			-V show-notes=true \
 			-V title="" \
 			-V title-prefix="HE-Arc" \
@@ -55,7 +55,7 @@ $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 			--pdf-engine=xelatex \
 			--lua-filter=meta.lua \
 			--lua-filter=english.lua \
-			--filter=pandoc-citeproc \
+			--citeproc \
 			-H $(TEMPLATES)/header.tex \
 			-V documentclass="scrartcl" \
 			-V links-as-notes=true \
@@ -72,7 +72,7 @@ $(BOOKS): $(BUILDDIR)/%.tex: $(SOURCEDIR)/%.md
 			-t latex \
 			--lua-filter=meta.lua \
 			--lua-filter=english.lua \
-			--filter=pandoc-citeproc \
+			--citeproc \
 		> $@
 
 $(BUILDDIR)/book.pdf: $(TEMPLATES)/book.tex $(BOOKS)
