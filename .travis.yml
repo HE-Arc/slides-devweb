@@ -18,6 +18,7 @@ addons:
       - lmodern
       - make
       - texlive
+      - texlive-base
       - texlive-fonts-extra
       - texlive-fonts-recommended
       - texlive-generic-recommended
