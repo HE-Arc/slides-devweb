@@ -14,7 +14,6 @@ addons:
       - fonts-inconsolata
       - fonts-linuxlibertine
       - fonts-texgyre
-      - latex-xcolor
       - latexmk
       - librsvg2-bin
       - lmodern
@@ -22,7 +21,6 @@ addons:
       - texlive
       - texlive-fonts-extra
       - texlive-fonts-recommended
-      - texlive-generic-recommended
       - texlive-lang-french
       - texlive-latex-extra
       - texlive-plain-generic
