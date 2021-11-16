@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
 > [MDN: DOMContentLoaded](https://developer.mozilla.org/en/docs/Web/Events/DOMContentLoaded)
 </div>
 
-# [Node.js](https://nodejs.org)
+# [Node.js](https://nodejs.org) / [Deno](https://www.reddit.com/r/node/comments/nx9qqr/deno_vs_nodejs_a_comparison_you_need_to_know/)
 
 * Node.js : une implémentation hors navigateur
 	* environnement d'exécution + bibliothèques
@@ -211,6 +211,7 @@ document.addEventListener("DOMContentLoaded", function() {
 * Méthodes de `Document`
 
 ```javascript
+    querySelector(), querySelectorAll(),
     getElementById(), getElementsByTagName(), getElementByClass(),	
     createElement(), createTextNode()
 ```
