@@ -20,13 +20,13 @@
 	* OS, serveurs, langages : patches rapidement disponibles
 	* nos applications : **c'est nous qui en sommes responsables**
 
-# [OWASP](26)
+# [OWASP][26]
 * Open Web Application Security Project
 * Fondation pour améliorer la sécurité des webapps
 * Fondée en 2004, internationale, sans but lucratif
 * Référence principale dans le domaine
 * Propose :
-  * Top 10 (web et [mobile](17))
+  * Top 10 (web et [mobile][17])
   * Grand communauté d'experts
   * Formation, documentation et ressources
   * Outils d'audit, de tests et de formation
