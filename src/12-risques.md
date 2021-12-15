@@ -192,7 +192,6 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 	* [Web Goat][13]
 	* [Insecure Labs][14]
 	* [Google-Gruyere][15]
-	* [Tutoriaux et challenges][16] en français
 
 <!-- Bibliographie -->
 [1]:https://fr.wikipedia.org/wiki/Injection_SQL
