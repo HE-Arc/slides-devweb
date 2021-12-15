@@ -44,6 +44,8 @@
 9. Carences des systèmes de contrôle et de journalisation
 10. Falsification de requêtes côté serveur
 
+* Non exhaustif : ex. : risques liés à [Node JS][16]
+
 # Injection de code
 * Données mal validées : possibilité d'exécuter du code
 * Passées par requêtes :
@@ -149,6 +151,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 * [passwordless][7] authentication
 	* [WebAuthN][24]
 	* [U2F][25]
+	* [Microsoft][28]
 * 2017 : [NIST 800-63-3][21] suivi par la [NCSC][22]
 	* Mots de passe longs plutôt qu’avec des caractères spéciaux
 	* Ne forcer le changement qu’en cas de nécessité
@@ -181,7 +184,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 # Références
 
 * Référence
-	* [OWASP][10], [webinar fr][28], [webinar fr 2016][29]
+	* [OWASP][10], [webinar fr 2016][29]
 * Exemples, explications
 	* [Présentation XSS et CSRF][11] en français
 	* [Protection CSRF][12] en français
@@ -207,7 +210,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [13]:https://www.owasp.org/index.php/Webgoat
 [14]:http://www.insecurelabs.org/task
 [15]:http://google-gruyere.appspot.com/
-[16]:https://www.securite-info.org/
+[16]:https://cheatsheetseries.owasp.org/cheatsheets/NPM_Security_Cheat_Sheet.html
 [17]:https://owasp.org/www-project-mobile-top-10/
 [18]:https://www.owasp.org/images/5/57/OWASP_Proactive_Controls_2.pdf
 [19]:http://visual.ly/our-password-habits-revealed
@@ -219,7 +222,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [25]:https://u2f-key.tech/fr/
 [26]:https://owasp.org/
 [27]:https://owasp.org/Top10/fr/
-[28]:https://www.youtube.com/watch?v=uJwoctrxyNs
+[28]:https://www.microsoft.com/security/blog/2021/09/15/the-passwordless-future-is-here-for-your-microsoft-account/
 [29]:https://www.youtube.com/watch?v=pHI2zitLph8
 
 <!-- Hack -->
