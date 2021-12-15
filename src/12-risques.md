@@ -4,10 +4,9 @@
 
 ## Risques applicatifs des app web{.title}
 
-<footer>HE-Arc (DGR) 2020</footer>
+<footer>HE-Arc (DGR) 2021</footer>
 
 # Risque
-
 * Faille ou bug permettant d'altérer le fonctionnement
 * Un attaquant pourra :
 	* Modifier le fonctionnement
@@ -21,8 +20,31 @@
 	* OS, serveurs, langages : patches rapidement disponibles
 	* nos applications : **c'est nous qui en sommes responsables**
 
-# Injection de code
+# [OWASP](26)
+* Open Web Application Security Project
+* Fondation pour améliorer la sécurité des webapps
+* Fondée en 2004, internationale, sans but lucratif
+* Référence principale dans le domaine
+* Propose :
+  * Top 10 (web et [mobile](17))
+  * Grand communauté d'experts
+  * Formation, documentation et ressources
+  * Outils d'audit, de tests et de formation
 
+# [Top 10][9] OWASP 2021 ([fr][27])
+
+1. Contrôle d'accès défaillants
+2. Défaillances cryptographiques 
+3. Injection
+4. Conception non sécurisée
+5. Mauvaise configuration de sécurité
+6. Composants vulnérables et obsolètes
+7. Identification & Authentification de mauvais quality
+8. Manque d'intégrité des données et du logiciel
+9. Carences des systèmes de contrôle et de journalisation
+10. Falsification de requêtes côté serveur
+
+# Injection de code
 * Données mal validées : possibilité d'exécuter du code
 * Passées par requêtes :
 	* formulaires
@@ -156,21 +178,6 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 	* ces bonnes pratiques sont déjà implémentées
 * Suites et logiciels de test
 
-# [Top 10][9] OWASP 2017 ([pdf][26], [fr][27])
-
-1. Injection
-2. Broken Authentication
-3. Sensitive Data Exposure
-4. XML External Entities ([XXE][23]) 
-5. Broken Access Control
-6. Security Misconfiguration
-7. Cross Site Scripting (XSS) 
-8. Insecure Deserialization
-9. Using Components with Known Vulnerabilities
-10. Insufficient Logging & Monitoring
-
-* Top 10 [mobile][17]
-
 # Références
 
 * Référence
@@ -201,7 +208,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [14]:http://www.insecurelabs.org/task
 [15]:http://google-gruyere.appspot.com/
 [16]:https://www.securite-info.org/
-[17]:https://www.owasp.org/index.php/Mobile_Top_10_2016-Top_10
+[17]:https://owasp.org/www-project-mobile-top-10/
 [18]:https://www.owasp.org/images/5/57/OWASP_Proactive_Controls_2.pdf
 [19]:http://visual.ly/our-password-habits-revealed
 [20]:https://www.shodan.io/
@@ -210,8 +217,8 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [23]:https://www.acunetix.com/blog/articles/xml-external-entity-xxe-vulnerabilities/
 [24]:https://en.wikipedia.org/wiki/WebAuthn
 [25]:https://u2f-key.tech/fr/
-[26]:https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf
-[27]:https://github.com/OWASP/Top10/tree/master/2017/fr
+[26]:https://owasp.org/
+[27]:https://owasp.org/Top10/fr/
 [28]:https://www.youtube.com/watch?v=uJwoctrxyNs
 [29]:https://www.youtube.com/watch?v=pHI2zitLph8
 
