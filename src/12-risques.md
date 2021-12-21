@@ -31,15 +31,15 @@
   * Formation, documentation et ressources
   * Outils d'audit, de tests et de formation
 
-# [Top 10][9] OWASP 2021 ([fr][27])
+# [Top 10][9] OWASP 2021 ([fr][27] - [hisorique][30])
 
 1. Contrôle d'accès défaillants
 2. Défaillances cryptographiques 
-3. Injection
+3. Injections
 4. Conception non sécurisée
 5. Mauvaise configuration de sécurité
 6. Composants vulnérables et obsolètes
-7. Identification & Authentification de mauvais quality
+7. Identification & Authentification de mauvaise qualité
 8. Manque d'intégrité des données et du logiciel
 9. Carences des systèmes de contrôle et de journalisation
 10. Falsification de requêtes côté serveur
@@ -223,7 +223,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [27]:https://owasp.org/Top10/fr/
 [28]:https://www.microsoft.com/security/blog/2021/09/15/the-passwordless-future-is-here-for-your-microsoft-account/
 [29]:https://www.youtube.com/watch?v=pHI2zitLph8
-
+[30]:https://www.hahwul.com/cullinan/history-of-owasp-top-10/
 <!-- Hack -->
 <style>
 
