@@ -31,7 +31,7 @@
   * Formation, documentation et ressources
   * Outils d'audit, de tests et de formation
 
-# [Top 10][9] OWASP 2021 ([fr][27] - [hisorique][30])
+# [Top 10][9] OWASP 2021 ([fr][27] - [historique][30])
 
 1. Contrôle d'accès défaillants
 2. Défaillances cryptographiques 
