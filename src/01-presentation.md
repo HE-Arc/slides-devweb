@@ -109,12 +109,24 @@
 * Discutez ! Echangez ! par exemple avec les vieux sur [gitter](https://gitter.im/HE-Arc)
 
 # Évaluation des projets
-* Note finale d'un projet :
-    * User Experience : 50%
-        * Design UI, Utilisabilité (Efficacité, efficience, satisfaction)
-    * Code : 30%
+* Note intermédiaire :
+    * 1 page permettant d'afficher des données provenant de la BDD
+        * p.ex. : Liste de tous les utilisateurs
+    * 1 page permettant d'enregistrer des données dans la BDD
+        * p.ex. : Création d'un utilisateur
+    * Respect des conventions et bonnes pratiques
+    * Respect du pattern MVC : Les requêtes doivent passer par toutes les étapes importantes de Laravel
+        * route, validation des entrées, contrôleur, vue
+    * Application déployé avec tous les éléments cités plus haut testable et fonctionnel
+    * UI/UX peut donner des bonus
+        * Mais cette note sera focalisé sur l'aspect fonctionnel de l'application
+        * Et le code
+* Note finale :
+    * Code : 50%
         * Absence bugs, qualité code, lisibilité, respect conventions et bonnes pratiques
         * Déploiement, configuration
+    * User Experience : 30%
+        * Design UI, Utilisabilité (Efficacité, efficience, satisfaction)
     * Gestion de projet : 20%
         * Fichiers versionnés, messages de commit, Issues, planification, travail en équipe
         * Documentation (wiki), Investissement, volume de travail
