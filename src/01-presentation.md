@@ -83,14 +83,16 @@
     1. Formation équipe et choix thème
     2. Objectifs et maquettes
     3. Authentification et 1er déploiement
-    4. 
-    5. Modèles avec relations (au moins 3, dont 1 n-n)
-    6. 
-    7. Minimal Viable Product
-    8. 
+    4. Modèles avec relations (au moins 3, dont 1 n-n)
+    5. 
+    6. Rendu intermédiaire (1x [route, validation, contrôleur, vue] GET et POST + bonne pratique Laravel + app déployé)
+    7. 
+    8. Minimal Viable Product
     9. 
     10. 
-    11. Rendu projet, Présentation
+    11. 
+    12. 
+    13. Rendu projet, Présentation
 * Il n'est pas interdit d'en ajouter
 
 # Conseils
