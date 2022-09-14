@@ -35,6 +35,9 @@ before_install:
   - eval $(ssh-agent -s)
   # Add the private SSH key. tr is used to fix line endings
   - echo "${SSH_PRIVATE_DEPLOY_KEY}" | openssl base64 -A -d | tr -d '\r' | ssh-add - > /dev/null
+  # Check permissions to repository by listing the files and directories
+  - echo "======= Checking if current job has permissions on the repository ======="
+  - git ls-remote "ssh://git@github.com/${TRAVIS_REPO_SLUG}"
 
 install:
   - wget https://github.com/joypixels/emoji-assets/archive/v${EMOJIONE_VERSION}.tar.gz -O emojione-assets.tgz
@@ -58,7 +61,9 @@ after_success:
         rm -f *.tmp *.md
         git init
         git add .
+        git config user.name "TravisCI"
+        git config user.email "travis@he-arc.test"
         git commit -m "Deployed to github pages"
-        git push -f -q --verbose "ssh://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}" master:gh-pages
+        git push -f -q --verbose "ssh://git@github.com/${TRAVIS_REPO_SLUG}" master:gh-pages
       ) \
       || echo "Nothing to do outside the master branch."
