@@ -57,10 +57,8 @@ after_success:
         cd build
         rm -f *.tmp *.md
         git init
-        git config user.name "TravisCI"
-        git config user.email "travis@he-arc.test"
         git add .
         git commit -m "Deployed to github pages"
-        git push -f -q "ssh://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}" master:gh-pages
+        git push -f -q --verbose "ssh://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}" master:gh-pages
       ) \
       || echo "Nothing to do outside the master branch."
