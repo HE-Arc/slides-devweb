@@ -29,6 +29,12 @@ addons:
 before_install:
   - wget https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb -O pandoc.deb
   - sudo dpkg -i pandoc.deb
+  # ===========================
+  # Setting up SSH Deploy keys
+  # Run the ssh-agent
+  - eval $(ssh-agent -s)
+  # Add the private SSH key. tr is used to fix line endings
+  - echo "${SSH_PRIVATE_DEPLOY_KEY}" | openssl base64 -A -d | tr -d '\r' | ssh-add - > /dev/null
 
 install:
   - wget https://github.com/joypixels/emoji-assets/archive/v${EMOJIONE_VERSION}.tar.gz -O emojione-assets.tgz
