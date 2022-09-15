@@ -121,6 +121,8 @@
     * UI/UX peut donner des bonus
         * Mais cette note sera focalisé sur l'aspect fonctionnel de l'application
         * Et le code
+
+# Évaluation des projets - suite
 * Note finale :
     * Code : 50%
         * Absence bugs, qualité code, lisibilité, respect conventions et bonnes pratiques
