@@ -1,8 +1,8 @@
 % 01.Cours devweb
 
-# Développement web dlm3
+# Développement web il3
 ## Présentation du cours{.title}
-<footer>HE-Arc 2021/22 DGR et YBL</footer>
+<footer>HE-Arc 2022/23 DGR et YBL</footer>
 
 # Programme
 * Frameworks MVC : Laravel, Django, …
@@ -26,7 +26,7 @@
     * Flask ([M. Amiguet][MA]) ?
 	* Automatisation du déploiement ([R. Emourgeon][RE]) ?
     * <span class="yel-bg">Vos présentations ? Vos propositions ?</span>
-* Support : [ghpages][slidesghp] ([source][slides]), ...ProfsAEtudiants\\3255_Technologies_Interaction\\dw
+* Support : [ghpages][slidesghp] ([source][slides]), partage fichiers (P: ? Teams ? 1drive ?)
 
 # Projets
 * Faire pour apprendre
@@ -40,7 +40,6 @@
     * Choix du projet
     * Forge : Créer projet sur github dans l'entité [HE-Arc][gharc]
     * [S’inscrire][wiki]
-* Offre d'essai Pluralsight 1-6 mois sur [MS Imagine][msvsde], [infos][masb]
 
 # Choix des projets
 * Contrainte : appli basée sur des données
@@ -57,15 +56,15 @@
 |---:|---|---:|---|
 |38|Projet PHP|8||
 |39||9||
-|40||10||
-|42||11||
-|43||12||
-|44||13||
-|45|S. thématique|14||
-|46||15|Présentations|
-|47||17|Présentations|
+|40||10|Rendu intermédiaire|
+|41|S. thématique|11||
+|42||12||
+|43||13||
+|44|Rendu intermédiaire|14||
+|45||16||
+|46||17||
 |48||18|Présentations|
-|49||19||
+|49||19|Présentations|
 |50||20|Examens|
 |51|Présentations|21|Début TB|
 |2|Projet Python|||
@@ -74,8 +73,8 @@
 |5|T. Autonome|||
 |6|Examen|||
 
-# Suivi du calendrier (à jour sur le réseau interne)
-![Suivi calendrier](img/DW2122.png)
+# Suivi du calendrier (à jour sur le partage)
+![Suivi calendrier](img/DW2223.png)
 
 # Jalons pour chacun des 2 projets
 * Echéances
@@ -106,7 +105,7 @@
 * Signalez dans le commit msg si vous n'êtes pas l'auteur
 * Le déploiement est long : commencez tôt !
 * Il est moins risqué travailler plus au début du projet qu'à la fin !
-* Discutez ! Echangez ! par exemple avec les vieux sur [gitter](https://gitter.im/HE-Arc)
+* Discutez ! Echangez ! 
 
 # Évaluation des projets
 * Note intermédiaire :
@@ -117,9 +116,9 @@
     * Respect des conventions et bonnes pratiques
     * Respect du pattern MVC : Les requêtes doivent passer par toutes les étapes importantes de Laravel
         * route, validation des entrées, contrôleur, vue
-    * Application déployé avec tous les éléments cités plus haut testable et fonctionnel
+    * Application déployée avec tous les éléments cités plus haut testable et fonctionnel
     * UI/UX peut donner des bonus
-        * Mais cette note sera focalisé sur l'aspect fonctionnel de l'application
+        * Mais la note sera focalisée sur l'aspect fonctionnel de l'application
         * Et le code
 
 # Évaluation des projets - suite
@@ -141,7 +140,7 @@
 * Aux projets des autres : Issues, PR
 * Participez à la [Hacktoberfest][hacktober]
 * Pariticipez au cours : contenu, présentation, pages ([index][ghpindex], [wiki][wikicours], ...)
-* Echangez avec [caravel](https://caravel.ing.he-arc.ch/) (groupes : dlm3 a21-22, dlm3 b21-22) et [gitter](https://gitter.im/HE-Arc)
+* Echangez avec [caravel](https://caravel.ing.he-arc.ch/) (groupes : 22-ISC3il-a et 22-ISC3il-b) et tout autre im (discord, teams, ...)
 
 # Présentation facultative
 * Facultatif, ne peut qu’augmenter la moyenne
@@ -174,21 +173,10 @@
     * Vous disposez de 15 min pour préparer une présentation de 10 min pour chacun des 2 cours (pendant la présentation de l'étudiant précédent) 
     * Idéalement vous faites une présentation d'environ 10 min et les 5 min restantes sont dédiées aux questions (pour chacun des cours)
 
-# Mesures sanitaires COVID-19
-* Rentrée : 100% présentiel
-* Etudiants portent le masque
-* Enseignants portent le masque à moins d'1.50m
-* Désinfection des mains avant d'entrer en salle
-* Quarantaine :
-  * courte en cas de suspicion : le temps d'avoir le résultat des tests (2-5j)
-    * considérée comme une absence, nécessité d'un certificat, faire le nécessaire pour rattrapper
-  * longue (14 jours) si test positif
-  * quarantaine courte ou des enseignants : le cours sera donné via Teams si possible
-
 # Mon expérience en développement web
 * [Questionnaire][form-survey] obligatoire (votre username github vous y sera demandé)
 
-### M E R C I !
+## 🙏 !
 
 <!-- Bibliographie -->
 [AK]: https://www.alinekeller.ch
@@ -199,13 +187,11 @@
 [module]:https://www.he-arc.ch/reglementation
 [sshkey]: https://github.com/settings/keys
 [gharc]: https://github.com/HE-Arc/
-[msvsde]: https://my.visualstudio.com/Benefits
 [dbp]: http://wiki.dbpedia.org/
 [odata]: https://opendata.swiss/fr/
 [prodhunt]: https://www.producthunt.com/topics/web-app
 [makeuseof]: http://www.makeuseof.com/tag/best-websites-internet/
-[wiki]: https://github.com/HE-Arc/slides-devweb/wiki/Projets-2021-22
-[masb]:https://docs.microsoft.com/fr-fr/visualstudio/subscriptions/vs-pluralsight
+[wiki]: https://github.com/HE-Arc/slides-devweb/wiki/Projets-2022-23
 [github]: https://github.com/orgs/HE-Arc
 [arcghp]: https://he-arc.github.io
 [hacktober]:https://hacktoberfest.digitalocean.com/
