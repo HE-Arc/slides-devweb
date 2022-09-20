@@ -191,7 +191,7 @@
 [odata]: https://opendata.swiss/fr/
 [prodhunt]: https://www.producthunt.com/topics/web-app
 [makeuseof]: http://www.makeuseof.com/tag/best-websites-internet/
-[wiki]: https://github.com/HE-Arc/slides-devweb/wiki/Projets-2022-23
+[wiki]: https://github.com/HE-Arc/slides-devweb/wiki/Projets-2022-2023
 [github]: https://github.com/orgs/HE-Arc
 [arcghp]: https://he-arc.github.io
 [hacktober]:https://hacktoberfest.digitalocean.com/

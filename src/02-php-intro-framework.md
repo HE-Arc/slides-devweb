@@ -214,7 +214,7 @@ l'Internet.
 
 ---
 
-## Qu'est-ce que le [World Wide Web][CERN] ?
+## Qu'est-ce que le World Wide Web ?
 
 * **URI/URL**, des identifiants uniques
 * **HTML**, un langage de publication
