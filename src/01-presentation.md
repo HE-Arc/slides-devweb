@@ -163,7 +163,7 @@
     * Il n'agit pas de réciter le contenu des slides par coeur, mais de les présenter avec vos propres mots (compréhension), et vos propres exemples.
 
 * Généralités pour la partie dev mobile de l'examen :
-    * Vous pourriez avoir un résumé personnel manuscrit, d’une feuille A4 recto-verso,
+    * Vous pourrez avoir un résumé personnel manuscrit, d’une feuille A4 recto-verso,
     * L’examen porte sur toute la matière vue en cours,
     * Les questions peuvent être théoriques ou/et pratiques.
 
@@ -176,7 +176,7 @@
 # Mon expérience en développement web
 * [Questionnaire][form-survey] obligatoire (votre username github vous y sera demandé)
 
-## 🙏 !
+### 🙏 !
 
 <!-- Bibliographie -->
 [AK]: https://www.alinekeller.ch
