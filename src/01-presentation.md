@@ -18,13 +18,13 @@
 # Contenu, activités
 * Cours théorique
 * 2 Projets
-    * 2 frameworks : Laravel & Django (ouvert à d'autres propositions)
+    * frameworks : Laravel, Django, Vue.js (ouvert à d'autres propositions)
     * Groupes de 3, [30h][module] par personne et par projet
     * Présentation de 20min
 * Workshops intervenants externes
     * Webdesign ([A. Keller][AK]) ?
     * Flask ([M. Amiguet][MA]) ?
-	* Automatisation du déploiement ([R. Emourgeon][RE]) ?
+	  * Automatisation du déploiement ([R. Emourgeon][RE]) ?
     * <span class="yel-bg">Vos présentations ? Vos propositions ?</span>
 * Support : [ghpages][slidesghp] ([source][slides]), partage fichiers (P: ? Teams ? 1drive ?)
 
@@ -84,14 +84,13 @@
     3. Authentification et 1er déploiement
     4. Modèles avec relations (au moins 3, dont 1 n-n)
     5. 
-    6. Rendu intermédiaire (1x [route, validation, contrôleur, vue] GET et POST + bonne pratique Laravel + app déployé)
+    6. <span class="yel-bg">Rendu intermédiaire (1x [route, validation, contrôleur, vue] GET et POST + bonne pratique Laravel + app déployé)</span>
     7. 
     8. Minimal Viable Product
     9. 
     10. 
     11. 
-    12. 
-    13. Rendu projet, Présentation
+    12. <span class="yel-bg">Rendu projet, Présentation</span>
 * Il n'est pas interdit d'en ajouter
 
 # Conseils
