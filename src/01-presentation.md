@@ -18,15 +18,15 @@
 # Contenu, activités
 * Cours théorique
 * 2 Projets
-    * frameworks : Laravel, Django, Vue.js (ouvert à d'autres propositions)
-    * Groupes de 3, [30h][module] par personne et par projet
-    * Présentation de 20min
+  * frameworks : Laravel, Django, Vue.js (ouvert à d'autres propositions)
+  * Groupes de 3, [30h][module] par personne et par projet
+  * Présentation de 20min
 * Workshops intervenants externes
-    * Webdesign ([A. Keller][AK]) ?
-    * Flask ([M. Amiguet][MA]) ?
-	  * Automatisation du déploiement ([R. Emourgeon][RE]) ?
-    * <span class="yel-bg">Vos présentations ? Vos propositions ?</span>
-* Support : [ghpages][slidesghp] ([source][slides]), partage fichiers (P: ? Teams ? 1drive ?)
+  * Webdesign ([A. Keller][AK]) ?
+  * Flask ([M. Amiguet][MA]) ?
+  * Automatisation du déploiement ([R. Emourgeon][RE]) ?
+  * <span class="yel-bg">Vos présentations ? Vos propositions ?</span>
+* Support : [ghpages][slidesghp] ([source][slides]), partage fichiers : [teams][teams]
 
 # Projets
 * Faire pour apprendre
@@ -73,7 +73,7 @@
 |5|T. Autonome|||
 |6|Examen|||
 
-# Suivi du calendrier (à jour sur le partage)
+# Suivi du calendrier (à jour sur [teams][teams])
 ![Suivi calendrier](img/DW2223.png)
 
 # Jalons pour chacun des 2 projets
@@ -161,11 +161,6 @@
     * Les questions sont générales, il s'agit de présenter des concepts vus en cours (souvent 1 chapitre), et expliquer certains mécanismes sous-jacents,
     * Il n'agit pas de réciter le contenu des slides par coeur, mais de les présenter avec vos propres mots (compréhension), et vos propres exemples.
 
-* Généralités pour la partie dev mobile de l'examen :
-    * Vous pourrez avoir un résumé personnel manuscrit, d’une feuille A4 recto-verso,
-    * L’examen porte sur toute la matière vue en cours,
-    * Les questions peuvent être théoriques ou/et pratiques.
-
 # Examen oral SA
 * Déroulement : 
     * Vous tirez un n° de question au hasard pour chaque cours 
@@ -200,6 +195,7 @@
 [form-survey]: https://docs.google.com/spreadsheet/viewform?formkey=dDg5Znh5akRBV1hPbC1qYlVRV3BONFE6MQ
 [ghpindex]: https://he-arc.github.io/
 [wikicours]: https://github.com/HE-Arc/slides-devweb/wiki
+[teams]: https://teams.microsoft.com/l/team/19%3ahGPvEcXl8HCohGre1MLq7AQ4qPWNkY_JqMTTPMPLM-I1%40thread.tacv2/conversations?groupId=cadc33cc-9fc8-49d7-b951-aa26d534e15f&tenantId=5b3b7d7d-e119-4d05-9022-f775f2e48e96
 
 <!-- Hack -->
 <style>
