@@ -129,8 +129,8 @@ CA : Autorité de certification - VA : Autorité de validation - RA : Autorité 
 [4]:http://www.vanemery.com/Linux/Apache/apache-SSL.html
 [5]:https://wiki.alphanet.ch/Ateliers/PresentationSecurityParty
 [6]:http://www.sebsauvage.net/comprendre/ssl/
-[7]:http://www.eventhelix.com/realtimemantra/networking/SSL.pdf
-[8]:http://www.win.tue.nl/hashclash/rogue-ca/
+[7]:https://www.eventhelix.com/networking/SSL.pdf
+[8]:https://www.win.tue.nl/hashclash/rogue-ca/
 [9]:http://www.cacert.org/
 [10]:https://www.sslforfree.com/
 [11]:https://www.verisign.com/?dmn=www.verisign.ch
@@ -139,7 +139,7 @@ CA : Autorité de certification - VA : Autorité de validation - RA : Autorité 
 [14]:http://security.stackexchange.com/questions/1599/what-is-the-difference-between-ssl-vs-ssh-which-is-more-secure
 [15]:https://letsencrypt.org/
 [16]:https://caddyserver.com/
-[17]:http://www.eventhelix.com/RealtimeMantra/Networking/ssl-tls/https-ssl-tls-session-for-spdy.pdf
+[17]:https://www.eventhelix.com/networking/ssl-tls/https-ssl-tls-session-for-spdy.pdf
 [18]:https://security.stackexchange.com/questions/20803/how-does-ssl-tls-work/20847#20847
 [19]:https://security.stackexchange.com/questions/55454/how-long-does-an-https-symmetric-key-last
 [20]:https://tiptopsecurity.com/how-does-https-work-rsa-encryption-explained/
