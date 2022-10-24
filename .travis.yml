@@ -1,18 +1,19 @@
 language: generic
+dist: focal
 
 cache: apt
 
 env:
   global:
-    - PANDOC_VERSION=2.10.1
-    - EMOJIONE_VERSION=5.0.3
+    - PANDOC_VERSION=2.19.2
+    - EMOJIONE_VERSION=7.0
 
 addons:
   apt:
     packages:
       - fonts-inconsolata
       - fonts-linuxlibertine
-      - latex-xcolor
+      - fonts-texgyre
       - latexmk
       - librsvg2-bin
       - lmodern
@@ -20,11 +21,11 @@ addons:
       - texlive
       - texlive-fonts-extra
       - texlive-fonts-recommended
-      - texlive-generic-recommended
-      - texlive-latex-extra
-      - texlive-math-extra
-      - texlive-xetex
       - texlive-lang-french
+      - texlive-latex-extra
+      - texlive-plain-generic
+      - texlive-science
+      - texlive-xetex
 
 before_install:
   - wget https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb -O pandoc.deb
@@ -42,7 +43,7 @@ before_install:
 install:
   - wget https://github.com/joypixels/emoji-assets/archive/v${EMOJIONE_VERSION}.tar.gz -O emojione-assets.tgz
   - tar xf emojione-assets.tgz
-  - mv emoji-assets-${EMOJIONE_VERSION} emojione-assets
+  - mv emoji-assets-${EMOJIONE_VERSION}-0 emojione-assets
   - wget https://raw.githubusercontent.com/mreq/xelatex-emoji/master/xelatexemoji.sty
   - wget https://raw.githubusercontent.com/mreq/xelatex-emoji/master/xelatexemoji-flags.sty
   - sed -i 's/^\(\\usepackage{amsmath}\)/%\1/' xelatexemoji.sty
