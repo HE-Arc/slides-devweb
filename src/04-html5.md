@@ -1,15 +1,15 @@
 % 04.HTML 5
 
-# Développement web dlm3
+# Développement web il3
 
 ## HTML5{.title}
 
-<footer>HE-Arc 2017/18 DGR</footer>
+<footer>HE-Arc 2022 DGR</footer>
 
 # Exemples
 
 * Vue d'ensemble : [slides](http://web.archive.org/web/20150525080904/http://slides.html5rocks.com/#landing-slide) Google 2011 ( [sources](https://github.com/html5rocks/slides.html5rocks.com) )
-    * Obslolète : ~~web sql~~, ~~quota~~, ~~microdata~~, ~~application cache~~ : Service Workers
+    * Obslolète : ~~quota~~, ~~web sql~~ : Web Storage, ~~application cache~~ : Service Workers
 * API d'accès à la [caméra](http://www.soundstep.com/blog/experiments/jsdetection/), avec du [webGL](http://auduno.github.io/clmtrackr/examples/facesubstitution.html)...
 * Bachelor NIFFF 2014 : une webapp mobile pour LACIS
 * Plein d'exemples
@@ -41,12 +41,14 @@
 # Exemples et tutos
 
 * Exemples 
+        * [What PWA can do today](https://whatpwacando.today/) 
+        * [Project Fugu](https://developer.chrome.com/blog/fugu-showcase/)
 	* [Appscope](https://appsco.pe/)
-	* [HN PWA](https://hnpwa.com/)
-	* [Gokulakrishnan Kalaikovan](https://github.com/gokulkrishh)
+
 * Tutos
 	* [Getting started with PWA](https://addyosmani.com/blog/getting-started-with-progressive-web-apps/)
 	* [Your 1st PWA](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/)
-* [Awesome PWA](https://github.com/hemanth/awesome-pwa)
-
+        * [Awesome PWA](https://github.com/hemanth/awesome-pwa)
+	* [HN PWA](https://hnpwa.com/)
+	* [Gokulakrishnan Kalaikovan](https://github.com/gokulkrishh)
 
