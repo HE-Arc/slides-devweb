@@ -1,10 +1,10 @@
 % 08.RSS
 
-# Développement web dlm3
+# Développement web il3
 
 ## Really Simple Syndication{.title}
 
-<footer>HE-Arc (DGR) 2017</footer>
+<footer>HE-Arc (DGR) 2022</footer>
 
 # Syndication
 

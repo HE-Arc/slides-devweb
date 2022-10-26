@@ -1,10 +1,10 @@
 % 03.Laravel
 
-# Développement web dlm3
+# Développement web il3
 
 ## Laravel{.title}
 
-<footer>HE-Arc (DGR & R. Emourgeon) 2018-21</footer>
+<footer>HE-Arc (DGR & R. Emourgeon) 2018-22</footer>
 
 # Pourquoi [Laravel](https://laravel.com/) ?
 

@@ -1,10 +1,10 @@
 % 11. HTTPS
 
-# Développement web dlm3
+# Développement web il3
 
 ## HTTPS{.title}
 
-<footer>HE-Arc (DGR) 2019</footer>
+<footer>HE-Arc (DGR) 2022</footer>
 
 # Sécuriser un site web
 

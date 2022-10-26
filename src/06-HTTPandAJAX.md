@@ -1,10 +1,10 @@
 % 06.HTTP & AJAX
 
-# Développement web dlm3
+# Développement web il3
 
 ## HTTP & AJAX{.title}
 
-<footer>HE-Arc (DGR) 2020</footer>
+<footer>HE-Arc (DGR) 2022</footer>
 
 # HyperText Transfer Protocol
 * Protocole application : invention www en 1990 (v0.9)

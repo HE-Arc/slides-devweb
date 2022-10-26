@@ -1,10 +1,10 @@
 % 07.jQuery
 
-# Développement web
+# Développement web il3
 
 ## jQuery{.title}
 
-<footer>HE-Arc (DGR) 2019</footer>
+<footer>HE-Arc (DGR) 2022</footer>
 
 # jQuery
 * John Resig, 2006

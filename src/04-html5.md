@@ -41,14 +41,14 @@
 # Exemples et tutos
 
 * Exemples 
-        * [What PWA can do today](https://whatpwacando.today/) 
-        * [Project Fugu](https://developer.chrome.com/blog/fugu-showcase/)
+    * [What PWA can do today](https://whatpwacando.today/) 
+    * [Project Fugu](https://developer.chrome.com/blog/fugu-showcase/)
+    * [Awesome PWA](https://github.com/hemanth/awesome-pwa)
 	* [Appscope](https://appsco.pe/)
 
 * Tutos
 	* [Getting started with PWA](https://addyosmani.com/blog/getting-started-with-progressive-web-apps/)
 	* [Your 1st PWA](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/)
-        * [Awesome PWA](https://github.com/hemanth/awesome-pwa)
 	* [HN PWA](https://hnpwa.com/)
 	* [Gokulakrishnan Kalaikovan](https://github.com/gokulkrishh)
 

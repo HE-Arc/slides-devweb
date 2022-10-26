@@ -1,12 +1,12 @@
 % 10.Responsive Web Design
 
-# Développement web dlm3
+# Développement web il3
 
 ## Responsive Web Design{.title}
 
 ### *Conception de sites web adaptatifs*
 
-<footer>HE-Arc (DGR) 2017</footer>
+<footer>HE-Arc (DGR) 2022</footer>
 
 # Site adaptatif ?
 

@@ -1,10 +1,10 @@
 % 02.Introduction aux frameworks PHP
 
-# Développement web dlm3
+# Développement web il3
 
 ## Introduction aux frameworks PHP{.title}
 
-<footer>HE-Arc 2016-21 DGR et YBL</footer>
+<footer>HE-Arc 2016-22 DGR et YBL</footer>
 
 ---
 

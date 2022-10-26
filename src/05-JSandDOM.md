@@ -1,10 +1,10 @@
 % 05.JavaScript & DOM
 
-# Développement web dlm3
+# Développement web il3
 
 ## JavaScript & DOM{.title}
 
-<footer>HE-Arc (DGR) 2019</footer>
+<footer>HE-Arc (DGR) 2022</footer>
 
 # JavaScript hier
 * Page web = HTML (+ CSS + JavaScript)
@@ -32,7 +32,7 @@
 # *Script
 
 * ECMAScript : Norme depuis 1997 
-	* Juin 2020 : [ECMA-262 11th edition / 2019](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
+	* Juin 2022 : [ECMA-262 13th edition](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
 	* [Support](http://kangax.github.io/compat-table/es2016plus/) des différentes implémentations
 	* Conversions avec [BabelJS](https://babeljs.io/)
 * JavaScript : implémentation Firefox (réf. MDN)

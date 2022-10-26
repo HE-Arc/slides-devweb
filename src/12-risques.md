@@ -1,10 +1,10 @@
 % 12. Risques applicatifs
 
-# Développement web dlm3
+# Développement web il3
 
 ## Risques applicatifs des app web{.title}
 
-<footer>HE-Arc (DGR) 2021</footer>
+<footer>HE-Arc (DGR) 2022</footer>
 
 # Risque
 * Faille ou bug permettant d'altérer le fonctionnement

@@ -1,10 +1,10 @@
 % 09.Services Web
 
-# Développement web dlm3
+# Développement web il3
 
 ## Services web{.title}
 
-<footer>HE-Arc (DGR) 2017</footer>
+<footer>HE-Arc (DGR) 2022</footer>
 
 # Applications distribuées
 
