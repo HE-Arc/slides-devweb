@@ -21,7 +21,7 @@
 * Mai 2013 : version 4, utilise [composer][Composer]
 * Août 2014 : projet PHP le plus [populaire][LaraStats] sur github
 * [Qui][builtwith] utilise Laravel ?
-* version 8 sortie le 9 sept. 2020
+* version 9 publiée 08.02.22, v10 : 07.02.23
 
 # Principales fonctionnalités
 
@@ -37,11 +37,11 @@
 
 # Le Front Controller
 
-![Rôle du front controller](img/front-ctrl.jpg "deux")
+![Rôle du front controller](img/front-ctrl.jpg "Front Controller")
 
 # Architecture
 
-![Architecture de Laravel](img/laravel-architecture.jpg "trois")
+![Architecture de Laravel](img/laravel-architecture.jpg "Laravel Architecture")
 
 # MVC
 
@@ -59,10 +59,10 @@
 * Outils : devtools Chrome ou FF, [Emmet][emmet], git
 * Doc
     * [Documentation officielle][LaraDoc] de Laravel
-    * [Cheat Sheet][LaraCheat]
+    * Cheat Sheet [Laravel 8][LaraCheat], [Artisan 9][ArtisanCheat]
 * Tutoriels
     * Pour un tuto à jour : bien préciser la version (8) dans votre recherche
-    * Laravel 8 : [Best Momo][tutoBMomo], [Tuts Make][tutsmake]
+    * Laravel 9 : [Best Momo][tutoBMomo], [Tuts Make][tutsmake], [Plural Sight][tutoCS]
 
 # Environnement de développement
 * De quoi ai-je besoin pour développer ?
@@ -97,8 +97,7 @@ $composer global require "laravel/installer"
 	* Windows : [Laragon][laragon]
 	* Laravel Valet pour [Mac][valetOSX], [Ubuntu][valetLinux], et [WSL][valetWSL]
 * Windows avec WSL
-    * [Tuto 1][wsl1]
-    * [Tuto 2][wsl2]
+    * [Tuto][wsl1]
 
 # Démarrer un projet
 * Créer un nouveau projet
@@ -176,10 +175,11 @@ $php artisan list
 
 # Ressources
 
-* [Laracast](https://laracasts.com/series/laravel-8-from-scratch)
+* [Tips](https://github.com/LaravelDaily/laravel-tips)
+* [Cheat Sheet][hackrCheat]
+* [Laracast](https://laracasts.com/search?query=laravel%209)
 * [Learning Laravel](http://learninglaravel.net/tags/tutorials)
 * [Laravel REST API CRUD tuto](https://www.tutsmake.com/laravel-8-rest-api-crud-with-passport-auth-tutorial/)
-* [Tips](https://github.com/LaravelDaily/laravel-tips)
 * [Les vôtres](https://github.com/HE-Arc/slides-devweb/wiki/Ressources)
 
 [LaraForum]: http://laravel.io/forum
@@ -198,10 +198,11 @@ $php artisan list
 [emmet]: http://emmet.io/
 [LaraDoc]: https://laravel.com/docs/master
 [LaraCheat]: https://learninglaravel.net/cheatsheet/
-[tutsmake]: https://www.tutsmake.com/page/1/?s=tutorial+laravel+8
-[tutoBMomo]: https://laravel.sillo.org/laravel-8/
-[tutoOCR]: https://openclassrooms.com/courses/decouvrez-le-framework-php-laravel-1
-[tutoCS]: https://www.codeschool.com/courses/try-laravel
+[ArtisanCheat]: https://artisan.page/
+[hackrCheat]: https://hackr.io/blog/laravel-cheat-sheet
+[tutsmake]: https://www.tutsmake.com/page/1/?s=tutorial+laravel+9
+[tutoBMomo]: https://laravel.sillo.org/laravel-9/
+[tutoCS]: https://www.pluralsight.com/courses/laravel-9-fundamentals
 [wsl]: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 [homestead]: https://laravel.com/docs/master/homestead
 [c9]: https://github.com/dev-nowornet/Laravel-5.6-Complete-Install-Cloud9-C9
@@ -210,7 +211,6 @@ $php artisan list
 [controllers]: https://laravel.com/docs/master/controllers
 [views]: https://laravel.com/docs/master/views
 [wsl1]: https://jackwhiting.co.uk/posts/setting-up-a-windows-10-development-environment-with-wsl-php-laravel/
-[wsl2]: https://dev-squared.com/2018/05/15/getting-started-with-laravel-development-on-windows-subsystem-for-linux-with-vs-code-a-complete-guide/
 [laragon]: https://laragon.org/
 [valetOSX]: https://laravel.com/docs/master/valet
 [valetLinux]: https://cpriego.github.io/valet-linux/#installation
