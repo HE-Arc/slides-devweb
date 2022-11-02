@@ -62,7 +62,7 @@
 * Syntaxe proche de C, Java
 * Faiblement typé :
 	* Pas de déclaration, type déterminé par la dernière affectation
-	* Risque : typo => nouvelle variable. Utiliser `var` et `let` 
+	* Risque : typo => nouvelle variable. Utiliser `const` et `let`
 * Types :
 	* Primitifs : `Boolean Null Undefined Number String Symbol`
 	* Objets : `Object Function`
