@@ -380,8 +380,8 @@ myXHR.getResponseHeader("Status");
 [22]:https://javascriptweblog.wordpress.com/2010/04/19/how-evil-is-eval/
 [23]:https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/JSON/parse
 [24]:https://www.bennadel.com/blog/1860-using-appropriate-status-codes-with-each-api-response.htm
-[25]:http://www.ajaxload.info/
-[26]:https://signalvnoise.com/archives/000558.php
+[25]:http://ajaxloadingimages.net/
+[26]:https://codepen.io/Mestika/pen/KVGwKb
 [27]:https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
 
 [w3c:history]: http://w3c.github.io/html/browsers.html#session-history-and-navigation
