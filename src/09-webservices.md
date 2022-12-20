@@ -202,7 +202,7 @@
 [37]:https://apiary.io/
 [38]:https://hoppscotch.io/
 [39]:https://ping-api.com/
-[40]:https://testfully.io/blog/top-5-postman-alternatives/
+[40]:https://testsigma.com/blog/postman-alternatives/
 
 <!-- Hack -->
 <style>
