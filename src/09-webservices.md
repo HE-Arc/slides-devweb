@@ -31,7 +31,7 @@
 	* [Applications distribuées][3] pour l'entreprise
 	* [Mashups][4] d'applications web ([exemples][5])
 	* Applications Facebook, [API Google][6]
-	* [IFTTT][7], [potions Netvibes][8]
+	* [IFTTT][7]
 * Consommer un service web ≠ Créer un service web
 
 # SOAP
@@ -153,14 +153,14 @@
 # Pour aller plus loin...
 
 * Références
-	* [SOAP][19], [WSDL][20], [UDDI][21], [XML-RPC][22], [REST][24], [The WSIO][23]
+	* [SOAP][19], [WSDL][20], [UDDI][21], [REST][24], [The WSIO][23]
 	* [Des services web RESTful][25], [Une apologie de REST][26] (recommandés)
 	* [REST et architectures orientées service][27], [Présentation ROA][28]
-	* [The RESTful cookbook][29], [Implementing REST][30]
-	* How important is [HATEOAS][31] (stack overflow)
+	* [The RESTful cookbook][29], How important is [HATEOAS][31] (stack overflow)
 * Exemples de services web :
-	* [Google][32], [Yahoo][33], [Flickr][34], [Twitter][35], [Netvibe][36], ...
+	* [Google][32], [Yahoo][33], [Flickr][34], [Twitter][35], ...
 	* [APIary][37] : Aide au design d'une API REST
+	* Tests : Postman, [Hoppscotch][38], [Ping-API][39], [autres][40]
 
 * [GraphQL](http://graphql.org/) 
 	* est destiné à devenir la prochaine évolution des apis REST utilisant JSON. Initié par Facebook, Github permet également d'en [faire usage](https://developer.github.com/v4/).
@@ -176,7 +176,7 @@
 [8]:https://www.netvibes.com/fr/explorer/dashboard-of-things
 [9]:https://en.wikipedia.org/wiki/List_of_web_service_specifications
 [10]:http://www.w3schools.com/xml/xml_soap.asp
-[11]:http://www.soapuser.com/fr/basics1.html
+[11]:http://www.w3big.com/fr/soap/default.html#gsc.tab=0
 [12]:http://www.w3schools.com/xml/xml_wsdl.asp
 [13]:http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
 [14]:https://fr.wikipedia.org/wiki/Roy_Fielding
@@ -187,7 +187,6 @@
 [19]:https://www.w3.org/TR/soap/
 [20]:https://www.w3.org/2002/ws/desc/
 [21]:http://uddi.xml.org/
-[22]:http://xmlrpc.scripting.com/default.html
 [23]:http://www.oasis-ws-i.org/
 [24]:http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
 [25]:https://larlet.fr/david/biologeek/archives/20070629-architecture-orientee-ressource-pour-faire-des-services-web-restful/
@@ -195,15 +194,15 @@
 [27]:http://www.figer.com/Publications/SOA.htm
 [28]:http://fr.slideshare.net/samijaber/symposium-dng-2008-roa
 [29]:http://restcookbook.com/
-[30]:https://code.google.com/archive/p/implementing-rest/wikis
 [31]:http://stackoverflow.com/questions/20335967/how-useful-important-is-rest-hateoas-maturity-level-3
 [32]:https://developers.google.com/products/
 [33]:https://developer.yahoo.com/everything.html
 [34]:https://www.flickr.com/services/api/
 [35]:https://dev.twitter.com/overview/api
-[36]:http://uwa.netvibes.com/docs/Uwa/html/index.html
 [37]:https://apiary.io/
-
+[38]:https://hoppscotch.io/
+[39]:https://ping-api.com/
+[40]:https://testfully.io/blog/top-5-postman-alternatives/
 
 <!-- Hack -->
 <style>
