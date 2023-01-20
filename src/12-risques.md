@@ -165,7 +165,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 * 3 acteurs : 
   * User Agent : Humain / Navigateur
   * Relying Party : Serveur (service auquel on veut s'authentifier)
-  * Authenticator : Clef USB / Smartphone / OS
+  * Authenticator : Clef USB / Smartphone / OS + biométrie
 * Communication :
   * User Agent <=> Authenticator : CTAP / U2F
   * User Agent <=> Relying Party : API JS [WebAuthn][34]
