@@ -148,15 +148,14 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 * 30% of users have a password from the top 10'000 ([source][5])
 * Our passwords habits [revealed][19]
 * xkcd's [password strength][6]
-* [passwordless][7] authentication
-	* [WebAuthN][24]
-	* [U2F][25]
-	* [Microsoft][28]
 * 2017 : [NIST 800-63-3][21] suivi par la [NCSC][22]
 	* Mots de passe longs plutôt qu’avec des caractères spéciaux
 	* Ne forcer le changement qu’en cas de nécessité
 	* Autoriser et accompagner l’utilisation de password managers
 	* Utiliser la 2FA
+* Plusieurs tentatives pour s'en affranchir :
+	* [Microsoft][28], [passwordless][7] authentication
+	* 2022 : Passkeys : JS API [WebAuthN][24] + CTAP/[U2F][25]
 
 # Passkeys
 * Paire de clés asymétriques au lieu d'un mot de passe
@@ -165,19 +164,19 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 * Clés utilisées pour résoudre des challenges : pas d'info sensible sur le réseau
 * 3 acteurs : 
   * User Agent : Humain / Navigateur
-  * Relying Party : Serveur
+  * Relying Party : Serveur (service auquel on veut s'authentifier)
   * Authenticator : Clef USB / Smartphone / OS
-* 2 Processus :
-  * Enregistrement : User Agent => Relying Party
-  * Authentification : User Agent => Relying Party
+* Communication :
+  * User Agent <=> Authenticator : CTAP / U2F
+  * User Agent <=> Relying Party : API WebAuth 
 
-# Passkeys : Acteurs
+# Passkeys : [Acteurs][31]
 ![Architecture](img/1-Web-Authentication-Entities.png)
 
-# Passkeys : Enregistrement
+# Passkeys : [Enregistrement][32]
 ![Reg](img/Registration.png)
 
-# Passkeys : Authentification
+# Passkeys : [Authentification][32]
 ![Auth](img/Login.png)
 
 # Collecte d'information
@@ -246,6 +245,9 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [28]:https://www.microsoft.com/security/blog/2021/09/15/the-passwordless-future-is-here-for-your-microsoft-account/
 [29]:https://www.youtube.com/watch?v=pHI2zitLph8
 [30]:https://www.hahwul.com/cullinan/history-of-owasp-top-10/
+[31]:https://auth0.com/blog/introduction-to-web-authentication/
+[32]:https://www.freecodecamp.org/news/intro-to-webauthn/
+
 <!-- Hack -->
 <style>
 
@@ -256,7 +258,8 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 	overflow: hidden; 
   }
 figure 			{ background-color: white;}
-figure > img 	{height: auto;}   
+figure > img 	{height: inherit; width:auto;}   
+figure img      {display: flex; justify-content: center; margin: auto;}
 ol > li {
 	margin: 10px 30px;
 	font-size: 80%;
