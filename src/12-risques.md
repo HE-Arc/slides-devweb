@@ -158,6 +158,23 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 	* Autoriser et accompagner l’utilisation de password managers
 	* Utiliser la 2FA
 
+# Passkeys
+* Paire de clés asymétriques au lieu d'un mot de passe
+* Initiative conjointe Apple, Google et Microsoft
+* Fin 2022 : intégrée à Android, iOS, win 11 et MacOS 
+* Clés utilisées pour résoudre des challenges : pas d'info sensible sur le réseau
+* 3 acteurs : 
+  * User Agent : Humain / Navigateur
+  * Relying Party : Serveur
+  * Authenticator : Clef USB / Smartphone / OS
+* 2 Processus :
+  * Enregistrement : User Agent => Relying Party
+  * Authentification : User Agent => Relying Party
+
+# Passkeys
+![Architecture](img/passwordscloud.png)
+
+
 # Collecte d'information
 * Toute information est bonne pour l'attaquant
 	* Messages d'erreur
