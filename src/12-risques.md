@@ -157,18 +157,18 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 	* [Microsoft][28], [passwordless][7] authentication
 	* 2022 : Passkeys : JS API [WebAuthN][24] + CTAP/[U2F][25]
 
-# Passkeys
+# [Passkeys][35]
 * Paire de clés asymétriques au lieu d'un mot de passe
-* Initiative conjointe Apple, Google et Microsoft
+* Initiative de l'alliance [FIDO][33]
 * Fin 2022 : intégrée à Android, iOS, win11 et MacOS 
-* Clés utilisées pour résoudre des challenges : pas d'info sensible sur le réseau
+* Résolution de challenges : pas d'info sensible sur le réseau
 * 3 acteurs : 
   * User Agent : Humain / Navigateur
   * Relying Party : Serveur (service auquel on veut s'authentifier)
   * Authenticator : Clef USB / Smartphone / OS
 * Communication :
   * User Agent <=> Authenticator : CTAP / U2F
-  * User Agent <=> Relying Party : API WebAuth 
+  * User Agent <=> Relying Party : API JS [WebAuthn][34]
 
 # Passkeys : [Acteurs][31]
 ![Architecture](img/1-Web-Authentication-Entities.png)
@@ -247,6 +247,9 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [30]:https://www.hahwul.com/cullinan/history-of-owasp-top-10/
 [31]:https://auth0.com/blog/introduction-to-web-authentication/
 [32]:https://www.freecodecamp.org/news/intro-to-webauthn/
+[33]:https://fidoalliance.org/members/
+[34]:https://webauthn.guide/
+[35]:https://medium.com/webauthnworks/introduction-to-webauthn-api-5fd1fb46c285
 
 <!-- Hack -->
 <style>
@@ -259,7 +262,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
   }
 figure 			{ background-color: white;}
 figure > img 	{height: inherit; width:auto;}   
-figure img      {display: flex; justify-content: center; margin: auto;}
+figure img      {display: flex; justify-content: center; margin: auto; position: relative;}
 ol > li {
 	margin: 10px 30px;
 	font-size: 80%;
