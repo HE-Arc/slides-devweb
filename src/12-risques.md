@@ -161,7 +161,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 # Passkeys
 * Paire de clés asymétriques au lieu d'un mot de passe
 * Initiative conjointe Apple, Google et Microsoft
-* Fin 2022 : intégrée à Android, iOS, win 11 et MacOS 
+* Fin 2022 : intégrée à Android, iOS, win11 et MacOS 
 * Clés utilisées pour résoudre des challenges : pas d'info sensible sur le réseau
 * 3 acteurs : 
   * User Agent : Humain / Navigateur
@@ -171,9 +171,14 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
   * Enregistrement : User Agent => Relying Party
   * Authentification : User Agent => Relying Party
 
-# Passkeys
-![Architecture](img/passwordscloud.png)
+# Passkeys : Acteurs
+![Architecture](img/1-Web-Authentication-Entities.png)
 
+# Passkeys : Enregistrement
+![Reg](img/Registration.png)
+
+# Passkeys : Authentification
+![Auth](img/Login.png)
 
 # Collecte d'information
 * Toute information est bonne pour l'attaquant
