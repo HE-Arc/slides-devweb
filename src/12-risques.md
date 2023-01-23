@@ -26,7 +26,7 @@
 * Fondée en 2004, internationale, sans but lucratif
 * Référence principale dans le domaine
 * Propose :
-  * Top 10 (web et [mobile][17])
+  * Top 10 (web et [mobile][17]) : [Méthode][40], [CVSS][41], [CWE][42] 
   * Grand communauté d'experts
   * Formation, documentation et ressources
   * Outils d'audit, de tests et de formation
@@ -197,7 +197,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 	* Identifiants et commentaires dans sources -au cas où-
 	* SOCIAL ENGINEERING !
 * Le développeur doit laisser filter un minimum d'info !
-* Utilisée aussi par les "white hats" (etical hackers) : [Honeypots][8]
+* Utilisée aussi par les "white hats" (ethical hackers) : [Honeypots][8]
 
 # Bonnes pratiques
 * Configuration stricte du serveur
@@ -265,6 +265,9 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [37]:https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API
 [38]:https://github.com/codebox/homoglyph/blob/master/raw_data/char_codes.txt
 [39]:https://onlineunicodetools.com/spoof-unicode-text
+[40]:https://owasp.org/Top10/#methodology
+[41]:https://www.first.org/cvss/calculator/3.0
+[42]:https://cwe.mitre.org/top25/archive/2022/2022_cwe_top25.html
 
 <!-- Hack -->
 <style>
