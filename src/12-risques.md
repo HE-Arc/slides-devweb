@@ -129,7 +129,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 * Difficile à contrer pour le développeur
 * L'utilisateur doit être prudent
 * Bien lire les URLS et le GUI du navigateur pas toujours suffisant
-* Ne pas utiliser de lien dont on n'est pas sur de la source ([Exemple][4])
+* Ne pas utiliser de lien dont on n'est pas sur de la source ([Homograph Attack][4], [Homoglyphes][38], [Unicode Spoofing][39])
 
 # Risques non liés à l'application
 
@@ -140,6 +140,16 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 * Trojans, backdoors
 * Usurpation de mots de passe : dictionnaire, force brute
 * **SOCIAL ENGINEERING !!!**
+
+# Authentification
+
+* **Identification** : annoncer qui on est
+* **Authentification** : prouver qu'on est la personne qu'on prétend être :
+  1. Avec quelque chose que l'on **sait** (PIN, mot de passe)
+  2. Avec quelque chose que l'on **possède** (téléphone, token, ...)
+  3. Avec quelque chose que l'on **est** (biométrie)
+* La sécurité augmente si on combine ces facteurs
+* Important de prendre en compte l'utilisabilité 
 
 # Top 500 passwords cloud
 ![top 500 passwords cloud](img/passwordscloud.png)
@@ -206,6 +216,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 
 * Référence
 	* [OWASP][10], [webinar fr 2016][29]
+	* WebAuthn : [w3c][36], [MDN][37]
 * Exemples, explications
 	* [Présentation XSS et CSRF][11] en français
 	* [Protection CSRF][12] en français
@@ -250,6 +261,10 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [33]:https://fidoalliance.org/members/
 [34]:https://webauthn.guide/
 [35]:https://medium.com/webauthnworks/introduction-to-webauthn-api-5fd1fb46c285
+[36]:https://www.w3.org/TR/webauthn/
+[37]:https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API
+[38]:https://github.com/codebox/homoglyph/blob/master/raw_data/char_codes.txt
+[39]:https://onlineunicodetools.com/spoof-unicode-text
 
 <!-- Hack -->
 <style>
