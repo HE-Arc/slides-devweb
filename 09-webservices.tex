@@ -1,0 +1,467 @@
+\hypertarget{applications-distribuuxe9es}{%
+\section{Applications distribuées}\label{applications-distribuuxe9es}}
+
+\begin{itemize}
+\tightlist
+\item
+  Motivation : répartir l'exécution sur plusieurs machines
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Principe : Les composants/services communiquent par le réseau
+  \item
+    Problèmes : Hétérogénéité systèmes, langages, \ldots{}
+  \item
+    Solution : Protocole générique, abstraction différences
+  \item
+    Exemples : RPC, RMI (java), CORBA, DCOM (MS)
+  \end{itemize}
+\item
+  Utiliser les technologies du web, comme HTTP et XML :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    indépendantes de la plateforme, éprouvées, largement utilisées
+  \end{itemize}
+\item
+  Système distribué importance de l'architecture :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \href{https://en.wikipedia.org/wiki/Resource-oriented_architecture}{orientée
+    ressource} : atome : ressource (donnée) : REST
+  \item
+    \href{https://fr.wikipedia.org/wiki/Architecture_orient\%C3\%A9e_services}{orientée
+    service} : atome : service (traitement) : RPC (SOAP)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{service-web}{%
+\section{Service web}\label{service-web}}
+
+\begin{itemize}
+\tightlist
+\item
+  2 visions :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Utiliser les technos web pour développer des applis distribuées
+  \item
+    Accès pour une application aux services offerts aux humains
+  \end{itemize}
+\item
+  Service web = webapp pour une autre application :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Webapps : pour humains, via un navigateur (HTTP + HTML)
+  \item
+    Services web : aux autres applications (HTTP + XML/JSON)
+  \end{itemize}
+\item
+  Exemples :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \href{https://upload.wikimedia.org/wikipedia/commons/3/3f/Concept_WS.jpg}{Applications
+    distribuées} pour l'entreprise
+  \item
+    \href{https://fr.wikipedia.org/wiki/Application_composite}{Mashups}
+    d'applications web
+    (\href{https://www.programmableweb.com/category/mashups}{exemples})
+  \item
+    Applications Facebook,
+    \href{https://developers.google.com/apis-explorer/}{API Google}
+  \item
+    \href{https://ifttt.com/}{IFTTT}
+  \end{itemize}
+\item
+  Consommer un service web ≠ Créer un service web
+\end{itemize}
+
+\hypertarget{soap}{%
+\section{SOAP}\label{soap}}
+
+\begin{itemize}
+\tightlist
+\item
+  AVANT : Simple Object Access Protocol (obsolète)
+\item
+  Evolution de XML-RPC, format XML d'envoi de messages
+\item
+  Architecture Orientée Service (SOA)
+\item
+  Indépendant du langage et de la plateforme
+\item
+  Recommandation du w3c depuis 2003
+\item
+  SOAP = abus de langage, service web WS-* est plus exact
+\item
+  Spécifications
+  \href{https://en.wikipedia.org/wiki/List_of_web_service_specifications}{WS-*}
+  :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    spécifications liées aux différents aspects des services web
+  \item
+    pour déployer un WS : au minimum SOAP + WSDL + UDDI
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{soap-1}{%
+\section{SOAP}\label{soap-1}}
+
+\begin{itemize}
+\tightlist
+\item
+  Structure d'un message SOAP
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Enveloppe, Entête, Corps, Erreurs
+  \end{itemize}
+\item
+  Squelette :
+\end{itemize}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{\textless{}?xml}\NormalTok{ version="1.0"}\KeywordTok{?\textgreater{}}
+\KeywordTok{\textless{}soap:Envelope}
+\OtherTok{     xmlns:soap=}\StringTok{"http://www.w3.org/2001/12/soap{-}envelope"}
+\OtherTok{     soap:encodingStyle=}\StringTok{"http://www.w3.org/2001/12/soap{-}encoding"}\KeywordTok{\textgreater{}}
+  \KeywordTok{\textless{}soap:Header\textgreater{}}\NormalTok{  ... }\KeywordTok{\textless{}/soap:Header\textgreater{}}
+  \KeywordTok{\textless{}soap:Body\textgreater{}}\NormalTok{  ... }
+    \KeywordTok{\textless{}soap:Fault\textgreater{}}\NormalTok{ ... }\KeywordTok{\textless{}/soap:Fault\textgreater{}}
+  \KeywordTok{\textless{}/soap:Body\textgreater{}}
+\KeywordTok{\textless{}/soap:Envelope\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{soap-2}{%
+\section{SOAP}\label{soap-2}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{http://www.w3schools.com/xml/xml_soap.asp}{Exemple}
+  requête/réponse
+\item
+  \href{http://www.w3big.com/fr/soap/default.html\#gsc.tab=0}{Introduction
+  à SOAP} (fr)
+\item
+  Créer un service web WS (SOAP) nécessite WSDL et UDDI :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    SOAP : Echange de messages XML sur le réseau
+  \item
+    WSDL : Web Service Description Language
+  \item
+    UDDI : Universal Description, Discovery and Integration
+  \end{itemize}
+\item
+  WSDL : Description des interfaces des web services
+\item
+  UDDI : Découverte et inscription aux services web
+
+  \begin{itemize}
+  \tightlist
+  \item
+    annuaire d'informations sur les services web
+  \item
+    annuaire d'interfaces de services web décrites en WSDL
+  \end{itemize}
+\item
+  \href{http://www.w3schools.com/xml/xml_wsdl.asp}{Tutorial WSDL/UDDI
+  w3schools}
+\end{itemize}
+
+\hypertarget{rest-representational-state-transfer}{%
+\section{REST : REpresentational State
+Transfer}\label{rest-representational-state-transfer}}
+
+\begin{itemize}
+\tightlist
+\item
+  Style d'architecture sur lequel a été bâti le web
+\item
+  Architecture Orientée Ressource (ROA)
+\item
+  Chapitre 5 de la
+  \href{http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm}{thèse}
+  de \href{https://fr.wikipedia.org/wiki/Roy_Fielding}{Roy T. Fielding}
+  (\href{http://opikanoba.org/tr/fielding/rest/}{fr}), 2000
+\item
+  Parmi les
+  \href{https://fr.wikipedia.org/wiki/Representational_state_transfer}{contraintes},
+  une interface uniforme :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Identification des ressources (URI)
+  \item
+    Manipulation des ressources par des représentations
+  \item
+    Messages autodescriptifs
+  \item
+    Hypermédia comme moteur de l'état de l'application
+  \end{itemize}
+\item
+  Ressource : information ou moyen d'accès
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ex. : météo du jour, adresse ajout d'un article à un blog, \ldots{}
+  \end{itemize}
+\item
+  Représentation : forme donnée à la ressource
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ex. : page html, fichier PDF, image, flux RSS, fichier sonore,
+    \ldots{}
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{rest}{%
+\section{REST}\label{rest}}
+
+\begin{itemize}
+\tightlist
+\item
+  Principes
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Identifier les ressources avec des URI (noms)
+  \item
+    Actions déterminées par des méthodes HTTP (verbes)
+
+    \begin{itemize}
+    \tightlist
+    \item
+      GET : READ (sûre)
+    \item
+      POST : CREATE
+    \item
+      PUT, PATCH : UPDATE (idempotente)
+    \item
+      DELETE : DELETE (idempotente)
+    \end{itemize}
+  \item
+    Les liens hypertextes permettent de représenter le contenu :
+    navigation
+  \item
+    Les types MIME determinent la représentation de la ressource
+  \end{itemize}
+\item
+  Rappel
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Sûreté : Etat de la ressource (contenu) inchangé
+  \item
+    Idempotence : plusieurs appels donnent le même résultat
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{rest-1}{%
+\section{REST}\label{rest-1}}
+
+\begin{itemize}
+\tightlist
+\item
+  L'appel d'une ressource avec des verbes différents produira un
+  résultat différent :
+\end{itemize}
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+Effet & Route & Verbe & URI (ressource) & Description\tabularnewline
+\midrule
+\endhead
+& Index & GET & /blogs & Affiche la liste\tabularnewline
+& New & GET & /blog/new & Affiche formulaire création\tabularnewline
+C & Create & POST & /blogs & Création en DB, puis
+redirection\tabularnewline
+R & Show & GET & /blogs/42 & Affiche le blog 42\tabularnewline
+& Edit & GET & /blogs/42/edit & Formulaire édition blog
+42\tabularnewline
+U & Update & PUT & /blogs/42 & MAJ en DB blog 42\tabularnewline
+D & Destroy & DELETE & /blogs/42 & Suppression ne DB blog
+42\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\tightlist
+\item
+  Laravel, Django, Rails, \ldots{} sont RESTful !
+\end{itemize}
+
+\hypertarget{niveaux-de-maturituxe9-de-richardson18}{%
+\section{\texorpdfstring{Niveaux de maturité de
+\href{http://martinfowler.com/articles/richardsonMaturityModel.html}{Richardson}}{Niveaux de maturité de Richardson}}\label{niveaux-de-maturituxe9-de-richardson18}}
+
+\begin{itemize}
+\tightlist
+\item
+  0: Plain Old Xml (POX)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Utilisation de HTTP pour faire du RPC
+  \end{itemize}
+\item
+  1: Ressources
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Ressources identifiées par URI
+  \end{itemize}
+\item
+  2: Verbes HTTP
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Respect des propriétés des verbes HTTP
+  \end{itemize}
+\item
+  3: Hypertext As The Engine Of Application State (HATEOAS)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Les états suivants sont documentés dans la réponse
+    (\textenglish{\texttt{\textless{}link\textgreater{}}})
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{soap-vs-rest}{%
+\section{SOAP vs REST}\label{soap-vs-rest}}
+
+\begin{itemize}
+\tightlist
+\item
+  webservice : exposer son API en REST ou SOAP ?
+\item
+  SOAP (WS-*)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    hérité du monde de l'entreprise
+  \item
+    plus de code pour manipuler la requête et générer la réponse
+  \item
+    plus flexible, extensible (namespace)
+  \item
+    valider requêtes depuis WDSL
+  \item
+    nécessité d'un framework (ex: nuSOAP en PHP)
+  \end{itemize}
+\item
+  REST
+
+  \begin{itemize}
+  \tightlist
+  \item
+    hérité du web
+  \item
+    plus facile et rapide à utiliser
+  \item
+    plus lisible et plus compact
+  \item
+    maintenance plus facile
+  \item
+    meilleure tolérance aux pannes
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{pour-aller-plus-loin}{%
+\section{Pour aller plus loin\ldots{}}\label{pour-aller-plus-loin}}
+
+\begin{itemize}
+\tightlist
+\item
+  Références
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \href{https://www.w3.org/TR/soap/}{SOAP},
+    \href{https://www.w3.org/2002/ws/desc/}{WSDL},
+    \href{http://uddi.xml.org/}{UDDI},
+    \href{http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm}{REST},
+    \href{http://www.oasis-ws-i.org/}{The WSIO}
+  \item
+    \href{https://larlet.fr/david/biologeek/archives/20070629-architecture-orientee-ressource-pour-faire-des-services-web-restful/}{Des
+    services web RESTful},
+    \href{https://web.archive.org/web/20160310205502/http://home.ccil.org/~cowan/restws.pdf}{Une
+    apologie de REST} (recommandés)
+  \item
+    \href{http://www.figer.com/Publications/SOA.htm}{REST et
+    architectures orientées service},
+    \href{http://fr.slideshare.net/samijaber/symposium-dng-2008-roa}{Présentation
+    ROA}
+  \item
+    \href{http://restcookbook.com/}{The RESTful cookbook}, How important
+    is
+    \href{http://stackoverflow.com/questions/20335967/how-useful-important-is-rest-hateoas-maturity-level-3}{HATEOAS}
+    (stack overflow)
+  \end{itemize}
+\item
+  Exemples de services web :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \href{https://developers.google.com/products/}{Google},
+    \href{https://developer.yahoo.com/everything.html}{Yahoo},
+    \href{https://www.flickr.com/services/api/}{Flickr},
+    \href{https://dev.twitter.com/overview/api}{Twitter}, \ldots{}
+  \item
+    \href{https://apiary.io/}{APIary} : Aide au design d'une API REST
+  \item
+    Tests : Postman, \href{https://hoppscotch.io/}{Hoppscotch},
+    \href{https://ping-api.com/}{Ping-API},
+    \href{https://testsigma.com/blog/postman-alternatives/}{autres}
+  \end{itemize}
+\item
+  \href{http://graphql.org/}{GraphQL}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    est destiné à devenir la prochaine évolution des apis REST utilisant
+    JSON. Initié par Facebook, Github permet également d'en
+    \href{https://developer.github.com/v4/}{faire usage}.
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{sources}{%
+\section{Sources}\label{sources}}

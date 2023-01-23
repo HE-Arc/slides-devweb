@@ -1,0 +1,1041 @@
+\includegraphics{src/img/imagine.png}
+
+\hypertarget{connexion}{%
+\section{Connexion}\label{connexion}}
+
+Nom de domaine et port SSH sur: \url{http://srvz-webapp2.he-arc.ch/}.
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Exemple}
+
+\NormalTok{$ }\FunctionTok{ssh}\NormalTok{ {-}p 2030 yoan@srvz{-}webapp2.he{-}arc.ch}
+\ExtensionTok{yoan@yoan}\NormalTok{$ more \textasciitilde{}/README.md}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{mise-uxe0-jour-de-rails}{%
+\subsection{Mise à jour de Rails}\label{mise-uxe0-jour-de-rails}}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{yoan@yoan}\NormalTok{$ rails {-}v}
+\ExtensionTok{Rails}\NormalTok{ 5.0.0.1}
+\ExtensionTok{yoan@yoan}\NormalTok{$ gem update}
+\ExtensionTok{Updating}\NormalTok{ installed gems}
+\ExtensionTok{...}
+\ExtensionTok{yoan@yoan}\NormalTok{$ rails {-}v}
+\ExtensionTok{Rails}\NormalTok{ 5.0.1}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{une-application-ruby}{%
+\subsection{Une application Ruby}\label{une-application-ruby}}
+
+Comme pour Laravel, c'est une bonne pratique d'avoir un répertoire pour
+le contenu publiable sur Internet.
+
+\begin{english}
+
+\begin{verbatim}
+$ cd /var/www/app
+$ ls
+config.ru
+Gemfile
+Gemfile.lock
+public/nginx-puma.png
+
+$ more config.ru
+\end{verbatim}
+
+\end{english}
+
+\hypertarget{rack-101}{%
+\section{Rack 101}\label{rack-101}}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{run {-}\textgreater{}(env) }\KeywordTok{do}
+\NormalTok{  [}
+    \DecValTok{200}\NormalTok{,}
+\NormalTok{    \{}\StringTok{"Content{-}Type"}\NormalTok{ =\textgreater{} }\StringTok{"text/html; charset=utf{-}8"}\NormalTok{\},}
+\NormalTok{    [}
+      \StringTok{"\textless{}!DOCTYPE html\textgreater{}"}\NormalTok{,}
+      \StringTok{"\textless{}meta charset=utf{-}8\textgreater{}"}\NormalTok{,}
+      \StringTok{"\textless{}title\textgreater{}Hello!\textless{}/title\textgreater{}"}\NormalTok{,}
+      \StringTok{"\textless{}h1\textgreater{}Hello\textless{}/h1\textgreater{}"}\NormalTok{,}
+      \StringTok{"\textless{}p\textgreater{}:{-})"}
+\NormalTok{    ]}
+\NormalTok{  ]}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+Une fonction, Proc ou lambda qui :
+
+\begin{itemize}
+\tightlist
+\item
+  reçoit un tableau associatif de son environement;
+\item
+  retourne un triplet de réponse HTTP.
+\end{itemize}
+
+Réponse HTTP:
+
+\begin{itemize}
+\tightlist
+\item
+  le code HTTP;
+\item
+  un tableau associatif des entêtes HTTP;
+\item
+  un itérateur sur le corps du document.
+\end{itemize}
+
+\hypertarget{gemfile}{%
+\subsection{\texorpdfstring{\emph{Gemfile}}{Gemfile}}\label{gemfile}}
+
+Un paquet Ruby se nomme une \emph{gemme}.
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Gemfile}
+\NormalTok{source }\StringTok{"https://rubygems.org"}
+
+\NormalTok{gem }\StringTok{"puma"}\NormalTok{, }\StringTok{"\textasciitilde{}\textgreater{} 3.6.2"}
+\NormalTok{gem }\StringTok{"rack"}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+Comme le composer.json pour PHP.
+
+\hypertarget{nginx}{%
+\subsection{NGINX}\label{nginx}}
+
+\begin{english}
+
+\begin{verbatim}
+root /var/www/app/public;
+
+location / {
+    try_files $uri/index.html $uri @rack;
+}
+
+location @rack {
+    proxy_pass http://puma;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header Host $http_host;
+    proxy_redirect off;
+}
+
+upstream puma {
+    server unix:/tmp/puma.sock fail_timeout=0;
+}
+\end{verbatim}
+
+\end{english}
+
+Le serveur HTTP qui sert les fichiers statiques (public) et redirige le
+reste vers le serveur d'application Ruby (puma).
+
+\hypertarget{puma}{%
+\subsection{Puma}\label{puma}}
+
+Le serveur d'application pour Ruby.
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{\#!/usr/bin/env puma}
+
+\NormalTok{environment }\StringTok{"production"}
+
+\NormalTok{directory }\StringTok{"/var/www/app"}
+\NormalTok{bind }\StringTok{"unix:///tmp/puma.sock"}
+
+\CommentTok{\# À ajouter.}
+\NormalTok{plugin }\StringTok{:tmp\_restart}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+En PHP, nous utilisions PHP-FPM. Qu'utilisez-vous avec JEE?
+
+\hypertarget{serveur}{%
+\subsection{Serveur}\label{serveur}}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\FunctionTok{ls}\NormalTok{ /etc/services}
+\ExtensionTok{cron}\NormalTok{ nginx puma sshd syslog}
+
+\NormalTok{$ }\FunctionTok{pstree}
+\ExtensionTok{tini}\NormalTok{───runsvdir─┬─runsv───cron}
+\NormalTok{                ├─}\ExtensionTok{runsv}\NormalTok{───nginx───4*[nginx]}
+\NormalTok{                ├─}\ExtensionTok{runsv}\NormalTok{───syslog{-}ng}
+\NormalTok{                └─}\ExtensionTok{runsv}\NormalTok{───bundle─┬─}\DataTypeTok{\{reactor.rb:151\}}
+\NormalTok{                                 ├─}\DataTypeTok{\{ruby{-}timer{-}thr\}}
+\NormalTok{                                 ├─}\DataTypeTok{\{server.rb:301\}}
+\NormalTok{                                 └─}\ExtensionTok{6*}\NormalTok{[}\DataTypeTok{\{thread\_pool.rb*\}}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{exercice-1}{%
+\section{Exercice 1}\label{exercice-1}}
+
+Modifiez l'environnement \emph{puma} en
+\textenglish{\texttt{development}}.
+
+\textenglish{\texttt{http://{[}\ PRENOM.NOM\ \textbar{}\ GITHUB\ {]}.srvz-webapp2.he-arc.ch/}}
+doit afficher:
+
+\begin{english}
+
+\begin{verbatim}
+RACK_ENV
+    development
+\end{verbatim}
+
+\end{english}
+
+\hypertarget{premiuxe8re-application}{%
+\section{Première application}\label{premiuxe8re-application}}
+
+Archivez \textenglish{\texttt{app}}.
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\BuiltInTok{cd}\NormalTok{ /var/www}
+\NormalTok{$ }\FunctionTok{mv}\NormalTok{ app demoapp}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+Créez une nouvelle application Rails.
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\ExtensionTok{rails}\NormalTok{ new app {-}{-}database=postgresql}
+\NormalTok{$ }\BuiltInTok{cd}\NormalTok{ app}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+Si vous changez le nom, vous devez modifier les configurations des
+serveurs.
+
+\hypertarget{plein-de-fichiers}{%
+\subsection{Plein de fichiers}\label{plein-de-fichiers}}
+
+\begin{english}
+
+\begin{verbatim}
+app/                # votre code
+bin/
+config/             # fichiers de config
+config.ru           # point d'entrée, « index.php »
+db/                 # migrations et seeds
+Gemfile             # comme le composer.json
+Gemfile.lock
+lib/
+log/
+public/             # fichiers publics
+Rakefile
+README.md
+test/               # tests unitaires, fonctionnels, etc.
+tmp/
+vendor/
+\end{verbatim}
+
+\end{english}
+
+\hypertarget{exercice-2}{%
+\section{Exercice 2}\label{exercice-2}}
+
+Que peut-on faire à l'aide de la commande \textenglish{\texttt{rails}}?
+
+Et de la commande \textenglish{\texttt{bundle}}?
+
+Avant Rails 5, rails et rake avaient des rôles séparés, condensés dans
+rails.
+
+\hypertarget{premier-duxe9marrage}{%
+\subsection{Premier démarrage}\label{premier-duxe9marrage}}
+
+\begin{english}
+
+\begin{verbatim}
+$ sudo sv restart puma
+\end{verbatim}
+
+\end{english}
+
+Kaboom!
+
+\hypertarget{connexion-1}{%
+\subsection{Connexion}\label{connexion-1}}
+
+Utilisez \href{https://www.pgadmin.org/}{pgAdmin} pour vous connecter à
+votre base de données.
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\BuiltInTok{echo} \VariableTok{$GROUPNAME} \VariableTok{$PASSWORD}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+Ou pour les durs à cuire :
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\ExtensionTok{psql}\NormalTok{ {-}h }\VariableTok{$POSTGRES\_HOST}\NormalTok{ {-}U }\VariableTok{$GROUPNAME}
+\OperatorTok{\textgreater{}}\NormalTok{ \textbackslash{}}\ExtensionTok{l}
+\OperatorTok{\textgreater{}}\NormalTok{ \textbackslash{}}\ExtensionTok{dn}
+\OperatorTok{\textgreater{}}\NormalTok{ \textbackslash{}}\ExtensionTok{dt}
+\OperatorTok{\textgreater{}}\NormalTok{ \textbackslash{}}\ExtensionTok{q}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{configuration}{%
+\subsection{Configuration}\label{configuration}}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{default}\KeywordTok{:}\AttributeTok{ }\OtherTok{\&default}
+\AttributeTok{  }\FunctionTok{adapter}\KeywordTok{:}\AttributeTok{ postgresql}
+\AttributeTok{  }\FunctionTok{encoding}\KeywordTok{:}\AttributeTok{ unicode}
+\FunctionTok{  pool}\KeywordTok{: }\AttributeTok{\textless{}\%= ENV.fetch(}\StringTok{"RAILS\_MAX\_THREADS"}\AttributeTok{) }\KeywordTok{\{}\AttributeTok{ 5 }\KeywordTok{\}}\AttributeTok{ \%}\CharTok{\textgreater{}}
+\FunctionTok{  host}\KeywordTok{: }\AttributeTok{\textless{}\%= ENV.fetch(}\StringTok{"POSTGRES\_HOST"}\AttributeTok{) }\KeywordTok{\{}\AttributeTok{ }\StringTok{"localhost"}\AttributeTok{ }\KeywordTok{\}}\AttributeTok{ \%}\CharTok{\textgreater{}}
+\FunctionTok{  port}\KeywordTok{: }\AttributeTok{\textless{}\%= ENV.fetch(}\StringTok{"POSTGRES\_PORT"}\AttributeTok{) }\KeywordTok{\{}\AttributeTok{ 5432 }\KeywordTok{\}}\AttributeTok{ \%}\CharTok{\textgreater{}}
+\FunctionTok{  database}\KeywordTok{: }\AttributeTok{\textless{}\%= ENV}\KeywordTok{[}\StringTok{"GROUPNAME"}\KeywordTok{]}\AttributeTok{ \%}\CharTok{\textgreater{}}
+\FunctionTok{  username}\KeywordTok{: }\AttributeTok{\textless{}\%= ENV}\KeywordTok{[}\StringTok{"GROUPNAME"}\KeywordTok{]}\AttributeTok{ \%}\CharTok{\textgreater{}}
+\FunctionTok{  password}\KeywordTok{: }\AttributeTok{\textless{}\%= ENV}\KeywordTok{[}\StringTok{"PASSWORD"}\KeywordTok{]}\AttributeTok{ \%}\CharTok{\textgreater{}}
+
+\FunctionTok{development}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{\textless{}\textless{}}\KeywordTok{:}\AttributeTok{ }\OtherTok{*default}
+
+\FunctionTok{test}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{\textless{}\textless{}}\KeywordTok{:}\AttributeTok{ }\OtherTok{*default}
+\AttributeTok{  }\FunctionTok{schema\_search\_path}\KeywordTok{:}\AttributeTok{ test}
+
+\FunctionTok{production}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{\textless{}\textless{}}\KeywordTok{:}\AttributeTok{ }\OtherTok{*default}
+\AttributeTok{  }\FunctionTok{schema\_search\_path}\KeywordTok{:}\AttributeTok{ production}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{application-de-duxe9mo}{%
+\section{Application de démo}\label{application-de-duxe9mo}}
+
+Téléchargez l'application pré-configurée pour vous.
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\BuiltInTok{cd}\NormalTok{ /var/www}
+\NormalTok{$ }\FunctionTok{rm}\NormalTok{ {-}rf app}
+
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ clone }\KeywordTok{\textbackslash{}}
+        \ExtensionTok{https}\NormalTok{://github.com/HE{-}Arc/rails{-}intro }\KeywordTok{\textbackslash{}}
+        \ExtensionTok{app}
+
+\NormalTok{$ }\BuiltInTok{cd}\NormalTok{ app}
+\NormalTok{$ }\ExtensionTok{bundle}\NormalTok{ install}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{migration}{%
+\subsection{Migration}\label{migration}}
+
+Installation de la base de données.
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\ExtensionTok{rails}\NormalTok{ db:migrate}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+Que s'est-il passé?
+
+(hint: \textenglish{\texttt{git\ status}})
+
+\hypertarget{exercice-3}{%
+\section{Exercice 3}\label{exercice-3}}
+
+Créez un produit possédant un titre, une description et un prix.
+
+\hypertarget{ruxe9ponse}{%
+\subsection{Réponse}\label{ruxe9ponse}}
+
+Nous obtenons une migration, un modèle et un test unitaire.
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\ExtensionTok{rails}\NormalTok{ generate model }\KeywordTok{\textbackslash{}}
+    \ExtensionTok{product} \KeywordTok{\textbackslash{}}
+        \ExtensionTok{title}\NormalTok{:string }\KeywordTok{\textbackslash{}}
+        \ExtensionTok{description}\NormalTok{:text }\KeywordTok{\textbackslash{}}
+        \ExtensionTok{price}\NormalTok{:decimal}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+RAD!
+
+\hypertarget{exercice-4}{%
+\section{Exercice 4}\label{exercice-4}}
+
+Corrigez le test qui échoue en corrigeant les \emph{fixtures}.
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\ExtensionTok{rails}\NormalTok{ db:rollback}
+
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ reset {-}{-}hard}
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ clean {-}fd}
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ checkout product}
+\NormalTok{$ }\ExtensionTok{rails}\NormalTok{ db:migrate}
+
+\NormalTok{$ }\ExtensionTok{rails}\NormalTok{ test}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{test-unitaire}{%
+\subsection{Test unitaire}\label{test-unitaire}}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# test/models/product\_test.rb}
+
+\KeywordTok{class} \DataTypeTok{ProductTest}\NormalTok{ \textless{} }\DataTypeTok{ActiveSupport}\NormalTok{::}\DataTypeTok{TestCase}
+\NormalTok{  test }\StringTok{\textquotesingle{}T{-}shirt has a price\textquotesingle{}} \KeywordTok{do}
+\NormalTok{    product = }\DataTypeTok{Product}\NormalTok{.find\_by(}\StringTok{title: \textquotesingle{}T{-}shirt\textquotesingle{}}\NormalTok{)}
+\NormalTok{    assert }\DecValTok{0}\NormalTok{ \textless{} product.price}
+  \KeywordTok{end}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{solution}{%
+\subsection{Solution}\label{solution}}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# test/fixtures/products.yml}
+
+\FunctionTok{tshirt}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{title}\KeywordTok{:}\AttributeTok{ T{-}shirt}
+\AttributeTok{  }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ Superbe maillot de corps}
+\AttributeTok{  }\FunctionTok{price}\KeywordTok{:}\AttributeTok{ }\FloatTok{9.99}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{validation}{%
+\subsection{Validation}\label{validation}}
+
+Selon Ruby on Rails, la logique métier ne doit pas se trouver dans la
+base de données.
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# app/models/product.rb}
+
+\KeywordTok{class} \DataTypeTok{Product}\NormalTok{ \textless{} }\DataTypeTok{ActiveRecord}\NormalTok{::}\DataTypeTok{Base}
+\NormalTok{  validates }\StringTok{:title}\NormalTok{, }\StringTok{presence: }\DecValTok{true}
+\NormalTok{  validates }\StringTok{:price}\NormalTok{, }\StringTok{numericality: }\NormalTok{\{ }\StringTok{greater\_than: }\DecValTok{0}\NormalTok{ \}}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{exercice-5}{%
+\section{Exercice 5}\label{exercice-5}}
+
+Testez les règles de validations ci-dessus en ajoutant des tests.
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ reset {-}{-}hard}
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ checkout validation}
+\NormalTok{$ }\ExtensionTok{rails}\NormalTok{ test}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{solution-1}{%
+\subsection{Solution}\label{solution-1}}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# test/models/product\_test.rb}
+
+\NormalTok{test }\StringTok{\textquotesingle{}must have a title\textquotesingle{}} \KeywordTok{do}
+\NormalTok{  assert\_not }\DataTypeTok{Product}\NormalTok{.create(}\StringTok{price: }\DecValTok{10}\NormalTok{).valid?}
+\KeywordTok{end}
+
+\NormalTok{test }\StringTok{\textquotesingle{}must have a price greater than zero\textquotesingle{}} \KeywordTok{do}
+\NormalTok{  assert\_raise }\KeywordTok{do}
+    \DataTypeTok{Product}\NormalTok{.create!(}\StringTok{title: \textquotesingle{}Untitled\textquotesingle{}}\NormalTok{, }\StringTok{price: }\DecValTok{0}\NormalTok{)}
+  \KeywordTok{end}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{contruxf4leur}{%
+\subsection{Contrôleur}\label{contruxf4leur}}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\ExtensionTok{rails}\NormalTok{ g controller products index}
+
+\ExtensionTok{app/assets/javascripts/products.coffee}
+          \ExtensionTok{/stylesheets/products.scss}
+   \ExtensionTok{/controllers/products\_controller.rb}\NormalTok{       \# def index}\KeywordTok{;} \ExtensionTok{end}
+   \ExtensionTok{/helpers/products\_helper.rb}
+   \ExtensionTok{/views/products/index.html.erb}\NormalTok{            \# index.html.erb}
+
+\ExtensionTok{config/routes.rb}\NormalTok{                             \# get }\StringTok{\textquotesingle{}products/index\textquotesingle{}}
+
+\ExtensionTok{test/controllers/products\_controller\_test.rb} \CommentTok{\# should get index}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+Par convention, un modèle est au singulier et un contrôleur au pluriel.
+
+\hypertarget{test-unitaire-1}{%
+\subsection{Test unitaire}\label{test-unitaire-1}}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# test/controllers/products\_controller\_test.rb}
+
+\NormalTok{test }\StringTok{\textquotesingle{}should get products on /\textquotesingle{}} \KeywordTok{do}
+\NormalTok{  get }\CharTok{\textquotesingle{}/\textquotesingle{}}
+
+\NormalTok{  assert\_response }\StringTok{:success}
+\NormalTok{  assert\_not\_nil assigns(}\StringTok{:products}\NormalTok{)}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{exercice-6}{%
+\section{Exercice 6}\label{exercice-6}}
+
+Corrigez le test du contrôleur.
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ reset {-}{-}hard}
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ clean {-}fd}
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ checkout controller}
+
+\NormalTok{$ }\ExtensionTok{rails}\NormalTok{ test}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{solution-2}{%
+\subsection{Solution}\label{solution-2}}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# config/routes.rb}
+\NormalTok{root }\StringTok{\textquotesingle{}products\#index\textquotesingle{}}
+
+\CommentTok{\# app/controllers/products\_controller}
+\KeywordTok{def}\NormalTok{ index}
+  \OtherTok{@products}\NormalTok{ = }\DataTypeTok{Product}\NormalTok{.all}
+\KeywordTok{end}
+
+\CommentTok{\# app/views/products/index.html.erb}
+\NormalTok{\textless{}\% }\OtherTok{@products}\NormalTok{.each }\KeywordTok{do}\NormalTok{ |product|}\OtherTok{ \%\textgreater{}}
+\StringTok{  \textless{}h2}\OtherTok{\textgreater{}}\NormalTok{\textless{}\%= product.title }\OtherTok{\%\textgreater{}}\StringTok{\textless{}/h2}\OtherTok{\textgreater{}}
+\NormalTok{\textless{}\% }\KeywordTok{end}\OtherTok{ \%\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{taille}{%
+\subsection{Taille}\label{taille}}
+
+Création d'un modèle pour les tailles de nos t-shirts.
+
+\begin{english}
+
+\begin{verbatim}
+$ rails generate model size name:string
+\end{verbatim}
+
+\end{english}
+
+\hypertarget{exercice-7}{%
+\section{Exercice 7}\label{exercice-7}}
+
+Créez un seeder pour les tailles allant de \textenglish{\texttt{XS}} à
+\textenglish{\texttt{XXL}}.
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ reset {-}{-}hard}
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ clean {-}fd}
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ checkout sizes}
+\NormalTok{$ }\ExtensionTok{rails}\NormalTok{ db:migrate}
+
+\NormalTok{$ }\ExtensionTok{rails}\NormalTok{ db:seed}
+
+\CommentTok{\# Test}
+\NormalTok{$ }\ExtensionTok{rails}\NormalTok{ console}
+\OperatorTok{\textgreater{}} \ExtensionTok{pp}\NormalTok{ Size.all}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{solution-3}{%
+\subsection{Solution}\label{solution-3}}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# db/seeds.rb}
+
+\DataTypeTok{Size}\NormalTok{.create([}
+\NormalTok{  \{}\StringTok{name: \textquotesingle{}XS\textquotesingle{}}\NormalTok{\},}
+\NormalTok{  \{}\StringTok{name: }\CharTok{\textquotesingle{}S\textquotesingle{}}\NormalTok{\},}
+\NormalTok{  \{}\StringTok{name: }\CharTok{\textquotesingle{}M\textquotesingle{}}\NormalTok{\},}
+\NormalTok{  \{}\StringTok{name: }\CharTok{\textquotesingle{}L\textquotesingle{}}\NormalTok{\},}
+\NormalTok{  \{}\StringTok{name: \textquotesingle{}XL\textquotesingle{}}\NormalTok{\},}
+\NormalTok{  \{}\StringTok{name: \textquotesingle{}XXL\textquotesingle{}}\NormalTok{\}}
+\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{relation-produits---tailles}{%
+\subsection{Relation Produits -
+Tailles}\label{relation-produits---tailles}}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\ExtensionTok{rails}\NormalTok{ g migration associate\_products\_and\_sizes}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# db/migrate/...\_associate\_products\_and\_sizes.rb}
+
+\NormalTok{create\_table }\StringTok{:products\_sizes} \KeywordTok{do}\NormalTok{ |t|}
+\NormalTok{  t.references }\StringTok{:product}\NormalTok{, }\StringTok{:index}\NormalTok{ =\textgreater{} }\DecValTok{true}
+\NormalTok{  t.references }\StringTok{:size}\NormalTok{, }\StringTok{:index}\NormalTok{ =\textgreater{} }\DecValTok{true}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{many-to-many}{%
+\subsection{Many-to-many}\label{many-to-many}}
+
+Dans chaque modèle.
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# app/models/product.rb}
+\NormalTok{has\_and\_belongs\_to\_many }\StringTok{:sizes}\NormalTok{, }\StringTok{uniq: }\DecValTok{true}
+
+\CommentTok{\# app/models/size.rb}
+\NormalTok{has\_and\_belongs\_to\_many }\StringTok{:products}\NormalTok{, }\StringTok{uniq: }\DecValTok{true}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{test}{%
+\subsection{Test}\label{test}}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ reset {-}{-}hard}
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ clean {-}fd}
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ checkout habtm}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+Tests depuis la console.
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\ExtensionTok{rails}\NormalTok{ console}
+\OperatorTok{\textgreater{}} \ExtensionTok{xxl}\NormalTok{ = Size.find\_by(name: }\StringTok{\textquotesingle{}XXL\textquotesingle{}}\NormalTok{)}
+\OperatorTok{\textgreater{}} \ExtensionTok{xxl.products.size}
+\NormalTok{=}\OperatorTok{\textgreater{}} \ExtensionTok{0}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+xxl.products.create(title: `A', description: `B', price: 10)
+
+\hypertarget{administration}{%
+\subsection{Administration}\label{administration}}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\FunctionTok{more}\NormalTok{ Gemfile}
+
+\CommentTok{\# Automagic admin interface.}
+\ExtensionTok{gem} \StringTok{\textquotesingle{}rails\_admin\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}\textasciitilde{}\textgreater{} 1.1\textquotesingle{}}
+
+\NormalTok{$ }\ExtensionTok{bundle}\NormalTok{ install}
+\NormalTok{$ }\ExtensionTok{rails}\NormalTok{ g rails\_admin:install}
+\NormalTok{$ }\FunctionTok{touch}\NormalTok{ tmp/restart.txt}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\begin{english}
+
+\begin{verbatim}
+$ git reset --hard
+$ git checkout admin
+$ bundle install
+\end{verbatim}
+
+\end{english}
+
+\hypertarget{image}{%
+\subsection{Image}\label{image}}
+
+Ajoutez une image à vos produits
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\FunctionTok{more}\NormalTok{ Gemfile}
+
+\CommentTok{\# Toughtbot\textquotesingle{}s paperclip to upload files}
+\ExtensionTok{gem} \StringTok{\textquotesingle{}paperclip\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}\textasciitilde{}\textgreater{} 5.1\textquotesingle{}}
+
+\NormalTok{$ }\ExtensionTok{bundle}\NormalTok{ install}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{migration-1}{%
+\subsection{Migration}\label{migration-1}}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\ExtensionTok{rails}\NormalTok{ g migration add\_image\_to\_product}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ change}
+\NormalTok{  change\_table }\StringTok{:products} \KeywordTok{do}\NormalTok{ |t|}
+\NormalTok{    t.attachment }\StringTok{:image}
+  \KeywordTok{end}
+\KeywordTok{end}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{exercice-8}{%
+\section{Exercice 8}\label{exercice-8}}
+
+Faites qu'on puisse attacher une image depuis l'interface
+d'administration.
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ reset {-}{-}hard}
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ clean {-}fd}
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ checkout images}
+\NormalTok{$ }\ExtensionTok{rails}\NormalTok{ db:migrate}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\textbf{Indice:} lire la documentation de
+\textenglish{\texttt{paperclip}}.
+
+\hypertarget{solution-4}{%
+\subsection{Solution}\label{solution-4}}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# app/models/product.rb}
+
+\StringTok{has\_attached\_file: }\NormalTok{image}
+\NormalTok{validates\_attachment\_content\_type }\StringTok{:image}\NormalTok{, \textbackslash{}}
+    \StringTok{content\_type: }\OtherTok{/\textbackslash{}Aimage/}
+\NormalTok{validates\_attachment\_file\_name }\StringTok{:image}\NormalTok{, \textbackslash{}}
+    \StringTok{matches: }\NormalTok{[}\OtherTok{/png\textbackslash{}z/}\NormalTok{, }\OtherTok{/jpe?g\textbackslash{}z/}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{ressource}{%
+\subsection{Ressource}\label{ressource}}
+
+Il aurait été possible de créer modèle, contrôleur et routes de type
+REST.
+
+\begin{english}
+
+\begin{verbatim}
+$ rails generate resource person
+$ rails routes
+...
+\end{verbatim}
+
+\end{english}
+
+Testez!
+
+\hypertarget{duxe9tails-intuxe9ressants-de-rails}{%
+\section{Détails intéressants de
+Rails}\label{duxe9tails-intuxe9ressants-de-rails}}
+
+\includegraphics{src/img/action-pack.png}
+
+\hypertarget{css-et-javascript}{%
+\subsection{CSS et JavaScript}\label{css-et-javascript}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textenglish{\texttt{foundation-rails}}
+\item
+  \textenglish{\texttt{bootstrap-sass,\ \textasciitilde{}\textgreater{}\ 3.3.7}}
+\item
+  \textenglish{\texttt{bootstrap,\ \textasciitilde{}\textgreater{}\ 4.0.0.alpha6}}
+\item
+  \textenglish{\texttt{basscss-rails}}
+\item
+  \textenglish{\texttt{bulma-rails}}
+\item
+  \textenglish{\texttt{mui-sass}}
+\item
+  etc.
+\end{itemize}
+
+Voir \href{http://guides.rubyonrails.org/asset_pipeline.html}{Asset
+Pipeline}
+
+Rails 5.1 proposera de gérer ces éléments-là via webpack ou yarn. D'ici
+là, il nous faut passer par les gems associées.
+
+\hypertarget{actioncable}{%
+\subsection{ActionCable}\label{actioncable}}
+
+La nouveauté de Rails 5.0.
+
+Gestion simplifiée des \textenglish{\texttt{WebSocket}} permettant
+d'incorporer des fonctionnalités « temps-réel ».
+
+Voir
+\href{http://guides.rubyonrails.org/action_cable_overview.html}{Action
+Cable Overview}
+
+\hypertarget{activejob}{%
+\subsection{ActiveJob}\label{activejob}}
+
+Gestion des tâches de fond, comme envoyer des e-mails, redimensionner
+des images, \ldots{}
+
+Voir \href{http://guides.rubyonrails.org/active_job_basics.html}{Active
+Jobs Basics}
+
+\hypertarget{actionview}{%
+\subsection{ActionView}\label{actionview}}
+
+La bonne méthode pour créer des formulaires et les lier à des données.
+
+\begin{english}
+
+\begin{verbatim}
+<%= form_for @article, url: {action: 'create'} do |f| %>
+  <%= f.text_field :title %>
+  <%= f.submit 'Create' %>
+<% end %>
+\end{verbatim}
+
+\end{english}
+
+Voir \href{http://guides.rubyonrails.org/form_helpers.html}{Form
+Helpers}
+
+\hypertarget{probluxe8me-avec-ruby-on-rails}{%
+\section{Problème avec Ruby on
+Rails}\label{probluxe8me-avec-ruby-on-rails}}
+
+\includegraphics{src/img/microservices-demo.png}
+
+\hypertarget{conclusion}{%
+\section{Conclusion}\label{conclusion}}
+
+\begin{itemize}
+\tightlist
+\item
+  Laravel tire son inspiration première de Ruby on Rails.
+\item
+  Rails est plus cohérent dans son ensemble tirant partie des
+  fonctionnalités de Ruby.
+\end{itemize}
+
+\includegraphics{src/img/dhh.png}(1)
+
+\hypertarget{difficultuxe9s-pour-vous}{%
+\subsection{Difficultés pour vous}\label{difficultuxe9s-pour-vous}}
+
+\begin{itemize}
+\tightlist
+\item
+  Construisez un produit au fur et à mesure
+\item
+  Déployez souvent
+\item
+  Essayer des bibliothèques
+\item
+  Et ayez un plan!
+\end{itemize}
+
+\includegraphics{src/img/rainbow.jpg}
+
+\hypertarget{sources}{%
+\section*{Sources}\label{sources}}
+\addcontentsline{toc}{section}{Sources}
+
+\hypertarget{refs}{}
+\begin{cslreferences}
+\leavevmode\hypertarget{ref-dhh:2017}{}%
+1. HEINEMEIER HANSSON, David. 2017: Start fewer things, but finish them.
+{[}en~ligne{]}. 2017. {[}Consulté~le~7~février~2017{]}. Disponible à
+l'adresse~: \url{https://twitter.com/dhh/status/815601578329575424}
+\end{cslreferences}

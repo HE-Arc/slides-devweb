@@ -1,0 +1,458 @@
+\hypertarget{syndication}{%
+\section{Syndication}\label{syndication}}
+
+\begin{itemize}
+\tightlist
+\item
+  Principe de vendre un contenu à plusieurs médias
+\item
+  Dans les journaux : dépêches, bandes dessinées, \ldots{}
+\item
+  Télévision : jeux, séries
+\item
+  Web : Flux RSS / Atom
+
+  \begin{itemize}
+  \tightlist
+  \item
+    1 source de donnée, plusieurs abonnés
+  \item
+    Contenu : news, blogs, podcast, \ldots{}
+  \item
+    Accès unique à plusieurs sources d'informations
+  \item
+    Mises à jour fréquentes
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{historique}{%
+\section{Historique}\label{historique}}
+
+\begin{itemize}
+\tightlist
+\item
+  Feed (fil ou flux) RSS
+\item
+  Format d'échange de données en XML
+
+  \begin{itemize}
+  \tightlist
+  \item
+    fournir ou recueillir des données structurées
+  \end{itemize}
+\item
+  Utilisation d'un lecteur (agrégateur) RSS
+\item
+  RSS V.90 Créé en 1999 par Netscape
+\item
+  RSS v1.0 par O'Reilly en 2000
+\item
+  RSS v2.0 par Dave Winer (Harvard) en 2002
+\item
+  Atom v1.0 en 2005 (développement communautaire)
+\end{itemize}
+
+Il y a \emph{neuf} versions de RSS généralement incompatibles entre
+elles. Lire
+\href{https://web.archive.org/web/20110726001954/http://diveintomark.org/archives/2004/02/04/incompatible-rss}{The
+myth of RSS compatibility}
+
+\hypertarget{applications}{%
+\section{Applications}\label{applications}}
+
+\begin{itemize}
+\tightlist
+\item
+  Récupérer l'info pour :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    la lire
+  \item
+    la réutiliser sur un site
+  \end{itemize}
+\item
+  News
+\item
+  Notification : activité, mise à jour
+\item
+  Podcasts
+\item
+  Accès unique à des infos de plusieurs sites
+\item
+  Source de contenu
+\item
+  Augmenter le trafic d'un site
+\item
+  \href{http://blog.louisgray.com/2008/11/30-different-uses-for-rss.html}{Exemples}
+  et
+  \href{http://www.makeuseof.com/tag/14-other-ways-to-use-rss-feeds/}{Passerelles}
+\end{itemize}
+
+\hypertarget{agruxe9gateurs}{%
+\section{Agrégateurs}\label{agruxe9gateurs}}
+
+\begin{itemize}
+\tightlist
+\item
+  Natifs
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Navigateurs (IE, FF, \ldots)
+  \item
+    Clients mail (OL, TB, Evolution, \ldots)
+  \item
+    Applis dédiées (Newsgator, FeedDemon, \ldots)
+  \end{itemize}
+\item
+  WebApps
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Feedly, NetVibes, Sniptracker\ldots{}
+  \end{itemize}
+\item
+  Extensions
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Sage
+  \end{itemize}
+\item
+  \href{https://en.wikipedia.org/wiki/Comparison_of_feed_aggregators}{Liste}
+\end{itemize}
+
+\hypertarget{guxe9nuxe9rer-un-flux-rss}{%
+\section{Générer un flux RSS}\label{guxe9nuxe9rer-un-flux-rss}}
+
+\begin{itemize}
+\tightlist
+\item
+  Fichier XML :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Canal / Items (RSS)
+  \item
+    Entrées (Atom)
+  \end{itemize}
+\item
+  Indiquer le flux au navigateur
+\item
+  Permettre l'abonnement : logo visible dans la page
+\item
+  Génération dynamique du fichier XML
+\end{itemize}
+
+\hypertarget{formats}{%
+\section{Formats}\label{formats}}
+
+\begin{itemize}
+\tightlist
+\item
+  RSS 2.0 (Really Simple Syndication)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Simple, le plus répandu
+  \item
+    Extensible par modules (éléments supplémentaires)
+  \end{itemize}
+\item
+  Atom 1.0 : 2 standards web
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Atom Syndication Format
+  \item
+    Atom Publishing Protocol
+  \end{itemize}
+\item
+  RSS 0.90, 1.0 (RDF Site Summary) : obsolète
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Basé sur RDF
+  \item
+    Extensible par modules
+  \end{itemize}
+\item
+  Antérieurs : RSS 0.91, 0.92 (Rich Site Summary) : obsolètes
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Migration facile vers RSS 2.0
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{rss-2.0}{%
+\section{RSS 2.0}\label{rss-2.0}}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{\textless{}?xml}\NormalTok{ version="1.0" encoding="utf{-}8"}\KeywordTok{?\textgreater{}}
+\KeywordTok{\textless{}rss}\OtherTok{ version=}\StringTok{"2.0"}\KeywordTok{\textgreater{}}
+    \KeywordTok{\textless{}channel\textgreater{}}
+    
+        \KeywordTok{\textless{}title\textgreater{}}\NormalTok{Arc Info News RSS 2.0}\KeywordTok{\textless{}/title\textgreater{}}
+        \KeywordTok{\textless{}link\textgreater{}}\NormalTok{http://www.he{-}arc.ch/}\KeywordTok{\textless{}/link\textgreater{}}
+        \KeywordTok{\textless{}description\textgreater{}}\NormalTok{News HE{-}Arc (RSS 2.0)}\KeywordTok{\textless{}/description\textgreater{}}
+        
+        \KeywordTok{\textless{}language\textgreater{}}\NormalTok{fr}\KeywordTok{\textless{}/language\textgreater{}}
+        \KeywordTok{\textless{}pubDate\textgreater{}}\NormalTok{Sun, 26 Oct 2008 04:00:00 GMT}\KeywordTok{\textless{}/pubDate\textgreater{}}
+        \KeywordTok{\textless{}lastBuildDate\textgreater{}}\NormalTok{Sun, 26 Oct 2008 09:41:01 GMT}\KeywordTok{\textless{}/lastBuildDate\textgreater{}}
+        \KeywordTok{\textless{}docs\textgreater{}}\NormalTok{http://blogs.law.harvard.edu/tech/rss}\KeywordTok{\textless{}/docs\textgreater{}}
+        \KeywordTok{\textless{}managingEditor\textgreater{}}\NormalTok{david.grunenwald@he{-}arc.ch}\KeywordTok{\textless{}/managingEditor\textgreater{}}
+        \KeywordTok{\textless{}webMaster\textgreater{}}\NormalTok{david.grunenwald@he{-}arc.ch}\KeywordTok{\textless{}/webMaster\textgreater{}}
+        \KeywordTok{\textless{}ttl\textgreater{}}\NormalTok{5}\KeywordTok{\textless{}/ttl\textgreater{}}
+    
+        \KeywordTok{\textless{}item\textgreater{}}
+          \KeywordTok{\textless{}title\textgreater{}}\NormalTok{Nouveau cours d\textquotesingle{}Applications Internet 2}\KeywordTok{\textless{}/title\textgreater{}}
+          \KeywordTok{\textless{}link\textgreater{}}\NormalTok{https://intranet.he{-}arc.ch/sites/ingenierie/}
+\NormalTok{          Bachelor\_Modules\_Annees\_Fich/12{-}13/Niveau{-}3/}
+\NormalTok{          ING{-}DM3254{-}12{-}D\%C3\%A9veloppement\%20web\%20et\%20mobile{-}V1.docx}\KeywordTok{\textless{}/link\textgreater{}}
+          \KeywordTok{\textless{}description\textgreater{}}\NormalTok{Un nouveau cours}\KeywordTok{\textless{}/description\textgreater{}}
+          \KeywordTok{\textless{}pubDate\textgreater{}}\NormalTok{Mon, 27 Oct 2008 09:39:21 GMT}\KeywordTok{\textless{}/pubDate\textgreater{}}
+        \KeywordTok{\textless{}/item\textgreater{}}
+    
+    \KeywordTok{\textless{}/channel\textgreater{}}
+\KeywordTok{\textless{}/rss\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{atom-1.0}{%
+\section{Atom 1.0}\label{atom-1.0}}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{\textless{}?xml}\NormalTok{ version="1.0" encoding="utf{-}8"}\KeywordTok{?\textgreater{}}
+\KeywordTok{\textless{}feed}\OtherTok{ xmlns=}\StringTok{"http://www.w3.org/2005/Atom"}\KeywordTok{\textgreater{}}
+ 
+    \KeywordTok{\textless{}title\textgreater{}}\NormalTok{Arc Info News Atom 1.0}\KeywordTok{\textless{}/title\textgreater{}}
+    \KeywordTok{\textless{}subtitle\textgreater{}}\NormalTok{version Atom}\KeywordTok{\textless{}/subtitle\textgreater{}}
+    \KeywordTok{\textless{}link}\OtherTok{ rel=}\StringTok{"self"}\OtherTok{ type=}\StringTok{"application/atom+xml"} 
+\OtherTok{        href=}\StringTok{"http://www.he{-}arc.ch/rss{-}generator/atom.php"} \KeywordTok{/\textgreater{}}
+
+    \KeywordTok{\textless{}updated\textgreater{}}\NormalTok{2008{-}10{-}27T18:30:02Z}\KeywordTok{\textless{}/updated\textgreater{}}
+    \KeywordTok{\textless{}author\textgreater{}}
+        \KeywordTok{\textless{}name\textgreater{}}\NormalTok{David Grunenwald}\KeywordTok{\textless{}/name\textgreater{}}
+        \KeywordTok{\textless{}email\textgreater{}}\NormalTok{david.grunenwald@he{-}arc.ch}\KeywordTok{\textless{}/email\textgreater{}}
+    \KeywordTok{\textless{}/author\textgreater{}}
+    \KeywordTok{\textless{}id\textgreater{}}\NormalTok{http://dgr.he{-}arc.ch/}\KeywordTok{\textless{}/id\textgreater{}}
+     
+    \KeywordTok{\textless{}entry\textgreater{}}
+        \KeywordTok{\textless{}title\textgreater{}}\NormalTok{Nouveau cours d\textquotesingle{}Applications Internet 2}\KeywordTok{\textless{}/title\textgreater{}}
+        \KeywordTok{\textless{}link\textgreater{}}\NormalTok{https://intranet.he{-}arc.ch/sites/ingenierie/}
+\NormalTok{          Bachelor\_Modules\_Annees\_Fich/12{-}13/Niveau{-}3/}
+\NormalTok{          ING{-}DM3254{-}12{-}D\%C3\%A9veloppement\%20web\%20et\%20mobile{-}V1.docx}\KeywordTok{\textless{}/link\textgreater{}}
+        \KeywordTok{\textless{}id\textgreater{}}\NormalTok{http://dgr.he{-}arc.ch/atom/1234}\KeywordTok{\textless{}/id\textgreater{}}
+        \KeywordTok{\textless{}updated\textgreater{}}\NormalTok{2008{-}10{-}27T18:30:02Z}\KeywordTok{\textless{}/updated\textgreater{}}
+        \KeywordTok{\textless{}summary\textgreater{}}\NormalTok{Un tout nouveau cours.}\KeywordTok{\textless{}/summary\textgreater{}}
+    \KeywordTok{\textless{}/entry\textgreater{}}
+ 
+\KeywordTok{\textless{}/feed\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{guxe9nuxe9rer-le-flux}{%
+\section{Générer le flux}\label{guxe9nuxe9rer-le-flux}}
+
+\begin{itemize}
+\tightlist
+\item
+  Données dynamiques
+\item
+  Source de données identique à celle de l'application
+\item
+  Nécessité de générer le fichier à la volée
+\item
+  Nouveaux items en premier
+\item
+  Possibilité d'afficher le flux avec XSLT
+\end{itemize}
+
+\hypertarget{signaler-la-pruxe9sence-dun-fil-rss}{%
+\section{Signaler la présence d'un fil
+RSS}\label{signaler-la-pruxe9sence-dun-fil-rss}}
+
+\begin{itemize}
+\tightlist
+\item
+  Au navigateur
+\end{itemize}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{\textless{}link}\OtherTok{ rel=}\StringTok{"alternate"}\OtherTok{ type=}\StringTok{"application/rss+xml"}\OtherTok{ title=}\StringTok{"RSS"} 
+\OtherTok{    href=}\StringTok{"http://www.site.tld/feedfilename.xml"}\KeywordTok{\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\begin{itemize}
+\tightlist
+\item
+  À l'utilisateur
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Icône + lien vers le script générant le flux
+  \end{itemize}
+
+  \begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{\textless{}a}\OtherTok{ href=}\StringTok{"http://www.site.tld/feed"}\KeywordTok{\textgreater{}}
+\KeywordTok{\textless{}img}\OtherTok{ src=}\StringTok{"rss{-}icon.png"}\OtherTok{ alt=}\StringTok{"M\textquotesingle{}abonner"} \KeywordTok{/\textgreater{}\textless{}/a\textgreater{}} 
+\end{Highlighting}
+\end{Shaded}
+
+  \end{english}
+\item
+  Valider un flux
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \href{http://validator.w3.org/feed/}{w3c}
+  \item
+    \href{http://www.feedvalidator.org/}{feedvalidator}
+  \end{itemize}
+\item
+  MIME Types
+
+  \begin{itemize}
+  \tightlist
+  \item
+    application/atom+xml
+  \item
+    application/rss+xml
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{podcasts}{%
+\section{Podcasts}\label{podcasts}}
+
+\begin{itemize}
+\tightlist
+\item
+  Elément en RSS 2.0 :
+\end{itemize}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{\textless{}item\textgreater{}}
+\KeywordTok{\textless{}title\textgreater{}}\NormalTok{Podcast}\KeywordTok{\textless{}/title\textgreater{}}
+\KeywordTok{\textless{}link\textgreater{}}\NormalTok{http://www.website\_url.com}\KeywordTok{\textless{}/link\textgreater{}}
+\KeywordTok{\textless{}description\textgreater{}}\NormalTok{Podcast : audio.mp3}\KeywordTok{\textless{}/description\textgreater{}}
+
+\KeywordTok{\textless{}enclosure}\OtherTok{ url=}\StringTok{"http://www.site.tld/sounds/audio.mp3"}\OtherTok{ length=}\StringTok{"666666"}\OtherTok{ type=}\StringTok{"audio/mpeg"}\KeywordTok{/\textgreater{}}
+
+\KeywordTok{\textless{}guid}\OtherTok{ isPermaLink=}\StringTok{"false"}\KeywordTok{\textgreater{}}\NormalTok{2004{-}11{-}30{-}02}\KeywordTok{\textless{}/guid\textgreater{}}
+\KeywordTok{\textless{}/item\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\begin{itemize}
+\tightlist
+\item
+  Elément en Atom 1.0 :
+\end{itemize}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{\textless{}entry\textgreater{}} 
+\KeywordTok{\textless{}id\textgreater{}}\NormalTok{http://www.example.org/entries/1}\KeywordTok{\textless{}/id\textgreater{}} \KeywordTok{\textless{}title\textgreater{}}\NormalTok{Atom 1.0}\KeywordTok{\textless{}/title\textgreater{}} 
+\KeywordTok{\textless{}updated\textgreater{}}\NormalTok{2005{-}07{-}15T12:00:00Z}\KeywordTok{\textless{}/updated\textgreater{}} 
+\KeywordTok{\textless{}link}\OtherTok{ href=}\StringTok{"http://www.example.org/entries/1"} \KeywordTok{/\textgreater{}} 
+\KeywordTok{\textless{}summary\textgreater{}}\NormalTok{An overview of Atom 1.0}\KeywordTok{\textless{}/summary\textgreater{}} 
+
+\KeywordTok{\textless{}link}\OtherTok{ rel=}\StringTok{"enclosure"} 
+\OtherTok{type=}\StringTok{"audio/mpeg"}\OtherTok{ title=}\StringTok{"Sttellla {-} ça va comme un lundi"} 
+\OtherTok{href=}\StringTok{" http://www.site.tld/sounds/audio.mp3 "}
+\OtherTok{length=}\StringTok{"666666"} \KeywordTok{/\textgreater{}}
+
+\KeywordTok{\textless{}/entry\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{alternatives}{%
+\section{Alternatives}\label{alternatives}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{http://ogp.me/}{Facebook Open Graph}
+\item
+  \href{https://dev.twitter.com/cards/overview}{Twitter Cards}
+\item
+  \href{http://schema.org/}{Google Schema.org}
+\item
+  \href{http://microformats.org/}{Microformats}
+\item
+  \href{http://json-ld.org/}{JSON-LD}
+\end{itemize}
+
+De multiples spécifications permettent d'enrichir le contenu d'une page
+afin de la rendre aisément « consommable » par un moteur de recherche,
+ou une plateforme sociale (e.g.~Facebook, Twitter, Reddit, etc.)
+
+RDF/XML (utilisé par RSS 0.90, 0.91) est progressivement remplacé par
+les \emph{microdata} (Schema.org), RDFa ou JSON-LD. Les microformats
+sont notamment utilisés par LinkedIn.
+
+\hypertarget{pour-en-savoir-plus}{%
+\section{Pour en savoir plus\ldots{}}\label{pour-en-savoir-plus}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{http://www.xul.fr/xml-rss.html}{Étapes de création d'un flux}
+\item
+  \href{http://www.rssboard.org/rss-specification}{Spécification RSS
+  2.0}
+\item
+  \href{https://tools.ietf.org/html/rfc4287}{Spécification Atom 1.0}
+\item
+  \href{http://www.differencebetween.info/difference-between-rss-and-atom}{Comparatif
+  RSS 2.0 / Atom 1.0}
+\item
+  \href{https://trends.builtwith.com/feeds}{Stats} d'utilisation
+\item
+  \href{http://www.makeuseof.com/tag/rss-dead-look-numbers/}{Is RSS dead
+  ?} (03.2015)
+\end{itemize}
+
+\hypertarget{sources}{%
+\section{Sources}\label{sources}}

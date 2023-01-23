@@ -1,0 +1,474 @@
+\hypertarget{jquery}{%
+\section{jQuery}\label{jquery}}
+
+\begin{itemize}
+\tightlist
+\item
+  John Resig, 2006
+\item
+  Bibliothèque JS, gratuit, OS (licence MIT)
+\item
+  Facilite le développement JS pour les tâches fréquentes :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Manipulations DOM
+  \item
+    Manipulations CSS
+  \item
+    Réponse aux évenements du navigateur
+  \item
+    Effets visuels et animations
+  \item
+    Requêtes et réponses Ajax
+  \end{itemize}
+\item
+  Abstraction implémentations différents navigateurs
+\item
+  Facile à apprendre
+\item
+  Utilisation du chaînage des méthodes et des callbacks
+\end{itemize}
+
+\hypertarget{utilisation}{%
+\section{Utilisation}\label{utilisation}}
+
+\begin{itemize}
+\tightlist
+\item
+  Inclusion \href{https://jquery.com/download/\#other-cdns}{CDN}
+\end{itemize}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\OperatorTok{\textless{}}\NormalTok{script src}\OperatorTok{=}\StringTok{"https://code.jquery.com/jquery{-}3.1.1.min.js"}\OperatorTok{\textgreater{}\textless{}/}\NormalTok{script}\OperatorTok{\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\begin{itemize}
+\tightlist
+\item
+  Nos scripts
+\end{itemize}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\OperatorTok{\textless{}}\NormalTok{script src}\OperatorTok{=}\StringTok{"application.js"}\OperatorTok{\textgreater{}\textless{}/}\NormalTok{script}\OperatorTok{\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\begin{itemize}
+\tightlist
+\item
+  Syntaxe basique
+\end{itemize}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{$}\NormalTok{(selecteur)}\OperatorTok{.}\FunctionTok{action}\NormalTok{()}\OperatorTok{;}      \CommentTok{// $() est un raccourci pour jQuery()}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\begin{itemize}
+\tightlist
+\item
+  Utilisation de sélecteurs CSS, id ou classes
+\end{itemize}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{$}\NormalTok{(}\BuiltInTok{document}\NormalTok{)}\OperatorTok{;}                \CommentTok{// retourne le DOM}
+\FunctionTok{$}\NormalTok{(}\StringTok{"h3"}\NormalTok{)}\OperatorTok{.}\FunctionTok{hide}\NormalTok{()}\OperatorTok{;}             \CommentTok{// cache tous les éléments h3}
+\FunctionTok{$}\NormalTok{(}\StringTok{".post"}\NormalTok{)}\OperatorTok{;}                 \CommentTok{// sélectionne les éléments de classe "post"}
+\KeywordTok{var}\NormalTok{ node }\OperatorTok{=} \FunctionTok{$}\NormalTok{(}\StringTok{\textquotesingle{}\textless{}p\textgreater{}New\textless{}/p\textgreater{}\textquotesingle{}}\NormalTok{)}\OperatorTok{;} \CommentTok{// un nouveau noeud}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\begin{itemize}
+\tightlist
+\item
+  Pour être sûr que le document est chargé :
+\end{itemize}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{$}\NormalTok{(}\BuiltInTok{document}\NormalTok{)}\OperatorTok{.}\FunctionTok{ready}\NormalTok{(}\KeywordTok{function}\NormalTok{()\{}
+    \BuiltInTok{console}\OperatorTok{.}\FunctionTok{log}\NormalTok{(}\StringTok{"prêt!"}\NormalTok{)}
+\NormalTok{\})}\OperatorTok{;}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+ou
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{$}\NormalTok{(}\KeywordTok{function}\NormalTok{() \{}
+    \BuiltInTok{console}\OperatorTok{.}\FunctionTok{log}\NormalTok{(}\StringTok{"prêt!"}\NormalTok{)}
+\NormalTok{\})}\OperatorTok{;}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{suxe9lection-dans-le-dom}{%
+\section{Sélection dans le DOM}\label{suxe9lection-dans-le-dom}}
+
+\begin{itemize}
+\tightlist
+\item
+  Sélection
+\end{itemize}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{$}\NormalTok{(}\StringTok{"h1"}\NormalTok{)}\OperatorTok{;}                        \CommentTok{// noeud élément}
+\FunctionTok{$}\NormalTok{(}\StringTok{"h1"}\NormalTok{)}\OperatorTok{.}\FunctionTok{text}\NormalTok{()}\OperatorTok{;}                 \CommentTok{// noeud texte en lecture}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\begin{itemize}
+\tightlist
+\item
+  Modification
+\end{itemize}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{$}\NormalTok{(}\StringTok{"h1"}\NormalTok{)}\OperatorTok{.}\FunctionTok{text}\NormalTok{(}\StringTok{"Nouveau Texte"}\NormalTok{)}\OperatorTok{;} \CommentTok{// noeud texte modifié}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\begin{itemize}
+\tightlist
+\item
+  Tous les fils (sélecteur descendant)
+\end{itemize}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{$}\NormalTok{(}\StringTok{"\#intro li"}\NormalTok{)}\OperatorTok{;}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\begin{itemize}
+\tightlist
+\item
+  Que les fils directs (sélecteur d'enfants)
+\end{itemize}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{$}\NormalTok{(}\StringTok{"\#intro \textgreater{} li"}\NormalTok{)}\OperatorTok{;}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\begin{itemize}
+\tightlist
+\item
+  Sélecteur multiple
+\end{itemize}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{$}\NormalTok{(}\StringTok{".post, \#main "}\NormalTok{)}\OperatorTok{;}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\begin{itemize}
+\tightlist
+\item
+  D'autres
+  \href{https://www.w3schools.com/jquery/jquery_selectors.asp}{exemples}
+  de sélecteurs
+\end{itemize}
+
+\hypertarget{parcours-traversing3}{%
+\section{\texorpdfstring{Parcours
+(\href{https://www.w3schools.com/jquery/jquery_traversing.asp}{traversing})}{Parcours (traversing)}}\label{parcours-traversing3}}
+
+\begin{itemize}
+\tightlist
+\item
+  Parcours du DOM dans les trois directions :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Depuis le noeud courant (sélectionné)
+  \item
+    Haut : \textenglish{\texttt{parent(),\ parents()}}
+  \item
+    Bas : \textenglish{\texttt{children(),\ find()}}
+  \item
+    Frères : \textenglish{\texttt{sibling(),\ next(),\ prev()}}
+  \end{itemize}
+\item
+  Filtrage
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textenglish{\texttt{first(),\ last(),\ eq()}}
+  \item
+    \textenglish{\texttt{filter(),\ not()}}
+  \item
+    \href{https://www.w3schools.com/jquery/jquery_ref_traversing.asp}{Référence}
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{modifications-de-contenu}{%
+\section{Modifications de contenu}\label{modifications-de-contenu}}
+
+\begin{itemize}
+\tightlist
+\item
+  Accès au contenu :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textenglish{\texttt{text()}} : get/set le texte entre les balises
+  \item
+    \textenglish{\texttt{html()}} : get/set l'élément complet (yc
+    balises)
+  \item
+    \textenglish{\texttt{val()}} : get/set les valeurs d'un formulaire
+  \item
+    \textenglish{\texttt{attr()}} : set la valeur d'un attribut
+  \end{itemize}
+\item
+  Ajout de contenu :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textenglish{\texttt{append(),\ prepend()}} : au début/fin de la
+    sélection (dans l'élément)
+  \item
+    \textenglish{\texttt{before(),\ after()}} : avant/après la sélection
+  \end{itemize}
+\item
+  Suppression
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textenglish{\texttt{empty()}} : suppression des enfants
+  \item
+    \textenglish{\texttt{remove()}} : supression de la sélection
+    (possibilité de filtrer)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{accuxe8s-aux-css}{%
+\section{Accès aux CSS}\label{accuxe8s-aux-css}}
+
+\begin{itemize}
+\tightlist
+\item
+  Accès aux classes
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textenglish{\texttt{addClass()}} : ajout de classe(s) à l'élément
+    sélectionné
+  \item
+    \textenglish{\texttt{removeClass()}} : suppression de classe(s)
+  \item
+    \textenglish{\texttt{toggleClass()}} : suppression si présente,
+    ajout sinon
+  \end{itemize}
+\item
+  Attribut style d'un élément : \textenglish{\texttt{css()}}
+\end{itemize}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{$}\NormalTok{(}\StringTok{"p"}\NormalTok{)}\OperatorTok{.}\FunctionTok{css}\NormalTok{(}\StringTok{"background{-}color"}\NormalTok{)}\OperatorTok{;}                 \CommentTok{// get}
+\FunctionTok{$}\NormalTok{(}\StringTok{"p"}\NormalTok{)}\OperatorTok{.}\FunctionTok{css}\NormalTok{(\{}\StringTok{"background{-}color"}\OperatorTok{:}\StringTok{"yellow"}\OperatorTok{,}\StringTok{"font{-}size"}\OperatorTok{:}\StringTok{"200\%"}\NormalTok{\})}\OperatorTok{;}   \CommentTok{// set}
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{evuxe9nements}{%
+\section{Evénements}\label{evuxe9nements}}
+
+\begin{itemize}
+\tightlist
+\item
+  Souris
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textenglish{\texttt{click,\ dblclick,\ mouseenter,\ mouseleave}}
+  \end{itemize}
+\item
+  Clavier
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textenglish{\texttt{keypress,\ keyup,\ keydown}}
+  \end{itemize}
+\item
+  Formulaires
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textenglish{\texttt{submit,\ change,\ focus,\ blur}}
+  \end{itemize}
+\item
+  Document
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textenglish{\texttt{ready,\ load,\ resize,\ scroll,\ unload}}
+  \end{itemize}
+\item
+  Exemple
+\end{itemize}
+
+\begin{english}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{$}\NormalTok{(}\StringTok{"p"}\NormalTok{)}\OperatorTok{.}\FunctionTok{click}\NormalTok{(}\KeywordTok{function}\NormalTok{()\{}
+  \CommentTok{// code à éxecuter ici}
+\NormalTok{\})}\OperatorTok{;} 
+\end{Highlighting}
+\end{Shaded}
+
+\end{english}
+
+\hypertarget{ajax11}{%
+\section{\texorpdfstring{\href{https://www.w3schools.com/jquery/jquery_ajax_load.asp}{AJAX}}{AJAX}}\label{ajax11}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textenglish{\texttt{\$(selector).load(URL,\ data,\ callback)}}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textenglish{\texttt{URL}} : Ressource ciblée par la requête
+  \item
+    \textenglish{\texttt{data}} : éventuel contenu
+  \item
+    \textenglish{\texttt{callback}} : fonction de rappel avec 3
+    paramètres :
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \textenglish{\texttt{responseTxt}}
+    \item
+      \textenglish{\texttt{statusTxt}}
+    \item
+      \textenglish{\texttt{xhr}}
+    \end{itemize}
+  \end{itemize}
+\item
+  \textenglish{\texttt{\$.get(URL,\ callback)}}
+\item
+  \textenglish{\texttt{\$.post(URL,\ data,\ callback)}}
+\end{itemize}
+
+\hypertarget{effets-et-animations}{%
+\section{Effets et animations}\label{effets-et-animations}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textenglish{\texttt{hide(),\ show(),\ toggle()}}
+\item
+  \textenglish{\texttt{fadeIn(),\ fadeOut(),\ fadeToggle()}}
+\item
+  \textenglish{\texttt{slideDown(),\ slideUp(),\ slideToggle()}}
+\item
+  \href{https://www.w3schools.com/jquery/jquery_animate.asp}{\textenglish{\texttt{animate()}}}
+\end{itemize}
+
+\hypertarget{alternatives}{%
+\section{Alternatives}\label{alternatives}}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{jQuery aussi, ça fait vieux}, YBL 17.10.29
+\item
+  \href{https://gist.github.com/paulirish/12fb951a8b893a454b32}{bling.js}
+\item
+  API
+  \href{https://www.w3schools.com/jsref/met_document_queryselectorall.asp}{queryselectorall()}
+  au lieu des getElementsBy\ldots{}
+\end{itemize}
+
+\hypertarget{ruxe9fuxe9rences}{%
+\section{Références}\label{ruxe9fuxe9rences}}
+
+\begin{itemize}
+\tightlist
+\item
+  Site officiel de \href{https://jquery.com/}{jQuery}
+\item
+  Tutos \href{https://www.w3schools.com/jquery/}{w3schools}
+\item
+  \href{https://github.com/jquery/sizzle/wiki}{SizzleJS} : uniquement
+  les sélecteurs
+\item
+  Comparaison avec \href{http://vanilla-js.com/}{Vanilla JS}
+\end{itemize}
+
+\hypertarget{sources}{%
+\section{Sources}\label{sources}}
