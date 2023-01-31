@@ -27,7 +27,7 @@
 * Référence principale dans le domaine
 * Propose :
   * Top 10 (web et [mobile][17]) : [Méthode][40], [CVSS][41], [CWE][42] 
-  * Grand communauté d'experts
+  * Grande communauté d'experts
   * Formation, documentation et ressources
   * Outils d'audit, de tests et de formation
 
