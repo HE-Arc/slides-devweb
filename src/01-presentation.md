@@ -2,7 +2,7 @@
 
 # Développement web il3
 ## Présentation du cours{.title}
-<footer>HE-Arc 2022/23 DGR et YBL</footer>
+<footer>HE-Arc 2023/24 DGR et YBL</footer>
 
 # Programme
 * Frameworks MVC : Laravel, Django, …
@@ -74,7 +74,7 @@
 |6|Examen|||
 
 # Suivi du calendrier (à jour sur [teams][teams])
-![Suivi calendrier](img/DW2223.png)
+![Suivi calendrier](img/DW2324.png)
 
 # Jalons pour chacun des 2 projets
 * Echéances
