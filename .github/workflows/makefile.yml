@@ -12,10 +12,26 @@ jobs:
     steps:
       - uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: make texlive texlive-xetex
+          packages: >
+          make 
+          texlive-xetex
+          fonts-inconsolata 
+          fonts-linuxlibertine 
+          latex-xcolor 
+          latexmk 
+          librsvg2-bin 
+          lmodern
+          texlive
+          texlive-fonts-extra
+          texlive-fonts-recommended
+          texlive-generic-recommended
+          texlive-latex-extra
+          texlive-math-extra
+          texlive-xetex
+          texlive-lang-french
           version: 1.0    
       - run: |
-         sudo fmtutil-sys --all
+         # sudo fmtutil-sys --all
          wget https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb -O pandoc.deb
          sudo dpkg -i pandoc.deb     
       - run: |
