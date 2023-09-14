@@ -56,7 +56,7 @@ $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 			--pdf-engine=xelatex \
 			--lua-filter=meta.lua \
 			--lua-filter=english.lua \
-			--filter=pandoc-citeproc \
+			--citeproc \
 			-H $(TEMPLATES)/header.tex \
 			-V documentclass="scrartcl" \
 			-V links-as-notes=true \
