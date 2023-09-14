@@ -29,9 +29,6 @@ jobs:
 
           version: 1.0    
       - run: |
-         sudo apt update
-         sudo apt-cache search xelatexemoji
-         # sudo fmtutil-sys --all
          wget https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb -O pandoc.deb
          sudo dpkg -i pandoc.deb     
       - run: |
@@ -41,10 +38,12 @@ jobs:
          wget https://raw.githubusercontent.com/mreq/xelatex-emoji/master/xelatexemoji.sty
          wget https://raw.githubusercontent.com/mreq/xelatex-emoji/master/xelatexemoji-flags.sty
          sed -i 's/^\(\\usepackage{amsmath}\)/%\1/' xelatexemoji.sty
-         sed -i 's/^\(\\providecommand{\\xelatexemojipath}\)/%\1/' xelatexemoji.sty      
-      
+         sed -i 's/^\(\\providecommand{\\xelatexemojipath}\)/%\1/' xelatexemoji.sty            
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: |
+         sudo apt update
+         sudo apt-cache search xelatexemoji
+         sudo fmtutil-sys --allecho "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: Check out repository code
         uses: actions/checkout@v3
