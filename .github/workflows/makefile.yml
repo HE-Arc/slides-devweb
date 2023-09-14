@@ -7,13 +7,17 @@ env:
   EMOJIONE_VERSION: 5.0.3
 
 jobs:
-  Explore-GitHub-Actions:
+  Install:
     runs-on: ubuntu-latest
     steps:
       - uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: make
+          packages: make texlive
           version: 1.0    
+      - run: |
+         wget https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb -O pandoc.deb
+         sudo dpkg -i pandoc.deb        
+      
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
