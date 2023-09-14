@@ -13,22 +13,10 @@ jobs:
       - uses: awalsh128/cache-apt-pkgs-action@latest
         with:
           packages: >
-          make 
-          texlive-xetex
-          fonts-inconsolata 
-          fonts-linuxlibertine 
-          latex-xcolor 
-          latexmk 
-          librsvg2-bin 
-          lmodern
+          make
           texlive
-          texlive-fonts-extra
-          texlive-fonts-recommended
-          texlive-generic-recommended
-          texlive-latex-extra
-          texlive-math-extra
           texlive-xetex
-          texlive-lang-french
+
           version: 1.0    
       - run: |
          # sudo fmtutil-sys --all
