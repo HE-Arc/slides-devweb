@@ -1,6 +1,6 @@
 % 01.Cours devweb
 
-# Développement web il3
+# Développement web ISC3-il
 ## Présentation du cours{.title}
 <footer>HE-Arc 2023/24 DGR et YBL</footer>
 

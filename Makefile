@@ -34,11 +34,12 @@ $(SLIDES): $(BUILDDIR)/%.html : $(SOURCEDIR)/%.md
 	sed -e 's/(\(img\/\)/($(SOURCEDIR)\/\1/g' "$^" \
 		| sed -e "\$$a# Sources" \
 		| pandoc -s \
-			-f markdown \
+		        -f markdown \
 			-t dzslides \
-			--self-contained \
+			--embed-resources \
+			--standalone \
 			--lua-filter=meta.lua \
-			--filter=pandoc-citeproc \
+			--citeproc \
 			-V show-notes=true \
 			-V title="" \
 			-V title-prefix="HE-Arc" \
@@ -55,7 +56,7 @@ $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 			--pdf-engine=xelatex \
 			--lua-filter=meta.lua \
 			--lua-filter=english.lua \
-			--filter=pandoc-citeproc \
+			--citeproc \
 			-H $(TEMPLATES)/header.tex \
 			-V documentclass="scrartcl" \
 			-V links-as-notes=true \
