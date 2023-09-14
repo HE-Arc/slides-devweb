@@ -3,8 +3,8 @@ run-name: ${{ github.actor }} is generating new slides
 on: [push]
 
 env:
-  PANDOC_VERSION: 2.10.1
-  EMOJIONE_VERSION: 5.0.3
+  PANDOC_VERSION: 3.1.8
+  EMOJIONE_VERSION: 8.0.0
 
 jobs:
   Install:
