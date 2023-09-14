@@ -16,6 +16,20 @@ jobs:
             make
             texlive
             texlive-xetex
+            fonts-inconsolata
+            fonts-linuxlibertine
+            latex-xcolor
+            latexmk
+            librsvg2-bin
+            lmodern
+            texlive
+            texlive-fonts-extra
+            texlive-fonts-recommended
+            texlive-generic-recommended
+            texlive-latex-extra
+            texlive-math-extra
+            texlive-xetex
+            texlive-lang-french
 
           version: 1.0    
       - run: |
