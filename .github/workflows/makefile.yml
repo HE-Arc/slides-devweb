@@ -37,7 +37,7 @@ jobs:
       - name: Run the Makefile
         run: |
           ls ${{ github.workspace }}
-          make all
+          make slides
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the build repository
         run: |
