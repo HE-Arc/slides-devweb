@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: fonts-inconsolata fonts-linuxlibertine latex-xcolor latexmk librsvg2-bin lmodern make
+          packages: make
           version: 1.0    
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
