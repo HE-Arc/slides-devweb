@@ -24,7 +24,6 @@ jobs:
             texlive
             texlive-fonts-extra
             texlive-fonts-recommended
-            texlive-generic-recommended
             texlive-latex-extra
             texlive-math-extra
             texlive-xetex
