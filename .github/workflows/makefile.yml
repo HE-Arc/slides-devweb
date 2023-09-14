@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: >
+          packages: >-
           make
           texlive
           texlive-xetex
