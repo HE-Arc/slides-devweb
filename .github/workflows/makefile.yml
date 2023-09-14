@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: make texlive
+          packages: make texlive xelatex
           version: 1.0    
       - run: |
          wget https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb -O pandoc.deb
@@ -40,8 +40,8 @@ jobs:
       - name: List files in the build repository
         run: |
           ls ${{ github.workspace }}
+          echo "B\n"
           ls ${{ github.workspace }}/build
           
-      - run: make all
       
       - run: echo "🍏 This job's status is ${{ job.status }}."
