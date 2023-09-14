@@ -37,7 +37,7 @@ $(SLIDES): $(BUILDDIR)/%.html : $(SOURCEDIR)/%.md
 		        -f markdown \
 			-t dzslides \
 			--embed-resources \
-			--sstandalone \
+			--standalone \
 			--lua-filter=meta.lua \
 			--citeproc \
 			-V show-notes=true \
