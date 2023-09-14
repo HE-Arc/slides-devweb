@@ -1,10 +1,18 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+name: html+pdf generation with pandoc
+run-name: ${{ github.actor }} is generating new slides on: [push]
+
+env:
+  PANDOC_VERSION=2.10.1
+  EMOJIONE_VERSION=5.0.3
+
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
+      - uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: fonts-inconsolata fonts-linuxlibertine latex-xcolor latexmk librsvg2-bin lmodern make
+          version: 1.0    
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
