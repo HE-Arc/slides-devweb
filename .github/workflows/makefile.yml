@@ -40,7 +40,7 @@ jobs:
       - name: List files in the build repository
         run: |
           ls ${{ github.workspace }}
-          echo "B\n"
+          echo "Build:\n"
           ls ${{ github.workspace }}/build
           
       
