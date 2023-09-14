@@ -13,9 +13,9 @@ jobs:
       - uses: awalsh128/cache-apt-pkgs-action@latest
         with:
           packages: >-
-          make
-          texlive
-          texlive-xetex
+            make
+            texlive
+            texlive-xetex
 
           version: 1.0    
       - run: |
