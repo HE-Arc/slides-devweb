@@ -10,24 +10,6 @@ jobs:
   Install:
     runs-on: ubuntu-latest
     steps:
-      - uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          packages: >-
-            make
-            texlive
-            texlive-xetex
-            fonts-inconsolata
-            fonts-linuxlibertine
-            latexmk
-            librsvg2-bin
-            lmodern
-            texlive
-            texlive-fonts-extra
-            texlive-fonts-recommended
-            texlive-latex-extra
-            texlive-lang-french
-
-          version: 1.0    
       - run: |
          wget https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb -O pandoc.deb
          sudo dpkg -i pandoc.deb     
@@ -52,7 +34,7 @@ jobs:
       - name: Run the Makefile
         run: |
           ls ${{ github.workspace }}
-          make all
+          make slides # XeTeX : I can't find the format file `xelatex.fmt'!
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the build repository
         run: |
