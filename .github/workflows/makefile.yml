@@ -33,8 +33,9 @@ jobs:
         
       - name: Add index
         run: |
-          cp ${{ github.workspace }}/template/index.html ${{ github.workspace }}/build
-          cp ${{ github.workspace }}/template/style.css ${{ github.workspace }}/build
+          echo ${{ github.workspace }}
+          cp /home/runner/work/slides-devweb/template/index.html /home/runner/work/slides-devweb/build
+          cp /home/runner/work/slides-devweb/template/style.css /home/runner/work/slides-devweb/build
           echo "🖥️ build dir :"
           ls ${{ github.workspace }}/build  
 
