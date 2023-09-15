@@ -84,7 +84,7 @@
     3. Authentification et 1er déploiement
     4. Modèles avec relations (au moins 3, dont 1 n-n)
     5. 
-    6. <span class="yel-bg">Rendu intermédiaire (1x [route, validation, contrôleur, vue] GET et POST + bonne pratique Laravel + app déployé)</span>
+    6. <span class="yel-bg">Rendu intermédiaire (1x [route, validation, contrôleur, vue] GET et POST + bonnes pratiques Laravel + app déployée)</span>
     7. 
     8. Minimal Viable Product
     9. 
@@ -139,7 +139,7 @@
 * Aux projets des autres : Issues, PR
 * Participez à la [Hacktoberfest][hacktober]
 * Pariticipez au cours : contenu, présentation, pages ([index][ghpindex], [wiki][wikicours], ...)
-* Echangez avec [caravel](https://caravel.ing.he-arc.ch/) (groupes : 22-ISC3il-a et 22-ISC3il-b) et tout autre im (discord, teams, ...)
+* Echangez avec [caravel](https://caravel.ing.he-arc.ch/) (groupe : 23-ISC3il-a) et tout autre im (discord, teams, ...)
 
 # Présentation facultative
 * Facultatif, ne peut qu’augmenter la moyenne
@@ -159,7 +159,7 @@
     * Vous n'avez droit à rien : on vous mettra à disposition 1 crayon et du papier pour préparer votre présentation,
     * L'examen porte sur toute la matière vue au en cours (yc workshops),
     * Les questions sont générales, il s'agit de présenter des concepts vus en cours (souvent 1 chapitre), et expliquer certains mécanismes sous-jacents,
-    * Il n'agit pas de réciter le contenu des slides par coeur, mais de les présenter avec vos propres mots (compréhension), et vos propres exemples.
+    * Il n'agit pas de réciter le contenu des slides par coeur coeur, mais de les présenter avec vos propres mots (compréhension), et vos propres exemples.
 
 # Examen oral SA
 * Déroulement : 
@@ -178,14 +178,14 @@
 [RE]: https://www.linkedin.com/in/raphaelemourgeon/
 [slidesghp]: https://he-arc.github.io/slides-devweb/
 [slides]: https://github.com/HE-Arc/slides-devweb/tree/master/src
-[module]:https://www.he-arc.ch/reglementation
+[module]: https://rs.he-arc.ch/index.php?id_menu=78&id_parent=76
 [sshkey]: https://github.com/settings/keys
 [gharc]: https://github.com/HE-Arc/
 [dbp]: http://wiki.dbpedia.org/
 [odata]: https://opendata.swiss/fr/
 [prodhunt]: https://www.producthunt.com/topics/web-app
 [makeuseof]: http://www.makeuseof.com/tag/best-websites-internet/
-[wiki]: https://github.com/HE-Arc/slides-devweb/wiki/Projets-2022-2023
+[wiki]: https://github.com/HE-Arc/slides-devweb/wiki/Projets-2023-2024
 [github]: https://github.com/orgs/HE-Arc
 [arcghp]: https://he-arc.github.io
 [hacktober]:https://hacktoberfest.digitalocean.com/
