@@ -29,6 +29,7 @@ jobs:
 
       - name: Run the Makefile
         run:  make slides # XeTeX : I can't find the format file `xelatex.fmt'!
+                          # 2do : https://github.com/pandoc/pandoc-action-example
         
       - name: List files in the build repository
         run: |
