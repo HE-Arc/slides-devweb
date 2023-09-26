@@ -4,7 +4,7 @@
 
 ## Introduction aux frameworks PHP{.title}
 
-<footer>HE-Arc 2016-22 DGR et YBL</footer>
+<footer>HE-Arc 2016-24 DGR et YBL</footer>
 
 ---
 
@@ -136,12 +136,7 @@ Dans les faits, cela montre également une maturité de la plateforme.
  * PHP-FI _Forms Interpreter_
  * PHP 3, réécrit en C++
  * PHP 4 _Zend Engine_, fausse POO
- * PHP 5, vraie POO
- * PHP 5.1, PDO
- * PHP 5.2, JSON
- * PHP 5.3, `goto` et `namespace`
- * PHP 5.4, `[]` et `trait`
- * PHP 5.5, `yield`
+ * PHP 5, vraie POO, PDO, JSON, ...
  * ~~PHP 6, Unicode~~ 💩, 🎃, 🐧
  * PHP 7, que du rêve!
  * PHP 8, JIT compilation, [...][PHP8]
