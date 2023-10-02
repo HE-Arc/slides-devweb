@@ -59,10 +59,10 @@
 * Outils : devtools Chrome ou FF, [Emmet][emmet], git
 * Doc
     * [Documentation officielle][LaraDoc] de Laravel
-    * Cheat Sheet [Laravel 8][LaraCheat], [Artisan 9][ArtisanCheat]
+    * Cheat Sheet [Laravel 8][LaraCheat], [Artisan][ArtisanCheat]
 * Tutoriels
-    * Pour un tuto à jour : bien préciser la version (8) dans votre recherche
-    * Laravel 9 : [Best Momo][tutoBMomo], [Tuts Make][tutsmake], [Plural Sight][tutoCS]
+    * Pour un tuto à jour : bien préciser la version (10) dans votre recherche
+    * Laravel 10 : [Best Momo][tutoBMomo], [Tuts Make][tutsmake], [Plural Sight][tutoCS]
 
 # Environnement de développement
 * De quoi ai-je besoin pour développer ?
@@ -179,7 +179,7 @@ $php artisan list
 * [Cheat Sheet][hackrCheat]
 * [Laracast](https://laracasts.com/search?query=laravel%209)
 * [Learning Laravel](http://learninglaravel.net/tags/tutorials)
-* [Laravel REST API CRUD tuto](https://www.tutsmake.com/laravel-8-rest-api-crud-with-passport-auth-tutorial/)
+* [Laravel REST API CRUD tuto](https://www.tutsmake.com/laravel-10-rest-api-authentication-with-passport/)
 * [Les vôtres](https://github.com/HE-Arc/slides-devweb/wiki/Ressources)
 
 [LaraForum]: http://laravel.io/forum
@@ -197,11 +197,11 @@ $php artisan list
 [gitpod]: https://www.gitpod.io/
 [emmet]: http://emmet.io/
 [LaraDoc]: https://laravel.com/docs/master
-[LaraCheat]: https://learninglaravel.net/cheatsheet/
+[LaraCheat]: https://quickref.me/laravel
 [ArtisanCheat]: https://artisan.page/
 [hackrCheat]: https://hackr.io/blog/laravel-cheat-sheet
-[tutsmake]: https://www.tutsmake.com/page/1/?s=tutorial+laravel+9
-[tutoBMomo]: https://laravel.sillo.org/laravel-9/
+[tutsmake]: https://www.tutsmake.com/page/1/?s=tutorial+laravel+10
+[tutoBMomo]: https://laravel.sillo.org/laravel-10/
 [tutoCS]: https://www.pluralsight.com/courses/laravel-9-fundamentals
 [wsl]: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 [homestead]: https://laravel.com/docs/master/homestead
