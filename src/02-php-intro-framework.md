@@ -93,7 +93,7 @@ http://app.host.tld/controller/action[/key/val]
 
 # Exemple d'architecture : Laravel
 
-![Archi](img/laravel-architecture.jpg)
+![Archi](img/laravel-architecture.png)
 
 <div class="notes">
 Ce schéma est clair mais pas tout à fait juste : dans Laravel, le contrôleur récupère la page générée à partir de la vue, et c'est lui qui renvoie le HTML (objet Response) au client.

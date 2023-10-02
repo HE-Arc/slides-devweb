@@ -4,7 +4,7 @@
 
 ## Laravel{.title}
 
-<footer>HE-Arc (DGR & R. Emourgeon) 2018-22</footer>
+<footer>HE-Arc (DGR & R. Emourgeon) 2018-23</footer>
 
 # Pourquoi [Laravel](https://laravel.com/) ?
 
@@ -41,7 +41,7 @@
 
 # Architecture
 
-![Architecture de Laravel](img/laravel-architecture.jpg "Laravel Architecture")
+![Architecture de Laravel](img/laravel-architecture.png "Laravel Architecture")
 
 # MVC
 
