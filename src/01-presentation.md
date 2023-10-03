@@ -108,10 +108,10 @@
 
 # Évaluation des projets
 * Note intermédiaire :
-    * 1 page permettant d'afficher des données provenant de la BDD
-        * p.ex. : Liste de tous les utilisateurs
-    * 1 page permettant d'enregistrer des données dans la BDD
-        * p.ex. : Création d'un utilisateur
+    * 1 page affichage BDD (autre que user)
+        * p.ex. : Liste de tous les films
+    * 1 page d'enregistrement BDD (autre que user)
+        * p.ex. : Création d'un film
     * Respect des conventions et bonnes pratiques
     * Respect du pattern MVC : Les requêtes doivent passer par toutes les étapes importantes de Laravel
         * route, validation des entrées, contrôleur, vue
