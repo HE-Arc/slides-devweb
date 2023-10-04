@@ -1,48 +1,67 @@
-name: html generation with pandoc
-run-name: ${{ github.actor }} is generating new slides 
+name: Generation with pandoc
+run-name: ${{ github.actor }} is generating new slides
 on: [push]
 
 env:
   PANDOC_VERSION: 3.1.8
-# EMOJIONE_VERSION: 8.0.0
 
 jobs:
-  md2html:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-22.04
+    concurrency:
+      group: ci-${{ github.ref_name }}
+      cancel-in-progress: true
     steps:
       - run: echo "🎉 Job triggered by a ${{ github.event_name }}, running on ${{ runner.os }}"
-      - run: |
-         wget https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb -O pandoc.deb
-         sudo dpkg -i pandoc.deb     
-#      - run: |
-#         wget https://github.com/joypixels/emoji-assets/archive/v${EMOJIONE_VERSION}.tar.gz -O emojione-assets.tgz
-#         tar xf emojione-assets.tgz
-#         mv emoji-assets-${EMOJIONE_VERSION} emojione-assets
-#         wget https://raw.githubusercontent.com/mreq/xelatex-emoji/master/xelatexemoji.sty
-#         wget https://raw.githubusercontent.com/mreq/xelatex-emoji/master/xelatexemoji-flags.sty
-#         sed -i 's/^\(\\usepackage{amsmath}\)/%\1/' xelatexemoji.sty
-#         sed -i 's/^\(\\providecommand{\\xelatexemojipath}\)/%\1/' xelatexemoji.sty            
 
       - name: Check out repository code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
       - run: echo "💡 The branch ${{ github.ref }} from ${{ github.repository }} has been cloned to the runner."
 
+      - name: Update apt
+        run: >-
+          sudo apt-get update -q
+      - name: Upgrade apt
+        run: >-
+          sudo apt-get upgrade -qy
+      - name: Install dependencies
+        run: >-
+          sudo apt-get install -qy
+          fonts-inconsolata
+          fonts-linuxlibertine
+          fonts-noto
+          fonts-texgyre
+          latexmk
+          lmodern
+          make
+          texlive-fonts-extra
+          texlive-fonts-recommended
+          texlive-lang-french
+          texlive-latex-base
+          texlive-latex-recommended
+          texlive-luatex
+          texlive-plain-generic
+          texlive-science
+          wget
+
+      - run: |
+         wget https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb -O pandoc.deb
+         sudo dpkg -i pandoc.deb
+
       - name: Run the Makefile
-        run:  make slides # XeTeX : I can't find the format file `xelatex.fmt'!
-                          # 2do : https://github.com/pandoc/pandoc-action-example
-        
+        run:  make slides pdfs  # book is not ready
+
       - name: Add index
         run: |
-          echo ${{ github.workspace }}
-          ls ${{ github.workspace }}
-          cp ${{ github.workspace }}/templates/index.html ${{ github.workspace }}/build
-          cp ${{ github.workspace }}/templates/style.css ${{ github.workspace }}/build
-          echo "🖥️ build dir :"
-          ls ${{ github.workspace }}/build  
+          cp ./templates/index.html build/
+          cp ./templates/style.css build/
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
+        if: github.ref == 'refs/heads/master'
         with:
           folder: build # The folder the action should deploy.
           branch: gh-pages
+
       - run: echo "🍏 This job's status is ${{ job.status }}."

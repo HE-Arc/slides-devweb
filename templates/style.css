@@ -118,7 +118,6 @@ a.left{
 a.right{
     float:right;
     clear:right;
-    display: none;
 }
 
 a.book{
