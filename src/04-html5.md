@@ -4,22 +4,22 @@
 
 ## HTML5{.title}
 
-<footer>HE-Arc 2022 DGR</footer>
+<footer>HE-Arc 2023 DGR</footer>
 
 # Exemples
 
-* Vue d'ensemble : [slides](http://web.archive.org/web/20150525080904/http://slides.html5rocks.com/#landing-slide) Google 2011 ( [sources](https://github.com/html5rocks/slides.html5rocks.com) )
+* Vue d'ensemble : [slides](http://web.archive.org/web20150525080904/http://slides.html5rocks.com/#landing-slide) Google 2011 ( [sources](https://github.com/html5rocks/slides.html5rocks.com) )
     * Obslolète : ~~quota~~, ~~web sql~~ : Web Storage, ~~application cache~~ : Service Workers
-* API d'accès à la [caméra](http://www.soundstep.com/blog/experiments/jsdetection/), avec du [webGL](http://auduno.github.io/clmtrackr/examples/facesubstitution.html)...
+* API d'accès à la [caméra](https://www.soundstep.com/blog/experiments/jsdetection/), avec du [webGL](https://auduno.github.io/clmtrackr/examples/facesubstitution.html)...
 * Bachelor NIFFF 2014 : une webapp mobile pour LACIS
 * Plein d'exemples
-    * [html5 rocks!](http://www.html5rocks.com/) => [Web Fundamentals](https://developers.google.com/web/)
-    * [Chrome Experiments](http://www.chromeexperiments.com/)
+    * [html5 rocks!](https://www.html5rocks.com/) => [web.dev](https://developers.google.com/web/)
+    * [Chrome Experiments](https://www.chromeexperiments.com/)
     * [MDN](https://developer.mozilla.org/en-US/demos/tag/tech:html5)
-    * [html5 demos](http://html5demos.com/)
-    * [plus de demos ?](http://bit.ly/VJaqjb)
-* Veille : [Frontend Focus](http://html5weekly.com/) (newsletter)
-* Disponibilité dans les navigateurs [CanIUse.com](https://caniuse.com/)
+    * [html5 demos](https://html5demos.com/)
+    * [plus de demos ?](https://letmegooglethat.com/?q=html5+demos)
+* Veille : [Frontend Focus](https://html5weekly.com/) (newsletter)
+* Disponibilité dans les navigateurs [CanIUse.com](https://caniuse.com/), [What web can do today?](https://whatwebcando.today/)
 
 # Progressive Web Apps
 
@@ -28,7 +28,7 @@
 * Avantages des 2 mondes (natif et web)
 * [Article](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) d'Alex Russel 15.06.15
 * Vue d'ensemble par [Wikipedia](https://en.wikipedia.org/wiki/Progressive_web_app)
-* Partiellement supporté par [iOS](https://love2dev.com/pwa/ios/) (pas de notif, cache limité)
+* Support tardif par [iOS](https://firt.dev/notes/pwa-ios/) (notification: iOS16, install banner: iOS17)
 
 # PWA : howto
 
@@ -50,5 +50,3 @@
 	* [Getting started with PWA](https://addyosmani.com/blog/getting-started-with-progressive-web-apps/)
 	* [Your 1st PWA](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/)
 	* [HN PWA](https://hnpwa.com/)
-	* [Gokulakrishnan Kalaikovan](https://github.com/gokulkrishh)
-
