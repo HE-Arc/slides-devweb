@@ -8,7 +8,7 @@
 
 # Exemples
 
-* Vue d'ensemble : [slides](http://web.archive.org/web20150525080904/http://slides.html5rocks.com/#landing-slide) Google 2011 ( [sources](https://github.com/html5rocks/slides.html5rocks.com) )
+* Vue d'ensemble : [slides](https://web.archive.org/web/20140320042652/http://slides.html5rocks.com) Google 2011 ( [sources](https://github.com/html5rocks/slides.html5rocks.com) )
     * Obslolète : ~~quota~~, ~~web sql~~ : Web Storage, ~~application cache~~ : Service Workers
 * API d'accès à la [caméra](https://www.soundstep.com/blog/experiments/jsdetection/), avec du [webGL](https://auduno.github.io/clmtrackr/examples/facesubstitution.html)...
 * Bachelor NIFFF 2014 : une webapp mobile pour LACIS
