@@ -116,9 +116,6 @@
     * Respect du pattern MVC : Les requêtes doivent passer par toutes les étapes importantes de Laravel
         * route, validation des entrées, contrôleur, vue
     * Application déployée avec tous les éléments cités plus haut testable et fonctionnel
-    * UI/UX peut donner des bonus
-        * Mais la note sera focalisée sur l'aspect fonctionnel de l'application
-        * Et le code
 
 # Évaluation des projets - suite
 * Note finale :
