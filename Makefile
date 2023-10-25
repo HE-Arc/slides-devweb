@@ -2,6 +2,9 @@ SOURCEDIR = src
 TEMPLATES = templates
 BUILDDIR  = build
 
+PDFENGINE = lualatex
+PDFENGINE_OPT = --shell-escape
+
 SOURCES=$(wildcard $(SOURCEDIR)/*.md)
 SLIDES=$(patsubst $(SOURCEDIR)/%.md,$(BUILDDIR)/%.html,$(SOURCES))
 PDFS=$(patsubst $(SOURCEDIR)/%.md,$(BUILDDIR)/%.pdf,$(SOURCES))
@@ -34,7 +37,7 @@ $(SLIDES): $(BUILDDIR)/%.html : $(SOURCEDIR)/%.md
 	sed -e 's/(\(img\/\)/($(SOURCEDIR)\/\1/g' "$^" \
 		| sed -e "\$$a# Sources" \
 		| pandoc -s \
-		        -f markdown \
+			-f markdown \
 			-t dzslides \
 			--embed-resources \
 			--standalone \
@@ -51,9 +54,10 @@ $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 	sed -e 's/(\(img\/\)/($(SOURCEDIR)\/\1/g' "$^" \
 		| sed -e "\$$a# Sources" \
 		| pandoc -s \
-			-f markdown \
+			-f markdown+emoji \
 			-t latex \
-			--pdf-engine=xelatex \
+			--pdf-engine=$(PDFENGINE) \
+			--pdf-engine-opt=$(PDFENGINE_OPT) \
 			--lua-filter=meta.lua \
 			--lua-filter=english.lua \
 			--citeproc \
@@ -61,6 +65,7 @@ $(PDFS): $(BUILDDIR)/%.pdf : $(SOURCEDIR)/%.md
 			-V documentclass="scrartcl" \
 			-V links-as-notes=true \
 			-o "$@"
+			
 
 $(BOOKS): $(BUILDDIR)/%.tex: $(SOURCEDIR)/%.md
 	mkdir -p $(BUILDDIR)
@@ -69,15 +74,15 @@ $(BOOKS): $(BUILDDIR)/%.tex: $(SOURCEDIR)/%.md
 		| sed -e 's/<footer>.*<\/footer>//g' \
 		| sed -e 's/^----*//g' \
 		| sed -e "\$$a# Sources" \
-		| pandoc -f markdown \
+		| pandoc -f markdown+emoji \
 			-t latex \
 			--lua-filter=meta.lua \
 			--lua-filter=english.lua \
-			--filter=pandoc-citeproc \
+			--citeproc \
 		> $@
 
 $(BUILDDIR)/book.pdf: $(TEMPLATES)/book.tex $(BOOKS)
-	latexmk -pdf $<
+	latexmk -pdflua $<
 	latexmk -c $<
 	mv book.pdf build/
 

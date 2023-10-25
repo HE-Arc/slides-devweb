@@ -4,13 +4,21 @@
 \documentclass[a4paper,12pt]{scrbook}
 \KOMAoptions{twoside=false}
 
+% Emoji
+\directlua{luaotfload.add_fallback
+   ("emojifallback",
+    {
+      "NotoColorEmoji:mode=harf;"
+    }
+   )}
+
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 \usepackage{fontspec}
-\setmainfont{Linux Libertine O}
-\setsansfont{Linux Biolinum O}
-\setmonofont[Scale=0.9]{Inconsolata}
-\defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text, Numbers=OldStyle, Ligatures={Common,Rare,Discretionary,Historic}}
+\setmainfont{Linux Libertine O}[RawFeature={fallback=emojifallback}]
+\setsansfont{Linux Biolinum O}[RawFeature={fallback=emojifallback}]
+\setmonofont{Inconsolata}[Scale=0.9]
+\defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text, Numbers=OldStyle, Ligatures={Common,Rare,Discretionary}}
 
 \usepackage{csquotes}
 \usepackage{polyglossia}
@@ -25,8 +33,7 @@
 
 \usepackage{longtable}
 \usepackage{booktabs}
-
-
+\usepackage{array}
 
 \usepackage{hyperref}
 \urlstyle{same}
@@ -87,7 +94,7 @@
 \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 
-\titlehead{2020-2021}
+\titlehead{2023-2024}
 \subject{Haute-École Arc}
 \title{Développement Web}
 \subtitle{Technologies d'interaction}
@@ -110,14 +117,33 @@
 
 \input{templates/header.tex}
 
-\begin{document}
-
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
-\newenvironment{cslreferences}%
-  {$if(csl-hanging-indent)$\setlength{\parindent}{0pt}%
-  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
-  {\par}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\usepackage{soul}
+
+\begin{document}
 
 \maketitle
 
