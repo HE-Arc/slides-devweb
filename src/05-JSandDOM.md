@@ -25,15 +25,15 @@
 * Implémentations hors-browser
 	* Node.js, Spidermonkey, Rhino
 	* script d'app (Qt, Notepad++, ...)
-* Langage cible de compilateurs : [emscripten](https://github.com/kripken/emscripten/wiki), [WebAssembly](http://webassembly.org/)
+* Langage cible de compilateurs : [emscripten](https://emscripten.org/), [WebAssembly](http://webassembly.org/)
 * Embarqué : [Espruino](http://www.espruino.com/), robotique : [Node Bots](https://nodebots.io/), [CylonJS](https://cylonjs.com/)
-* Applications Desktop : [Electron](https://electronjs.org/), [<sciter>](https://sciter.com/)
+* Applications Desktop : [Electron](https://electronjs.org/), [sciter](https://sciter.com/)
 
 # *Script
 
 * ECMAScript : Norme depuis 1997 
-	* Juin 2022 : [ECMA-262 13th edition](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
-	* [Support](http://kangax.github.io/compat-table/es2016plus/) des différentes implémentations
+	* Juin 2023 : [ECMA-262 14th edition](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+	* [Support](https://compat-table.github.io/compat-table/es2016plus/) des différentes implémentations
 	* Conversions avec [BabelJS](https://babeljs.io/)
 * JavaScript : implémentation Firefox (réf. MDN)
 * Variantes (à transpiler) :
@@ -69,7 +69,7 @@
 * Particularités
 	* [Prototypes](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Le_mod%C3%A8le_objet_JavaScript_en_d%C3%A9tails)
 	* [Fermetures](http://www.w3schools.com/js/js_function_closures.asp) 
-	* [Promesses](https://www.promisejs.org/) ([MDN](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise), [Google](https://developers.google.com/web/fundamentals/getting-started/primers/promises))
+	* [Promesses](https://www.promisejs.org/) ([MDN](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise), [Google](https://web.dev/articles/promises?hl=fr))
 
 # Fonctions
 
@@ -90,7 +90,7 @@ eval(), ...
 # JavaScript dans la page web
 
 * Éléments `<script>` exécutés dans l’ordre de la page
-* Conseillé de les placer en [fin de page](https://developer.yahoo.com/performance/rules.html#js_bottom=)
+* Conseillé de les placer en [fin de page](https://stackoverflow.com/questions/1638670/javascript-at-bottom-top-of-web-page)
 * Evénements (onclick, onerror, onsubmit, …)
 	* Embarqués dans les balises (onXXX)
 
