@@ -357,34 +357,33 @@ myXHR.getResponseHeader("Status");
 
 <!-- Bibliographie -->
 [1]:https://docs.google.com/presentation/d/1eqae3OBCxwWswOsaWMAWRpqnmrVVrAfPQclfSqPkXrA/present#slide=id.p19
-[2]:http://caniuse.com/#feat=http2
+[2]:https://caniuse.com/#feat=http2
 [3]:https://http3-explained.haxx.se/fr/
-
-[5]:http://www.mnot.net/blog/2012/09/05/patch
-[6]:http://soabits.blogspot.ch/2013/01/http-put-patch-or-post-partial-updates.html
-[7]:http://web.archive.org/web/20110102130434/http://www.adaptivepath.com/ideas/essays/archives/000385.php
-[9]:http://archive.oreilly.com/pub/a/javascript/2002/02/08/iframe.html
+[5]:https://www.mnot.net/blog/2012/09/05/patch
+[6]:https://soabits.blogspot.ch/2013/01/http-put-patch-or-post-partial-updates.html
+[7]:https://web.archive.org/web/20110102130434/http://www.adaptivepath.com/ideas/essays/archives/000385.php
+[9]:https://archive.oreilly.com/pub/a/javascript/2002/02/08/iframe.html
 [8]:https://en.wikipedia.org/wiki/Remote_scripting
-[10]:http://www.ashleyit.com/rs/jsrs/test.htm
-[11]:http://web.archive.org/web/20100916110710/http://depressedpress.com/Content/Development/JavaScript/Articles/GIFAsPipe/Index.cfm
+[10]:https://www.ashleyit.com/rs/jsrs/test.htm
+[11]:https://web.archive.org/web/20100916110710/http://depressedpress.com/Content/Development/JavaScript/Articles/GIFAsPipe/Index.cfm
 [12]:https://www.w3.org/TR/XMLHttpRequest/
-[13]:http://www.xul.fr/xml-ajax.html#ajax-exemple
-[14]:http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_ajax_load
+[13]:https://www.xul.fr/xml-ajax.html#ajax-exemple
+[14]:https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_ajax_load
 [15]:https://code.tutsplus.com/tutorials/jquery-succinctly-jquery-and-ajax--net-33856
-[16]:http://stackoverflow.com/questions/367786/prevent-browser-caching-of-jquery-ajax-call-result
+[16]:https://stackoverflow.com/questions/367786/prevent-browser-caching-of-jquery-ajax-call-result
 [17]:https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching
-[18]:http://blog.teamtreehouse.com/the-definitive-guide-to-get-vs-post
-[19]:http://www.json.org/
-[20]:http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf
-[21]:http://www.crockford.com/
+[18]:https://blog.teamtreehouse.com/the-definitive-guide-to-get-vs-post
+[19]:https://www.json.org/
+[20]:https://ecma-international.org/publications-and-standards/standards/ecma-404/
+[21]:https://www.crockford.com/
 [22]:https://javascriptweblog.wordpress.com/2010/04/19/how-evil-is-eval/
 [23]:https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/JSON/parse
 [24]:https://www.bennadel.com/blog/1860-using-appropriate-status-codes-with-each-api-response.htm
-[25]:http://ajaxloadingimages.net/
+[25]:https://loading.io/
 [26]:https://codepen.io/Mestika/pen/KVGwKb
 [27]:https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
 
-[w3c:history]: http://w3c.github.io/html/browsers.html#session-history-and-navigation
+[w3c:history]: https://html.spec.whatwg.org/multipage/nav-history-apis.html
 [whatwg:fetch]: https://fetch.spec.whatwg.org/
 [28]:https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
 [29]:https://www.promisejs.org/
