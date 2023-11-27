@@ -233,17 +233,17 @@ _microdata_ (Schema.org), RDFa ou JSON-LD. Les microformats sont notamment utili
 * [Is RSS dead ?][11] (03.2015)
 
 <!-- Bibliographie -->
-[1]:http://blog.louisgray.com/2008/11/30-different-uses-for-rss.html
-[2]:http://www.makeuseof.com/tag/14-other-ways-to-use-rss-feeds/
+[1]:https://www.feedforall.com/100-uses-of-rss-feeds.htm
+[2]:https://www.makeuseof.com/tag/14-other-ways-to-use-rss-feeds/
 [3]:https://en.wikipedia.org/wiki/Comparison_of_feed_aggregators
-[4]:http://validator.w3.org/feed/
-[5]:http://www.feedvalidator.org/
-[6]:http://www.xul.fr/xml-rss.html
-[7]:http://www.rssboard.org/rss-specification
+[4]:https://validator.w3.org/feed/
+[5]:https://www.feedvalidator.org/
+[6]:https://www.xul.fr/xml-rss.html
+[7]:https://www.rssboard.org/rss-specification
 [8]:https://tools.ietf.org/html/rfc4287
-[9]:http://www.differencebetween.info/difference-between-rss-and-atom
+[9]:https://www.differencebetween.info/difference-between-rss-and-atom
 [10]:https://trends.builtwith.com/feeds
-[11]:http://www.makeuseof.com/tag/rss-dead-look-numbers/
+[11]:https://www.makeuseof.com/tag/rss-dead-look-numbers/
 
 
 <!-- Hack -->
