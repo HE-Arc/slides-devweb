@@ -110,7 +110,7 @@ userid=joe&password=guessme
 	* Le w3c fait évoluer un [draft][12] depuis 2006
 * Principe
 	1. Envoi de requête HTTP
-	2. La réponse provoque l'éxecution de la fonction de rappel
+	2. La réponse provoque l'exécution de la fonction de rappel
 	3. Le DOM de la page est mis à jour
 * Applications
 	* GUI ressemblant à des app natives
