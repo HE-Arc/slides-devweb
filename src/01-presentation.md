@@ -2,7 +2,7 @@
 
 # Développement web ISC3-il
 ## Présentation du cours{.title}
-<footer>HE-Arc 2023/24 DGR et YBL</footer>
+<footer>HE-Arc 2024/25 DGR et YBL</footer>
 
 # Programme
 * Frameworks MVC : Laravel, Django, …
@@ -74,7 +74,7 @@
 |6|Examen|||
 
 # Suivi du calendrier (à jour sur [teams][teams])
-![Suivi calendrier](img/DW2324.png)
+![Suivi calendrier](img/DW2425.png)
 
 # Jalons pour chacun des 2 projets
 * Echéances
@@ -107,7 +107,7 @@
 * Discutez ! Echangez ! 
 
 # Évaluation des projets
-* Note intermédiaire :
+* Note intermédiaire (1/5 de la note du module) :
     * 1 page affichage BDD (autre que user)
         * p.ex. : Liste de tous les films
     * 1 page d'enregistrement BDD (autre que user)
@@ -118,7 +118,7 @@
     * Application déployée avec tous les éléments cités plus haut testable et fonctionnel
 
 # Évaluation des projets - suite
-* Note finale :
+* Note finale (4/5 de la note du module) :
     * Code : 50%
         * Absence bugs, qualité code, lisibilité, respect conventions et bonnes pratiques
         * Déploiement, configuration
