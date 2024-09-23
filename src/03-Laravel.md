@@ -59,10 +59,10 @@
 * Outils : devtools Chrome ou FF, [Emmet][emmet], git
 * Doc
     * [Documentation officielle][LaraDoc] de Laravel
-    * Cheat Sheet [Laravel 8][LaraCheat], [Artisan][ArtisanCheat]
+    * Cheat Sheet [dev.to][devto], [Laravel 8][LaraCheat], [Artisan][ArtisanCheat]
 * Tutoriels
     * Pour un tuto à jour : bien préciser la version (10) dans votre recherche
-    * Laravel 10 : [Best Momo][tutoBMomo], [Tuts Make][tutsmake], [Plural Sight][tutoCS]
+    * Laravel 11 : [Best Momo][tutoBMomo], [Tuts Make][tutsmake], [Plural Sight][tutoCS]
 
 # Environnement de développement
 * De quoi ai-je besoin pour développer ?
@@ -177,31 +177,32 @@ $php artisan list
 
 * [Tips](https://github.com/LaravelDaily/laravel-tips)
 * [Cheat Sheet][hackrCheat]
-* [Laracast](https://laracasts.com/search?query=laravel%209)
-* [Learning Laravel](http://learninglaravel.net/tags/tutorials)
-* [Laravel REST API CRUD tuto](https://www.tutsmake.com/laravel-10-rest-api-authentication-with-passport/)
+* [Laracast](https://laracasts.com/search?query=laravel%2011)
+* [Learning Laravel](https://learninglaravel.net/tags/tutorials)
+* [Laravel 10 REST API CRUD tuto](https://www.tutsmake.com/laravel-10-rest-api-authentication-with-passport/)
 * [Les vôtres](https://github.com/HE-Arc/slides-devweb/wiki/Ressources)
 
-[LaraForum]: http://laravel.io/forum
-[SOLID]: http://fr.wikipedia.org/wiki/SOLID_(informatique)
-[TO]: http://taylorotwell.com/
+[LaraForum]: https://laravel.io/forum
+[SOLID]: https://fr.wikipedia.org/wiki/SOLID_(informatique)
+[TO]: https://taylorotwell.com/
 [Composer]: https://getcomposer.org/
 [LaraStats]: https://github.com/search?l=PHP&q=stars%3A%3E0&ref=searchresults&type=Repositories
 [builtwith]: https://madewithlaravel.com/
-[Packalyst]: http://packalyst.com/
+[Packalyst]: https://packalyst.com/
 [lifeCycle]: https://laravel.com/docs/master/lifecycle
 [PSR2]: https://laravel.com/docs/5.1/contributions#coding-style
 [styleci]: https://styleci.io/
 [glitch]: https://glitch.com/
 [replit]: https://repl.it/
 [gitpod]: https://www.gitpod.io/
-[emmet]: http://emmet.io/
+[emmet]: https://emmet.io/
 [LaraDoc]: https://laravel.com/docs/master
+[devto]: https://dev.to/mikevarenek/laravel-fundamentals-a-cheat-sheet-for-rapid-development-gd9
 [LaraCheat]: https://quickref.me/laravel
 [ArtisanCheat]: https://artisan.page/
 [hackrCheat]: https://hackr.io/blog/laravel-cheat-sheet
-[tutsmake]: https://www.tutsmake.com/page/1/?s=tutorial+laravel+10
-[tutoBMomo]: https://laravel.sillo.org/laravel-10/
+[tutsmake]: https://tutsmake.com/?s=laravel+11
+[tutoBMomo]: https://laravel.sillo.org/search/laravel%2011
 [tutoCS]: https://www.pluralsight.com/courses/laravel-9-fundamentals
 [wsl]: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 [homestead]: https://laravel.com/docs/master/homestead
@@ -215,7 +216,6 @@ $php artisan list
 [valetOSX]: https://laravel.com/docs/master/valet
 [valetLinux]: https://cpriego.github.io/valet-linux/#installation
 [valetWSL]: https://github.com/valeryan/valet-wsl
-
 
 <style type="text/css">
     section.title, section#sources, h1.title {display:none;}
