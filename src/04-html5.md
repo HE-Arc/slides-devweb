@@ -4,7 +4,7 @@
 
 ## HTML5{.title}
 
-<footer>HE-Arc 2023 DGR</footer>
+<footer>HE-Arc 2024 DGR</footer>
 
 # Exemples
 
@@ -17,8 +17,7 @@
     * [What web can do today?](https://whatwebcando.today/)
     * [Chrome Experiments](https://www.chromeexperiments.com/)
     * API d'accès à la [caméra](https://www.soundstep.com/blog/experiments/jsdetection/), avec du [webGL](https://auduno.github.io/clmtrackr/examples/facesubstitution.html)...
-    * Bachelor NIFFF 2014 : une webapp mobile pour LACIS
-    * [html5 demos](https://bestvpn.org/html5demos/) (sponsorisé), [Showcase Hongkiat](https://www.hongkiat.com/blog/48-excellent-html5-demos/)
+    * [html5 demos](https://bestvpn.org/html5demos/) (sponsorisé), [Showcase Hongkiat](https://www.hongkiat.com/blog/48-excellent-html5-demos/), LACIS (TB NIFFF 2014)
 * Veille : [Frontend Focus](https://frontendfoc.us/) (newsletter)
 * Disponibilité dans les navigateurs [CanIUse.com](https://caniuse.com/)
 
@@ -50,3 +49,5 @@
 	* [Getting started with PWA](https://addyosmani.com/blog/getting-started-with-progressive-web-apps/)
 	* [Your 1st PWA](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/)
 	* [HN PWA](https://hnpwa.com/)
+
+
