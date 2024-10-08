@@ -4,7 +4,7 @@
 
 ## JavaScript & DOM{.title}
 
-<footer>HE-Arc (DGR) 2022</footer>
+<footer>HE-Arc (DGR) 2024</footer>
 
 # JavaScript hier
 * Page web = HTML (+ CSS + JavaScript)
@@ -32,7 +32,7 @@
 # *Script
 
 * ECMAScript : Norme depuis 1997 
-	* Juin 2023 : [ECMA-262 14th edition](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+	* Juin 2024 : [ECMA-262 15th edition](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
 	* [Support](https://compat-table.github.io/compat-table/es2016plus/) des différentes implémentations
 	* Conversions avec [BabelJS](https://babeljs.io/)
 * JavaScript : implémentation Firefox (réf. MDN)
@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	* Ajout
 * JS peut donc modifier le contenu d'une page
 
-# DOM
+# [DOM](http://bioub.github.io/dom-visualizer/)
 
 ```html
 <html>
@@ -312,7 +312,7 @@ function insertNode() {
 * Une [réintroduction à JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Une_r%C3%A9introduction_%C3%A0_JavaScript)
 * [How does it feel to learn JS in 2016](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f)
 * Référence [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference)
-* Tutoriels [The Modern JS Tuto](https://javascript.info/) [w3schools](http://www.w3schools.com/js/)
+* Tutoriels [The Modern JS Tuto](https://javascript.info/) [w3schools](http://www.w3schools.com/js/) [LearnJS](https://learnjavascript.online/)
 * Outils de développement Chrome et Firefox (F12, Ctrl+Shift I)
 * Visualisation du [DOM](http://bioub.github.io/dom-visualizer/)
 * Outils web
