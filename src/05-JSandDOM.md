@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 ```javascript
     querySelector(), querySelectorAll(),
-    getElementById(), getElementsByTagName(), getElementByClass(),	
+    getElementById(), getElementsByTagName(), getElementsByClassName(),	
     createElement(), createTextNode()
 ```
 
