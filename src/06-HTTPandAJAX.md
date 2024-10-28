@@ -172,7 +172,6 @@ $(document).ready(function(){
 ```
 
 * [Tester][14]
-* D'[autres][15] façons de faire
 
 # XHR : propriétés et méthodes
 * `readyState, status, onreadystatechange`
@@ -316,6 +315,11 @@ fetch("fichier.json")
 
 * L'API fetch est native et utilise les [promesses][29] plutôt que les callbacks
 
+# Autres alternatives AJAX
+
+* Utiliser une bibliothèque comme [Axios](https://axios-http.com/docs/intro) 
+* [htmx](https://htmx.org/docs/#ajax) : html repensé pour l'utilisation post-2020
+
 # Traitement d'erreurs
 * Utiliser les [entêtes HTTP][24]
 	* Champ Status
@@ -369,7 +373,7 @@ myXHR.getResponseHeader("Status");
 [12]:https://www.w3.org/TR/XMLHttpRequest/
 [13]:https://www.xul.fr/xml-ajax.html#ajax-exemple
 [14]:https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_ajax_load
-[15]:https://code.tutsplus.com/tutorials/jquery-succinctly-jquery-and-ajax--net-33856
+[15]:
 [16]:https://stackoverflow.com/questions/367786/prevent-browser-caching-of-jquery-ajax-call-result
 [17]:https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching
 [18]:https://blog.teamtreehouse.com/the-definitive-guide-to-get-vs-post
