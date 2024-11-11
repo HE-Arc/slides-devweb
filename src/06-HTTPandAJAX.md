@@ -373,7 +373,7 @@ myXHR.getResponseHeader("Status");
 [12]:https://www.w3.org/TR/XMLHttpRequest/
 [13]:https://www.xul.fr/xml-ajax.html#ajax-exemple
 [14]:https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_ajax_load
-[15]:
+
 [16]:https://stackoverflow.com/questions/367786/prevent-browser-caching-of-jquery-ajax-call-result
 [17]:https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching
 [18]:https://blog.teamtreehouse.com/the-definitive-guide-to-get-vs-post
