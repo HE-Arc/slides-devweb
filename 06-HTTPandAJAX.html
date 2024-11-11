@@ -538,8 +538,10 @@ OWA)</li>
 <ul>
 <li>Cache
 <ul>
-<li>Client : Construire des [URL uniques][16]</li>
-<li>Serveur : Envoi d’[entêtes][17] interdisant le cache</li>
+<li>Client : Construire des <a href="https://stackoverflow.com/questions/367786/prevent-browser-caching-of-jquery-ajax-call-result">URL
+uniques</a></li>
+<li>Serveur : Envoi d’<a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching">entêtes</a>
+interdisant le cache</li>
 </ul></li>
 </ul>
 <div class="sourceCode" id="cb6"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>MyXhr<span class="op">.</span><span class="fu">open</span>(<span class="st">&quot;GET&quot;</span><span class="op">,</span> <span class="st">&quot;fichier.xml&quot;</span><span class="op">,</span> <span class="kw">true</span>)<span class="op">;</span></span>
@@ -557,7 +559,7 @@ OWA)</li>
 </figure>
 </div>
 <div style="float:right;">
-<p>[Détails][18]</p>
+<p><a href="https://blog.teamtreehouse.com/the-definitive-guide-to-get-vs-post">Détails</a></p>
 </div>
 </section>
 <section id="réponse-en-texte" class="slide level1">
@@ -597,9 +599,11 @@ OWA)</li>
 </ul>
 </section>
 <section id="réponse-en-json19" class="slide level1">
-<h1>Réponse en [JSON][19]</h1>
+<h1>Réponse en <a href="https://www.json.org/">JSON</a></h1>
 <ul>
-<li>[Standard][20] depuis octobre 2013 ([Douglas Crockford][21])</li>
+<li><a href="https://ecma-international.org/publications-and-standards/standards/ecma-404/">Standard</a>
+depuis octobre 2013 (<a href="https://www.crockford.com/">Douglas
+Crockford</a>)</li>
 <li>Tableau d’objets js :
 <ul>
 <li>pour chacun, ses attributs sont des paires clé:valeur</li>
@@ -618,11 +622,13 @@ OWA)</li>
 </ul>
 </section>
 <section id="eval-is-evil-22" class="slide level1">
-<h1>[« eval is Evil »][22]</h1>
+<h1><a href="https://javascriptweblog.wordpress.com/2010/04/19/how-evil-is-eval/">«
+eval is Evil »</a></h1>
 <ul>
 <li><code>eval()</code> : évalue et exécute la chaîne en paramètre</li>
 <li>Risque : instructions au lieu d’un tableau d’objets</li>
-<li>Solution : le [parser][23] JSON</li>
+<li>Solution : le <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/JSON/parse">parser</a>
+JSON</li>
 </ul>
 <div class="sourceCode" id="cb11"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> users <span class="op">=</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">parse</span>(myXHR<span class="op">.</span><span class="at">responseText</span>)<span class="op">;</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> myString <span class="op">=</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">stringify</span>(users)<span class="op">;</span></span></code></pre></div>
@@ -666,7 +672,8 @@ l’utilisation post-2020</li>
 <section id="traitement-derreurs" class="slide level1">
 <h1>Traitement d’erreurs</h1>
 <ul>
-<li>Utiliser les [entêtes HTTP][24]
+<li>Utiliser les <a href="https://www.bennadel.com/blog/1860-using-appropriate-status-codes-with-each-api-response.htm">entêtes
+HTTP</a>
 <ul>
 <li>Champ Status</li>
 <li>Code d’erreur</li>
@@ -691,9 +698,10 @@ API</a></li>
 </ul></li>
 <li>Utilisabilité : signaler à l’utilisateur ce qui est en cours :
 <ul>
-<li>GIF [AJAX loading][25]</li>
+<li>GIF <a href="https://loading.io/">AJAX loading</a></li>
 <li>Rectangle Loading en haut à droite (Google)</li>
-<li>[Yellow Fade Technique][26] (37signals) : partie modifiée</li>
+<li><a href="https://codepen.io/Mestika/pen/KVGwKb">Yellow Fade
+Technique</a> (37signals) : partie modifiée</li>
 </ul></li>
 <li>Code client :
 <ul>
@@ -710,24 +718,12 @@ API</a></li>
 <li>Pas de surprise</li>
 <li>Respect des conventions</li>
 <li>Pas de distraction</li>
-<li>A11y (<a href="https://color.a11y.com/">Contrast Checker</a>, <a href="https://www.a11yproject.com/checklist/">Checklist</a>, [ARIA][27],
+<li>A11y (<a href="https://color.a11y.com/">Contrast Checker</a>, <a href="https://www.a11yproject.com/checklist/">Checklist</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">ARIA</a>,
 <a href="https://www.a11yproject.com/resources/">Resources</a>)</li>
 <li>Ne pas switcher AJAX/non-AJAX</li>
 <li>Se mettre à la place de l’utilisateur</li>
 </ul>
 <!-- Bibliographie -->
-<p>[15]:
-[16]:https://stackoverflow.com/questions/367786/prevent-browser-caching-of-jquery-ajax-call-result
-[17]:https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching
-[18]:https://blog.teamtreehouse.com/the-definitive-guide-to-get-vs-post
-[19]:https://www.json.org/
-[20]:https://ecma-international.org/publications-and-standards/standards/ecma-404/
-[21]:https://www.crockford.com/
-[22]:https://javascriptweblog.wordpress.com/2010/04/19/how-evil-is-eval/
-[23]:https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/JSON/parse
-[24]:https://www.bennadel.com/blog/1860-using-appropriate-status-codes-with-each-api-response.htm
-[25]:https://loading.io/ [26]:https://codepen.io/Mestika/pen/KVGwKb
-[27]:https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA</p>
 <!-- Hack -->
 <style>
 .green {color: green}
