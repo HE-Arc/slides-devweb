@@ -26,10 +26,10 @@
 * Fondée en 2004, internationale, sans but lucratif
 * Référence principale dans le domaine
 * Propose :
-  * Top 10 (web et [mobile][17]) : [Méthode][40], [CVSS][41], [CWE][42] 
+  * Top 10 (web et [mobile][17]) tous les 4 ans : [Méthode][40], [CVSS][41], [CWE][42] 
   * Grande communauté d'experts
   * Formation, documentation et ressources
-  * Outils d'audit, de tests et de formation
+  * Outils d'audit, de tests et de formation (ex: [Juice Shop][43])
 
 # [Top 10][9] OWASP 2021 ([fr][27] - [historique][30])
 
@@ -221,8 +221,8 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 	* [Présentation XSS et CSRF][11] en français
 	* [Protection CSRF][12] en français
 * Utilitaires, tutos, exercices
-	* [Web Goat][13]
-	* [Insecure Labs][14]
+	* [Juice Shop][43]
+ 	* [Web Goat][13]
 	* [Google-Gruyere][15]
 
 <!-- Bibliographie -->
@@ -236,7 +236,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [8]:https://hackertarget.com/cowrie-honeypot-analysis-24hrs/
 [9]:https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project
 [10]:https://www.owasp.org/index.php/Main_Page
-[11]:https://www.journaldunet.com/developpeur/tutoriel/php/031030php_nexen-xss1.shtml
+[11]:https://www.journaldunet.com/solutions/dsi/1209139-comment-eviter-les-failles-cross-site-scripting-xss/
 [12]:https://www.apprendre-php.com/tutoriels/tutoriel-39-introduction-aux-cross-site-request-forgeries-ou-sea-surf.html
 [13]:https://www.owasp.org/index.php/Webgoat
 [14]:https://www.insecurelabs.org/task
@@ -250,7 +250,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [22]:https://www.ncsc.gov.uk/guidance/password-guidance-simplifying-your-approach
 [23]:https://www.acunetix.com/blog/articles/xml-external-entity-xxe-vulnerabilities/
 [24]:https://en.wikipedia.org/wiki/WebAuthn
-[25]:https://u2f-key.tech/fr/
+[25]:https://proton.me/blog/fr/universal-2nd-factor-u2f
 [26]:https://owasp.org/
 [27]:https://owasp.org/Top10/fr/
 [28]:https://www.microsoft.com/security/blog/2021/09/15/the-passwordless-future-is-here-for-your-microsoft-account/
@@ -268,6 +268,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [40]:https://owasp.org/Top10/#methodology
 [41]:https://www.first.org/cvss/calculator/3.0
 [42]:https://cwe.mitre.org/top25/archive/2022/2022_cwe_top25.html
+[43]:https://owasp.org/www-project-juice-shop/
 
 <!-- Hack -->
 <style>
