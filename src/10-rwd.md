@@ -6,7 +6,7 @@
 
 ### *Conception de sites web adaptatifs*
 
-<footer>HE-Arc (DGR) 2022</footer>
+<footer>HE-Arc (DGR) 2024</footer>
 
 # Site adaptatif ?
 
@@ -164,16 +164,14 @@ img, embed, object, video{ max-width: 100%; }
 # Références
 * Exemples
 	* [Site][19] support du [livre][20] d'Ethan Marcotte
-	* [mediaqueri.es][21]
 	* [thenextweb][22]
 	* [designshack][23]
 * Plus loin...
 	* [Généralités][24]
 	* [viewport et media queries][25]
 	* D'autres techniques, liste de Smashing magazine [@smashing:rwd]
-	* Améliorer la [performance][26]
+	* Améliorer la [performance][26], [Awesome WPO][28]
 	* [Making sites more responsive, responsibly][27]
-        * Workshop [Pierre Spring][28] 26.02.13
 	
 # Pratique
 * Tester les exemples sur un mobile
@@ -182,10 +180,10 @@ img, embed, object, video{ max-width: 100%; }
 
 [2]:https://alistapart.github.io/code-samples/responsive-web-design/ex/ex-site-FINAL.html
 [3]:https://blog.atolcd.com/adaptive-design-versus-responsive-design/
-[4]:https://browserdiet.com/
+[4]:https://www.netguru.com/blog/improve-web-app-performace
 [6]:https://webdesignerwall.com/tutorials/responsive-design-in-3-steps
 [7]:https://developer.mozilla.org/fr/docs/CSS/Media_queries
-[8]:https://blog.javierusobiaga.com/stop-using-the-viewport-tag-until-you-know-ho
+[8]:https://lukeplant.me.uk/blog/posts/you-can-stop-using-user-scalable-no-and-maximum-scale-1-in-viewport-meta-tags-now/
 [9]:https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html
 [10]:https://www.smashingmagazine.com/2014/05/14/responsive-images-done-right-guide-picture-srcset/
 [11]:https://ericportis.com/etc/smashing-mag-picture-examples/art-direction.html
@@ -194,16 +192,14 @@ img, embed, object, video{ max-width: 100%; }
 [16]:https://sparkbox.github.io/mediaQueryBookmarklet/
 [17]:https://www.lukew.com/resources/mobile_first.asp
 [18]:https://offlinefirst.org/
-[19]:https://responsivewebdesign.com/robot/
-[20]:https://abookapart.com/products/responsive-web-design
-[21]:https://mediaqueri.es/
+[20]:https://ethanmarcotte.com/books/responsive-web-design/full/
 [22]:https://thenextweb.com/dd/2013/01/13/30-new-inspiring-responsive-design-websites/
 [23]:https://designshack.net/articles/css/20-amazing-examples-of-using-media-queries-for-responsive-web-design/
 [24]:https://johnpolacek.github.io/scrolldeck.js/decks/responsive/
 [25]:https://www.quirksmode.org/blog/archives/2010/09/combining_meta.html
 [26]:https://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/
 [27]:https://24ways.org/2014/making-sites-more-responsive-responsibly/
-[28]:https://www.slideshare.net/caillou/2013-03-webtuesday-responsive
+[28]:https://github.com/davidsonfellipe/awesome-wpo
 [30]:https://developers.google.com/web/progressive-web-apps/
 
 <!-- Hack -->
