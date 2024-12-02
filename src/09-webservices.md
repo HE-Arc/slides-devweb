@@ -67,7 +67,6 @@
 # SOAP
 
 * [Exemple][10] requête/réponse
-* [Introduction à SOAP][11] (fr)
 * Créer un service web WS (SOAP) nécessite WSDL et UDDI :
 	* SOAP : Echange de messages XML sur le réseau
 	* WSDL : Web Service Description Language
@@ -158,7 +157,7 @@
 	* [REST et architectures orientées service][27], [Présentation ROA][28]
 	* [The RESTful cookbook][29], How important is [HATEOAS][31] (stack overflow)
 * Exemples de services web :
-	* [Google][32], [Yahoo][33], [Flickr][34], [Twitter][35], ...
+	* [Google][32], [Yahoo][33], [Flickr][34], [Twitter][35], [Spotify][41]...
 	* [APIary][37] : Aide au design d'une API REST
 	* Tests : Postman, [Hoppscotch][38], [Ping-API][39], [autres][40]
 
@@ -176,7 +175,7 @@
 [8]:https://www.netvibes.com/fr/explorer/dashboard-of-things
 [9]:https://en.wikipedia.org/wiki/List_of_web_service_specifications
 [10]:https://www.w3schools.com/xml/xml_soap.asp
-[11]:https://www.w3big.com/fr/soap/default.html#gsc.tab=0
+
 [12]:https://www.w3schools.com/xml/xml_wsdl.asp
 [13]:https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
 [14]:https://fr.wikipedia.org/wiki/Roy_Fielding
@@ -203,6 +202,7 @@
 [38]:https://hoppscotch.io/
 [39]:https://ping-api.com/
 [40]:https://testsigma.com/blog/postman-alternatives/
+[41]:https://developer.spotify.com/
 
 <!-- Hack -->
 <style>
