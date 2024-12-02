@@ -230,7 +230,7 @@ _microdata_ (Schema.org), RDFa ou JSON-LD. Les microformats sont notamment utili
 * [Spécification Atom 1.0][8]
 * [Comparatif RSS 2.0 / Atom 1.0][9]
 * [Stats][10] d'utilisation
-* [Is RSS dead ?][11] (03.2015)
+* [Is RSS dead ? Nope, We’ve Proven Otherwise][11]
 
 <!-- Bibliographie -->
 [1]:https://www.feedforall.com/100-uses-of-rss-feeds.htm
@@ -243,7 +243,7 @@ _microdata_ (Schema.org), RDFa ou JSON-LD. Les microformats sont notamment utili
 [8]:https://tools.ietf.org/html/rfc4287
 [9]:https://www.differencebetween.info/difference-between-rss-and-atom
 [10]:https://trends.builtwith.com/feeds
-[11]:https://www.makeuseof.com/tag/rss-dead-look-numbers/
+[11]:https://www.wprssaggregator.com/is-rss-dead/
 
 
 <!-- Hack -->
