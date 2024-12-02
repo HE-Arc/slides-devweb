@@ -107,7 +107,6 @@ CA : Autorité de certification - VA : Autorité de validation - RA : Autorité 
 
 # Ressources
 
-* [Security Party 23.10.2009][5]
 * [SebSauvage][6]
 * HTTPS en détails :
     * Diagramme de séquence [HTTPS][7]
