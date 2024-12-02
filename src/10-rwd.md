@@ -163,7 +163,7 @@ img, embed, object, video{ max-width: 100%; }
 
 # Références
 * Exemples
-	* [Site][19] support du [livre][20] d'Ethan Marcotte
+	* [Livre][20] d'Ethan Marcotte
 	* [thenextweb][22]
 	* [designshack][23]
 * Plus loin...
