@@ -4,7 +4,7 @@
 
 ## Risques applicatifs des app web{.title}
 
-<footer>HE-Arc (DGR) 2022</footer>
+<footer>HE-Arc (DGR) 2024</footer>
 
 # Risque
 * Faille ou bug permettant d'altérer le fonctionnement
@@ -30,6 +30,7 @@
   * Grande communauté d'experts
   * Formation, documentation et ressources
   * Outils d'audit, de tests et de formation (ex: [Juice Shop][43])
+  * [Cheat Sheets][44] (yc pour CICD, Ajax, Laravel, Django,... ;)
 
 # [Top 10][9] OWASP 2021 ([fr][27] - [historique][30])
 
@@ -269,7 +270,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [41]:https://www.first.org/cvss/calculator/3.0
 [42]:https://cwe.mitre.org/top25/archive/2022/2022_cwe_top25.html
 [43]:https://owasp.org/www-project-juice-shop/
-
+[44]:https://cheatsheetseries.owasp.org/
 <!-- Hack -->
 <style>
 
