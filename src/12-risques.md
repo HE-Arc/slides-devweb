@@ -198,7 +198,9 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 	* Identifiants et commentaires dans sources -au cas où-
 	* SOCIAL ENGINEERING !
 * Le développeur doit laisser filter un minimum d'info !
-* Utilisée aussi par les "white hats" (ethical hackers) : [Honeypots][8]
+* Utilisée aussi par les "white hats" (ethical hackers) :
+	* [Cowrie Honeypot][8] (visualisation des attaques en 24h)
+ 	* [Autres cartes][45] de menaces et attaques 
 
 # Bonnes pratiques
 * Configuration stricte du serveur
@@ -236,7 +238,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [7]:https://hacks.mozilla.org/2014/10/passwordless-authentication-secure-simple-and-fast-to-deploy/
 [8]:https://hackertarget.com/cowrie-honeypot-analysis-24hrs/
 [9]:https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project
-[10]:https://www.owasp.org/index.php/Main_Page
+[10]:https://www.owasp.org/
 [11]:https://www.journaldunet.com/solutions/dsi/1209139-comment-eviter-les-failles-cross-site-scripting-xss/
 [12]:https://www.apprendre-php.com/tutoriels/tutoriel-39-introduction-aux-cross-site-request-forgeries-ou-sea-surf.html
 [13]:https://www.owasp.org/index.php/Webgoat
@@ -247,7 +249,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [18]:https://www.owasp.org/images/5/57/OWASP_Proactive_Controls_2.pdf
 [19]:https://visual.ly/our-password-habits-revealed
 [20]:https://www.shodan.io/
-[21]:https://nakedsecurity.sophos.com/2016/08/18/nists-new-password-rules-what-you-need-to-know/
+[21]:https://pages.nist.gov/800-63-3/
 [22]:https://www.ncsc.gov.uk/guidance/password-guidance-simplifying-your-approach
 [23]:https://www.acunetix.com/blog/articles/xml-external-entity-xxe-vulnerabilities/
 [24]:https://en.wikipedia.org/wiki/WebAuthn
@@ -264,13 +266,14 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [35]:https://medium.com/webauthnworks/introduction-to-webauthn-api-5fd1fb46c285
 [36]:https://www.w3.org/TR/webauthn/
 [37]:https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API
-[38]:https://github.com/codebox/homoglyph/blob/master/raw_data/char_codes.txt
+[38]:https://github.com/codebox/homoglyph/blob/master/raw_data/chars.txt
 [39]:https://onlineunicodetools.com/spoof-unicode-text
 [40]:https://owasp.org/Top10/#methodology
 [41]:https://www.first.org/cvss/calculator/3.0
 [42]:https://cwe.mitre.org/top25/archive/2022/2022_cwe_top25.html
 [43]:https://owasp.org/www-project-juice-shop/
 [44]:https://cheatsheetseries.owasp.org/
+[45]:https://www.google.com/search?q=ipviking
 <!-- Hack -->
 <style>
 
