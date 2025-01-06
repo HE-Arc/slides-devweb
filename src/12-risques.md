@@ -227,6 +227,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 	* [Juice Shop][43]
  	* [Web Goat][13]
 	* [Google-Gruyere][15]
+* Passkeys developer [Cheat Sheet][46]
 
 <!-- Bibliographie -->
 [1]:https://fr.wikipedia.org/wiki/Injection_SQL
@@ -274,6 +275,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [43]:https://owasp.org/www-project-juice-shop/
 [44]:https://cheatsheetseries.owasp.org/
 [45]:https://www.google.com/search?q=ipviking
+[46]:https://www.corbado.com/blog/passkeys-cheat-sheet
 <!-- Hack -->
 <style>
 
