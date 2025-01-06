@@ -180,6 +180,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 * Communication :
   * User Agent <=> Authenticator : CTAP / U2F
   * User Agent <=> Relying Party : API JS [WebAuthn][34]
+* Disponible sur Switch Edu-ID : **Testez!** 
 
 # Passkeys : [Acteurs][31]
 ![Architecture](img/1-Web-Authentication-Entities.png)
