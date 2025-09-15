@@ -135,7 +135,7 @@
 * Aux projets des autres : Issues, PR
 * Participez à la [Hacktoberfest][hacktober]
 * Pariticipez au cours : contenu, présentation, pages ([index][ghpindex], [wiki][wikicours], ...)
-* Echangez avec [github]([https://caravel.ing.he-arc.ch/](https://github.com/HE-Arc/slides-devweb/discussions/58)) ou un im (discord, [teams][teams], ...)
+* Echangez avec [github](https://github.com/HE-Arc/slides-devweb/discussions/58) ou un im (discord, [teams][teams], ...)
 
 # Présentation facultative
 * Facultatif, ne peut qu’augmenter la moyenne
