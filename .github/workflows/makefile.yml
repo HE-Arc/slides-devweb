@@ -1,6 +1,6 @@
 name: Generation with pandoc
 run-name: ${{ github.actor }} is generating new slides
-on: [push]
+on: [push, workflow_dispatch]
 
 env:
   PANDOC_VERSION: 3.1.8
