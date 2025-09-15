@@ -63,6 +63,6 @@ jobs:
         with:
           folder: build # The folder the action should deploy.
           branch: gh-pages
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GHP }}
 
       - run: echo "🍏 This job's status is ${{ job.status }}."
