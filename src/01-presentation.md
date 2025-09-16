@@ -55,16 +55,16 @@
 |---:|---|---:|---|
 |38|Projet PHP|8||
 |39||9||
-|40||10|Rendu intermédiaire|
-|41|S. thématique|11||
-|42||12||
+|40||10||
+|41||11|Rendu intermédiaire|
+|42|S. thématique|12||
 |43||13||
-|44|Rendu intermédiaire|14||
-|45||16||
+|44||14||
+|45|Rendu intermédiaire|16||
 |46||17||
 |48||18|Présentations|
-|49||19|Présentations|
-|50||20|Examens|
+|49||19||
+|50||20||
 |51|Présentations|21|Début TB|
 |2|Projet Python|||
 |3||||
@@ -73,7 +73,7 @@
 |6|Examen|||
 
 # Suivi du calendrier (à jour sur [teams][teams])
-![Suivi calendrier](img/DW2425.png)
+![Suivi calendrier](img/DW2526.png)
 
 # Jalons pour chacun des 2 projets
 * Echéances
