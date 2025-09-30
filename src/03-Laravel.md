@@ -4,7 +4,7 @@
 
 ## Laravel{.title}
 
-<footer>HE-Arc (DGR & R. Emourgeon) 2018-23</footer>
+<footer>HE-Arc (DGR & R. Emourgeon) 2018-25</footer>
 
 # Pourquoi [Laravel](https://laravel.com/) ?
 
@@ -21,7 +21,7 @@
 * Mai 2013 : version 4, utilise [composer][Composer]
 * Août 2014 : projet PHP le plus [populaire][LaraStats] sur github
 * [Qui][builtwith] utilise Laravel ?
-* version 9 publiée 08.02.22, v10 : 07.02.23
+* version 9 publiée en 02.22, v10: 02.23, v11: 03.24, v12: 02.25
 
 # Principales fonctionnalités
 
