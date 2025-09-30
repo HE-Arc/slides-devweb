@@ -54,14 +54,14 @@
 
 * Conventions de codage : Laravel respecte [PSR-2][PSR2]
     * Vous aussi avec [StyleCI][styleci]
-* Editeurs et IDE : PhpStorm, [glitch][glitch], brackets, VS Code, [repl.it][replit], [Gitpod][gitpod]...
+* Editeurs et IDE : VSCode (aussi dans github et gitlab avec .) PhpStorm, [phoenix][phoenix], ...
 * Tests : unitaires, Jmeter, Selenium, ...
 * Outils : devtools Chrome ou FF, [Emmet][emmet], git
 * Doc
     * [Documentation officielle][LaraDoc] de Laravel
     * Cheat Sheet [dev.to][devto], [Laravel 8][LaraCheat], [Artisan][ArtisanCheat]
 * Tutoriels
-    * Pour un tuto à jour : bien préciser la version (10) dans votre recherche
+    * Pour un tuto à jour : bien préciser la version (12) dans votre recherche
     * Laravel 11 : [Best Momo][tutoBMomo], [Tuts Make][tutsmake], [Plural Sight][tutoCS]
 
 # Environnement de développement
@@ -184,7 +184,7 @@ $php artisan list
 
 [LaraForum]: https://laravel.io/forum
 [SOLID]: https://fr.wikipedia.org/wiki/SOLID_(informatique)
-[TO]: https://taylorotwell.com/
+[TO]: https://medium.com/@taylorotwell
 [Composer]: https://getcomposer.org/
 [LaraStats]: https://github.com/search?l=PHP&q=stars%3A%3E0&ref=searchresults&type=Repositories
 [builtwith]: https://madewithlaravel.com/
@@ -192,21 +192,18 @@ $php artisan list
 [lifeCycle]: https://laravel.com/docs/master/lifecycle
 [PSR2]: https://laravel.com/docs/5.1/contributions#coding-style
 [styleci]: https://styleci.io/
-[glitch]: https://glitch.com/
-[replit]: https://repl.it/
-[gitpod]: https://www.gitpod.io/
+[phoenix]: https://phcode.io/
 [emmet]: https://emmet.io/
 [LaraDoc]: https://laravel.com/docs/master
 [devto]: https://dev.to/mikevarenek/laravel-fundamentals-a-cheat-sheet-for-rapid-development-gd9
 [LaraCheat]: https://quickref.me/laravel
 [ArtisanCheat]: https://artisan.page/
 [hackrCheat]: https://hackr.io/blog/laravel-cheat-sheet
-[tutsmake]: https://tutsmake.com/?s=laravel+11
-[tutoBMomo]: https://laravel.sillo.org/search/laravel%2011
-[tutoCS]: https://www.pluralsight.com/courses/laravel-9-fundamentals
+[tutsmake]: https://tutsmake.com/?s=laravel+12
+[tutoBMomo]: https://laravel.sillo.org/search/laravel%2012
+[tutoCS]: https://www.pluralsight.com/paths/laravel
 [wsl]: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 [homestead]: https://laravel.com/docs/master/homestead
-[c9]: https://github.com/dev-nowornet/Laravel-5.6-Complete-Install-Cloud9-C9
 [artisan]: https://laravel.com/docs/master/artisan
 [routing]: https://laravel.com/docs/master/routing
 [controllers]: https://laravel.com/docs/master/controllers
