@@ -52,8 +52,8 @@
 
 # Pratique
 
-* Conventions de codage : Laravel respecte [PSR-2][PSR2]
-    * Vous aussi avec [StyleCI][styleci]
+* Conventions de codage : Laravel respecte [PSR-2 / 12][PSR2]
+    * Vous aussi avec [StyleCI][styleci] ou [LaravelPint][LaravelPint]
 * Editeurs et IDE : VSCode (aussi dans github et gitlab avec .) PhpStorm, [phoenix][phoenix], ...
 * Tests : unitaires, Jmeter, Selenium, ...
 * Outils : devtools Chrome ou FF, [Emmet][emmet], git
@@ -190,7 +190,8 @@ $php artisan list
 [builtwith]: https://madewithlaravel.com/
 [Packalyst]: https://packalyst.com/
 [lifeCycle]: https://laravel.com/docs/master/lifecycle
-[PSR2]: https://laravel.com/docs/5.1/contributions#coding-style
+[PSR2]: https://laravel.com/docs/master/contributions#coding-style
+[LaravelPint]: https://laravel.com/docs/master/pint
 [styleci]: https://styleci.io/
 [phoenix]: https://phcode.io/
 [emmet]: https://emmet.io/
