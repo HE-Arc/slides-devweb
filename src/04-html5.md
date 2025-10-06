@@ -4,7 +4,7 @@
 
 ## HTML5{.title}
 
-<footer>HE-Arc 2024 DGR</footer>
+<footer>HE-Arc 2025 DGR</footer>
 
 # Exemples
 
@@ -28,6 +28,7 @@
 * [Article](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) d'Alex Russel 15.06.15
 * Vue d'ensemble par [Wikipedia](https://en.wikipedia.org/wiki/Progressive_web_app)
 * Support tardif d'[iOS](https://firt.dev/notes/pwa-ios/) (notification: iOS16, install banner: iOS17)
+* Toujours des soucis dans [iOS26](https://modernwebweekly.substack.com/p/modern-web-weekly-60), les [raisons](https://www.reddit.com/r/PWA/comments/1n6e22q/apples_pwa_limitations_are_deliberate_not/) ?
 
 # PWA : howto
 * [Learn PWA](https://web.dev/learn/pwa)
@@ -43,11 +44,12 @@
     * [What PWA can do today](https://whatpwacando.today/) 
     * [Project Fugu](https://developer.chrome.com/docs/capabilities/fugu-showcase?hl=fr)
     * [Awesome PWA](https://github.com/hemanth/awesome-pwa)
-	* [Appscope](https://appsco.pe/)
+	* [store.app](https://store.app/)
 
 * Tutos
 	* [Getting started with PWA](https://addyosmani.com/blog/getting-started-with-progressive-web-apps/)
 	* [Your 1st PWA](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/)
 	* [HN PWA](https://hnpwa.com/)
+
 
 
