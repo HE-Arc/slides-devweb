@@ -50,6 +50,8 @@
 	* [Getting started with PWA](https://addyosmani.com/blog/getting-started-with-progressive-web-apps/)
 	* [Your 1st PWA](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/)
 	* [HN PWA](https://hnpwa.com/)
+    * [Démarrer une PWA avec Vite et VueJS](https://medium.com/@Christopher_Tseng/build-a-blazing-fast-offline-first-pwa-with-vue-3-and-vite-in-2025-the-definitive-guide-5b4969bc7f96)
+
 
 
 
