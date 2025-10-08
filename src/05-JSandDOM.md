@@ -4,7 +4,7 @@
 
 ## JavaScript & DOM{.title}
 
-<footer>HE-Arc (DGR) 2024</footer>
+<footer>HE-Arc (DGR) 2025</footer>
 
 # JavaScript hier
 * Page web = HTML (+ CSS + JavaScript)
@@ -21,6 +21,7 @@
 * Page web = HTML + CSS + **JavaScript**
 * Compilation JIT
 * HTML5, AJAX, bookmarklets
+* [Userscripts](https://github.com/awesome-scripts/awesome-userscripts) : [Tampermonkey](https://www.tampermonkey.net/), Brave [Custom scriptlets](https://brave.com/privacy-updates/32-custom-scriptlets/)
 * One Page Apps
 * Implémentations hors-browser
 	* Node.js, Spidermonkey, Rhino
@@ -32,7 +33,7 @@
 # *Script
 
 * ECMAScript : Norme depuis 1997 
-	* Juin 2024 : [ECMA-262 15th edition](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+	* Juin 2025 : [ECMA-262 16th edition](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
 	* [Support](https://compat-table.github.io/compat-table/es2016plus/) des différentes implémentations
 	* Conversions avec [BabelJS](https://babeljs.io/)
 * JavaScript : implémentation Firefox (réf. MDN)
@@ -46,8 +47,9 @@
  
 * Différentes [implémentations](https://en.wikipedia.org/wiki/List_of_ECMAScript_engines) : navigateur, srv, apps, ...
 * Permissif : du mauvais code est peu maintenable 
-	* [Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
-	* [Bonnes pratiques](http://jstherightway.org/)
+	* [Design Patterns](https://patterns.addy.ie/)
+	* [Bonnes pratiques](https://web.archive.org/web/20250827211325/http://www.jstherightway.org/) ([src](https://github.com/jstherightway/js-the-right-way/))
+    * [Exploring JavaScript](https://exploringjs.com/js/index.html) 
 
 * Interface pour scripter le navigateur
 	* Accès et modification du contenu via DOM
@@ -169,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	* serveur http
 	* express, cordova, forever, dev, pm2, karma, sails, phantomjs
 	
-* [Tuto](https://www.tutorialspoint.com/nodejs/index.htm), [Playground](https://runkit.com)
+* [Tuto](https://www.tutorialspoint.com/nodejs/index.htm), [Playground](https://stackblitz.com/edit/node-js-playground?file=index.js)
 
 # DOM
 
@@ -336,3 +338,4 @@ section#sources {display:none;}
   }
   
 </style>
+
