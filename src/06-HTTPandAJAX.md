@@ -90,28 +90,6 @@ userid=joe&password=guessme
 	* Browser dev tools
 * Exemples PATCH : [mnot][5] , [SOA bits][6]
 
-# Same Origin Policy ([SOP][33])
-* Restriction pour les documents et scripts provenant d'une *origine*
-* *origine* = protocole + hôte + port
-* Concerne les requêtes envoyées par des **scripts** (fecth, XHR)
-* **But** : éviter les attaques inter-sites (XSS, CSRF) 
-  * lecture cookies de sessions, requêtes auth, réponses API, ...
-* Protège les sessions (inderdit à 1 "onglet" d'accéder aux autres)
-* Exceptions pour les éléments *inertes* : images, fonts, CSS, JS, medias (audio/video)
-* CORS permet de contrôler l'accès depuis d'autres origines
-  
-# Cross-Origin Resource Sharing ([CORS][34])
-* **But** : Contourner la SOP quand c'est justifié
-* Géré par le navigateur
-* Utilisation des entêtes de réponses
-* Avant de demander la ressource, le client demande l'autorisation :
-  * Requête *preflight* `OPTION`
-  * Réponse avec les autorisations dans les entêtes :
-    * `Access-Control-Allow-Origin` : protocol + hôte + port
-    * `Access-Control-Allow-Methods` : GET, POST, PUT, DELETE
-    * `Access-Control-Allow-Headers` : entêtes req client
-    * `Access-Control-Allow-Credentials` : cookies ou tokens
-
 # AJAX : Historique
 * Asynchronous Javascript And Xml
 * Buzzword, [Jesse James Garret][7], 2005
@@ -343,10 +321,33 @@ fetch("fichier.json")
 * Utiliser une bibliothèque comme [Axios](https://axios-http.com/docs/intro) 
 * [htmx](https://htmx.org/docs/#ajax) : html repensé pour l'utilisation post-2020
 
+# Same Origin Policy ([SOP][33])
+* Restriction pour les documents et scripts provenant d'une *origine*
+* *origine* = protocole + hôte + port
+* Concerne les requêtes envoyées par des **scripts** (fecth, XHR)
+* **But** : éviter les attaques inter-sites (XSS, CSRF) 
+  * lecture cookies de sessions, requêtes auth, réponses API, ...
+* Protège les sessions (inderdit à 1 "onglet" d'accéder aux autres)
+* Exceptions pour les éléments *inertes* : images, fonts, CSS, JS, medias (audio/video)
+* CORS permet de contrôler l'accès depuis d'autres origines
+  
+# Cross-Origin Resource Sharing ([CORS][34])
+* **But** : Contourner la SOP quand c'est justifié
+* Le serveur *décide*, le navigateur *contrôle*
+* Utilisation des entêtes de réponses
+* Avant de demander la ressource, le client demande l'autorisation :
+  * Requête *preflight* `OPTION`
+  * Réponse avec les autorisations dans les entêtes :
+    * `Access-Control-Allow-Origin` : protocole + hôte + port
+    * `Access-Control-Allow-Methods` : GET, POST, PUT, DELETE
+    * `Access-Control-Allow-Headers` : entêtes des requêtes client
+    * `Access-Control-Allow-Credentials` : cookies ou tokens
+
 # Traitement d'erreurs
 * Utiliser les [entêtes HTTP][24]
 	* Champ Status
 	* Code d'erreur
+ 	* Corps structuré en JSON 
 * En PHP
 
 ```php
@@ -375,8 +376,7 @@ myXHR.getResponseHeader("Status");
 
 # Bonnes pratiques d'utilisabilité
 * Trafic minimal
-* Pas de surprise
-* Respect des conventions
+* Pas de surprise, Respect des conventions ([UI Patterns][35])
 * Pas de distraction
 * A11y ([Contrast Checker][30], [Checklist][32], [ARIA][27], [Resources][31])
 * Ne pas switcher AJAX/non-AJAX
@@ -419,9 +419,7 @@ myXHR.getResponseHeader("Status");
 [32]:https://www.a11yproject.com/checklist/
 [33]:https://developer.mozilla.org/fr/docs/Web/Security/Same-origin_policy
 [34]:https://developer.mozilla.org/fr/docs/Web/HTTP/Guides/CORS
-[35]:
-[36]:
-[37]:
+[35]:https://ui-patterns.com/patterns
 
 <!-- Hack -->
 <style>
@@ -447,4 +445,5 @@ myXHR.getResponseHeader("Status");
   
 </style>
  
+
 
