@@ -395,47 +395,6 @@ sans la ressource</li>
 bits</a></li>
 </ul>
 </section>
-<section id="same-origin-policy-sop33" class="slide level1">
-<h1>Same Origin Policy (<a href="https://developer.mozilla.org/fr/docs/Web/Security/Same-origin_policy">SOP</a>)</h1>
-<ul>
-<li>Restriction pour les documents et scripts provenant d’une
-<em>origine</em></li>
-<li><em>origine</em> = protocole + hôte + port</li>
-<li>Concerne les requêtes envoyées par des <strong>scripts</strong>
-(fecth, XHR)</li>
-<li><strong>But</strong> : éviter les attaques inter-sites (XSS, CSRF)
-<ul>
-<li>lecture cookies de sessions, requêtes auth, réponses API, …</li>
-</ul></li>
-<li>Protège les sessions (inderdit à 1 “onglet” d’accéder aux
-autres)</li>
-<li>Exceptions pour les éléments <em>inertes</em> : images, fonts, CSS,
-JS, medias (audio/video)</li>
-<li>CORS permet de contrôler l’accès depuis d’autres origines</li>
-</ul>
-</section>
-<section id="cross-origin-resource-sharing-cors34" class="slide level1">
-<h1>Cross-Origin Resource Sharing (<a href="https://developer.mozilla.org/fr/docs/Web/HTTP/Guides/CORS">CORS</a>)</h1>
-<ul>
-<li><strong>But</strong> : Contourner la SOP quand c’est justifié</li>
-<li>Géré par le navigateur</li>
-<li>Utilisation des entêtes de réponses</li>
-<li>Avant de demander la ressource, le client demande l’autorisation :
-<ul>
-<li>Requête <em>preflight</em> <code>OPTION</code></li>
-<li>Réponse avec les autorisations dans les entêtes :
-<ul>
-<li><code>Access-Control-Allow-Origin</code> : protocol + hôte +
-port</li>
-<li><code>Access-Control-Allow-Methods</code> : GET, POST, PUT,
-DELETE</li>
-<li><code>Access-Control-Allow-Headers</code> : entêtes req client</li>
-<li><code>Access-Control-Allow-Credentials</code> : cookies ou
-tokens</li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
 <section id="ajax-historique" class="slide level1">
 <h1>AJAX : Historique</h1>
 <ul>
@@ -714,6 +673,48 @@ callbacks</li>
 l’utilisation post-2020</li>
 </ul>
 </section>
+<section id="same-origin-policy-sop33" class="slide level1">
+<h1>Same Origin Policy (<a href="https://developer.mozilla.org/fr/docs/Web/Security/Same-origin_policy">SOP</a>)</h1>
+<ul>
+<li>Restriction pour les documents et scripts provenant d’une
+<em>origine</em></li>
+<li><em>origine</em> = protocole + hôte + port</li>
+<li>Concerne les requêtes envoyées par des <strong>scripts</strong>
+(fecth, XHR)</li>
+<li><strong>But</strong> : éviter les attaques inter-sites (XSS, CSRF)
+<ul>
+<li>lecture cookies de sessions, requêtes auth, réponses API, …</li>
+</ul></li>
+<li>Protège les sessions (inderdit à 1 “onglet” d’accéder aux
+autres)</li>
+<li>Exceptions pour les éléments <em>inertes</em> : images, fonts, CSS,
+JS, medias (audio/video)</li>
+<li>CORS permet de contrôler l’accès depuis d’autres origines</li>
+</ul>
+</section>
+<section id="cross-origin-resource-sharing-cors34" class="slide level1">
+<h1>Cross-Origin Resource Sharing (<a href="https://developer.mozilla.org/fr/docs/Web/HTTP/Guides/CORS">CORS</a>)</h1>
+<ul>
+<li><strong>But</strong> : Contourner la SOP quand c’est justifié</li>
+<li>Le serveur <em>décide</em>, le navigateur <em>contrôle</em></li>
+<li>Utilisation des entêtes de réponses</li>
+<li>Avant de demander la ressource, le client demande l’autorisation :
+<ul>
+<li>Requête <em>preflight</em> <code>OPTION</code></li>
+<li>Réponse avec les autorisations dans les entêtes :
+<ul>
+<li><code>Access-Control-Allow-Origin</code> : protocole + hôte +
+port</li>
+<li><code>Access-Control-Allow-Methods</code> : GET, POST, PUT,
+DELETE</li>
+<li><code>Access-Control-Allow-Headers</code> : entêtes des requêtes
+client</li>
+<li><code>Access-Control-Allow-Credentials</code> : cookies ou
+tokens</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
 <section id="traitement-derreurs" class="slide level1">
 <h1>Traitement d’erreurs</h1>
 <ul>
@@ -722,6 +723,7 @@ HTTP</a>
 <ul>
 <li>Champ Status</li>
 <li>Code d’erreur</li>
+<li>Corps structuré en JSON</li>
 </ul></li>
 <li>En PHP</li>
 </ul>
@@ -760,8 +762,7 @@ Technique</a> (37signals) : partie modifiée</li>
 <h1>Bonnes pratiques d’utilisabilité</h1>
 <ul>
 <li>Trafic minimal</li>
-<li>Pas de surprise</li>
-<li>Respect des conventions</li>
+<li>Pas de surprise, Respect des conventions (<a href="https://ui-patterns.com/patterns">UI Patterns</a>)</li>
 <li>Pas de distraction</li>
 <li>A11y (<a href="https://color.a11y.com/">Contrast Checker</a>, <a href="https://www.a11yproject.com/checklist/">Checklist</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">ARIA</a>,
 <a href="https://www.a11yproject.com/resources/">Resources</a>)</li>
@@ -769,7 +770,6 @@ Technique</a> (37signals) : partie modifiée</li>
 <li>Se mettre à la place de l’utilisateur</li>
 </ul>
 <!-- Bibliographie -->
-<p>[35]: [36]: [37]:</p>
 <!-- Hack -->
 <style>
 .green {color: green}
