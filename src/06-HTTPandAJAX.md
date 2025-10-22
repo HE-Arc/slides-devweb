@@ -4,7 +4,7 @@
 
 ## HTTP & AJAX{.title}
 
-<footer>HE-Arc (DGR) 2022</footer>
+<footer>HE-Arc (DGR) 2025</footer>
 
 # HyperText Transfer Protocol
 * Protocole application : invention www en 1990 (v0.9)
@@ -13,11 +13,12 @@
 	* Entêtes de requête (Host, Referer, User-Agent, …) et réponse (Content-Type, Set-Cookie, Location, …)
 * HTTP 1.1 (1997)
 	* Nouveaux entêtes (Keep-alive, pipelining, cache, ...), Host obligatoire
-* [HTTP 2.0][1] (2015)
+* [HTTP 2.0][1] (2015, basé sur SPDY)
 	* Binaire, multiplexage connexions, compression entêtes, push, …
 	* Supporté par [presque tous][2] les navigateurs, une majorité de serveurs
-* [HTTP 3.0][3] (2019)
-	* UDP, correction erreur, contrôle congestion, multiplexage (0 RTT)
+* [HTTP 3.0][3] (2019, basé sur QUIC)
+	* **UDP**, TLS 1.3 obligatoire, correction erreur, contrôle congestion, multiplexage (0 RTT)
+ 	* TCP+TLS (http2) remplacés par UDP+QUIC 
 
 # Codes de réponse
 * 1xx : Information
@@ -88,6 +89,28 @@ userid=joe&password=guessme
 	* CLI : curl
 	* Browser dev tools
 * Exemples PATCH : [mnot][5] , [SOA bits][6]
+
+# Same Origin Policy ([SOP][33])
+* Restriction pour les documents et scripts provenant d'une *origine*
+* *origine* = protocole + hôte + port
+* Concerne les requêtes envoyées par des **scripts** (fecth, XHR)
+* **But** : éviter les attaques inter-sites (XSS, CSRF) 
+  * lecture cookies de sessions, requêtes auth, réponses API, ...
+* Protège les sessions (inderdit à 1 "onglet" d'accéder aux autres)
+* Exceptions pour les éléments *inertes* : images, fonts, CSS, JS, medias (audio/video)
+* CORS permet de contrôler l'accès depuis d'autres origines
+  
+# Cross-Origin Resource Sharing ([CORS][34])
+* **But** : Contourner la SOP quand c'est justifié
+* Géré par le navigateur
+* Utilisation des entêtes de réponses
+* Avant de demander la ressource, le client demande l'autorisation :
+  * Requête *preflight* `OPTION`
+  * Réponse avec les autorisations dans les entêtes :
+    * `Access-Control-Allow-Origin` : protocol + hôte + port
+    * `Access-Control-Allow-Methods` : GET, POST, PUT, DELETE
+    * `Access-Control-Allow-Headers` : entêtes req client
+    * `Access-Control-Allow-Credentials` : cookies ou tokens
 
 # AJAX : Historique
 * Asynchronous Javascript And Xml
@@ -394,6 +417,11 @@ myXHR.getResponseHeader("Status");
 [30]:https://color.a11y.com/
 [31]:https://www.a11yproject.com/resources/
 [32]:https://www.a11yproject.com/checklist/
+[33]:https://developer.mozilla.org/fr/docs/Web/Security/Same-origin_policy
+[34]:https://developer.mozilla.org/fr/docs/Web/HTTP/Guides/CORS
+[35]:
+[36]:
+[37]:
 
 <!-- Hack -->
 <style>
@@ -419,3 +447,4 @@ myXHR.getResponseHeader("Status");
   
 </style>
  
+
