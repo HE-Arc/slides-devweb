@@ -279,7 +279,7 @@ background: rgba(255, 0, 0, 0.8);
 <h1>Développement web il3</h1>
 <h2 class="title" id="http-ajax">HTTP &amp; AJAX</h2>
 <footer>
-HE-Arc (DGR) 2022
+HE-Arc (DGR) 2025
 </footer>
 </section>
 <section id="hypertext-transfer-protocol" class="slide level1">
@@ -300,16 +300,18 @@ HE-Arc (DGR) 2022
 obligatoire</li>
 </ul></li>
 <li><a href="https://docs.google.com/presentation/d/1eqae3OBCxwWswOsaWMAWRpqnmrVVrAfPQclfSqPkXrA/present#slide=id.p19">HTTP
-2.0</a> (2015)
+2.0</a> (2015, basé sur SPDY)
 <ul>
 <li>Binaire, multiplexage connexions, compression entêtes, push, …</li>
 <li>Supporté par <a href="https://caniuse.com/#feat=http2">presque
 tous</a> les navigateurs, une majorité de serveurs</li>
 </ul></li>
-<li><a href="https://http3-explained.haxx.se/fr/">HTTP 3.0</a> (2019)
+<li><a href="https://http3-explained.haxx.se/fr/">HTTP 3.0</a> (2019,
+basé sur QUIC)
 <ul>
-<li>UDP, correction erreur, contrôle congestion, multiplexage (0
-RTT)</li>
+<li><strong>UDP</strong>, TLS 1.3 obligatoire, correction erreur,
+contrôle congestion, multiplexage (0 RTT)</li>
+<li>TCP+TLS (http2) remplacés par UDP+QUIC</li>
 </ul></li>
 </ul>
 </section>
@@ -391,6 +393,47 @@ sans la ressource</li>
 </ul></li>
 <li>Exemples PATCH : <a href="https://www.mnot.net/blog/2012/09/05/patch">mnot</a> , <a href="https://soabits.blogspot.ch/2013/01/http-put-patch-or-post-partial-updates.html">SOA
 bits</a></li>
+</ul>
+</section>
+<section id="same-origin-policy-sop33" class="slide level1">
+<h1>Same Origin Policy (<a href="https://developer.mozilla.org/fr/docs/Web/Security/Same-origin_policy">SOP</a>)</h1>
+<ul>
+<li>Restriction pour les documents et scripts provenant d’une
+<em>origine</em></li>
+<li><em>origine</em> = protocole + hôte + port</li>
+<li>Concerne les requêtes envoyées par des <strong>scripts</strong>
+(fecth, XHR)</li>
+<li><strong>But</strong> : éviter les attaques inter-sites (XSS, CSRF)
+<ul>
+<li>lecture cookies de sessions, requêtes auth, réponses API, …</li>
+</ul></li>
+<li>Protège les sessions (inderdit à 1 “onglet” d’accéder aux
+autres)</li>
+<li>Exceptions pour les éléments <em>inertes</em> : images, fonts, CSS,
+JS, medias (audio/video)</li>
+<li>CORS permet de contrôler l’accès depuis d’autres origines</li>
+</ul>
+</section>
+<section id="cross-origin-resource-sharing-cors34" class="slide level1">
+<h1>Cross-Origin Resource Sharing (<a href="https://developer.mozilla.org/fr/docs/Web/HTTP/Guides/CORS">CORS</a>)</h1>
+<ul>
+<li><strong>But</strong> : Contourner la SOP quand c’est justifié</li>
+<li>Géré par le navigateur</li>
+<li>Utilisation des entêtes de réponses</li>
+<li>Avant de demander la ressource, le client demande l’autorisation :
+<ul>
+<li>Requête <em>preflight</em> <code>OPTION</code></li>
+<li>Réponse avec les autorisations dans les entêtes :
+<ul>
+<li><code>Access-Control-Allow-Origin</code> : protocol + hôte +
+port</li>
+<li><code>Access-Control-Allow-Methods</code> : GET, POST, PUT,
+DELETE</li>
+<li><code>Access-Control-Allow-Headers</code> : entêtes req client</li>
+<li><code>Access-Control-Allow-Credentials</code> : cookies ou
+tokens</li>
+</ul></li>
+</ul></li>
 </ul>
 </section>
 <section id="ajax-historique" class="slide level1">
@@ -726,6 +769,7 @@ Technique</a> (37signals) : partie modifiée</li>
 <li>Se mettre à la place de l’utilisateur</li>
 </ul>
 <!-- Bibliographie -->
+<p>[35]: [36]: [37]:</p>
 <!-- Hack -->
 <style>
 .green {color: green}
