@@ -599,12 +599,117 @@ de menaces et attaques</li>
 <ul>
 <li>Session, IP, user agent, proxy, …</li>
 </ul></li>
+<li>Suites et logiciels de test</li>
 <li>Utiliser un framework
 <ul>
 <li>ces bonnes pratiques sont déjà implémentées</li>
 </ul></li>
-<li>Suites et logiciels de test</li>
 </ul>
+</section>
+<section id="laravel-django-et-le-top-10-owasp" class="slide level1">
+<h1>Laravel, Django et le top 10 OWASP</h1>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr>
+<th>OWASP 2021</th>
+<th>Laravel</th>
+<th>Django</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A01: Broken Access Control</td>
+<td>Middleware d’autorisation, Gates et Policies pour contrôle d’accès
+basé sur les rôles</td>
+<td>Décorateur <span class="citation" data-cites="login_required">(<strong>login_required?</strong>)</span>,
+système de permissions intégré avec django.contrib.auth</td>
+</tr>
+<tr>
+<td>A02: Cryptographic Failures</td>
+<td>Hachage automatique des mots de passe avec Bcrypt, chiffrement des
+cookies via middleware EncryptCookies, fonction Crypt pour données
+sensibles</td>
+<td>Fonction make_password() pour hachage sécurisé, gestion de
+SECRET_KEY avec rotation recommandée</td>
+</tr>
+<tr>
+<td>A03: Injection</td>
+<td>ORM Eloquent avec requêtes paramétrées par défaut, protection contre
+SQL injection si utilisation correcte des bindings</td>
+<td>ORM Django avec requêtes paramétrées automatiques, fonction RawSQL()
+avec placeholders pour requêtes brutes</td>
+</tr>
+<tr>
+<td>A04: Insecure Design</td>
+<td>Kits de démarrage sécurisés (Breeze, Fortify, Jetstream) avec
+fonctionnalités d’authentification robustes</td>
+<td>Architecture secure by default, documentation de sécurité complète
+et commande check –deploy</td>
+</tr>
+<tr>
+<td>A05: Security Misconfiguration</td>
+<td>Variable APP_DEBUG à désactiver en production, validation des
+permissions fichiers (775/664)</td>
+<td>DEBUG = False obligatoire en production, middleware de sécurité
+activé par défaut</td>
+</tr>
+<tr>
+<td>A06: Vulnerable Components</td>
+<td>Outil Enlightn Security Checker pour scanner les dépendances
+vulnérables</td>
+<td>Outils tiers comme safety et Bandit pour détecter vulnérabilités
+dans dépendances</td>
+</tr>
+<tr>
+<td>A07: Authentication Failures</td>
+<td>Packages Laravel Sanctum et Passport pour authentification API,
+limitation de tentatives via rate limiting</td>
+<td>Validateurs de mots de passe configurables, packages django-axes
+pour protection contre brute-force</td>
+</tr>
+<tr>
+<td>A08: Software and Data Integrity Failures</td>
+<td>Protection contre mass assignment via $fillable et $guarded, éviter
+forceFill() sur données non validées</td>
+<td>Protection automatique contre mass assignment via ModelForm avec
+Meta.fields (approche liste blanche)</td>
+</tr>
+<tr>
+<td>A09: Logging &amp; Monitoring Failures</td>
+<td>Système de logs intégré, packages tiers pour monitoring en temps
+réel disponibles</td>
+<td>Logging configurable, outils comme django-axes pour traçabilité des
+tentatives d’authentification</td>
+</tr>
+<tr>
+<td>A10: Server-Side Request Forgery (SSRF)</td>
+<td>Validation stricte des URLs, éviter requêtes basées sur input
+utilisateur non validé</td>
+<td>Validation des URLs externes, middleware de sécurité pour en-têtes
+HTTP</td>
+</tr>
+<tr>
+<td>Bonus: CSRF Protection</td>
+<td>Middleware VerifyCsrfToken activé par défaut, directive Blade <span class="citation" data-cites="csrf">(<strong>csrf?</strong>)</span> pour
+formulaires, token automatique pour AJAX via Axios</td>
+<td>Middleware CsrfViewMiddleware activé par défaut, tag template {%
+csrf_token %} pour formulaires</td>
+</tr>
+<tr>
+<td>Bonus: XSS Protection</td>
+<td>Échappement automatique via {{ }} dans Blade, attention avec {!! !!}
+qui désactive la protection</td>
+<td>Échappement automatique de toutes les variables dans templates,
+éviter mark_safe() et filtre safe</td>
+</tr>
+</tbody>
+</table>
+<p>(Généré par perplexity.ai)</p>
 </section>
 <section id="références" class="slide level1">
 <h1>Références</h1>
