@@ -212,9 +212,27 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 * Tester ses formulaires avec des expressions à risques
 * Contrôler le maximum de paramètres (même si redondant) :
 	* Session, IP, user agent, proxy, ...
+* Suites et logiciels de test
 * Utiliser un framework 
 	* ces bonnes pratiques sont déjà implémentées
-* Suites et logiciels de test
+
+# Laravel, Django et le top 10 OWASP
+| OWASP 2021 | Laravel | Django |
+|--------------------------|-------------|------------|
+| A01: Broken Access Control | Middleware d'autorisation, Gates et Policies pour contrôle d'accès basé sur les rôles | Décorateur @login_required, système de permissions intégré avec django.contrib.auth |
+| A02: Cryptographic Failures | Hachage automatique des mots de passe avec Bcrypt, chiffrement des cookies via middleware EncryptCookies, fonction Crypt pour données sensibles | Fonction make_password() pour hachage sécurisé, gestion de SECRET_KEY avec rotation recommandée |
+| A03: Injection | ORM Eloquent avec requêtes paramétrées par défaut, protection contre SQL injection si utilisation correcte des bindings | ORM Django avec requêtes paramétrées automatiques, fonction RawSQL() avec placeholders pour requêtes brutes |
+| A04: Insecure Design | Kits de démarrage sécurisés (Breeze, Fortify, Jetstream) avec fonctionnalités d'authentification robustes | Architecture secure by default, documentation de sécurité complète et commande check --deploy |
+| A05: Security Misconfiguration | Variable APP_DEBUG à désactiver en production, validation des permissions fichiers (775/664) | DEBUG = False obligatoire en production, middleware de sécurité activé par défaut |
+| A06: Vulnerable Components | Outil Enlightn Security Checker pour scanner les dépendances vulnérables | Outils tiers comme safety et Bandit pour détecter vulnérabilités dans dépendances |
+| A07: Authentication Failures | Packages Laravel Sanctum et Passport pour authentification API, limitation de tentatives via rate limiting | Validateurs de mots de passe configurables, packages django-axes pour protection contre brute-force |
+| A08: Software and Data Integrity Failures | Protection contre mass assignment via $fillable et $guarded, éviter forceFill() sur données non validées | Protection automatique contre mass assignment via ModelForm avec Meta.fields (approche liste blanche) |
+| A09: Logging & Monitoring Failures | Système de logs intégré, packages tiers pour monitoring en temps réel disponibles | Logging configurable, outils comme django-axes pour traçabilité des tentatives d'authentification |
+| A10: Server-Side Request Forgery (SSRF) | Validation stricte des URLs, éviter requêtes basées sur input utilisateur non validé | Validation des URLs externes, middleware de sécurité pour en-têtes HTTP |
+| Bonus: CSRF Protection | Middleware VerifyCsrfToken activé par défaut, directive Blade @csrf pour formulaires, token automatique pour AJAX via Axios | Middleware CsrfViewMiddleware activé par défaut, tag template {% csrf_token %} pour formulaires |
+| Bonus: XSS Protection | Échappement automatique via {{ }} dans Blade, attention avec {!! !!} qui désactive la protection | Échappement automatique de toutes les variables dans templates, éviter mark_safe() et filtre safe |
+
+(Généré par perplexity.ai)
 
 # Références
 
@@ -295,3 +313,4 @@ ol > li {
 }  
   
 </style>
+
