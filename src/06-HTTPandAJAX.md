@@ -301,8 +301,8 @@ alert(obj.nom);
 * Fetch a un _polyfill_ pour les navigateurs ne le supportant pas
 * L'API Fetch est native et utilise les [promesses][29] plutôt que les callbacks
 
-<div style="display: flex; gap: 20px;">
-	<div style="flex: 50%;">
+
+<div style="flex: 50%;">
 
 ```javascript
 fetch("https://api.site.com/data")
@@ -317,8 +317,8 @@ fetch("https://api.site.com/data")
     })
 ```
 
-	</div>
-	<div style="flex: 50%;">
+</div>
+<div style="flex: 50%;">
 
 ```javascript
 async function getData() {
@@ -331,8 +331,8 @@ async function getData() {
   }
 }
 ```
-	</div>
 </div>
+
 
 
 # Autres alternatives AJAX
@@ -464,6 +464,7 @@ myXHR.getResponseHeader("Status");
   
 </style>
  
+
 
 
 
