@@ -299,10 +299,12 @@ alert(obj.nom);
 
 * Le successeur d'XHR est [fetch][whatwg:fetch] : [Exemple][28]
 * Fetch a un _polyfill_ pour les navigateurs ne le supportant pas
-* L'API Fetch est native et plus simple d'utilisation que jQuery
+* L'API Fetch est native et utilise les [promesses][29] plutôt que les callbacks
+
+<div>
 
 ```javascript
-fetch("fichier.json")
+fetch("https://api.example.com/data")
     .then(function(response) {
         return response.json()
     })
@@ -314,7 +316,24 @@ fetch("fichier.json")
     })
 ```
 
-* L'API fetch est native et utilise les [promesses][29] plutôt que les callbacks
+</div>
+
+<div style="float:right;">
+
+```javascript
+async function getData() {
+  try {
+    const response = await fetch("https://api.example.com/data");
+    const data = await response.json();
+    console.log("Données reçues :", data);
+  } catch (erreur) {
+    console.error("Erreur :", erreur);
+  }
+}
+```
+
+</div>
+
 
 # Autres alternatives AJAX
 
@@ -325,7 +344,7 @@ fetch("fichier.json")
 * Restriction pour les documents et scripts provenant d'une *origine*
 * *origine* = protocole + hôte + port
 * Concerne les requêtes envoyées par des **scripts** (fecth, XHR)
-* **But** : éviter les attaques inter-sites (XSS, CSRF) 
+* **But** : éviter l'accès au DOM par d'autres onglets
   * lecture cookies de sessions, requêtes auth, réponses API, ...
 * Protège les sessions (inderdit à 1 "onglet" d'accéder aux autres)
 * Exceptions pour les éléments *inertes* : images, fonts, CSS, JS, medias (audio/video)
@@ -445,5 +464,6 @@ myXHR.getResponseHeader("Status");
   
 </style>
  
+
 
 
