@@ -301,7 +301,7 @@ alert(obj.nom);
 * Fetch a un _polyfill_ pour les navigateurs ne le supportant pas
 * L'API Fetch est native et utilise les [promesses][29] plutôt que les callbacks
 
-
+<div style="display: flex; gap: 20px;">
 <div style="flex: 50%;">
 
 ```javascript
@@ -331,6 +331,7 @@ async function getData() {
   }
 }
 ```
+</div>
 </div>
 
 
@@ -464,6 +465,7 @@ myXHR.getResponseHeader("Status");
   
 </style>
  
+
 
 
 
