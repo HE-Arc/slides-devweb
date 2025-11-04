@@ -312,6 +312,7 @@ function insertNode() {
 # Références
 
 * Une [réintroduction à JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Une_r%C3%A9introduction_%C3%A0_JavaScript)
+* [Things to avoid in JS][https://waspdev.com/articles/2025-06-13/things-to-avoid-in-javascript#not_using_modules]
 * [How does it feel to learn JS in 2016](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f)
 * Référence [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference)
 * Tutoriels [The Modern JS Tuto](https://javascript.info/) [w3schools](http://www.w3schools.com/js/) [LearnJS](https://learnjavascript.online/)
@@ -338,4 +339,5 @@ section#sources {display:none;}
   }
   
 </style>
+
 
