@@ -301,10 +301,11 @@ alert(obj.nom);
 * Fetch a un _polyfill_ pour les navigateurs ne le supportant pas
 * L'API Fetch est native et utilise les [promesses][29] plutôt que les callbacks
 
-<div>
+<div style="display: flex; gap: 20px;">
+	<div style="flex: 50%;">
 
 ```javascript
-fetch("https://api.example.com/data")
+fetch("https://api.site.com/data")
     .then(function(response) {
         return response.json()
     })
@@ -316,14 +317,13 @@ fetch("https://api.example.com/data")
     })
 ```
 
-</div>
-
-<div style="float:right;">
+	</div>
+	<div style="flex: 50%;">
 
 ```javascript
 async function getData() {
   try {
-    const response = await fetch("https://api.example.com/data");
+    const response = await fetch("https://api.site.com/data");
     const data = await response.json();
     console.log("Données reçues :", data);
   } catch (erreur) {
@@ -331,7 +331,7 @@ async function getData() {
   }
 }
 ```
-
+	</div>
 </div>
 
 
@@ -464,6 +464,7 @@ myXHR.getResponseHeader("Status");
   
 </style>
  
+
 
 
 
