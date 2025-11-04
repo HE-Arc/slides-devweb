@@ -4,7 +4,7 @@
 
 ## jQuery{.title}
 
-<footer>HE-Arc (DGR) 2022</footer>
+<footer>HE-Arc (DGR) 2025</footer>
 
 # jQuery
 * John Resig, 2006
@@ -17,7 +17,8 @@
 	* Requêtes et réponses Ajax
 * Abstraction implémentations différents navigateurs
 * Facile à apprendre
-* Utilisation du chaînage des méthodes et des callbacks 
+* Utilisation du chaînage des méthodes et des callbacks
+* [Toujours utilisé][15] ? [Pourquoi][16] ?
 
 # Utilisation
 
@@ -204,6 +205,7 @@ $("p").click(function(){
 * Tutos [w3schools][7]
 * [SizzleJS][9] : uniquement les sélecteurs
 * Comparaison avec [Vanilla JS][10]
+* [You might not need jQuery][16]
 
 <!-- Bibliographie -->
 [1]:https://jquery.com/download/#other-cdns
@@ -218,6 +220,9 @@ $("p").click(function(){
 [11]:https://www.w3schools.com/jquery/jquery_ajax_load.asp
 [12]:https://gist.github.com/paulirish/12fb951a8b893a454b32
 [13]:https://www.w3schools.com/jsref/met_document_queryselectorall.asp
+[14]:https://survey.stackoverflow.co/2025/technology#1-web-frameworks-and-technologies
+[15]:https://abdulkadersafi.com/blog/is-jquery-still-relevant-in-2025-a-practical-guide-for-developers
+[16]:https://youmightnotneedjquery.com/
 
 
 <!-- Hack -->
@@ -231,3 +236,4 @@ $("p").click(function(){
   }
   
 </style>
+
