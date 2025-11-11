@@ -164,12 +164,10 @@ img, embed, object, video{ max-width: 100%; }
 # Références
 * Exemples
 	* [Livre][20] d'Ethan Marcotte
-	* [thenextweb][22]
-	* [designshack][23]
+	* [thenextweb][22], [designshack][23]
 * Performance
   * [Google][31], [Mozilla][32], [Cloudflare][33], [freeCodeCamp][26]
-  * [sematext][28], [sitespeed.io][29]
-  * [CDNPerf][34]
+  * [sematext][28], [sitespeed.io][29], [CDNPerf][34]
 * Plus loin...
 	* [Généralités][24]
 	* [viewport et media queries][25]
@@ -223,6 +221,7 @@ img, embed, object, video{ max-width: 100%; }
 li p {margin: 5px}
   
 </style>
+
 
 
 
