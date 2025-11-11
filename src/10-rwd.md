@@ -168,7 +168,7 @@ img, embed, object, video{ max-width: 100%; }
 	* [designshack][23]
 * Performance
   * [Google][31], [Mozilla][32], [Cloudflare][33]
-  * [sematext][28]
+  * [sematext][28], [sitespeed.io][29]
   * [CDNPerf][34]
 * Plus loin...
 	* [Généralités][24]
@@ -202,6 +202,7 @@ img, embed, object, video{ max-width: 100%; }
 [25]:https://www.quirksmode.org/blog/archives/2010/09/combining_meta.html
 [27]:https://24ways.org/2014/making-sites-more-responsive-responsibly/
 [28]:https://sematext.com/blog/improve-website-performance/
+[29]:https://www.sitespeed.io/
 [30]:https://developers.google.com/web/progressive-web-apps/
 [31]:https://web.dev/learn/performance
 [32]:https://developer.mozilla.org/en-US/docs/Web/Performance
@@ -221,4 +222,5 @@ img, embed, object, video{ max-width: 100%; }
 li p {margin: 5px}
   
 </style>
+
 
