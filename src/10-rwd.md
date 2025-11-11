@@ -6,7 +6,7 @@
 
 ### *Conception de sites web adaptatifs*
 
-<footer>HE-Arc (DGR) 2024</footer>
+<footer>HE-Arc (DGR) 2025</footer>
 
 # Site adaptatif ?
 
@@ -166,11 +166,14 @@ img, embed, object, video{ max-width: 100%; }
 	* [Livre][20] d'Ethan Marcotte
 	* [thenextweb][22]
 	* [designshack][23]
+* Performance
+  * [Google][31], [Mozilla][32], [Cloudflare][33]
+  * [sematext][28]
+  * [CDNPerf][34]
 * Plus loin...
 	* [Généralités][24]
 	* [viewport et media queries][25]
 	* D'autres techniques, liste de Smashing magazine [@smashing:rwd]
-	* Améliorer la [performance][26], [Awesome WPO][28]
 	* [Making sites more responsive, responsibly][27]
 	
 # Pratique
@@ -184,7 +187,7 @@ img, embed, object, video{ max-width: 100%; }
 [6]:https://webdesignerwall.com/tutorials/responsive-design-in-3-steps
 [7]:https://developer.mozilla.org/fr/docs/CSS/Media_queries
 [8]:https://lukeplant.me.uk/blog/posts/you-can-stop-using-user-scalable-no-and-maximum-scale-1-in-viewport-meta-tags-now/
-[9]:https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html
+[9]:https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html
 [10]:https://www.smashingmagazine.com/2014/05/14/responsive-images-done-right-guide-picture-srcset/
 [11]:https://ericportis.com/etc/smashing-mag-picture-examples/art-direction.html
 [12]:https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/
@@ -197,10 +200,13 @@ img, embed, object, video{ max-width: 100%; }
 [23]:https://designshack.net/articles/css/20-amazing-examples-of-using-media-queries-for-responsive-web-design/
 [24]:https://johnpolacek.github.io/scrolldeck.js/decks/responsive/
 [25]:https://www.quirksmode.org/blog/archives/2010/09/combining_meta.html
-[26]:https://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/
 [27]:https://24ways.org/2014/making-sites-more-responsive-responsibly/
-[28]:https://github.com/davidsonfellipe/awesome-wpo
+[28]:https://sematext.com/blog/improve-website-performance/
 [30]:https://developers.google.com/web/progressive-web-apps/
+[31]:https://web.dev/learn/performance
+[32]:https://developer.mozilla.org/en-US/docs/Web/Performance
+[33]:https://www.cloudflare.com/fr-fr/learning/performance/speed-up-a-website/
+[34]:https://www.cdnperf.com/
 
 <!-- Hack -->
 <style>
@@ -215,3 +221,4 @@ img, embed, object, video{ max-width: 100%; }
 li p {margin: 5px}
   
 </style>
+
