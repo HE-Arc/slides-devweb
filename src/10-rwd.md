@@ -167,7 +167,7 @@ img, embed, object, video{ max-width: 100%; }
 	* [thenextweb][22]
 	* [designshack][23]
 * Performance
-  * [Google][31], [Mozilla][32], [Cloudflare][33]
+  * [Google][31], [Mozilla][32], [Cloudflare][33], [freeCodeCamp][26]
   * [sematext][28], [sitespeed.io][29]
   * [CDNPerf][34]
 * Plus loin...
@@ -200,6 +200,7 @@ img, embed, object, video{ max-width: 100%; }
 [23]:https://designshack.net/articles/css/20-amazing-examples-of-using-media-queries-for-responsive-web-design/
 [24]:https://johnpolacek.github.io/scrolldeck.js/decks/responsive/
 [25]:https://www.quirksmode.org/blog/archives/2010/09/combining_meta.html
+[26]:https://www.freecodecamp.org/news/the-front-end-performance-optimization-handbook/
 [27]:https://24ways.org/2014/making-sites-more-responsive-responsibly/
 [28]:https://sematext.com/blog/improve-website-performance/
 [29]:https://www.sitespeed.io/
@@ -222,5 +223,6 @@ img, embed, object, video{ max-width: 100%; }
 li p {margin: 5px}
   
 </style>
+
 
 
