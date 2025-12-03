@@ -2,9 +2,9 @@
 
 # Développement web il3
 
-## Services web{.title}
+## Service web / A.P.I.{.title}
 
-<footer>HE-Arc (DGR) 2022</footer>
+<footer>HE-Arc (DGR) 2025</footer>
 
 # Applications distribuées
 
@@ -19,7 +19,7 @@
     * [orientée ressource][1] : atome : ressource (donnée) : REST
     * [orientée service][2] : atome : service (traitement) : RPC (SOAP)
 
-# Service web
+# Service web / API
 
 * 2 visions :
 	* Utiliser les technos web pour développer des applis distribuées
@@ -152,7 +152,7 @@
 # Pour aller plus loin...
 
 * Références
-	* [SOAP][19], [WSDL][20], [UDDI][21], [REST][24], [The WSIO][23]
+	* [SOAP][19], [WSDL][20], [REST][24]
 	* [Des services web RESTful][25], [Une apologie de REST][26] (recommandés)
 	* [REST et architectures orientées service][27], [Présentation ROA][28]
 	* [The RESTful cookbook][29], How important is [HATEOAS][31] (stack overflow)
@@ -177,7 +177,7 @@
 [10]:https://www.w3schools.com/xml/xml_soap.asp
 
 [12]:https://www.w3schools.com/xml/xml_wsdl.asp
-[13]:https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
+[13]:https://web.archive.org/web/20251011130223/https://ics.uci.edu/~fielding/pubs/dissertation/top.htm
 [14]:https://fr.wikipedia.org/wiki/Roy_Fielding
 [15]:https://opikanoba.org/tr/fielding/rest/
 [16]:https://fr.wikipedia.org/wiki/Representational_state_transfer
@@ -185,8 +185,8 @@
 [18]:https://martinfowler.com/articles/richardsonMaturityModel.html
 [19]:https://www.w3.org/TR/soap/
 [20]:https://www.w3.org/2002/ws/desc/
-[21]:https://uddi.xml.org/
-[23]:https://www.oasis-ws-i.org/
+
+
 [24]:https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
 [25]:https://larlet.fr/david/biologeek/archives/20070629-architecture-orientee-ressource-pour-faire-des-services-web-restful/
 [26]:https://web.archive.org/web/20160310205502/http://home.ccil.org/~cowan/restws.pdf
@@ -217,3 +217,4 @@
   #sources {display:none}
   
 </style>
+
