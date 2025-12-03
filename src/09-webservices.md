@@ -82,18 +82,28 @@
 * Style d'architecture sur lequel a été bâti le web
 * Architecture Orientée Ressource (ROA)
 * Chapitre 5 de la [thèse][13] de [Roy T. Fielding][14] ([fr][15]), 2000
-* Parmi les [contraintes][16], une interface uniforme :
-	* Identification des ressources (URI)
-	* Manipulation des ressources par des représentations
+* Architecture REST est définie par 6 contraintes architecturales :
+  * Client / Serveur
+  * Sans état
+  * Avec mise en cache
+  * En couches
+  * Avec code à la demande
+  * **Interface uniforme**
+
+
+# REST : Interface Uniforme
+Parmi les 6 [contraintes][16], l'*interface uniforme* : tous les composants (clients, serveurs, proxies…) communiquent avec un même type d’interface générique, au lieu d’avoir une API spécifique à chaque serveur.
+* L'interface uniforme est, elle-même, définie par 4 contraintes
+	* Identification des *ressources* (URI)
+	* Manipulation des *ressources* par des *représentations*
 	* Messages autodescriptifs
 	* Hypermédia comme moteur de l’état de l’application
-* Ressource : information ou moyen d’accès
+* *Ressource* : information ou moyen d’accès
 	* ex. : météo du jour, adresse ajout d’un article à un blog, ...
-* Représentation : forme donnée à la ressource
+* *Représentation* : forme donnée à la ressource
 	* ex. : page html, fichier PDF, image, flux RSS, fichier sonore, ...
 
-# REST
-
+# REST concrètement
 * Principes
 	* Identifier les ressources avec des URI (noms)
 	* Actions déterminées par des méthodes HTTP (verbes)
@@ -107,7 +117,7 @@
 	* Sûreté : Etat de la ressource (contenu) inchangé
 	* Idempotence : plusieurs appels donnent le même résultat
 
-# REST
+# REST : exemples
 * L'appel d'une ressource avec des verbes différents produira un résultat différent :
 
 | Effet | Route   | Verbe  |URI (ressource) | Description                      |
@@ -217,4 +227,5 @@
   #sources {display:none}
   
 </style>
+
 
