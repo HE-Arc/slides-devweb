@@ -90,10 +90,8 @@
   * Avec code à la demande
   * **Interface uniforme**
 
-
 # REST : Interface Uniforme
 Parmi les 6 [contraintes][16], l'*interface uniforme* : Tous les composants (clients, serveurs, proxies…) communiquent avec un même type d’interface générique, au lieu d’avoir une API spécifique à chaque serveur.
-
 * L'interface uniforme est, elle-même, définie par 4 contraintes
 	* Identification des *ressources* (URI)
 	* Manipulation des *ressources* par des *représentations*
@@ -228,7 +226,4 @@ Parmi les 6 [contraintes][16], l'*interface uniforme* : Tous les composants (cli
   #sources {display:none}
   
 </style>
-
-
-
 
