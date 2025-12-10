@@ -159,7 +159,6 @@
 
 # SOAP vs REST
 
-* webservice : exposer son API en REST ou SOAP ?
 * SOAP (WS-*)
 	* hérité du monde de l'entreprise
 	* plus de code pour manipuler la requête et générer la réponse
@@ -186,7 +185,8 @@
 	* Tests : Postman, [Hoppscotch][38], [Ping-API][39], [autres][40]
 
 * [GraphQL](http://graphql.org/) 
-	* est destiné à devenir la prochaine évolution des apis REST utilisant JSON. Initié par Facebook, Github permet également d'en [faire usage](https://developer.github.com/v4/).
+	* Requête envoyée à un endpoint unique, le client décrit la forme de la réponse (JSON)
+ 	* Initiative Facebook, ex: [Github](https://docs.github.com/fr/graphql).
 
 <!-- Bibliographie -->
 [1]:https://en.wikipedia.org/wiki/Resource-oriented_architecture
@@ -241,6 +241,7 @@
   #sources {display:none}
   
 </style>
+
 
 
 
