@@ -218,8 +218,8 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 
 # Laravel, Django et le top 10 OWASP
 <div class=small>
-| OWASP 2021 | Laravel | Django |
-|--------------------------|-------------|------------|
+| O21|  Laravel    |   Django   |
+|----|-------------|------------|
 | A01 | Role based AC | Décorateur @login_required, django.contrib.auth |
 | A02 | Passwords : Bcrypt, EncryptCookies, Crypt | make_password() , gestion SECRET_KEY |
 | A03 | ORM Eloquent, protection injection SQL  | ORM Django, RawSQL() avec placeholders pour requêtes brutes |
@@ -315,14 +315,15 @@ ol > li {
 	margin: 10px 30px;
 	font-size: 80%;
 }  
-	.small, table, tr, td {
+	.small {
     font-size: 40%;
-	line-height: 80%;
+	line-height: 90%;
     margin: 0 auto;
 	overflow: hidden; 
   }
 		
 </style>
+
 
 
 
