@@ -92,8 +92,7 @@
 
 # REST : Interface Uniforme
 * Parmi les 6 [contraintes][16], l'*interface uniforme* : 
-Les composants (clients, serveurs, proxies…) communiquent par une interface générique (et non une API spécifique à chaque serveur).
-
+	* Les composants (clients, serveurs, proxies…) communiquent par une interface générique (et non une API spécifique à chaque serveur).
 * L'interface uniforme est, elle-même, définie par 4 contraintes
 	* Identification des *ressources* (URI)
 	* Manipulation des *ressources* par des *représentations*
@@ -143,6 +142,20 @@ Les composants (clients, serveurs, proxies…) communiquent par une interface g�
 	* Respect des propriétés des verbes HTTP
 * 3: Hypertext As The Engine Of Application State (HATEOAS)
 	* Les états suivants sont documentés dans la réponse (`<link>`)
+
+# REpresentational State Transfer
+## Representional
+  * On ne manipule pas directement les ressource, mais les representations
+## State
+  * L'état de l'application côté client qui représente une ressource
+  * Changement d'état en suivant des liens hypertextes (requêtes http)
+## Transfer
+  * Chaque réponse aux requêtes **transfère** une nouvelle représentation
+## REST
+  * Client/Serveur
+  * L'état de l'application est gérée par le client
+  * Ressources manipulées avec des représentations (mimetypes)
+  * Hypermedia pour changer d'état
 
 # SOAP vs REST
 
@@ -228,6 +241,7 @@ Les composants (clients, serveurs, proxies…) communiquent par une interface g�
   #sources {display:none}
   
 </style>
+
 
 
 
