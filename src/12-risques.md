@@ -315,13 +315,14 @@ ol > li {
 	margin: 10px 30px;
 	font-size: 80%;
 }  
-	.small {
-    font-size: 80%;
+	.small, table, tr, td {
+    font-size: 40%;
 	line-height: 80%;
     margin: 0 auto;
 	overflow: hidden; 
   }
 		
 </style>
+
 
 
