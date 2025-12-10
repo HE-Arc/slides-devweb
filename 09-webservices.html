@@ -399,10 +399,10 @@ Fielding</a> (<a href="https://opikanoba.org/tr/fielding/rest/">fr</a>),
 <li>Architecture REST est définie par 6 contraintes architecturales :
 <ul>
 <li>Client / Serveur</li>
-<li>Sans état</li>
+<li>Sans état (pour le serveur)</li>
 <li>Avec mise en cache</li>
 <li>En couches</li>
-<li>Avec code à la demande</li>
+<li>Avec code à la demande (optionnel : envoi de JS au client)</li>
 <li><strong>Interface uniforme</strong></li>
 </ul></li>
 </ul>
@@ -415,7 +415,7 @@ l’<em>interface uniforme</em> :
 <ul>
 <li>Les composants (clients, serveurs, proxies…) communiquent avec une
 interface générique (et non une API spécifique à chaque serveur) : HTTP
-(verbes, URI, codes réponses, entêtes, …)</li>
+(verbes, URI, codes de réponse, entêtes, …)</li>
 </ul></li>
 <li>L’<em>interface uniforme</em> est, elle-même, définie par 4
 contraintes
@@ -429,7 +429,7 @@ types</a>)</li>
 </ul></li>
 <li><em>Ressource</em> : information ou moyen d’accès (abstrait)
 <ul>
-<li>ex. : météo du jour, adresse ajout d’un article à un blog, …</li>
+<li>ex. : météo du jour, adresse, article à un blog, …</li>
 </ul></li>
 <li><em>Représentation</em> : forme donnée à la ressource
 <ul>
