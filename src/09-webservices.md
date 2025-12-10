@@ -93,12 +93,12 @@
 # REST : Interface Uniforme
 * Parmi les 6 [contraintes][16], l'*interface uniforme* : 
 	* Les composants (clients, serveurs, proxies…) communiquent avec une interface générique (et non une API spécifique à chaque serveur) : HTTP (verbes, URI, codes réponses, entêtes, ...)
-* L'interface uniforme est, elle-même, définie par 4 contraintes
+* L'*interface uniforme* est, elle-même, définie par 4 contraintes
 	* Identification des *ressources* (URI)
-	* Manipulation des *ressources* par des *représentations* (MIME types)
-	* Messages autodescriptifs (entêtes/réponses http)
+	* Manipulation des *ressources* par des *représentations* ([MIME types][21])
+	* Messages autodescriptifs (entêtes/réponses HTTP)
 	* Hypermédia comme moteur de l’état de l’application (liens)
-* *Ressource* : information ou moyen d’accès
+* *Ressource* : information ou moyen d’accès (abstrait)
 	* ex. : météo du jour, adresse ajout d’un article à un blog, ...
 * *Représentation* : forme donnée à la ressource
 	* ex. : text/html, application/pdf, image/png, application/rss+xml, audio/mpeg, ...
@@ -144,18 +144,18 @@
 	* Les états suivants sont documentés dans la réponse (`<link>`)
 
 # REpresentational State Transfer
-* Representional
-  * On ne manipule pas directement les ressource, mais les representations
-* State
-  * L'état de l'application côté client qui représente une ressource
-  * Changement d'état en suivant des liens hypertextes (requêtes http)
-* Transfer
+* **Representional**
+  * On ne manipule pas directement les ressources, mais des *représentations* de ces ressources
+* **State**
+  * L'état de l'application côté **client** qui *représente* une ressource
+  * Changement d'état en suivant des liens hypertextes (requêtes HTTP)
+* **Transfer**
   * Chaque réponse aux requêtes **transfère** une nouvelle représentation
 * REST
   * Client/Serveur
   * L'état de l'application est gérée par le client
-  * Ressources manipulées avec des représentations (mimetypes)
-  * Hypermedia pour changer d'état
+  * Ressources manipulées avec des représentations ([MIME Types][21])
+  * Hypermedia (liens) pour changer d'état
 
 # SOAP vs REST
 
@@ -209,7 +209,7 @@
 [18]:https://martinfowler.com/articles/richardsonMaturityModel.html
 [19]:https://www.w3.org/TR/soap/
 [20]:https://www.w3.org/2002/ws/desc/
-
+[21]:https://mimetype.io/all-types
 
 [24]:https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
 [25]:https://larlet.fr/david/biologeek/archives/20070629-architecture-orientee-ressource-pour-faire-des-services-web-restful/
@@ -241,6 +241,7 @@
   #sources {display:none}
   
 </style>
+
 
 
 
