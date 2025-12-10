@@ -417,15 +417,17 @@ l’<em>interface uniforme</em> :
 interface générique (et non une API spécifique à chaque serveur) : HTTP
 (verbes, URI, codes réponses, entêtes, …)</li>
 </ul></li>
-<li>L’interface uniforme est, elle-même, définie par 4 contraintes
+<li>L’<em>interface uniforme</em> est, elle-même, définie par 4
+contraintes
 <ul>
 <li>Identification des <em>ressources</em> (URI)</li>
 <li>Manipulation des <em>ressources</em> par des
-<em>représentations</em> (MIME types)</li>
-<li>Messages autodescriptifs (entêtes/réponses http)</li>
+<em>représentations</em> (<a href="https://mimetype.io/all-types">MIME
+types</a>)</li>
+<li>Messages autodescriptifs (entêtes/réponses HTTP)</li>
 <li>Hypermédia comme moteur de l’état de l’application (liens)</li>
 </ul></li>
-<li><em>Ressource</em> : information ou moyen d’accès
+<li><em>Ressource</em> : information ou moyen d’accès (abstrait)
 <ul>
 <li>ex. : météo du jour, adresse ajout d’un article à un blog, …</li>
 </ul></li>
@@ -563,17 +565,20 @@ résultat différent :</li>
 <section id="representational-state-transfer" class="slide level1">
 <h1>REpresentational State Transfer</h1>
 <ul>
-<li>Representional
+<li><strong>Representional</strong>
 <ul>
-<li>On ne manipule pas directement les ressource, mais les
-representations</li>
+<li>On ne manipule pas directement les ressources, mais des
+<em>représentations</em> de ces ressources</li>
 </ul></li>
-<li>State
+<li><strong>State</strong>
 <ul>
-<li>L’état de l’application côté client qui représente une
-ressource</li>
-<li>Changement d’état en suivant des liens hypertextes (requêtes http)
-* Transfer</li>
+<li>L’état de l’application côté <strong>client</strong> qui
+<em>représente</em> une ressource</li>
+<li>Changement d’état en suivant des liens hypertextes (requêtes
+HTTP)</li>
+</ul></li>
+<li><strong>Transfer</strong>
+<ul>
 <li>Chaque réponse aux requêtes <strong>transfère</strong> une nouvelle
 représentation</li>
 </ul></li>
@@ -581,8 +586,8 @@ représentation</li>
 <ul>
 <li>Client/Serveur</li>
 <li>L’état de l’application est gérée par le client</li>
-<li>Ressources manipulées avec des représentations (mimetypes)</li>
-<li>Hypermedia pour changer d’état</li>
+<li>Ressources manipulées avec des représentations (<a href="https://mimetype.io/all-types">MIME Types</a>)</li>
+<li>Hypermedia (liens) pour changer d’état</li>
 </ul></li>
 </ul>
 </section>
