@@ -413,23 +413,27 @@ Fielding</a> (<a href="https://opikanoba.org/tr/fielding/rest/">fr</a>),
 <li>Parmi les 6 <a href="https://fr.wikipedia.org/wiki/Representational_state_transfer">contraintes</a>,
 l’<em>interface uniforme</em> :
 <ul>
-<li>Les composants (clients, serveurs, proxies…) communiquent par une
-interface générique (et non une API spécifique à chaque serveur).</li>
+<li>Les composants (clients, serveurs, proxies…) communiquent avec une
+interface générique (et non une API spécifique à chaque serveur) : HTTP
+(verbes, URI, codes réponses, entêtes, …)</li>
 </ul></li>
 <li>L’interface uniforme est, elle-même, définie par 4 contraintes
 <ul>
 <li>Identification des <em>ressources</em> (URI)</li>
 <li>Manipulation des <em>ressources</em> par des
-<em>représentations</em></li>
-<li>Messages autodescriptifs</li>
-<li>Hypermédia comme moteur de l’état de l’application</li>
+<em>représentations</em> (MIME types)</li>
+<li>Messages autodescriptifs (entêtes/réponses http)</li>
+<li>Hypermédia comme moteur de l’état de l’application (liens)</li>
 </ul></li>
 <li><em>Ressource</em> : information ou moyen d’accès
 <ul>
 <li>ex. : météo du jour, adresse ajout d’un article à un blog, …</li>
 </ul></li>
-<li><em>Représentation</em> : forme donnée à la ressource ex. : page
-html, fichier PDF, image, flux RSS, fichier sonore, …</li>
+<li><em>Représentation</em> : forme donnée à la ressource
+<ul>
+<li>ex. : text/html, application/pdf, image/png, application/rss+xml,
+audio/mpeg, …</li>
+</ul></li>
 </ul>
 </section>
 <section id="rest-concrètement" class="slide level1">
@@ -445,8 +449,7 @@ html, fichier PDF, image, flux RSS, fichier sonore, …</li>
 <li>PUT, PATCH : UPDATE (idempotente)</li>
 <li>DELETE : DELETE (idempotente)</li>
 </ul></li>
-<li>Les liens hypertextes permettent de représenter le contenu :
-navigation</li>
+<li>Les liens hypertextes permettent de changer d’état : navigation</li>
 <li>Les types MIME determinent la représentation de la ressource</li>
 </ul></li>
 <li>Rappel
@@ -559,20 +562,28 @@ résultat différent :</li>
 </section>
 <section id="representational-state-transfer" class="slide level1">
 <h1>REpresentational State Transfer</h1>
-<h2 id="representional">Representional</h2>
+<ul>
+<li>Representional
 <ul>
 <li>On ne manipule pas directement les ressource, mais les
-representations ## State</li>
+representations</li>
+</ul></li>
+<li>State
+<ul>
 <li>L’état de l’application côté client qui représente une
 ressource</li>
 <li>Changement d’état en suivant des liens hypertextes (requêtes http)
-## Transfer</li>
+* Transfer</li>
 <li>Chaque réponse aux requêtes <strong>transfère</strong> une nouvelle
-représentation ## REST</li>
+représentation</li>
+</ul></li>
+<li>REST
+<ul>
 <li>Client/Serveur</li>
 <li>L’état de l’application est gérée par le client</li>
 <li>Ressources manipulées avec des représentations (mimetypes)</li>
 <li>Hypermedia pour changer d’état</li>
+</ul></li>
 </ul>
 </section>
 <section id="soap-vs-rest" class="slide level1">
