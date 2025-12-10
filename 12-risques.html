@@ -638,40 +638,43 @@ de menaces et attaques</li>
 <tr>
 <td>A03 Injection</td>
 <td>ORM Eloquent, protection injection SQL</td>
-<td>ORM Django, RawSQL() avec placeholders pour requêtes brutes</td>
+<td>ORM Django, <code>RawSQL()</code> avec placeholders pour requêtes
+brutes</td>
 </tr>
 <tr>
 <td>A04 Conception</td>
 <td>Starter Kits (Breeze, Fortify, Jetstream)</td>
-<td>Architecture secure by default, check –deploy</td>
+<td>Architecture secure by default, <code>check --deploy</code></td>
 </tr>
 <tr>
 <td>A05 Config</td>
-<td>APP_DEBUG à FALSE, permissions fichiers (775/664)</td>
-<td>DEBUG = False obligatoire en production, middleware de sécurité
-activé par défaut</td>
+<td><code>APP_DEBUG = FALSE</code>, permissions fichiers
+(<code>775/664</code>)</td>
+<td><code>DEBUG = False</code> obligatoire en production, middleware de
+sécurité activé par défaut</td>
 </tr>
 <tr>
 <td>A06 Dépendances</td>
-<td>Enlightn Security Checker (scan dépendances)</td>
-<td>tiers : safety, Bandit, … pour dépendances</td>
+<td><code>Enlightn Security Checker</code> (scan dépendances)</td>
+<td>tiers : <code>safety, Bandit, ...</code> pour dépendances</td>
 </tr>
 <tr>
 <td>A07 Auth</td>
-<td>Sanctum et Passport auth. API, rate limiting</td>
-<td>Validateurs passwords, django-axes contre brute-force</td>
+<td><code>Sanctum et Passport</code> auth. API, rate limiting</td>
+<td>Validateurs passwords, <code>django-axes</code> contre
+brute-force</td>
 </tr>
 <tr>
 <td>A08 Integrité</td>
-<td>Protection contre mass assignment via $fillable et $guarded, éviter
-forceFill() sur données non validées</td>
-<td>Protection automatique contre mass assignment via ModelForm avec
-Meta.fields (approche liste blanche)</td>
+<td>mass assignment protection : <code>$fillable</code> et
+<code>$guarded</code></td>
+<td><code>ModelForm</code> avec <code>Meta.fields</code> (approche liste
+blanche)</td>
 </tr>
 <tr>
 <td>A09 Logs</td>
 <td>logs intégré, monitoring en temps réel</td>
-<td>Logging configurable, outils comme django-axes</td>
+<td>Logging configurable, <code>django-axes</code>, …</td>
 </tr>
 <tr>
 <td>A10 SSRF</td>
@@ -680,15 +683,16 @@ Meta.fields (approche liste blanche)</td>
 </tr>
 <tr>
 <td>CSRF Protection</td>
-<td>VerifyCsrfToken, <span class="citation" data-cites="csrf">(<strong>csrf?</strong>)</span> pour forms, token
+<td><code>VerifyCsrfToken</code>, <code>@csrf</code> pour forms, token
 automatique pour AJAX via Axios</td>
-<td>CsrfViewMiddleware, {% csrf_token %} pour forms</td>
+<td><code>CsrfViewMiddleware</code>, <code>{% csrf_token %}</code> pour
+forms</td>
 </tr>
 <tr>
 <td>XSS Protection</td>
-<td>Échappement automatique via {{ }} dans Blade</td>
-<td>Échappement automatique dans templates, éviter mark_safe() et filtre
-safe</td>
+<td>Échappement automatique via <code>{{ }}</code> dans Blade</td>
+<td>Échappement automatique dans templates, éviter
+<code>mark_safe()</code></td>
 </tr>
 </tbody>
 </table>
