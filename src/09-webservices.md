@@ -92,16 +92,16 @@
 
 # REST : Interface Uniforme
 * Parmi les 6 [contraintes][16], l'*interface uniforme* : 
-	* Les composants (clients, serveurs, proxies…) communiquent par une interface générique (et non une API spécifique à chaque serveur).
+	* Les composants (clients, serveurs, proxies…) communiquent avec une interface générique (et non une API spécifique à chaque serveur) : HTTP (verbes, URI, codes réponses, entêtes, ...)
 * L'interface uniforme est, elle-même, définie par 4 contraintes
 	* Identification des *ressources* (URI)
-	* Manipulation des *ressources* par des *représentations*
-	* Messages autodescriptifs
-	* Hypermédia comme moteur de l’état de l’application
+	* Manipulation des *ressources* par des *représentations* (MIME types)
+	* Messages autodescriptifs (entêtes/réponses http)
+	* Hypermédia comme moteur de l’état de l’application (liens)
 * *Ressource* : information ou moyen d’accès
 	* ex. : météo du jour, adresse ajout d’un article à un blog, ...
 * *Représentation* : forme donnée à la ressource
-	ex. : page html, fichier PDF, image, flux RSS, fichier sonore, ...
+	* ex. : text/html, application/pdf, image/png, application/rss+xml, audio/mpeg, ...
 
 # REST concrètement
 * Principes
@@ -111,7 +111,7 @@
 		* POST : CREATE
 		* PUT, PATCH : UPDATE (idempotente)
 		* DELETE : DELETE (idempotente)
-	* Les liens hypertextes permettent de représenter le contenu : navigation
+	* Les liens hypertextes permettent de changer d'état : navigation
 	* Les types MIME determinent la représentation de la ressource
 * Rappel	
 	* Sûreté : Etat de la ressource (contenu) inchangé
@@ -144,14 +144,14 @@
 	* Les états suivants sont documentés dans la réponse (`<link>`)
 
 # REpresentational State Transfer
-## Representional
+* Representional
   * On ne manipule pas directement les ressource, mais les representations
-## State
+* State
   * L'état de l'application côté client qui représente une ressource
   * Changement d'état en suivant des liens hypertextes (requêtes http)
-## Transfer
+* Transfer
   * Chaque réponse aux requêtes **transfère** une nouvelle représentation
-## REST
+* REST
   * Client/Serveur
   * L'état de l'application est gérée par le client
   * Ressources manipulées avec des représentations (mimetypes)
@@ -241,6 +241,7 @@
   #sources {display:none}
   
 </style>
+
 
 
 
