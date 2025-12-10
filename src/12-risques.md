@@ -222,16 +222,16 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 |----|-------------|------------|
 | A01 Accès| Role based AC | Décorateur `@login_required`, `django.contrib.auth` |
 | A02 Crypto| Passwords : `Bcrypt`, `EncryptCookies`, `Crypt` | `make_password()` , gestion `SECRET_KEY` |
-| A03 Injection| ORM Eloquent, protection injection SQL  | ORM Django, RawSQL() avec placeholders pour requêtes brutes |
-| A04 Conception| Starter Kits (Breeze, Fortify, Jetstream) | Architecture secure by default, check --deploy |
-| A05 Config| APP_DEBUG à FALSE, permissions fichiers (775/664) | DEBUG = False obligatoire en production, middleware de sécurité activé par défaut |
-| A06 Dépendances| Enlightn Security Checker (scan dépendances) | tiers : safety, Bandit, ... pour dépendances |
-| A07 Auth| Sanctum et Passport auth. API, rate limiting | Validateurs passwords, django-axes contre brute-force |
-| A08 Integrité| Protection contre mass assignment via $fillable et $guarded, éviter forceFill() sur données non validées | Protection automatique contre mass assignment via ModelForm avec Meta.fields (approche liste blanche) |
-| A09 Logs| logs intégré, monitoring en temps réel | Logging configurable, outils comme django-axes |
+| A03 Injection| ORM Eloquent, protection injection SQL  | ORM Django, `RawSQL()` avec placeholders pour requêtes brutes |
+| A04 Conception| Starter Kits (Breeze, Fortify, Jetstream) | Architecture secure by default, `check --deploy` |
+| A05 Config| `APP_DEBUG = FALSE`, permissions fichiers (`775/664`) | `DEBUG = False` obligatoire en production, middleware de sécurité activé par défaut |
+| A06 Dépendances| `Enlightn Security Checker` (scan dépendances) | tiers : `safety, Bandit, ...` pour dépendances |
+| A07 Auth| `Sanctum et Passport` auth. API, rate limiting | Validateurs passwords, `django-axes` contre brute-force |
+| A08 Integrité| mass assignment protection : `$fillable` et `$guarded` | `ModelForm` avec `Meta.fields` (approche liste blanche) |
+| A09 Logs| logs intégré, monitoring en temps réel | Logging configurable, `django-axes`, ... |
 | A10 SSRF| Validation stricte des URLs | Validation des URLs externes, sécurité en-têtes HTTP |
-| CSRF Protection | VerifyCsrfToken, @csrf pour forms, token automatique pour AJAX via Axios | CsrfViewMiddleware, {% csrf_token %} pour forms |
-| XSS Protection | Échappement automatique via {{ }} dans Blade | Échappement automatique dans templates, éviter mark_safe() et filtre safe |
+| CSRF Protection | `VerifyCsrfToken`, `@csrf` pour forms, token automatique pour AJAX via Axios | `CsrfViewMiddleware`, `{% csrf_token %}` pour forms |
+| XSS Protection | Échappement automatique via `{{ }}` dans Blade | Échappement automatique dans templates, éviter `mark_safe()` |
 
 </div>
 (Généré par perplexity.ai)
@@ -323,6 +323,7 @@ ol > li {
   }
 		
 </style>
+
 
 
 
