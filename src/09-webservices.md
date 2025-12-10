@@ -84,22 +84,22 @@
 * Chapitre 5 de la [thèse][13] de [Roy T. Fielding][14] ([fr][15]), 2000
 * Architecture REST est définie par 6 contraintes architecturales :
   * Client / Serveur
-  * Sans état
+  * Sans état (pour le serveur)
   * Avec mise en cache
   * En couches
-  * Avec code à la demande
+  * Avec code à la demande (optionnel : envoi de JS au client)
   * **Interface uniforme**
 
 # REST : Interface Uniforme
 * Parmi les 6 [contraintes][16], l'*interface uniforme* : 
-	* Les composants (clients, serveurs, proxies…) communiquent avec une interface générique (et non une API spécifique à chaque serveur) : HTTP (verbes, URI, codes réponses, entêtes, ...)
+	* Les composants (clients, serveurs, proxies…) communiquent avec une interface générique (et non une API spécifique à chaque serveur) : HTTP (verbes, URI, codes de réponse, entêtes, ...)
 * L'*interface uniforme* est, elle-même, définie par 4 contraintes
 	* Identification des *ressources* (URI)
 	* Manipulation des *ressources* par des *représentations* ([MIME types][21])
 	* Messages autodescriptifs (entêtes/réponses HTTP)
 	* Hypermédia comme moteur de l’état de l’application (liens)
 * *Ressource* : information ou moyen d’accès (abstrait)
-	* ex. : météo du jour, adresse ajout d’un article à un blog, ...
+	* ex. : météo du jour, adresse, article à un blog, ...
 * *Représentation* : forme donnée à la ressource
 	* ex. : text/html, application/pdf, image/png, application/rss+xml, audio/mpeg, ...
 
@@ -241,6 +241,7 @@
   #sources {display:none}
   
 </style>
+
 
 
 
