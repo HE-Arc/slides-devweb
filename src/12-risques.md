@@ -4,7 +4,7 @@
 
 ## Risques applicatifs des app web{.title}
 
-<footer>HE-Arc (DGR) 2024</footer>
+<footer>HE-Arc (DGR) 2025</footer>
 
 # Risque
 * Faille ou bug permettant d'altérer le fonctionnement
@@ -26,24 +26,24 @@
 * Fondée en 2004, internationale, sans but lucratif
 * Référence principale dans le domaine
 * Propose :
-  * Top 10 (web et [mobile][17]) tous les 4 ans : [Méthode][40], [CVSS][41], [CWE][42] 
+  * Top 10 (web, [mobile][17], [API][47], [LLM][48]) tous les 4 ans : [Méthode][40], [CVSS][41], [CWE][42] 
   * Grande communauté d'experts
   * Formation, documentation et ressources
   * Outils d'audit, de tests et de formation (ex: [Juice Shop][43])
   * [Cheat Sheets][44] (yc pour CICD, Ajax, Laravel, Django,... ;)
 
-# [Top 10][9] OWASP 2021 ([fr][27] - [historique][30])
+# [Top 10][9] OWASP 2025 ([fr][27] - [historique][30])
 
 1. Contrôle d'accès défaillants
-2. Défaillances cryptographiques 
-3. Injections
-4. Conception non sécurisée
-5. Mauvaise configuration de sécurité
-6. Composants vulnérables et obsolètes
-7. Identification & Authentification de mauvaise qualité
+2. Mauvaise configuration de sécurité
+3. Vulnérabilités des dépenndances
+4. Défaillances cryptographiques 
+5. Injections
+6. Conception non sécurisée
+7. Authentification de mauvaise qualité
 8. Manque d'intégrité des données et du logiciel
-9. Carences des systèmes de contrôle et de journalisation
-10. Falsification de requêtes côté serveur
+9. Carences des systèmes d'alerte et de journalisation
+10. Mauvaise gestion des condtions exceptionnelles
 
 * Non exhaustif : ex. : risques liés à [Node JS][16]
 
@@ -217,22 +217,24 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 	* ces bonnes pratiques sont déjà implémentées
 
 # Laravel, Django et le top 10 OWASP
+<div class=small>
 | OWASP 2021 | Laravel | Django |
 |--------------------------|-------------|------------|
-| A01: Broken Access Control | Middleware d'autorisation, Gates et Policies pour contrôle d'accès basé sur les rôles | Décorateur @login_required, système de permissions intégré avec django.contrib.auth |
-| A02: Cryptographic Failures | Hachage automatique des mots de passe avec Bcrypt, chiffrement des cookies via middleware EncryptCookies, fonction Crypt pour données sensibles | Fonction make_password() pour hachage sécurisé, gestion de SECRET_KEY avec rotation recommandée |
-| A03: Injection | ORM Eloquent avec requêtes paramétrées par défaut, protection contre SQL injection si utilisation correcte des bindings | ORM Django avec requêtes paramétrées automatiques, fonction RawSQL() avec placeholders pour requêtes brutes |
-| A04: Insecure Design | Kits de démarrage sécurisés (Breeze, Fortify, Jetstream) avec fonctionnalités d'authentification robustes | Architecture secure by default, documentation de sécurité complète et commande check --deploy |
-| A05: Security Misconfiguration | Variable APP_DEBUG à désactiver en production, validation des permissions fichiers (775/664) | DEBUG = False obligatoire en production, middleware de sécurité activé par défaut |
-| A06: Vulnerable Components | Outil Enlightn Security Checker pour scanner les dépendances vulnérables | Outils tiers comme safety et Bandit pour détecter vulnérabilités dans dépendances |
-| A07: Authentication Failures | Packages Laravel Sanctum et Passport pour authentification API, limitation de tentatives via rate limiting | Validateurs de mots de passe configurables, packages django-axes pour protection contre brute-force |
-| A08: Software and Data Integrity Failures | Protection contre mass assignment via $fillable et $guarded, éviter forceFill() sur données non validées | Protection automatique contre mass assignment via ModelForm avec Meta.fields (approche liste blanche) |
-| A09: Logging & Monitoring Failures | Système de logs intégré, packages tiers pour monitoring en temps réel disponibles | Logging configurable, outils comme django-axes pour traçabilité des tentatives d'authentification |
-| A10: Server-Side Request Forgery (SSRF) | Validation stricte des URLs, éviter requêtes basées sur input utilisateur non validé | Validation des URLs externes, middleware de sécurité pour en-têtes HTTP |
-| Bonus: CSRF Protection | Middleware VerifyCsrfToken activé par défaut, directive Blade @csrf pour formulaires, token automatique pour AJAX via Axios | Middleware CsrfViewMiddleware activé par défaut, tag template {% csrf_token %} pour formulaires |
-| Bonus: XSS Protection | Échappement automatique via {{ }} dans Blade, attention avec {!! !!} qui désactive la protection | Échappement automatique de toutes les variables dans templates, éviter mark_safe() et filtre safe |
+| A01 | Role based AC | Décorateur @login_required, django.contrib.auth |
+| A02 | Passwords : Bcrypt, EncryptCookies, Crypt | make_password() , gestion SECRET_KEY |
+| A03 | ORM Eloquent, protection injection SQL  | ORM Django, RawSQL() avec placeholders pour requêtes brutes |
+| A04 | Starter Kits (Breeze, Fortify, Jetstream) | Architecture secure by default, check --deploy |
+| A05 | APP_DEBUG à FALSE, permissions fichiers (775/664) | DEBUG = False obligatoire en production, middleware de sécurité activé par défaut |
+| A06 | Enlightn Security Checker (scan dépendances) | tiers : safety, Bandit, ... pour dépendances |
+| A07 | Sanctum et Passport auth. API, rate limiting | Validateurs passwords, django-axes contre brute-force |
+| A08 | Protection contre mass assignment via $fillable et $guarded, éviter forceFill() sur données non validées | Protection automatique contre mass assignment via ModelForm avec Meta.fields (approche liste blanche) |
+| A09 | logs intégré, monitoring en temps réel | Logging configurable, outils comme django-axes |
+| A10 | Validation stricte des URLs | Validation des URLs externes, sécurité en-têtes HTTP |
+| CSRF Protection | VerifyCsrfToken, @csrf pour forms, token automatique pour AJAX via Axios | CsrfViewMiddleware, {% csrf_token %} pour forms |
+| XSS Protection | Échappement automatique via {{ }} dans Blade | Échappement automatique dans templates, éviter mark_safe() et filtre safe |
 
 (Généré par perplexity.ai)
+</div>
 
 # Références
 
@@ -295,6 +297,8 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [44]:https://cheatsheetseries.owasp.org/
 [45]:https://www.google.com/search?q=ipviking
 [46]:https://www.corbado.com/blog/passkeys-cheat-sheet
+[47]:https://owasp.org/www-project-api-security/
+[48]:https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/
 <!-- Hack -->
 <style>
 
@@ -311,6 +315,13 @@ ol > li {
 	margin: 10px 30px;
 	font-size: 80%;
 }  
-  
+	.small {
+    font-size: 80%;
+	line-height: 80%;
+    margin: 0 auto;
+	overflow: hidden; 
+  }
+		
 </style>
+
 
