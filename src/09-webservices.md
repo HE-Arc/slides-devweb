@@ -91,7 +91,7 @@
   * **Interface uniforme**
 
 # REST : Interface Uniforme
-Parmi les 6 [contraintes][16], l'*interface uniforme* : 
+* Parmi les 6 [contraintes][16], l'*interface uniforme* : 
 Les composants (clients, serveurs, proxies…) communiquent par une interface générique (et non une API spécifique à chaque serveur).
 
 * L'interface uniforme est, elle-même, définie par 4 contraintes
@@ -100,7 +100,7 @@ Les composants (clients, serveurs, proxies…) communiquent par une interface g�
 	* Messages autodescriptifs
 	* Hypermédia comme moteur de l’état de l’application
 * *Ressource* : information ou moyen d’accès
-	ex. : météo du jour, adresse ajout d’un article à un blog, ...
+	* ex. : météo du jour, adresse ajout d’un article à un blog, ...
 * *Représentation* : forme donnée à la ressource
 	ex. : page html, fichier PDF, image, flux RSS, fichier sonore, ...
 
@@ -228,6 +228,7 @@ Les composants (clients, serveurs, proxies…) communiquent par une interface g�
   #sources {display:none}
   
 </style>
+
 
 
 
