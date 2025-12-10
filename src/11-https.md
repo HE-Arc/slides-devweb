@@ -4,7 +4,7 @@
 
 ## HTTPS{.title}
 
-<footer>HE-Arc (DGR) 2022</footer>
+<footer>HE-Arc (DGR) 2025</footer>
 
 # Sécuriser un site web
 
@@ -82,7 +82,7 @@ CA : Autorité de certification - VA : Autorité de validation - RA : Autorité 
 6. Le serveur répond à la requête en chiffrant avec la CS
 7. Le navigateur décode la réponse avec la CS
 
-* En [images][20], [ou ici][2] ou en [slides][3]
+* En [images][2] ou en [slides][3]
 * 2-5 en TCP
 
 # Déploiement
@@ -100,7 +100,7 @@ CA : Autorité de certification - VA : Autorité de validation - RA : Autorité 
 # HTTPS Aujourd'hui
 
 * Il n'y a plus de bonne raison d'utiliser HTTP
-* TLS toujours utilisé avec HTTP2 et HTTP3
+* TLS 1.3 est nativement intégré à QUIC (HTTP3)
 * HTTP2 et 3 minimisent et accélèrent les échanges
 * Certificats gratuits
 * Mise en place simplifiée
@@ -123,7 +123,7 @@ CA : Autorité de certification - VA : Autorité de validation - RA : Autorité 
 
 <!-- Bibliographie -->
 [1]:https://en.wikipedia.org/wiki/Public_key_infrastructure
-[2]:http://software-engineer-tips-and-tricks.blogspot.ch/2012/08/ssl-in-pictures.html?view=sidebar
+[2]:http://software-engineer-tips-and-tricks.blogspot.ch/2012/08/ssl-in-pictures.html
 [3]:https://www.youtube.com/embed/iQsKdtjwtYI?rel=0
 [4]:http://www.vanemery.com/Linux/Apache/apache-SSL.html
 [5]:https://wiki.alphanet.ch/Ateliers/PresentationSecurityParty
@@ -141,7 +141,7 @@ CA : Autorité de certification - VA : Autorité de validation - RA : Autorité 
 [17]:https://www.eventhelix.com/networking/ssl-tls/https-ssl-tls-session-for-spdy.pdf
 [18]:https://security.stackexchange.com/questions/20803/how-does-ssl-tls-work/20847#20847
 [19]:https://security.stackexchange.com/questions/55454/how-long-does-an-https-symmetric-key-last
-[20]:https://tiptopsecurity.com/how-does-https-work-rsa-encryption-explained/
+[20]:
 <!-- Hack -->
 <style>
 
@@ -159,3 +159,4 @@ ol > li {
   #sources {display:none}
 </style>
 	
+
