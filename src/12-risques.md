@@ -21,7 +21,7 @@
 	* nos applications : **c'est nous qui en sommes responsables**
 
 # [OWASP][26]
-* Open Web Application Security Project
+* Open Worldwide Application Security Project
 * Fondation pour améliorer la sécurité des webapps
 * Fondée en 2004, internationale, sans but lucratif
 * Référence principale dans le domaine
@@ -323,6 +323,7 @@ ol > li {
   }
 		
 </style>
+
 
 
 
