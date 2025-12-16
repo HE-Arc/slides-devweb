@@ -26,7 +26,7 @@
 * Fondée en 2004, internationale, sans but lucratif
 * Référence principale dans le domaine
 * Propose :
-  * Top 10 (web, [mobile][17], [API][47], [LLM][48]) tous les 4 ans : [Méthode][40], [CVSS][41], [CWE][42] 
+  * Top 10 (web, [mobile][17], [API][47], [LLM][48], [OT][49]) tous les 4 ans : [Méthode][40], [CVSS][41], [CWE][42] 
   * Grande communauté d'experts
   * Formation, documentation et ressources
   * Outils d'audit, de tests et de formation (ex: [Juice Shop][43])
@@ -299,6 +299,7 @@ SELECT login, password FROM user INTO DUMPFILE 'www/exploit.txt'
 [46]:https://www.corbado.com/blog/passkeys-cheat-sheet
 [47]:https://owasp.org/www-project-api-security/
 [48]:https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/
+[49]:https://ot.owasp.org/
 <!-- Hack -->
 <style>
 
@@ -323,6 +324,7 @@ ol > li {
   }
 		
 </style>
+
 
 
 
