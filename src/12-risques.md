@@ -36,7 +36,7 @@
 
 1. Contrôle d'accès défaillants
 2. Mauvaise configuration de sécurité
-3. Vulnérabilités des dépenndances
+3. Vulnérabilités des dépendances
 4. Défaillances cryptographiques 
 5. Injections
 6. Conception non sécurisée
@@ -324,6 +324,7 @@ ol > li {
   }
 		
 </style>
+
 
 
 
