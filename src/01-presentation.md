@@ -117,7 +117,7 @@
   * Idéalement lien vers la session
   * Outil, modèle, prompts
   * But : identifier VOTRE valeur ajoutée !
-* Ressources : [SPOC HES-SO][spoc-so], [Position MIT][AIE-MIT], [Impacts métier probables][ytaipl]
+* Ressources : [SPOC HES-SO][spoc-so], [Position MIT][AIE-MIT], [Guide Etudiants UQÀM][CarrefourUQAM], [Impacts métier probables][ytaipl]
 
 # Évaluation des projets
 * Note intermédiaire (1/5 de la note du module, détails dans slides workshop) :
@@ -212,6 +212,7 @@
 [AIE-MIT]: https://aiandeducation.mit.edu/report/
 [ytaipl]: https://www.youtube.com/playlist?list=PLPlKp7M-XTJw&jct=id40uzluhyjfQ1dLo_rO1w
 [aidecisiontree]: https://cat.wfu.edu/resources/ai/syllabus/decision/
+[CarrefourUQAM]: https://services-medias.uqam.ca/media/uploads/sites/44/2024/08/20153554/20240820_Guide_PersonneEtudiante_UsageResponsableIA_v2.pdf
 
 <!-- Hack -->
 <style>
