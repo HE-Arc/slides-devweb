@@ -2,7 +2,7 @@
 
 # Développement web ISC3-il
 ## Présentation du cours{.title}
-<footer>HE-Arc 2025/26 DGR et YBL</footer>
+<footer>HE-Arc 2026/27 DGR et YBL</footer>
 
 # Programme
 * Frameworks MVC : Laravel, Django, …
@@ -28,7 +28,7 @@
 * Support : [ghpages][slidesghp] ([source][slides]), partage fichiers : [teams][teams]
 
 # Projets
-* Faire pour apprendre
+* Faire pour apprendre (⚠️ IAg)
 * Les rôles dans une équipe de développement web, workflow
 * Ne pas réinventer la roue ou tout faire soi-même
 * Critères d’évaluation d’un projet
@@ -46,7 +46,7 @@
     * Besoin réel
     * Données existantes :  [dbpedia][dbp], [opendata][odata], …
     * S'inspirer de l'existant :
-        - [Product Hunt][prodhunt], Make Use Of [liste 1][makeuseof] , [liste 2][muo2], [PWA Directory][https://pwa.directory/categories], …
+        - [Product Hunt][prodhunt], Make Use Of [liste 1][makeuseof] , [liste 2][muo2], [PWA Directory][pwadir], …
         - [Volées précédentes][gharc]
 * Commencer tôt pour se libérer les dernières semaines de l'année
 
@@ -94,7 +94,7 @@
 # Conseils
 * Le plus simple possible, pas trop de données
 * Application crédible (vraies données, cas réalistes)
-* Projet à blanc pour la prise en main du framework
+* Projet à blanc (workshop) pour la prise en main du framework
 * [Maquettes][mockups]
 * [Organisez][branching] l'utilisation du dépôt
 * Le temps disponible à l'horaire ne suffira pas !
@@ -102,7 +102,17 @@
 * Signalez dans le commit msg si vous n'êtes pas l'auteur
 * Le déploiement est long : commencez tôt !
 * Il est moins risqué travailler plus au début du projet qu'à la fin !
-* Discutez ! Echangez ! 
+* Discutez ! Echangez !
+
+# IA Génératives
+* Fiche de cours dans Teams
+  * Activité non listée ? Doute ? ➡️ On en parle avec le prof
+* Doit [favoriser l'apprentissage][aidecisiontree], pas le péjorer
+* Intégrité académique et professionel, transparence
+* Déclarer (*Disclose*) :
+  * Idéalement lien vers la session
+  * Outil, modèle, prompts
+* Ressources : [SPOC HES-SO][spoc-so], [Postion MIT][AIE-MIT], [Impacts métier probables][ytaipl]
 
 # Évaluation des projets
 * Note intermédiaire (1/5 de la note du module, détails dans slides workshop) :
@@ -193,6 +203,10 @@
 [ghpindex]: https://he-arc.github.io/
 [wikicours]: https://github.com/HE-Arc/slides-devweb/wiki
 [teams]: https://teams.microsoft.com/l/team/19%3ahGPvEcXl8HCohGre1MLq7AQ4qPWNkY_JqMTTPMPLM-I1%40thread.tacv2/conversations?groupId=cadc33cc-9fc8-49d7-b951-aa26d534e15f&tenantId=5b3b7d7d-e119-4d05-9022-f775f2e48e96
+[spoc-so]: http://spoc.hes-so.ai/
+[AIE-MIT]: https://aiandeducation.mit.edu/report/
+[ytaipl]: https://www.youtube.com/playlist?list=PLPlKp7M-XTJw&jct=id40uzluhyjfQ1dLo_rO1w
+[aidecisiontree]: https://cat.wfu.edu/resources/ai/syllabus/decision/
 
 <!-- Hack -->
 <style>
