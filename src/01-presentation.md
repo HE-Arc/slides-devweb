@@ -46,7 +46,7 @@
     * Besoin réel
     * Données existantes :  [dbpedia][dbp], [opendata][odata], …
     * S'inspirer de l'existant :
-        - [Product Hunt][prodhunt], [makeuseof][makeuseof], …
+        - [Product Hunt][prodhunt], Make Use Of [liste 1][makeuseof] , [liste 2][muo2], [PWA Directory][https://pwa.directory/categories], …
         - [Volées précédentes][gharc]
 * Commencer tôt pour se libérer les dernières semaines de l'année
 
@@ -55,25 +55,24 @@
 |---:|---|---:|---|
 |38|Projet PHP|8||
 |39||9||
-|40||10||
-|41||11|Rendu intermédiaire|
+|40||10|Rendu intermédiaire|
+|41||11||
 |42|S. thématique|12||
-|43||13||
-|44||14||
+|43||13|Pâques|
+|44||14|Présentations|
 |45|Rendu intermédiaire|16||
 |46||17||
-|48||18|Présentations|
+|48||18||
 |49||19||
-|50||20||
-|51|Présentations|21|Début TB|
-|2|Projet Python|||
-|3||||
+|50||20|Début TB|
+|51|Présentations|21||
+|3|Projet Python|||
 |4||||
 |5|T. Autonome|||
 |6|Examen|||
 
 # Suivi du calendrier (à jour sur [teams][teams])
-![Suivi calendrier](img/DW2526.png)
+![Suivi calendrier](img/DW2627.png)
 
 # Jalons pour chacun des 2 projets
 * Echéances
@@ -180,8 +179,10 @@
 [dbp]: https://www.dbpedia.org/resources/individual/
 [odata]: https://opendata.swiss/fr/
 [prodhunt]: https://www.producthunt.com/topics/web-app
-[makeuseof]: http://www.makeuseof.com/tag/best-websites-internet/
-[wiki]: https://github.com/HE-Arc/slides-devweb/wiki/Projets-2025-2026
+[makeuseof]: https://www.makeuseof.com/tag/useful-web-apps/
+[muo2]: https://www.makeuseof.com/search/?q=web+app
+[pwadir]: https://pwa.directory/categories
+[wiki]: https://github.com/HE-Arc/slides-devweb/wiki/Projets-2026-2027
 [github]: https://github.com/orgs/HE-Arc
 [arcghp]: https://he-arc.github.io
 [hacktober]:https://hacktoberfest.digitalocean.com/
