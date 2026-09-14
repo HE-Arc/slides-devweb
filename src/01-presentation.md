@@ -106,13 +106,18 @@
 
 # IA Génératives
 * Fiche de cours dans Teams
+  * Objectif cours : savoir-faire avec les frameworks MVC
+    * Ne pas générer de code relatif
+    * Ne pas livrer qq chose dont vous n'êtes pas garant (Responsabilité)
+    * Ok pour le reste, avec déclaration (ou citation)
   * Activité non listée ? Doute ? ➡️ On en parle avec le prof
 * Doit [favoriser l'apprentissage][aidecisiontree], pas le péjorer
 * Intégrité académique et professionel, transparence
 * Déclarer (*Disclose*) :
   * Idéalement lien vers la session
   * Outil, modèle, prompts
-* Ressources : [SPOC HES-SO][spoc-so], [Postion MIT][AIE-MIT], [Impacts métier probables][ytaipl]
+  * But : identifier VOTRE valeur ajoutée !
+* Ressources : [SPOC HES-SO][spoc-so], [Position MIT][AIE-MIT], [Impacts métier probables][ytaipl]
 
 # Évaluation des projets
 * Note intermédiaire (1/5 de la note du module, détails dans slides workshop) :
