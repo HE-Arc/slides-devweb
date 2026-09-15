@@ -111,7 +111,7 @@
     * Ok pour le reste, avec déclaration (ou citation)
   * Activité non listée ? Doute ? ➡️ On en parle avec le prof
 * Doit [favoriser l'apprentissage][aidecisiontree], pas le péjorer
-* Intégrité académique et professionel, transparence
+* Intégrité académique et professionelle, transparence
 * Déclarer (*Disclose*) :
   * Idéalement lien vers la session
   * Outil, modèle, prompts
