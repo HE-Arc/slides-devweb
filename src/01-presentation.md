@@ -107,8 +107,7 @@
 # IA Génératives
 * Fiche de cours dans Teams
   * Objectif cours : savoir-faire avec les frameworks MVC
-    * Ne pas générer de code relatif
-    * Ne pas livrer qq chose dont vous n'êtes pas garant (Responsabilité)
+    * _**Ne pas**_ générer ce code, ni livrer qq chose dont vous n'êtes pas garant (Responsabilité)
     * Ok pour le reste, avec déclaration (ou citation)
   * Activité non listée ? Doute ? ➡️ On en parle avec le prof
 * Doit [favoriser l'apprentissage][aidecisiontree], pas le péjorer
