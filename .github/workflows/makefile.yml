@@ -56,6 +56,7 @@ jobs:
         run: |
           cp ./templates/index.html build/
           cp ./templates/style.css build/
+          cp ./templates/favicon.ico build/
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
