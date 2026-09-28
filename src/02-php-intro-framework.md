@@ -4,7 +4,7 @@
 
 ## Introduction aux frameworks PHP{.title}
 
-<footer>HE-Arc 2016-24 DGR et YBL</footer>
+<footer>HE-Arc 2016-26 DGR et YBL</footer>
 
 ---
 
@@ -139,7 +139,7 @@ Dans les faits, cela montre également une maturité de la plateforme.
  * PHP 5, vraie POO, PDO, JSON, ...
  * ~~PHP 6, Unicode~~ 💩, 🎃, 🐧
  * PHP 7, que du rêve!
- * PHP 8, JIT compilation, [...][PHP8]
+ * PHP 8, JIT compilation, [...][PHP85]
 
 <div class="notes">
 
@@ -209,7 +209,7 @@ l'Internet.
 
 ---
 
-## Qu'est-ce que le World Wide Web ?
+## Qu'est-ce que le [World Wide Web][CERN] ?
 
 * **URI/URL**, des identifiants uniques
 * **HTML**, un langage de publication
@@ -849,8 +849,8 @@ Questions?
 [PHP-Hist]: http://php.net/manual/en/history.php.php
 [PHP-wiki]: https://en.wikipedia.org/wiki/PHP
 [ITcrowd]: https://www.youtube.com/watch?v=iDbyYGrswtg
-[CERN]: http://line-mode.cern.ch/www/hypertext/WWW/TheProject.html
-[PHP8]: https://kinsta.com/fr/blog/php-8/
+[CERN]: https://line-mode.cern.ch/
+[PHP85]: https://www.php.net/releases/8.5/fr.php
 
 <!-- CSS -->
 <style>
