@@ -4,7 +4,7 @@
 
 ## Laravel{.title}
 
-<footer>HE-Arc (DGR & R. Emourgeon) 2018-25</footer>
+<footer>HE-Arc (DGR & R. Emourgeon) 2018-26</footer>
 
 # Pourquoi [Laravel](https://laravel.com/) ?
 
@@ -21,7 +21,7 @@
 * Mai 2013 : version 4, utilise [composer][Composer]
 * Août 2014 : projet PHP le plus [populaire][LaraStats] sur github
 * [Qui][builtwith] utilise Laravel ?
-* version 9 publiée en 02.22, v10: 02.23, v11: 03.24, v12: 02.25
+* version 9 publiée en 02.22, v10: 02.23, v11: 03.24, v12: 02.25, v13: 03.26
 
 # Principales fonctionnalités
 
@@ -59,11 +59,11 @@
 * Outils : devtools Chrome ou FF, [Emmet][emmet], git
 * Doc
     * [Documentation officielle][LaraDoc] de Laravel
-    * Cheat Sheet [dev.to][devto], [Laravel 8][LaraCheat], [Artisan][ArtisanCheat]
+    * Cheat Sheet [devsheets][devsheets], [obabusi][obabusi]
 * Tutoriels
-    * Pour un tuto à jour : bien préciser la version (12) dans votre recherche
-    * Laravel 11 : [Best Momo][tutoBMomo], [Tuts Make][tutsmake], [Plural Sight][tutoCS]
-
+    * Pour un tuto à jour : bien préciser la version (13) dans votre recherche
+    * exemple : [Best Momo][tutoBMomo]
+      
 # Environnement de développement
 * De quoi ai-je besoin pour développer ?
 	* (L)AMP : Serveur HTTP, SGBD, PHP
@@ -94,8 +94,8 @@ $composer global require "laravel/installer"
 # Aide à la mise en place du dev env
 * Paquets AMP (WAMP, EasyPHP, ...)
 * Pour aller plus vite :
-	* Windows : [Laragon][laragon]
-	* Laravel Valet pour [Mac][valetOSX], [Ubuntu][valetLinux], et [WSL][valetWSL]
+	* [Laravel Herd][Herd], [Laragon][laragon]
+
 * Windows avec WSL
     * [Tuto][wsl1]
 
@@ -196,12 +196,13 @@ $php artisan list
 [phoenix]: https://phcode.io/
 [emmet]: https://emmet.io/
 [LaraDoc]: https://laravel.com/docs/master
-[devto]: https://dev.to/mikevarenek/laravel-fundamentals-a-cheat-sheet-for-rapid-development-gd9
-[LaraCheat]: https://quickref.me/laravel
-[ArtisanCheat]: https://artisan.page/
-[hackrCheat]: https://hackr.io/blog/laravel-cheat-sheet
-[tutsmake]: https://tutsmake.com/?s=laravel+12
-[tutoBMomo]: https://laravel.sillo.org/search/laravel%2012
+
+[devsheets]:https://devsheets.io/sheets/laravel
+[obabusi]:https://thatobabusi.github.io/laravel-13-cheat-sheet/
+[]:
+
+
+[tutoBMomo]: https://laravel.sillo.org/search/laravel%2013
 [tutoCS]: https://www.pluralsight.com/paths/laravel
 [wsl]: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 [homestead]: https://laravel.com/docs/master/homestead
@@ -214,6 +215,8 @@ $php artisan list
 [valetOSX]: https://laravel.com/docs/master/valet
 [valetLinux]: https://cpriego.github.io/valet-linux/#installation
 [valetWSL]: https://github.com/valeryan/valet-wsl
+
+[Herd]: https://herd.laravel.com/
 
 <style type="text/css">
     section.title, section#sources, h1.title {display:none;}
