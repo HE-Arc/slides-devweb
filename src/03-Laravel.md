@@ -179,7 +179,6 @@ $php artisan list
 * [Cheat Sheet][hackrCheat]
 * [Laracast](https://laracasts.com/search?query=laravel%2011)
 * [Learning Laravel](https://learninglaravel.net/tags/tutorials)
-* [Laravel 10 REST API CRUD tuto](https://www.tutsmake.com/laravel-10-rest-api-authentication-with-passport/)
 * [Les vôtres](https://github.com/HE-Arc/slides-devweb/wiki/Ressources)
 
 [LaraForum]: https://laravel.io/forum
@@ -199,7 +198,6 @@ $php artisan list
 
 [devsheets]:https://devsheets.io/sheets/laravel
 [obabusi]:https://thatobabusi.github.io/laravel-13-cheat-sheet/
-[]:
 
 
 [tutoBMomo]: https://laravel.sillo.org/search/laravel%2013
@@ -210,7 +208,7 @@ $php artisan list
 [routing]: https://laravel.com/docs/master/routing
 [controllers]: https://laravel.com/docs/master/controllers
 [views]: https://laravel.com/docs/master/views
-[wsl1]: https://jackwhiting.co.uk/posts/setting-up-a-windows-10-development-environment-with-wsl-php-laravel/
+
 [laragon]: https://laragon.org/
 [valetOSX]: https://laravel.com/docs/master/valet
 [valetLinux]: https://cpriego.github.io/valet-linux/#installation
