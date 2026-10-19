@@ -28,7 +28,7 @@
 * [Article](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) d'Alex Russel 15.06.15
 * Vue d'ensemble par [Wikipedia](https://en.wikipedia.org/wiki/Progressive_web_app)
 * Support tardif d'[iOS](https://firt.dev/notes/pwa-ios/) (notification: iOS16, installation complexe)
-* Toujours des soucis dans [iOS26](https://modernwebweekly.substack.com/p/modern-web-weekly-60), les [raisons](https://www.reddit.com/r/PWA/comments/1n6e22q/apples_pwa_limitations_are_deliberate_not/) ? Situation en [2026][https://www.magicbell.com/blog/pwa-ios-limitations-safari-support-complete-guide]
+* Toujours des soucis dans [iOS26](https://modernwebweekly.substack.com/p/modern-web-weekly-60), les [raisons](https://www.reddit.com/r/PWA/comments/1n6e22q/apples_pwa_limitations_are_deliberate_not/) ? Situation en 2026 : [1](https://mittl-medien.de/progressive-web-app-ios), [2](https://noman-web-developer.vercel.app/news/apple-expands-pwa-support-ios-2026), [3](https://www.magicbell.com/blog/pwa-ios-limitations-safari-support-complete-guide)
 
 # PWA : howto
 * [Learn PWA](https://web.dev/learn/pwa)
