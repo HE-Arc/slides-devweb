@@ -27,33 +27,33 @@
 	* Node.js, Spidermonkey, Rhino
 	* script d'app (Qt, Notepad++, ...)
 * Langage cible de compilateurs : [emscripten](https://emscripten.org/), [WebAssembly](http://webassembly.org/)
-* Embarqué : [Espruino](http://www.espruino.com/), robotique : [Node Bots](https://nodebots.io/), [CylonJS](https://cylonjs.com/)
-* Applications Desktop : [Electron](https://electronjs.org/), [sciter](https://sciter.com/)
+* Embarqué : [Espruino](http://www.espruino.com/), robotique : [Node Bots](https://nodebots.io/), [Johnny 5][https://johnny-five.io/]
+* Applications Desktop : [Electron](https://electronjs.org/), [sciter](https://sciter.com/), [Tauri][https://tauri.app/] (+ [Pake][https://pake.run/])
 
 # *Script
 
 * ECMAScript : Norme depuis 1997 
-	* Juin 2025 : [ECMA-262 16th edition](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
-	* [Support](https://compat-table.github.io/compat-table/es2016plus/) des différentes implémentations
+	* Juin 2026 : [ECMA-262 17th edition](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+	* [Support](https://compat-table.github.io/compat-table/) des différentes implémentations
 	* Conversions avec [BabelJS](https://babeljs.io/)
 * JavaScript : implémentation Firefox (réf. MDN)
 * Variantes (à transpiler) :
-	* [Typescript](https://www.typescriptlang.org/) : variante fortement typée, avec des classes (MS)
-	* [Coffescript](http://coffeescript.org/)
-		* sucre syntaxique
-		* compilé -> js
+	* [Typescript](https://www.typescriptlang.org/) :
+ 		* variante fortement typée (MS)
+		* plus maintenable, recommandé par défaut !
+		* **trans**pilé -> JS
+  		* Développement *symbiotique* avec Monaco / [VSCode](https://www.youtube.com/watch?v=kHL3XzjpT5w)
 
 # JavaScript
  
 * Différentes [implémentations](https://en.wikipedia.org/wiki/List_of_ECMAScript_engines) : navigateur, srv, apps, ...
 * Permissif : du mauvais code est peu maintenable 
-	* [Design Patterns](https://patterns.addy.ie/)
-	* [Bonnes pratiques](https://web.archive.org/web/20250827211325/http://www.jstherightway.org/) ([src](https://github.com/jstherightway/js-the-right-way/))
-    * [Exploring JavaScript](https://exploringjs.com/js/index.html) 
+	* [Design Patterns](https://www.patterns.dev/), [book](https://patterns.addy.ie/)
+	* [Bonnes pratiques](https://good.js.org/), [W3S](https://www.w3schools.com/js/js_best_practices.asp)
 
 * Interface pour scripter le navigateur
 	* Accès et modification du contenu via DOM
-	* [Bookmarklets](http://www.howtogeek.com/125846/the-most-useful-bookmarklets-to-enhance-your-browsing-experience/), [exemples](http://www.hongkiat.com/blog/100-useful-bookmarklets-for-better-productivity-ultimate-list/)
+	* [Bookmarklets](https://bookmarklet.io/library), [A11y](https://a11y-tools.com/bookmarklets/), [Contrast](https://webaim.org/resources/contrastchecker/bookmarklet), [dev tools](https://bookmarklets.app.quest/) [exemples plus vieux](http://www.hongkiat.com/blog/100-useful-bookmarklets-for-better-productivity-ultimate-list/)
 	* Requêtes HTTP (Fetch API, Xml Http Request)
 * Développement d'applications complètes, parfois offline 
 * Langage de script généraliste (paquets npm)
@@ -92,7 +92,6 @@ eval(), ...
 # JavaScript dans la page web
 
 * Éléments `<script>` exécutés dans l’ordre de la page
-* Conseillé de les placer en [fin de page](https://stackoverflow.com/questions/1638670/javascript-at-bottom-top-of-web-page)
 * Evénements (onclick, onerror, onsubmit, …)
 	* Embarqués dans les balises (onXXX)
 
@@ -115,7 +114,8 @@ eval(), ...
 * Conseillé d'inclure le code (attribut src)
 
 ```html
-<script type="text/javascript" src="script02.js"></script> 
+    <script type="module" src="app.js"></script> // pour un module ESM
+    <script defer src="ancien-script.js"></script> // pour les autres scripts
 ```
 
 <div class="notes">
@@ -127,7 +127,7 @@ eval(), ...
 > [HTML5: script](https://www.w3.org/TR/html5/scripting-1.html#the-script-element)
 </div>
 
-# [Unobstrusive JS](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript)
+# [Unobstrusive JS](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript) (Pourquoi en [2026](https://www.perplexity.ai/search/a62728eb-54cf-4ba0-85a4-d6f3287ed6bb) ?)
 
 * Séparation JS...
 
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	<input type="text" name="date" id="date" />
 ```
 * Dégradation élégante
-	* Alternatives pour un browser ne supportant pas JS
+	* Fonction critique pas JS only si alternative HTML/CSS possible
 * Accessibilité
 	* Les fonctionnalités restent accessibles en cas d'erreur 
 * Utilisabilité
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function() {
 > [MDN: DOMContentLoaded](https://developer.mozilla.org/en/docs/Web/Events/DOMContentLoaded)
 </div>
 
-# [Node.js](https://nodejs.org) / [Deno](https://www.reddit.com/r/node/comments/nx9qqr/deno_vs_nodejs_a_comparison_you_need_to_know/)
+# [Node.js](https://nodejs.org) / [Deno](https://www.reddit.com/r/node/comments/nx9qqr/deno_vs_nodejs_a_comparison_you_need_to_know/) ([Cloudflare](https://deno.com/blog/cloudflare))
 
 * Node.js : une implémentation hors navigateur
 	* environnement d'exécution + bibliothèques
@@ -165,11 +165,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	* [npm](https://www.npmjs.com) : gestionnaire de paquets
 	* gulp : make js
 	
-* [Exemples](https://colorlib.com/wp/npm-packages-node-js/) d'applications
+* [Exemples](https://github.com/whokartikgambhir/Open-Source-node-backend-Apps) d'applications
 	* gulp, grunt, bower, yarn
 	* browserify
 	* serveur http
-	* express, cordova, forever, dev, pm2, karma, sails, phantomjs
+	* axios, express, cordova, forever, dev, pm2, karma, sails, phantomjs
 	
 * [Tuto](https://www.tutorialspoint.com/nodejs/index.htm), [Playground](https://stackblitz.com/edit/node-js-playground?file=index.js)
 
@@ -312,11 +312,11 @@ function insertNode() {
 # Références
 
 * Une [réintroduction à JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Une_r%C3%A9introduction_%C3%A0_JavaScript)
-* [Things to avoid in JS][https://waspdev.com/articles/2025-06-13/things-to-avoid-in-javascript#not_using_modules]
-* [How does it feel to learn JS in 2016](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f)
+* [Things to avoid in JS](https://waspdev.com/articles/2025-06-13/things-to-avoid-in-javascript)
+* [How does it feel to learn JS in 2016](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f), [What to know in JS, 2026](https://blog.master.dev/what-to-know-in-javascript-2026-edition/)
 * Référence [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference)
-* Tutoriels [The Modern JS Tuto](https://javascript.info/) [w3schools](http://www.w3schools.com/js/) [LearnJS](https://learnjavascript.online/)
-* Outils de développement Chrome et Firefox (F12, Ctrl+Shift I)
+* Tutoriels [The Modern JS Tuto](https://javascript.info/), [w3schools](http://www.w3schools.com/js/), [LearnJS](https://learnjavascript.online/)
+* devtools Chrome et Firefox (F12, Ctrl+Shift I)
 * Visualisation du [DOM](http://bioub.github.io/dom-visualizer/)
 * Outils web
 	* [JSFiddle](https://jsfiddle.net/)
