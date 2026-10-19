@@ -4,7 +4,7 @@
 
 ## JavaScript & DOM{.title}
 
-<footer>HE-Arc (DGR) 2025</footer>
+<footer>HE-Arc (DGR) 2026</footer>
 
 # JavaScript hier
 * Page web = HTML (+ CSS + JavaScript)
