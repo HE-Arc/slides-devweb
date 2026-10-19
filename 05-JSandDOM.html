@@ -284,7 +284,7 @@ background: rgba(255, 0, 0, 0.8);
 <h1>Développement web il3</h1>
 <h2 class="title" id="javascript-dom">JavaScript &amp; DOM</h2>
 <footer>
-HE-Arc (DGR) 2025
+HE-Arc (DGR) 2026
 </footer>
 </section>
 <section id="javascript-hier" class="slide level1">
@@ -318,8 +318,10 @@ scriptlets</a></li>
 </ul></li>
 <li>Langage cible de compilateurs : <a href="https://emscripten.org/">emscripten</a>, <a href="http://webassembly.org/">WebAssembly</a></li>
 <li>Embarqué : <a href="http://www.espruino.com/">Espruino</a>,
-robotique : <a href="https://nodebots.io/">Node Bots</a>, <a href="https://cylonjs.com/">CylonJS</a></li>
-<li>Applications Desktop : <a href="https://electronjs.org/">Electron</a>, <a href="https://sciter.com/">sciter</a></li>
+robotique : <a href="https://nodebots.io/">Node Bots</a>, [Johnny
+5][https://johnny-five.io/]</li>
+<li>Applications Desktop : <a href="https://electronjs.org/">Electron</a>, <a href="https://sciter.com/">sciter</a>, [Tauri][https://tauri.app/] (+
+[Pake][https://pake.run/])</li>
 </ul>
 </section>
 <section id="script" class="slide level1">
@@ -327,21 +329,21 @@ robotique : <a href="https://nodebots.io/">Node Bots</a>, <a href="https://cylon
 <ul>
 <li>ECMAScript : Norme depuis 1997
 <ul>
-<li>Juin 2025 : <a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMA-262
-16th edition</a></li>
-<li><a href="https://compat-table.github.io/compat-table/es2016plus/">Support</a>
+<li>Juin 2026 : <a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMA-262
+17th edition</a></li>
+<li><a href="https://compat-table.github.io/compat-table/">Support</a>
 des différentes implémentations</li>
 <li>Conversions avec <a href="https://babeljs.io/">BabelJS</a></li>
 </ul></li>
 <li>JavaScript : implémentation Firefox (réf. MDN)</li>
 <li>Variantes (à transpiler) :
 <ul>
-<li><a href="https://www.typescriptlang.org/">Typescript</a> : variante
-fortement typée, avec des classes (MS)</li>
-<li><a href="http://coffeescript.org/">Coffescript</a>
+<li><a href="https://www.typescriptlang.org/">Typescript</a> :
 <ul>
-<li>sucre syntaxique</li>
-<li>compilé -&gt; js</li>
+<li>variante fortement typée (MS)</li>
+<li>plus maintenable, recommandé par défaut !</li>
+<li><strong>trans</strong>pilé -&gt; JS</li>
+<li>Développement <em>symbiotique</em> avec Monaco / <a href="https://www.youtube.com/watch?v=kHL3XzjpT5w">VSCode</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -353,17 +355,15 @@ fortement typée, avec des classes (MS)</li>
 : navigateur, srv, apps, …</li>
 <li>Permissif : du mauvais code est peu maintenable
 <ul>
-<li><a href="https://patterns.addy.ie/">Design Patterns</a></li>
-<li><a href="https://web.archive.org/web/20250827211325/http://www.jstherightway.org/">Bonnes
-pratiques</a> (<a href="https://github.com/jstherightway/js-the-right-way/">src</a>)</li>
-<li><a href="https://exploringjs.com/js/index.html">Exploring
-JavaScript</a></li>
+<li><a href="https://www.patterns.dev/">Design Patterns</a>, <a href="https://patterns.addy.ie/">book</a></li>
+<li><a href="https://good.js.org/">Bonnes pratiques</a>, <a href="https://www.w3schools.com/js/js_best_practices.asp">W3S</a></li>
 </ul></li>
 <li>Interface pour scripter le navigateur
 <ul>
 <li>Accès et modification du contenu via DOM</li>
-<li><a href="http://www.howtogeek.com/125846/the-most-useful-bookmarklets-to-enhance-your-browsing-experience/">Bookmarklets</a>,
-<a href="http://www.hongkiat.com/blog/100-useful-bookmarklets-for-better-productivity-ultimate-list/">exemples</a></li>
+<li><a href="https://bookmarklet.io/library">Bookmarklets</a>, <a href="https://a11y-tools.com/bookmarklets/">A11y</a>, <a href="https://webaim.org/resources/contrastchecker/bookmarklet">Contrast</a>,
+<a href="https://bookmarklets.app.quest/">dev tools</a> <a href="http://www.hongkiat.com/blog/100-useful-bookmarklets-for-better-productivity-ultimate-list/">exemples
+plus vieux</a></li>
 <li>Requêtes HTTP (Fetch API, Xml Http Request)</li>
 </ul></li>
 <li>Développement d’applications complètes, parfois offline</li>
@@ -416,8 +416,6 @@ et <code>let</code></li>
 <ul>
 <li>Éléments <code>&lt;script&gt;</code> exécutés dans l’ordre de la
 page</li>
-<li>Conseillé de les placer en <a href="https://stackoverflow.com/questions/1638670/javascript-at-bottom-top-of-web-page">fin
-de page</a></li>
 <li>Evénements (onclick, onerror, onsubmit, …)
 <ul>
 <li>Embarqués dans les balises (onXXX)</li>
@@ -437,7 +435,8 @@ Utiliser DOM
 <ul>
 <li>Conseillé d’inclure le code (attribut src)</li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;script02.js&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span> </span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;app.js&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span> // pour un module ESM</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> defer src</span><span class="op">=</span><span class="st">&quot;ancien-script.js&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span> // pour les autres scripts</span></code></pre></div>
 <div class="notes" role="note">
 <p><code>language=&quot;JavaScript&quot;</code> est déprécié et <code>type</code>
 vaut par défaut <code>text/javascript</code>.</p>
@@ -450,9 +449,10 @@ script</a></p>
 </blockquote>
 </div>
 </section>
-<section id="unobstrusive-js" class="slide level1">
+<section id="unobstrusive-js-pourquoi-en-2026" class="slide level1">
 <h1><a href="https://en.wikipedia.org/wiki/Unobtrusive_JavaScript">Unobstrusive
-JS</a></h1>
+JS</a> (Pourquoi en <a href="https://www.perplexity.ai/search/a62728eb-54cf-4ba0-85a4-d6f3287ed6bb">2026</a>
+?)</h1>
 <ul>
 <li>Séparation JS…</li>
 </ul>
@@ -466,7 +466,7 @@ JS</a></h1>
 <ul>
 <li>Dégradation élégante
 <ul>
-<li>Alternatives pour un browser ne supportant pas JS</li>
+<li>Fonction critique pas JS only si alternative HTML/CSS possible</li>
 </ul></li>
 <li>Accessibilité
 <ul>
@@ -487,8 +487,9 @@ DOMContentLoaded</a></p>
 </blockquote>
 </div>
 </section>
-<section id="node.js-deno" class="slide level1">
-<h1><a href="https://nodejs.org">Node.js</a> / <a href="https://www.reddit.com/r/node/comments/nx9qqr/deno_vs_nodejs_a_comparison_you_need_to_know/">Deno</a></h1>
+<section id="node.js-deno-cloudflare" class="slide level1">
+<h1><a href="https://nodejs.org">Node.js</a> / <a href="https://www.reddit.com/r/node/comments/nx9qqr/deno_vs_nodejs_a_comparison_you_need_to_know/">Deno</a>
+(<a href="https://deno.com/blog/cloudflare">Cloudflare</a>)</h1>
 <ul>
 <li>Node.js : une implémentation hors navigateur
 <ul>
@@ -500,13 +501,14 @@ DOMContentLoaded</a></p>
 paquets</li>
 <li>gulp : make js</li>
 </ul></li>
-<li><a href="https://colorlib.com/wp/npm-packages-node-js/">Exemples</a>
+<li><a href="https://github.com/whokartikgambhir/Open-Source-node-backend-Apps">Exemples</a>
 d’applications
 <ul>
 <li>gulp, grunt, bower, yarn</li>
 <li>browserify</li>
 <li>serveur http</li>
-<li>express, cordova, forever, dev, pm2, karma, sails, phantomjs</li>
+<li>axios, express, cordova, forever, dev, pm2, karma, sails,
+phantomjs</li>
 </ul></li>
 <li><a href="https://www.tutorialspoint.com/nodejs/index.htm">Tuto</a>,
 <a href="https://stackblitz.com/edit/node-js-playground?file=index.js">Playground</a></li>
@@ -661,14 +663,15 @@ texte</li>
 <ul>
 <li>Une <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Une_r%C3%A9introduction_%C3%A0_JavaScript">réintroduction
 à JavaScript</a></li>
-<li>[Things to avoid in
-JS][https://waspdev.com/articles/2025-06-13/things-to-avoid-in-javascript#not_using_modules]</li>
+<li><a href="https://waspdev.com/articles/2025-06-13/things-to-avoid-in-javascript">Things
+to avoid in JS</a></li>
 <li><a href="https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f">How
-does it feel to learn JS in 2016</a></li>
+does it feel to learn JS in 2016</a>, <a href="https://blog.master.dev/what-to-know-in-javascript-2026-edition/">What
+to know in JS, 2026</a></li>
 <li>Référence <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference">MDN</a></li>
-<li>Tutoriels <a href="https://javascript.info/">The Modern JS Tuto</a>
-<a href="http://www.w3schools.com/js/">w3schools</a> <a href="https://learnjavascript.online/">LearnJS</a></li>
-<li>Outils de développement Chrome et Firefox (F12, Ctrl+Shift I)</li>
+<li>Tutoriels <a href="https://javascript.info/">The Modern JS Tuto</a>,
+<a href="http://www.w3schools.com/js/">w3schools</a>, <a href="https://learnjavascript.online/">LearnJS</a></li>
+<li>devtools Chrome et Firefox (F12, Ctrl+Shift I)</li>
 <li>Visualisation du <a href="http://bioub.github.io/dom-visualizer/">DOM</a></li>
 <li>Outils web
 <ul>
