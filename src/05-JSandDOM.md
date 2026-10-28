@@ -27,8 +27,8 @@
 	* Node.js, Spidermonkey, Rhino
 	* script d'app (Qt, Notepad++, ...)
 * Langage cible de compilateurs : [emscripten](https://emscripten.org/), [WebAssembly](http://webassembly.org/)
-* Embarqué : [Espruino](http://www.espruino.com/), robotique : [Node Bots](https://nodebots.io/), [Johnny 5][https://johnny-five.io/]
-* Applications Desktop : [Electron](https://electronjs.org/), [sciter](https://sciter.com/), [Tauri][https://tauri.app/] (+ [Pake][https://pake.run/])
+* Embarqué : [Espruino](http://www.espruino.com/), robotique : [Node Bots](https://nodebots.io/), [Johnny 5](https://johnny-five.io/)
+* Applications Desktop : [Electron](https://electronjs.org/), [sciter](https://sciter.com/), [Tauri](https://tauri.app/) (+ [Pake](https://pake.run/))
 
 # *Script
 
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function() {
 > [MDN: DOMContentLoaded](https://developer.mozilla.org/en/docs/Web/Events/DOMContentLoaded)
 </div>
 
-# [Node.js](https://nodejs.org) / [Deno](https://www.reddit.com/r/node/comments/nx9qqr/deno_vs_nodejs_a_comparison_you_need_to_know/) ([Cloudflare](https://deno.com/blog/cloudflare))
+# [Node.js](https://nodejs.org) / ~~[Deno](https://www.reddit.com/r/node/comments/nx9qqr/deno_vs_nodejs_a_comparison_you_need_to_know/)~~ ([Cloudflare](https://deno.com/blog/cloudflare))
 
 * Node.js : une implémentation hors navigateur
 	* environnement d'exécution + bibliothèques
