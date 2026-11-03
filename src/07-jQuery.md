@@ -4,7 +4,7 @@
 
 ## jQuery{.title}
 
-<footer>HE-Arc (DGR) 2025</footer>
+<footer>HE-Arc (DGR) 2026</footer>
 
 # jQuery
 * John Resig, 2006
@@ -25,7 +25,7 @@
 * Inclusion [CDN][1]
 
 ```javascript
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
 ```
 
 * Nos scripts
@@ -221,7 +221,7 @@ $("p").click(function(){
 [12]:https://gist.github.com/paulirish/12fb951a8b893a454b32
 [13]:https://www.w3schools.com/jsref/met_document_queryselectorall.asp
 [14]:https://survey.stackoverflow.co/2025/technology#1-web-frameworks-and-technologies
-[15]:https://abdulkadersafi.com/blog/is-jquery-still-relevant-in-2025-a-practical-guide-for-developers
+[15]:https://logicproviders.ca/blog/why-i-stopped-using-jquery-in-2026
 [16]:https://youmightnotneedjquery.com/
 
 
